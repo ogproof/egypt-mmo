@@ -10,7 +10,8 @@
     "server": "node server/index.js",
     "start": "npm run build && node server/index.js",
     "postinstall": "echo 'Server dependencies installed successfully'",
-    "railway-start": "npm run build && node server/index.js"
+    "railway-start": "npm run build && node server/index.js",
+    "railway-build": "vite build --base=./"
   },
   "dependencies": {
     "cannon-es": "^0.20.0",

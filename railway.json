@@ -8,18 +8,6 @@
     "restartPolicyMaxRetries": 10
   },
   "nixpacks": {
-    "startCmd": "npm start",
-    "buildCmd": "npm run build",
-    "phases": {
-      "setup": {
-        "cmds": ["npm install"]
-      },
-      "build": {
-        "cmds": ["npm run build"]
-      },
-      "start": {
-        "cmds": ["npm start"]
-      }
-    }
+    "startCmd": "npm start"
   }
 }
