@@ -1,5 +1,2 @@
-src/
-dist/
 vite.config.js
-index.html
 test-fixes.html

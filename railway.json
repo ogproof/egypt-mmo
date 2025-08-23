@@ -9,10 +9,13 @@
   },
   "nixpacks": {
     "startCmd": "npm start",
-    "buildCmd": "echo 'No build needed - server only' && exit 0",
+    "buildCmd": "npm run build",
     "phases": {
+      "setup": {
+        "cmds": ["npm install"]
+      },
       "build": {
-        "cmds": ["echo 'Skipping build phase'"]
+        "cmds": ["npm run build"]
       },
       "start": {
         "cmds": ["npm start"]

@@ -3,7 +3,10 @@
 // Simple start script for Railway
 console.log('🚂 Starting Egypt MMO Server...');
 
-// Start the server
-require('./server/index.js');
+// Use the package.json start script (which includes build)
+const { spawn } = require('child_process');
+const startProcess = spawn('npm', ['start'], { stdio: 'inherit' });
 
-console.log('✅ Server started successfully');
+startProcess.on('close', (code) => {
+    console.log(`✅ Server process exited with code ${code}`);
+});
