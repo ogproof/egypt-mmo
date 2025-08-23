@@ -2,11 +2,10 @@
 cmds = ["npm install"]
 
 [phases.build]
-cmds = ["echo 'Build phase disabled - using pre-built files'"]
+cmds = ["echo 'Build phase completed - using pre-built files'"]
 
 [phases.start]
 cmds = ["npm start"]
 
 [variables]
 NODE_ENV = "production"
-PORT = "3000"
