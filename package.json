@@ -9,7 +9,6 @@
     "preview": "vite preview",
     "server": "node server/index.js",
     "start": "node server/index.js",
-    "railway-start": "RAILWAY_ENVIRONMENT=production node server/index.js",
     "postinstall": "echo 'Server dependencies installed successfully'"
   },
   "dependencies": {
