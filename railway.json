@@ -1,10 +1,14 @@
 {
   "build": {
-    "builder": "dockerfile"
+    "builder": "nixpacks"
   },
   "deploy": {
     "startCommand": "npm start",
     "restartPolicyType": "ON_FAILURE",
     "restartPolicyMaxRetries": 10
+  },
+  "nixpacks": {
+    "startCmd": "npm start",
+    "buildCmd": "echo 'Build phase disabled - using pre-built files' && exit 0"
   }
 }

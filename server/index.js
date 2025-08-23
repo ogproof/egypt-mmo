@@ -16,10 +16,8 @@ const io = socketIo(server, {
 // Middleware
 app.use(cors());
 app.use(express.json());
-// Only serve static files if they exist (for local development)
-if (process.env.NODE_ENV !== 'production') {
-    app.use(express.static(path.join(__dirname, '../dist')));
-}
+// Serve static files (both development and production)
+app.use(express.static(path.join(__dirname, '../dist')));
 
 // Game state
 const gameState = {
@@ -334,12 +332,10 @@ app.get('/health', (req, res) => {
     });
 });
 
-// Serve the game (only in development)
-if (process.env.NODE_ENV !== 'production') {
-    app.get('*', (req, res) => {
-        res.sendFile(path.join(__dirname, '../dist/index.html'));
-    });
-}
+// Serve the game (both development and production)
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../dist/index.html'));
+});
 
 // Start server
 const PORT = process.env.PORT || 3001;
