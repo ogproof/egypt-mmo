@@ -9,9 +9,7 @@
     "preview": "vite preview",
     "server": "node server/index.js",
     "start": "node server/index.js",
-    "postinstall": "echo 'Server dependencies installed successfully'",
-    "railway-start": "node server/index.js",
-    "railway-build": "echo 'Build skipped - using pre-built files'"
+    "postinstall": "echo 'Server dependencies installed successfully'"
   },
   "dependencies": {
     "cannon-es": "^0.20.0",
