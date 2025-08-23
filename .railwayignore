@@ -1,3 +1,10 @@
+# Force nixpacks - block Docker
+Dockerfile
+.dockerignore
+docker-compose.yml
+docker-compose.yaml
+
+# Development files
 node_modules/
 .git/
 .env
@@ -5,3 +12,7 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Build artifacts (we'll build locally)
+dist/
+build/

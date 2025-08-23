@@ -1,6 +1,7 @@
 {
   "build": {
-    "builder": "nixpacks"
+    "builder": "nixpacks",
+    "dockerfilePath": null
   },
   "deploy": {
     "startCommand": "npm start",
@@ -11,6 +12,17 @@
   },
   "nixpacks": {
     "startCmd": "npm start",
-    "buildCmd": "echo 'Build phase disabled - using pre-built files' && exit 0"
+    "buildCmd": "echo 'Build phase disabled - using pre-built files' && exit 0",
+    "phases": {
+      "setup": {
+        "cmds": ["npm install"]
+      },
+      "build": {
+        "cmds": ["echo 'Build phase skipped'"]
+      },
+      "start": {
+        "cmds": ["npm start"]
+      }
+    }
   }
 }
