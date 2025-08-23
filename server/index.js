@@ -30,9 +30,10 @@ app.use((req, res, next) => {
     res.setHeader('X-XSS-Protection', '1; mode=block');
     res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
     
-    // HSTS header (only on HTTPS)
-    if (req.headers['x-forwarded-proto'] === 'https') {
-        res.setHeader('Strict-Transport-Security', 'max-age=31536000; includeSubDomains');
+    // HSTS header (only on HTTPS and with proper SSL)
+    if (req.headers['x-forwarded-proto'] === 'https' && req.headers.host) {
+        // Reduced HSTS time for Railway's free SSL
+        res.setHeader('Strict-Transport-Security', 'max-age=300; includeSubDomains');
     }
     
     next();
@@ -345,12 +346,24 @@ app.get('/api/player/:id', (req, res) => {
     }
 });
 
+// SSL status endpoint
+app.get('/api/ssl-status', (req, res) => {
+    res.json({
+        ssl: req.headers['x-forwarded-proto'] === 'https',
+        host: req.headers.host,
+        userAgent: req.headers['user-agent'],
+        forwardedProto: req.headers['x-forwarded-proto'],
+        railway: !!process.env.PORT
+    });
+});
+
 // Health check
 app.get('/health', (req, res) => {
     res.json({ 
         status: 'healthy', 
         players: gameState.players.size,
-        uptime: process.uptime()
+        uptime: process.uptime(),
+        ssl: req.headers['x-forwarded-proto'] === 'https'
     });
 });
 

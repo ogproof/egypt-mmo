@@ -12,5 +12,11 @@
   "nixpacks": {
     "startCmd": "npm start",
     "buildCmd": "echo 'Build phase completed - using pre-built files' && exit 0"
+  },
+  "domains": {
+    "custom": {
+      "ssl": true,
+      "forceHttps": true
+    }
   }
 }
