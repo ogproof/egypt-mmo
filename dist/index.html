@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' ws: wss:;">
+    <title>Egypt MMO - Ancient Egyptian Crafting Adventure</title>
+    <meta name="description" content="Embark on an epic journey through ancient Egypt in this browser-based MMO crafting game">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="./assets/index-DrAW9mw5.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/three-C8PiImrb.js">
+  <link rel="modulepreload" crossorigin href="./assets/networking-BsC3Nmyy.js">
+  <link rel="stylesheet" crossorigin href="./assets/index-Dndrepyh.css">
+  <script type="module">import.meta.url;import("_").catch(()=>1);(async function*(){})().next();if(location.protocol!="file:"){window.__vite_is_modern_browser=true}</script>
+  <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
+</head>
+<body>
+    <div id="game-container">
+        <!-- Loading Screen -->
+        <div id="loading-screen" class="loading-screen">
+            <div class="loading-content">
+                <div class="egyptian-symbol">☥</div>
+                <h1>Egypt MMO</h1>
+                <p>Ancient Egyptian Crafting Adventure</p>
+                <div class="loading-bar">
+                    <div class="loading-progress"></div>
+                </div>
+                <div class="loading-text">Loading ancient wisdom...</div>
+            </div>
+        </div>
+
+        <!-- Game UI -->
+        <div id="game-ui" class="game-ui hidden">
+            <!-- Top HUD -->
+            <div class="top-hud">
+                <div class="player-info">
+                    <div class="player-avatar">👤</div>
+                    <div class="player-details">
+                        <div class="player-name">Player</div>
+                        <div class="player-level">Level 1</div>
+                    </div>
+                </div>
+                <div class="resources">
+                    <div class="resource gold">🪙 <span id="gold-amount">0</span></div>
+                    <div class="resource experience">⭐ <span id="exp-amount">0</span></div>
+                    <div class="resource time">🌅 <span id="time-display">Morning</span></div>
+                </div>
+            </div>
+
+            <!-- Crafting Panel -->
+            <div id="crafting-panel" class="crafting-panel hidden">
+                <div class="panel-header">
+                    <h3>Ancient Crafting</h3>
+                    <button class="close-btn" id="close-crafting">×</button>
+                </div>
+                <div class="crafting-categories">
+                    <button class="category-btn active" data-category="weapons">⚔️ Weapons</button>
+                    <button class="category-btn" data-category="armor">🛡️ Armor</button>
+                    <button class="category-btn" data-category="tools">🔨 Tools</button>
+                    <button class="category-btn" data-category="potions">🧪 Potions</button>
+                </div>
+                <div class="crafting-items" id="crafting-items">
+                    <!-- Items will be populated dynamically -->
+                </div>
+            </div>
+
+            <!-- Inventory -->
+            <div id="inventory" class="inventory hidden">
+                <div class="panel-header">
+                    <h3>Inventory</h3>
+                    <button class="close-btn" id="close-inventory">×</button>
+                </div>
+                <div class="inventory-content">
+                    <!-- Character Doll and Equipment -->
+                    <div class="character-doll">
+                        <h4>Equipment</h4>
+                        <div class="equipment-slots">
+                            <div class="equipment-slot" data-slot="head" title="Head">
+                                <div class="slot-label">Head</div>
+                            </div>
+                            <div class="equipment-slot" data-slot="chest" title="Chest">
+                                <div class="slot-label">Chest</div>
+                            </div>
+                            <div class="equipment-slot" data-slot="legs" title="Legs">
+                                <div class="slot-label">Legs</div>
+                            </div>
+                            <div class="equipment-slot" data-slot="feet" title="Feet">
+                                <div class="slot-label">Feet</div>
+                            </div>
+                            <div class="equipment-slot" data-slot="weapon" title="Weapon">
+                                <div class="slot-label">Weapon</div>
+                            </div>
+                            <div class="equipment-slot" data-slot="offhand" title="Offhand">
+                                <div class="slot-label">Offhand</div>
+                            </div>
+                            <div class="equipment-slot" data-slot="accessory" title="Accessory">
+                                <div class="slot-label">Accessory</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Inventory Grid -->
+                    <div class="inventory-section">
+                        <h4>Items</h4>
+                        <div class="inventory-grid" id="inventory-grid">
+                            <!-- Inventory slots will be populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button id="crafting-btn" class="action-btn">⚒️ Craft</button>
+                <button id="inventory-btn" class="action-btn">🎒 Inventory</button>
+                <button id="map-btn" class="action-btn">🗺️ Map</button>
+                <button id="skills-btn" class="action-btn">📚 Skills</button>
+            </div>
+
+            <!-- Options Menu -->
+            <div id="options-menu" class="options-menu hidden">
+                <div class="options-content">
+                    <div class="options-header">
+                        <h2>⚙️ Options</h2>
+                        <button id="close-options" class="close-btn">✕</button>
+                    </div>
+                    
+                    <div class="options-tabs">
+                        <button class="tab-btn active" data-tab="video">🎮 Video</button>
+                        <button class="tab-btn" data-tab="audio">🔊 Audio</button>
+                        <button class="tab-btn" data-tab="controls">⌨️ Controls</button>
+                    </div>
+                    
+                    <div class="tab-content active" id="video-tab">
+                        <div class="setting-group">
+                            <label for="graphics-quality">Graphics Quality:</label>
+                            <select id="graphics-quality">
+                                <option value="low">Low (Performance)</option>
+                                <option value="medium" selected>Medium (Balanced)</option>
+                                <option value="high">High (Quality)</option>
+                                <option value="ultra">Ultra (Maximum)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="setting-group">
+                            <label for="shadow-quality">Shadow Quality:</label>
+                            <select id="shadow-quality">
+                                <option value="off">Off</option>
+                                <option value="low">Low</option>
+                                <option value="medium" selected>Medium</option>
+                                <option value="high">High</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="audio-tab">
+                        <div class="setting-group">
+                            <label for="master-volume">Master Volume:</label>
+                            <input type="range" id="master-volume" min="0" max="100" value="50">
+                            <span id="master-volume-value">50%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="controls-tab">
+                        <div class="setting-group">
+                            <label for="mouse-sensitivity">Mouse Sensitivity:</label>
+                            <input type="range" id="mouse-sensitivity" min="0.1" max="2.0" step="0.1" value="1.0">
+                            <span id="mouse-sensitivity-value">1.0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="options-actions">
+                        <button id="apply-settings" class="apply-btn">Apply Settings</button>
+                        <button id="reset-settings" class="reset-btn">Reset to Default</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Canvas -->
+        <canvas id="game-canvas"></canvas>
+    </div>
+
+  <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
+  <script nomodule crossorigin id="vite-legacy-polyfill" src="./assets/polyfills-legacy-aLPCCT8d.js"></script>
+  <script nomodule crossorigin id="vite-legacy-entry" data-src="./assets/index-legacy-Cly0erv4.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+</body>
+</html>

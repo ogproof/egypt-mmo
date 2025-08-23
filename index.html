@@ -5,16 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' ws: wss:;">
     <title>Egypt MMO - Ancient Egyptian Crafting Adventure</title>
-    <meta name="description" content="Embark on an epic journey through ancient Egypt in this browser-based MMO crafting game">
+    <meta name="description" content="Embark on an epic journey through ancient Egypt in this browser-based MMO crafting game">
+    <link rel="stylesheet" href="./src/styles/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/egypt-mmo/assets/index-Dem0xl4V.js"></script>
-  <link rel="modulepreload" crossorigin href="/egypt-mmo/assets/three-C8PiImrb.js">
-  <link rel="modulepreload" crossorigin href="/egypt-mmo/assets/networking-BsC3Nmyy.js">
-  <link rel="stylesheet" crossorigin href="/egypt-mmo/assets/index-Dndrepyh.css">
-  <script type="module">import.meta.url;import("_").catch(()=>1);(async function*(){})().next();if(location.protocol!="file:"){window.__vite_is_modern_browser=true}</script>
-  <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
 </head>
 <body>
     <div id="game-container">
@@ -145,58 +140,12 @@
                         </div>
                         
                         <div class="setting-group">
-                            <label for="render-distance">Render Distance:</label>
-                            <select id="render-distance">
-                                <option value="low">Low (Close)</option>
-                                <option value="medium" selected>Medium (Normal)</option>
-                                <option value="high">High (Far)</option>
-                            </select>
-                        </div>
-                        
-                        <div class="setting-group">
                             <label for="shadow-quality">Shadow Quality:</label>
                             <select id="shadow-quality">
                                 <option value="off">Off</option>
                                 <option value="low">Low</option>
                                 <option value="medium" selected>Medium</option>
                                 <option value="high">High</option>
-                            </select>
-                        </div>
-                        
-                        <div class="setting-group">
-                            <label for="anti-aliasing">Anti-Aliasing:</label>
-                            <select id="anti-aliasing">
-                                <option value="off">Off</option>
-                                <option value="fxaa" selected>FXAA (Fast)</option>
-                                <option value="msaa">MSAA (Quality)</option>
-                            </select>
-                        </div>
-                        
-                        <div class="setting-group">
-                            <label for="particle-effects">Particle Effects:</label>
-                            <select id="particle-effects">
-                                <option value="off">Off</option>
-                                <option value="low">Low</option>
-                                <option value="medium" selected>Medium</option>
-                                <option value="high">High</option>
-                            </select>
-                        </div>
-                        
-                        <div class="setting-group">
-                            <label for="vsync">V-Sync:</label>
-                            <select id="vsync">
-                                <option value="off">Off</option>
-                                <option value="on" selected>On</option>
-                            </select>
-                        </div>
-                        
-                        <div class="setting-group">
-                            <label for="fps-limit">FPS Limit:</label>
-                            <select id="fps-limit">
-                                <option value="30">30 FPS</option>
-                                <option value="60" selected>60 FPS</option>
-                                <option value="120">120 FPS</option>
-                                <option value="unlimited">Unlimited</option>
                             </select>
                         </div>
                     </div>
@@ -207,18 +156,6 @@
                             <input type="range" id="master-volume" min="0" max="100" value="50">
                             <span id="master-volume-value">50%</span>
                         </div>
-                        
-                        <div class="setting-group">
-                            <label for="music-volume">Music Volume:</label>
-                            <input type="range" id="music-volume" min="0" max="100" value="70">
-                            <span id="music-volume-value">70%</span>
-                        </div>
-                        
-                        <div class="setting-group">
-                            <label for="sfx-volume">SFX Volume:</label>
-                            <input type="range" id="sfx-volume" min="0" max="100" value="80">
-                            <span id="sfx-volume-value">80%</span>
-                        </div>
                     </div>
                     
                     <div class="tab-content" id="controls-tab">
@@ -226,12 +163,6 @@
                             <label for="mouse-sensitivity">Mouse Sensitivity:</label>
                             <input type="range" id="mouse-sensitivity" min="0.1" max="2.0" step="0.1" value="1.0">
                             <span id="mouse-sensitivity-value">1.0</span>
-                        </div>
-                        
-                        <div class="setting-group">
-                            <label for="camera-speed">Camera Speed:</label>
-                            <input type="range" id="camera-speed" min="0.5" max="3.0" step="0.1" value="1.0">
-                            <span id="camera-speed-value">1.0</span>
                         </div>
                     </div>
                     
@@ -246,9 +177,7 @@
         <!-- Game Canvas -->
         <canvas id="game-canvas"></canvas>
     </div>
-
-  <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
-  <script nomodule crossorigin id="vite-legacy-polyfill" src="/egypt-mmo/assets/polyfills-legacy-aLPCCT8d.js"></script>
-  <script nomodule crossorigin id="vite-legacy-entry" data-src="/egypt-mmo/assets/index-legacy-C4CGBo72.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+
+    <script type="module" src="./src/index.js"></script>
 </body>
 </html>
