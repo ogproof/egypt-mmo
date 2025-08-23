@@ -14,10 +14,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Build artifacts (we'll build locally)
-dist/
-build/
-
 # Force nixpacks
 .railwayignore
 railway.json
