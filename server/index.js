@@ -346,15 +346,46 @@ app.get('/api/player/:id', (req, res) => {
     }
 });
 
+// Domain validation endpoint
+app.get('/api/domain-check', (req, res) => {
+    const domainInfo = {
+        currentHost: req.headers.host,
+        expectedHost: process.env.RAILWAY_PUBLIC_DOMAIN || 'railway.app',
+        sslWorking: req.headers['x-forwarded-proto'] === 'https',
+        recommendations: []
+    };
+    
+    // Check if using correct domain
+    if (req.headers.host && !req.headers.host.includes('railway.app')) {
+        domainInfo.recommendations.push('Using custom domain - check SSL certificate');
+    }
+    
+    if (req.headers['x-forwarded-proto'] !== 'https') {
+        domainInfo.recommendations.push('Not using HTTPS - SSL certificate not needed');
+    }
+    
+    console.log('Domain Check:', domainInfo);
+    res.json(domainInfo);
+});
+
 // SSL status endpoint
 app.get('/api/ssl-status', (req, res) => {
-    res.json({
+    const sslInfo = {
         ssl: req.headers['x-forwarded-proto'] === 'https',
         host: req.headers.host,
         userAgent: req.headers['user-agent'],
         forwardedProto: req.headers['x-forwarded-proto'],
-        railway: !!process.env.PORT
-    });
+        railway: !!process.env.PORT,
+        url: req.url,
+        headers: {
+            'x-forwarded-host': req.headers['x-forwarded-host'],
+            'x-forwarded-proto': req.headers['x-forwarded-proto'],
+            'x-forwarded-for': req.headers['x-forwarded-for']
+        }
+    };
+    
+    console.log('SSL Status Request:', sslInfo);
+    res.json(sslInfo);
 });
 
 // Health check
@@ -375,10 +406,13 @@ app.get('*', (req, res) => {
 // Start server
 const PORT = process.env.PORT || 3001;
 server.listen(PORT, '0.0.0.0', () => {
+    const railwayDomain = process.env.RAILWAY_PUBLIC_DOMAIN || 'railway.app';
     console.log(`🏺 Egypt MMO Server running on port ${PORT}`);
-    console.log(`🌐 Server URL: ${process.env.PORT ? 'https://railway.app' : `http://localhost:${PORT}`}`);
-    console.log(`📊 Health check: ${process.env.PORT ? 'https://railway.app/health' : `http://localhost:${PORT}/health`}`);
+    console.log(`🌐 Server URL: ${process.env.PORT ? `https://${railwayDomain}` : `http://localhost:${PORT}`}`);
+    console.log(`📊 Health check: ${process.env.PORT ? `https://${railwayDomain}/health` : `http://localhost:${PORT}/health`}`);
     console.log(`🚀 Server ready for multiplayer connections!`);
+    console.log(`🔒 SSL: ${process.env.PORT ? 'Enabled (Railway)' : 'Local development'}`);
+    console.log(`📡 Listening on: 0.0.0.0:${PORT}`);
 });
 
 // Graceful shutdown
