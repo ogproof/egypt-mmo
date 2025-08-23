@@ -365,6 +365,7 @@ server.listen(PORT, '0.0.0.0', () => {
     console.log(`🏺 Egypt MMO Server running on port ${PORT}`);
     console.log(`🌐 Server URL: ${process.env.PORT ? 'https://railway.app' : `http://localhost:${PORT}`}`);
     console.log(`📊 Health check: ${process.env.PORT ? 'https://railway.app/health' : `http://localhost:${PORT}/health`}`);
+    console.log(`🚀 Server ready for multiplayer connections!`);
 });
 
 // Graceful shutdown
