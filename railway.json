@@ -8,6 +8,18 @@
     "restartPolicyMaxRetries": 10
   },
   "nixpacks": {
-    "startCmd": "npm start"
+    "startCmd": "npm start",
+    "buildCmd": "echo 'Build phase disabled' && exit 0",
+    "phases": {
+      "setup": {
+        "cmds": ["npm install"]
+      },
+      "build": {
+        "cmds": ["echo 'Build phase skipped - using pre-built files'"]
+      },
+      "start": {
+        "cmds": ["npm start"]
+      }
+    }
   }
 }
