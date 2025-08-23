@@ -1,8 +1,9 @@
-# Force nixpacks - block Docker
-Dockerfile
-.dockerignore
-docker-compose.yml
-docker-compose.yaml
+# Force nixpacks - block ALL Docker
+Dockerfile*
+.dockerignore*
+docker-compose*
+dockerfile*
+Dockerfile.*
 
 # Development files
 node_modules/
@@ -16,3 +17,7 @@ yarn-error.log*
 # Build artifacts (we'll build locally)
 dist/
 build/
+
+# Force nixpacks
+.railwayignore
+railway.json
