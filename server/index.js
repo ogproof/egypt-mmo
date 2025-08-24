@@ -31,25 +31,24 @@ app.use((req, res, next) => {
     next();
 });
 
-// Security headers for Railway
+// HTTPS redirects and security headers
 app.use((req, res, next) => {
-    // Force HTTPS on Railway (detect by PORT environment variable)
+    // Skip HTTPS redirect for health checks and internal Railway endpoints
+    if (req.path === '/health' || req.path.startsWith('/api/') || req.headers.host === 'healthcheck.railway.app') {
+        return next();
+    }
+    
     if (process.env.PORT && req.headers['x-forwarded-proto'] !== 'https') {
         return res.redirect(`https://${req.headers.host}${req.url}`);
     }
     
-    // Security headers
     res.setHeader('X-Content-Type-Options', 'nosniff');
     res.setHeader('X-Frame-Options', 'DENY');
     res.setHeader('X-XSS-Protection', '1; mode=block');
     res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
-    
-    // HSTS header (only on HTTPS and with proper SSL)
     if (req.headers['x-forwarded-proto'] === 'https' && req.headers.host) {
-        // Reduced HSTS time for Railway's free SSL
         res.setHeader('Strict-Transport-Security', 'max-age=300; includeSubDomains');
     }
-    
     next();
 });
 
