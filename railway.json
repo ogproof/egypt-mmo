@@ -1,6 +1,6 @@
 {
   "build": {
-    "builder": "nixpacks"
+    "builder": "dockerfile"
   },
   "deploy": {
     "startCommand": "npm start",
@@ -8,9 +8,5 @@
     "restartPolicyMaxRetries": 10,
     "healthcheckPath": "/health",
     "healthcheckTimeout": 300
-  },
-  "nixpacks": {
-    "startCmd": "npm start",
-    "buildCmd": "echo 'Build phase completed - using pre-built files' && exit 0"
   }
 }

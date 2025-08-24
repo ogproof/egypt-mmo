@@ -1,14 +1,4 @@
-# Force pure nixpacks - block ALL possible Docker detection
-Dockerfile*
-.dockerignore*
-docker-compose*
-dockerfile*
-Dockerfile.*
-.dockerignore.*
-docker*
-Docker*
-
-# Development files
+# Development files only
 node_modules/
 .git/
 .env
@@ -17,11 +7,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Force nixpacks only
-.railwayignore
-railway.json
-nixpacks.toml
-railway.toml
+# Allow Docker files (we're using Docker now)
+# Dockerfile
+# .dockerignore
 
 # Block any build artifacts that might interfere
 dist/
