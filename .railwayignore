@@ -1,10 +1,12 @@
-# Force pure nixpacks - block ALL Docker and build files
+# Force pure nixpacks - block ALL possible Docker detection
 Dockerfile*
 .dockerignore*
 docker-compose*
 dockerfile*
 Dockerfile.*
 .dockerignore.*
+docker*
+Docker*
 
 # Development files
 node_modules/
@@ -19,7 +21,11 @@ yarn-error.log*
 .railwayignore
 railway.json
 nixpacks.toml
+railway.toml
 
 # Block any build artifacts that might interfere
 dist/
 build/
+
+# Block any hidden files
+.*

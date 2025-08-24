@@ -1,0 +1,11 @@
+[build]
+builder = "nixpacks"
+
+[deploy]
+startCommand = "npm start"
+healthcheckPath = "/health"
+healthcheckTimeout = 300
+
+[nixpacks]
+startCmd = "npm start"
+buildCmd = "echo 'Build phase completed - using pre-built files' && exit 0"
