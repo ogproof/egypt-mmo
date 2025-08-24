@@ -395,6 +395,28 @@ export class NetworkManager {
         };
     }
 
+    // Test network connection
+    testConnection() {
+        if (this.socket && this.isConnected) {
+            console.log('🌐 Testing network connection...');
+            this.socket.emit('heartbeat', { timestamp: Date.now() });
+            return true;
+        } else {
+            console.warn('⚠️ Network not connected for testing');
+            return false;
+        }
+    }
+
+    // Get connection status
+    getConnectionStatus() {
+        return {
+            connected: this.isConnected,
+            socketId: this.socket?.id,
+            playerId: this.playerId,
+            serverUrl: this.serverUrl
+        };
+    }
+
     // Cleanup
     destroy() {
         this.disconnect();

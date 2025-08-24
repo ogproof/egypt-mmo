@@ -1413,6 +1413,9 @@ export class GameEngine {
             if (data.rotation) {
                 playerMesh.rotation.set(data.rotation.x, data.rotation.y, data.rotation.z);
             }
+            console.log(`👥 Updated player ${data.playerId} position: (${data.position.x.toFixed(1)}, ${data.position.y.toFixed(1)}, ${data.position.z.toFixed(1)})`);
+        } else {
+            console.warn(`⚠️ Received movement update for unknown player: ${data.playerId}`);
         }
     }
     
@@ -1452,14 +1455,36 @@ export class GameEngine {
         console.log('🔍 Network Manager:', this.networkManager ? '✅ Available' : '❌ Not Available');
         
         if (this.networkManager) {
-            console.log('🔍 Connection Status:', this.networkManager.isConnected() ? '✅ Connected' : '❌ Disconnected');
-            console.log('🔍 Player ID:', this.networkManager.getPlayerId());
-            console.log('🔍 Connected Players:', this.networkManager.getConnectedPlayers());
+            console.log('🔍 Connection Status:', this.networkManager.isConnected ? '✅ Connected' : '❌ Disconnected');
+            console.log('🔍 Player ID:', this.networkManager.playerId);
+            console.log('🔍 Connection Info:', this.networkManager.getConnectionStatus());
         }
         
         console.log('🔍 Local Players Map Size:', this.players.size);
         console.log('🔍 Local Players:', Array.from(this.players.keys()));
         console.log('🔍 ===============================');
+    }
+
+    // Test movement sync
+    testMovementSync() {
+        console.log('🧪 Testing movement sync...');
+        
+        if (!this.networkManager || !this.networkManager.isConnected) {
+            console.warn('⚠️ Network not connected for movement sync test');
+            return;
+        }
+        
+        if (!this.player) {
+            console.warn('⚠️ No local player for movement sync test');
+            return;
+        }
+        
+        // Send a test position
+        const testPosition = { x: 10, y: 0, z: 10 };
+        console.log('🧪 Sending test position:', testPosition);
+        this.networkManager.sendPlayerPosition(testPosition);
+        
+        console.log('🧪 Movement sync test completed');
     }
 
     // System setters

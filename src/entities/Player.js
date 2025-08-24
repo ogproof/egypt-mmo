@@ -305,6 +305,15 @@ export class Player {
             this.movementPath = null;
             this.currentPathIndex = 0;
             
+            // 🔧 NETWORK SYNC: Send final position when stopping
+            if (window.egyptMMO?.networkManager?.isConnected) {
+                try {
+                    window.egyptMMO.networkManager.sendPlayerPosition(this.position);
+                } catch (error) {
+                    console.warn('⚠️ Failed to sync final position:', error);
+                }
+            }
+            
             // Clear grid highlight
             const gridManager = this.scene.userData.gridManager;
             if (gridManager) {
@@ -325,6 +334,20 @@ export class Player {
         // Update position
         this.position.copy(newPosition);
         this.mesh.position.copy(this.position);
+        
+        // 🔧 NETWORK SYNC: Send position update to other players (throttled)
+        if (window.egyptMMO?.networkManager?.isConnected) {
+            // Only send updates every 100ms to reduce network traffic
+            if (!this.lastNetworkUpdate || Date.now() - this.lastNetworkUpdate > 100) {
+                try {
+                    window.egyptMMO.networkManager.sendPlayerPosition(this.position);
+                    this.lastNetworkUpdate = Date.now();
+                    console.log(`🌐 Sent position update: (${this.position.x.toFixed(1)}, ${this.position.y.toFixed(1)}, ${this.position.z.toFixed(1)})`);
+                } catch (error) {
+                    console.warn('⚠️ Failed to sync position:', error);
+                }
+            }
+        }
         
         // Update camera position to follow player
         if (this.camera) {

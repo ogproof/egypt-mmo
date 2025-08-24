@@ -162,6 +162,24 @@ class EgyptMMO {
         window.addEventListener('beforeunload', () => {
             this.networkManager?.disconnect();
         });
+
+        // Debug shortcuts for movement sync testing
+        document.addEventListener('keydown', (event) => {
+            switch (event.key) {
+                case 'F1':
+                    console.log('🔍 Debug: Multiplayer Status');
+                    this.gameEngine?.debugMultiplayerStatus();
+                    break;
+                case 'F2':
+                    console.log('🧪 Debug: Test Movement Sync');
+                    this.gameEngine?.testMovementSync();
+                    break;
+                case 'F3':
+                    console.log('🌐 Debug: Test Network Connection');
+                    this.networkManager?.testConnection();
+                    break;
+            }
+        });
     }
 
     showErrorScreen(error) {
