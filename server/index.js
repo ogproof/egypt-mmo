@@ -68,10 +68,13 @@ const gameState = {
 
 // Socket.io connection handling
 io.on('connection', (socket) => {
-    console.log(`Player connected: ${socket.id}`);
+    console.log(`🔌 New socket connection: ${socket.id}`);
+    console.log(`📊 Current players in world: ${gameState.players.size}`);
     
     // Player joins
     socket.on('player_join', (playerData) => {
+        console.log(`🌍 Player join request from ${socket.id}:`, playerData);
+        
         // Generate a random starting position for the player
         const startX = (Math.random() - 0.5) * 50; // Random position within 50 units
         const startZ = (Math.random() - 0.5) * 50;
@@ -95,16 +98,21 @@ io.on('connection', (socket) => {
         gameState.players.set(socket.id, player);
         
         console.log(`🌍 Player ${player.name} joined at position (${startX.toFixed(1)}, 0, ${startZ.toFixed(1)})`);
+        console.log(`📊 Total players in world: ${gameState.players.size}`);
         
         // Notify other players about the new player
         socket.broadcast.emit('player_join', player);
+        console.log(`📢 Broadcasted player_join to ${gameState.players.size - 1} other players`);
         
         // Send current world state to new player
-        socket.emit('world_state', {
+        const worldState = {
             players: Array.from(gameState.players.values()),
             resources: Array.from(gameState.resources.values()),
             buildings: Array.from(gameState.buildings.values())
-        });
+        };
+        
+        socket.emit('world_state', worldState);
+        console.log(`🌍 Sent world state to ${player.name} with ${worldState.players.length} players`);
         
         // Send confirmation to the player
         socket.emit('player_joined', {
@@ -416,6 +424,28 @@ app.get('/api/ssl-status', (req, res) => {
     
     console.log('SSL Status Request:', sslInfo);
     res.json(sslInfo);
+});
+
+// Debug endpoint to see current world state
+app.get('/debug', (req, res) => {
+    const worldInfo = {
+        message: 'Egypt MMO World Debug Info',
+        timestamp: new Date().toISOString(),
+        serverPort: PORT,
+        connectedPlayers: gameState.players.size,
+        players: Array.from(gameState.players.values()).map(p => ({
+            id: p.id,
+            name: p.name,
+            position: p.position,
+            connectedAt: p.connectedAt
+        })),
+        resources: gameState.resources.size,
+        buildings: gameState.buildings.size,
+        uptime: process.uptime()
+    };
+    
+    console.log('🔍 Debug endpoint called, world state:', worldInfo);
+    res.json(worldInfo);
 });
 
 // Test endpoint

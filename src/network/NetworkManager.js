@@ -128,40 +128,63 @@ export class NetworkManager {
     setupSocketEvents() {
         if (!this.socket) return;
 
+        console.log('🔧 Setting up Socket.IO event handlers...');
+
         this.socket.on('disconnect', () => {
             this.isConnected = false;
             console.log('🌐 Disconnected from server');
         });
 
         this.socket.on('player_join', (playerData) => {
+            console.log('👥 Received player_join event:', playerData);
             if (this.onPlayerJoin) {
                 this.onPlayerJoin(playerData);
+            } else {
+                console.log('❌ No onPlayerJoin callback set');
             }
         });
 
         this.socket.on('player_leave', (playerId) => {
+            console.log('👥 Received player_leave event:', playerId);
             if (this.onPlayerLeave) {
                 this.onPlayerLeave(playerId);
+            } else {
+                console.log('❌ No onPlayerLeave callback set');
             }
         });
 
         this.socket.on('player_move', (data) => {
+            console.log('👥 Received player_move event:', data);
             if (this.onPlayerMove) {
                 this.onPlayerMove(data);
+            } else {
+                console.log('❌ No onPlayerMove callback set');
+            }
+        });
+
+        this.socket.on('world_state', (worldData) => {
+            console.log('🌍 Received world_state event:', worldData);
+            if (this.onWorldUpdate) {
+                this.onWorldUpdate(worldData);
+            } else {
+                console.log('❌ No onWorldUpdate callback set');
             }
         });
 
         this.socket.on('chat_message', (message) => {
+            console.log('💬 Received chat_message event:', message);
             if (this.onChatMessage) {
                 this.onChatMessage(message);
+            } else {
+                console.log('❌ No onChatMessage callback set');
             }
         });
 
-        this.socket.on('world_update', (update) => {
-            if (this.onWorldUpdate) {
-                this.onWorldUpdate(update);
-            }
+        this.socket.on('player_joined', (data) => {
+            console.log('✅ Received player_joined confirmation:', data);
         });
+
+        console.log('✅ Socket.IO event handlers set up successfully');
     }
 
     disconnect() {

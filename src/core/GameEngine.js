@@ -1171,11 +1171,18 @@ export class GameEngine {
 
     // Multiplayer player handling
     setupMultiplayerCallbacks() {
-        if (!this.networkManager) return;
+        console.log('🔧 Setting up multiplayer callbacks...');
+        
+        if (!this.networkManager) {
+            console.log('❌ No network manager available for multiplayer callbacks');
+            return;
+        }
+        
+        console.log('✅ Network manager found, setting up callbacks...');
         
         // Handle other players joining
         this.networkManager.onPlayerJoin = (playerData) => {
-            console.log(`👥 Player joined: ${playerData.name}`);
+            console.log(`👥 Player joined: ${playerData.name}`, playerData);
             this.addOtherPlayer(playerData);
         };
         
@@ -1187,8 +1194,32 @@ export class GameEngine {
         
         // Handle other players moving
         this.networkManager.onPlayerMove = (data) => {
+            console.log(`👥 Player moved: ${data.playerId}`, data);
             this.updateOtherPlayer(data);
         };
+        
+        // Handle world state updates
+        this.networkManager.onWorldUpdate = (worldData) => {
+            console.log(`🌍 World state update received:`, worldData);
+            this.handleWorldStateUpdate(worldData);
+        };
+        
+        console.log('✅ Multiplayer callbacks set up successfully');
+    }
+    
+    // Handle world state update from server
+    handleWorldStateUpdate(worldData) {
+        console.log(`🌍 Processing world state with ${worldData.players?.length || 0} players`);
+        
+        if (worldData.players) {
+            worldData.players.forEach(playerData => {
+                // Don't add our own player
+                if (playerData.id !== this.networkManager?.getPlayerId()) {
+                    console.log(`🌍 Adding existing player: ${playerData.name}`);
+                    this.addOtherPlayer(playerData);
+                }
+            });
+        }
     }
     
     // Add other player to the world
@@ -1264,6 +1295,22 @@ export class GameEngine {
         );
         
         return plane;
+    }
+
+    // Debug multiplayer status
+    debugMultiplayerStatus() {
+        console.log('🔍 === Multiplayer Debug Info ===');
+        console.log('🔍 Network Manager:', this.networkManager ? '✅ Available' : '❌ Not Available');
+        
+        if (this.networkManager) {
+            console.log('🔍 Connection Status:', this.networkManager.isConnected() ? '✅ Connected' : '❌ Disconnected');
+            console.log('🔍 Player ID:', this.networkManager.getPlayerId());
+            console.log('🔍 Connected Players:', this.networkManager.getConnectedPlayers());
+        }
+        
+        console.log('🔍 Local Players Map Size:', this.players.size);
+        console.log('🔍 Local Players:', Array.from(this.players.keys()));
+        console.log('🔍 ===============================');
     }
 
     // System setters
@@ -1378,13 +1425,13 @@ export class GameEngine {
                     this.uiManager.toggleCraftingPanel();
                 }
                 break;
+            case 'KeyM':
+                // Debug multiplayer status
+                this.debugMultiplayerStatus();
+                break;
             case 'KeyR':
                 // Reset camera to default position
                 this.resetCamera();
-                break;
-            case 'KeyD':
-                // Debug camera state
-                this.debugCameraState();
                 break;
             case 'BracketLeft': // [
                 // Decrease camera smoothing (more responsive)
