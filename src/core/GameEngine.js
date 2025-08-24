@@ -1157,6 +1157,115 @@ export class GameEngine {
         }
     }
 
+    // Update player position and sync with network
+    updatePlayerPosition(newPosition) {
+        if (this.player) {
+            this.player.setPosition(newPosition);
+            
+            // Sync position with other players via network
+            if (this.networkManager && this.networkManager.isConnected()) {
+                this.networkManager.sendPlayerPosition(newPosition);
+            }
+        }
+    }
+
+    // Multiplayer player handling
+    setupMultiplayerCallbacks() {
+        if (!this.networkManager) return;
+        
+        // Handle other players joining
+        this.networkManager.onPlayerJoin = (playerData) => {
+            console.log(`👥 Player joined: ${playerData.name}`);
+            this.addOtherPlayer(playerData);
+        };
+        
+        // Handle other players leaving
+        this.networkManager.onPlayerLeave = (playerId) => {
+            console.log(`👥 Player left: ${playerId}`);
+            this.removeOtherPlayer(playerId);
+        };
+        
+        // Handle other players moving
+        this.networkManager.onPlayerMove = (data) => {
+            this.updateOtherPlayer(data);
+        };
+    }
+    
+    // Add other player to the world
+    addOtherPlayer(playerData) {
+        if (this.players.has(playerData.id)) return;
+        
+        // Create a simple player representation
+        const playerMesh = new THREE.Mesh(
+            new THREE.CapsuleGeometry(0.5, 1, 4, 8),
+            new THREE.MeshLambertMaterial({ color: 0x00ff00 })
+        );
+        
+        playerMesh.position.set(playerData.position.x, playerData.position.y, playerData.position.z);
+        playerMesh.userData = { playerId: playerData.id, playerName: playerData.name };
+        
+        // Add name tag
+        const nameTag = this.createNameTag(playerData.name);
+        nameTag.position.set(0, 2, 0);
+        playerMesh.add(nameTag);
+        
+        this.scene.add(playerMesh);
+        this.players.set(playerData.id, playerMesh);
+        
+        console.log(`✅ Added player ${playerData.name} to the world`);
+    }
+    
+    // Remove other player from the world
+    removeOtherPlayer(playerId) {
+        const playerMesh = this.players.get(playerId);
+        if (playerMesh) {
+            this.scene.remove(playerMesh);
+            this.players.delete(playerId);
+            console.log(`✅ Removed player ${playerId} from the world`);
+        }
+    }
+    
+    // Update other player position
+    updateOtherPlayer(data) {
+        const playerMesh = this.players.get(data.playerId);
+        if (playerMesh) {
+            playerMesh.position.set(data.position.x, data.position.y, data.position.z);
+            if (data.rotation) {
+                playerMesh.rotation.set(data.rotation.x, data.rotation.y, data.rotation.z);
+            }
+        }
+    }
+    
+    // Create name tag for other players
+    createNameTag(name) {
+        const canvas = document.createElement('canvas');
+        const context = canvas.getContext('2d');
+        canvas.width = 256;
+        canvas.height = 64;
+        
+        context.fillStyle = 'rgba(0, 0, 0, 0.7)';
+        context.fillRect(0, 0, canvas.width, canvas.height);
+        
+        context.fillStyle = '#FFD700';
+        context.font = 'bold 24px Arial';
+        context.textAlign = 'center';
+        context.fillText(name, canvas.width / 2, canvas.height / 2 + 8);
+        
+        const texture = new THREE.CanvasTexture(canvas);
+        const material = new THREE.MeshBasicMaterial({ 
+            map: texture, 
+            transparent: true,
+            side: THREE.DoubleSide
+        });
+        
+        const plane = new THREE.Mesh(
+            new THREE.PlaneGeometry(4, 1),
+            material
+        );
+        
+        return plane;
+    }
+
     // System setters
     setUIManager(uiManager) {
         this.uiManager = uiManager;
@@ -1174,6 +1283,7 @@ export class GameEngine {
 
     setNetworkManager(networkManager) {
         this.networkManager = networkManager;
+        this.setupMultiplayerCallbacks(); // Setup callbacks for network manager
     }
     
     setAudioManager(audioManager) {

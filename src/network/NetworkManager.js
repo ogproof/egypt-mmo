@@ -4,10 +4,10 @@ export class NetworkManager {
     constructor() {
         this.socket = null;
         this.isConnected = false;
-        // Try production server first, fallback to localhost for development
+        // Use the actual Railway domain for production
         this.serverUrl = window.location.hostname === 'localhost' 
             ? 'http://localhost:3001' 
-            : 'https://your-egypt-mmo.railway.app'; // Replace with your actual Railway URL
+            : 'https://egypt-mmo-production.up.railway.app';
         this.playerId = null;
         this.players = new Map();
         
@@ -23,7 +23,7 @@ export class NetworkManager {
         this.maxReconnectAttempts = 5;
         this.reconnectDelay = 1000;
 
-        this.isInitialized = false; // Add this line
+        this.isInitialized = false;
     }
 
     async init() {
@@ -84,33 +84,38 @@ export class NetworkManager {
     // Real network methods (for future implementation)
     async connect() {
         try {
-                    this.socket = io(this.serverUrl, {
-            transports: ['websocket'],
-            timeout: 5000, // Reduced timeout
-            reconnection: false, // Disable reconnection for single-player
-            reconnectionAttempts: 0, // No retry attempts
-            reconnectionDelay: 0
-        });
+            console.log(`🌐 Attempting to connect to: ${this.serverUrl}`);
+            
+            this.socket = io(this.serverUrl, {
+                transports: ['websocket'],
+                timeout: 10000, // Increased timeout for Railway
+                reconnection: true, // Enable reconnection for multiplayer
+                reconnectionAttempts: 5,
+                reconnectionDelay: 1000
+            });
 
             this.setupSocketEvents();
             
-                        return new Promise((resolve, reject) => {
+            return new Promise((resolve, reject) => {
                 // Add timeout to prevent hanging
                 const timeout = setTimeout(() => {
                     reject(new Error('Connection timeout - running in single-player mode'));
-                }, 3000);
+                }, 10000);
 
                 this.socket.on('connect', () => {
                     clearTimeout(timeout);
                     this.isConnected = true;
                     this.playerId = this.socket.id;
-                    console.log(`🌐 Connected to server - Player ID: ${this.playerId}`);
+                    console.log(`🌐 Connected to Railway server - Player ID: ${this.playerId}`);
+                    
+                    // Join the world immediately after connection
+                    this.joinWorld();
                     resolve();
                 });
 
                 this.socket.on('connect_error', (error) => {
                     clearTimeout(timeout);
-                    console.log('🌐 Single-player mode: No server available');
+                    console.log('🌐 Connection failed, running in single-player mode:', error.message);
                     reject(new Error('No server available - running in single-player mode'));
                 });
             });
@@ -167,6 +172,24 @@ export class NetworkManager {
         this.isConnected = false;
         this.playerId = null;
         console.log('🌐 Disconnected from server');
+    }
+
+    // Join the game world
+    joinWorld() {
+        if (!this.socket || !this.isConnected) return;
+        
+        const playerData = {
+            name: `Player_${Math.floor(Math.random() * 1000)}`,
+            position: { x: 0, y: 0, z: 0 },
+            rotation: { x: 0, y: 0, z: 0 },
+            level: 1,
+            skills: {},
+            inventory: [],
+            equipment: {}
+        };
+        
+        console.log('🌍 Joining the Egypt MMO world...');
+        this.socket.emit('player_join', playerData);
     }
 
     // Player movement

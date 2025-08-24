@@ -72,10 +72,18 @@ io.on('connection', (socket) => {
     
     // Player joins
     socket.on('player_join', (playerData) => {
+        // Generate a random starting position for the player
+        const startX = (Math.random() - 0.5) * 50; // Random position within 50 units
+        const startZ = (Math.random() - 0.5) * 50;
+        
         const player = {
             id: socket.id,
-            name: playerData.name || 'Player',
-            position: playerData.position || { x: 0, y: 0, z: 0 },
+            name: playerData.name || `Player_${socket.id.slice(-4)}`,
+            position: { 
+                x: startX, 
+                y: 0, 
+                z: startZ 
+            },
             rotation: playerData.rotation || { x: 0, y: 0, z: 0 },
             level: playerData.level || 1,
             skills: playerData.skills || {},
@@ -86,7 +94,9 @@ io.on('connection', (socket) => {
         
         gameState.players.set(socket.id, player);
         
-        // Notify other players
+        console.log(`🌍 Player ${player.name} joined at position (${startX.toFixed(1)}, 0, ${startZ.toFixed(1)})`);
+        
+        // Notify other players about the new player
         socket.broadcast.emit('player_join', player);
         
         // Send current world state to new player
@@ -96,7 +106,14 @@ io.on('connection', (socket) => {
             buildings: Array.from(gameState.buildings.values())
         });
         
-        console.log(`Player ${player.name} joined the world`);
+        // Send confirmation to the player
+        socket.emit('player_joined', {
+            success: true,
+            player: player,
+            message: `Welcome to Egypt MMO, ${player.name}!`
+        });
+        
+        console.log(`✅ Player ${player.name} successfully joined the world`);
     });
     
     // Player movement
@@ -403,12 +420,14 @@ app.get('/api/ssl-status', (req, res) => {
 
 // Test endpoint
 app.get('/test', (req, res) => {
-    console.log(`🧪 Test endpoint called from: ${req.ip}`);
-    res.json({ 
-        message: 'Server is working!', 
+    res.json({
+        message: 'Egypt MMO Server is running!',
         timestamp: new Date().toISOString(),
-        port: PORT,
-        uptime: process.uptime()
+        connectedPlayers: gameState.players.size,
+        players: Array.from(gameState.players.values()).map(p => ({
+            name: p.name,
+            position: p.position
+        }))
     });
 });
 
