@@ -1387,7 +1387,7 @@ export class WorldManager {
     updateDayNightCycleProgress(deltaTime) {
         // Time progression is now controlled by the server for multiplayer sync
         // Only update locally if no server connection (single player mode)
-        if (typeof window !== 'undefined' && window.egyptMMO?.networkManager?.isConnected()) {
+        if (typeof window !== 'undefined' && window.egyptMMO?.networkManager?.isConnected) {
             // Multiplayer mode - time comes from server
             return;
         }
