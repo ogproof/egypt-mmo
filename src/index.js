@@ -24,6 +24,16 @@ class EgyptMMO {
         }
         
         try {
+            // Handle Redux DevTools errors gracefully
+            window.addEventListener('error', (event) => {
+                if (event.error && event.error.message && event.error.message.includes('detectStore')) {
+                    // Ignore Redux DevTools errors
+                    event.preventDefault();
+                    console.log('ℹ️ Redux DevTools error ignored (safe to ignore)');
+                    return;
+                }
+            });
+            
             console.log('🚀 Initializing Egypt MMO...');
             console.log('🔍 Init called at:', new Date().toISOString());
             console.log('🔍 Stack trace:', new Error().stack);
@@ -65,7 +75,21 @@ class EgyptMMO {
             
         } catch (error) {
             console.error('Failed to initialize Egypt MMO:', error);
-            this.showErrorScreen(error);
+            
+            // Show more specific error messages
+            let errorMessage = 'Initialization failed';
+            
+            if (error.message.includes('protectImportantObjects')) {
+                errorMessage = 'World initialization failed - missing required methods';
+            } else if (error.message.includes('detectStore')) {
+                errorMessage = 'Redux DevTools error (safe to ignore)';
+            } else if (error.message.includes('AudioContext')) {
+                errorMessage = 'Audio initialization failed - try clicking on the page first';
+            } else {
+                errorMessage = `Initialization failed: ${error.message}`;
+            }
+            
+            this.showErrorScreen({ message: errorMessage });
         }
     }
 

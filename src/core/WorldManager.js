@@ -47,6 +47,65 @@ export class WorldManager {
         this.isInitialized = true; // Mark as initialized
         console.log('✅ World Manager initialized');
     }
+    
+    // Protect important objects from accidental removal
+    protectImportantObjects() {
+        try {
+            console.log('🛡️ Protecting important world objects...');
+            
+            // Mark terrain as protected
+            if (this.terrain) {
+                this.terrain.userData.protected = true;
+                this.terrain.userData.type = 'terrain';
+            }
+            
+            // Mark lighting as protected
+            if (this.dayNightCycle) {
+                if (this.dayNightCycle.directionalLight) {
+                    this.dayNightCycle.directionalLight.userData.protected = true;
+                    this.dayNightCycle.directionalLight.userData.type = 'lighting';
+                }
+                if (this.dayNightCycle.ambientLight) {
+                    this.dayNightCycle.ambientLight.userData.protected = true;
+                    this.dayNightCycle.ambientLight.userData.type = 'lighting';
+                }
+            }
+            
+            // Mark structures as protected
+            this.pyramids.forEach(pyramid => {
+                if (pyramid) {
+                    pyramid.userData.protected = true;
+                    pyramid.userData.type = 'structure';
+                }
+            });
+            
+            this.temples.forEach(temple => {
+                if (temple) {
+                    temple.userData.protected = true;
+                    temple.userData.type = 'structure';
+                }
+            });
+            
+            this.sphinxes.forEach(sphinx => {
+                if (sphinx) {
+                    sphinx.userData.protected = true;
+                    sphinx.userData.type = 'structure';
+                }
+            });
+            
+            this.obelisks.forEach(obelisk => {
+                if (obelisk) {
+                    obelisk.userData.protected = true;
+                    obelisk.userData.type = 'structure';
+                }
+            });
+            
+            console.log('✅ Important objects protected');
+            
+        } catch (error) {
+            console.error('❌ Error protecting important objects:', error);
+        }
+    }
 
     createTerrain() {
         // Create ground plane with minimal detail for maximum performance
