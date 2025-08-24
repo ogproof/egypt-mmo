@@ -28,9 +28,10 @@ COPY package*.json ./
 # Install only production dependencies
 RUN npm ci --only=production
 
-# Copy built files from builder stage
+# Copy the entire project structure from builder
 COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/server ./server
+COPY --from=builder /app/package*.json ./
 
 # Expose port
 EXPOSE 3000
