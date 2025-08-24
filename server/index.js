@@ -17,6 +17,14 @@ const io = socketIo(server, {
 app.use(cors());
 app.use(express.json());
 
+// Add request logging middleware
+app.use((req, res, next) => {
+    console.log(`📥 Incoming request: ${req.method} ${req.url} from ${req.ip}`);
+    console.log(`📥 Headers:`, req.headers);
+    console.log(`📥 User-Agent: ${req.headers['user-agent']}`);
+    next();
+});
+
 // Security headers for Railway
 app.use((req, res, next) => {
     // Force HTTPS on Railway (detect by PORT environment variable)
@@ -452,6 +460,10 @@ server.listen(PORT, '0.0.0.0', () => {
     } else {
         console.log(`❌ Dist folder NOT found at: ${distPath}`);
     }
+    
+    console.log(`🎯 Server is now ready to accept requests on port ${PORT}`);
+    console.log(`🎯 Health check endpoint: http://0.0.0.0:${PORT}/health`);
+    console.log(`🎯 Root endpoint: http://0.0.0.0:${PORT}/`);
 });
 
 // Graceful shutdown
