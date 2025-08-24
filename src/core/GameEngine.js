@@ -104,6 +104,9 @@ export class GameEngine {
         // Setup debug controls
         this.setupDebugControls();
         
+        // Ensure all game objects have safe update methods
+        this.ensureSafeUpdateMethods();
+        
         this.isInitialized = true; // Mark as initialized
         console.log('✅ Game Engine initialized');
         
@@ -1000,43 +1003,151 @@ export class GameEngine {
         }
     }
     
-    // Main animation loop
+    // Main game loop
     animate() {
         if (!this.isRunning) return;
         
-        requestAnimationFrame(this.animate);
-        
-        const currentTime = performance.now();
-        const deltaTime = (currentTime - this.lastTime) / 1000;
-        this.lastTime = currentTime;
-        
-        // Update FPS
-        this.frameCount++;
-        if (this.frameCount % 60 === 0) {
-            this.fps = Math.round(1 / deltaTime);
+        try {
+            const deltaTime = this.clock.getDelta();
+            const currentTime = this.clock.getElapsedTime();
+            
+            // Limit delta time to prevent spiral of death
+            const clampedDeltaTime = Math.min(deltaTime, 0.1); // Max 100ms per frame
+            
+            // Update FPS counter
+            this.frameCount++;
+            if (currentTime - this.lastTime >= 1.0) {
+                this.fps = this.frameCount;
+                this.frameCount = 0;
+                this.lastTime = currentTime;
+                
+                // Log performance warnings
+                if (this.fps < 30) {
+                    console.warn(`⚠️ Low FPS detected: ${this.fps} FPS`);
+                }
+            }
+            
+            // Update game systems with error handling
+            this.updateGameSystems(clampedDeltaTime, currentTime);
+            
+            // Render the scene
+            if (this.renderer && this.scene && this.camera) {
+                this.renderer.render(this.scene, this.camera);
+            }
+            
+            // Continue the loop
+            requestAnimationFrame(this.animate);
+            
+        } catch (error) {
+            console.error('🚨 Game loop error:', error);
+            console.error('🚨 Error stack:', error.stack);
+            
+            // Try to recover by continuing the loop
+            setTimeout(() => {
+                if (this.isRunning) {
+                    requestAnimationFrame(this.animate);
+                }
+            }, 100);
         }
-        
-        // Update game systems
-        if (this.worldManager) {
-            this.worldManager.update(deltaTime);
+    }
+    
+    // Update game systems with individual error handling
+    updateGameSystems(deltaTime, currentTime) {
+        try {
+            // Update player
+            if (this.player && typeof this.player.update === 'function') {
+                this.player.update(deltaTime);
+            }
+            
+            // Update world manager
+            if (this.worldManager && typeof this.worldManager.update === 'function') {
+                this.worldManager.update(deltaTime);
+            }
+            
+            // Update grid manager
+            if (this.gridManager && typeof this.gridManager.update === 'function') {
+                this.gridManager.update(deltaTime);
+            }
+            
+            // Update input manager
+            if (this.inputManager && typeof this.inputManager.update === 'function') {
+                this.inputManager.update(deltaTime);
+            }
+            
+            // Update crafting system
+            if (this.craftingSystem && typeof this.craftingSystem.update === 'function') {
+                this.craftingSystem.update(deltaTime);
+            }
+            
+            // Update inventory system
+            if (this.inventorySystem && typeof this.inventorySystem.update === 'function') {
+                this.inventorySystem.update(deltaTime);
+            }
+            
+            // Update other players
+            this.updateOtherPlayers(deltaTime);
+            
+        } catch (error) {
+            console.error('🚨 System update error:', error);
+            console.error('🚨 Failed system update at time:', currentTime);
         }
-        
-        if (this.player) {
-            this.player.update(deltaTime);
+    }
+    
+    // Update other players with error handling
+    updateOtherPlayers(deltaTime) {
+        try {
+            this.players.forEach((playerMesh, playerId) => {
+                if (playerMesh && typeof playerMesh.update === 'function') {
+                    playerMesh.update(deltaTime);
+                }
+            });
+        } catch (error) {
+            console.error('🚨 Other players update error:', error);
         }
-        
-        // Update input manager
-        if (this.inputManager) {
-            this.inputManager.update();
+    }
+    
+    // Ensure all game objects have safe update methods
+    ensureSafeUpdateMethods() {
+        try {
+            // Ensure player has update method
+            if (this.player && typeof this.player.update !== 'function') {
+                this.player.update = function(deltaTime) { return; };
+                console.log('🔧 Added safe update method to player');
+            }
+            
+            // Ensure world manager has update method
+            if (this.worldManager && typeof this.worldManager.update !== 'function') {
+                this.worldManager.update = function(deltaTime) { return; };
+                console.log('🔧 Added safe update method to world manager');
+            }
+            
+            // Ensure grid manager has update method
+            if (this.gridManager && typeof this.gridManager.update !== 'function') {
+                this.gridManager.update = function(deltaTime) { return; };
+                console.log('🔧 Added safe update method to grid manager');
+            }
+            
+            // Ensure input manager has update method
+            if (this.inputManager && typeof this.inputManager.update !== 'function') {
+                this.inputManager.update = function(deltaTime) { return; };
+                console.log('🔧 Added safe update method to input manager');
+            }
+            
+            // Ensure crafting system has update method
+            if (this.craftingSystem && typeof this.craftingSystem.update !== 'function') {
+                this.craftingSystem.update = function(deltaTime) { return; };
+                console.log('🔧 Added safe update method to crafting system');
+            }
+            
+            // Ensure inventory system has update method
+            if (this.inventorySystem && typeof this.inventorySystem.update !== 'function') {
+                this.inventorySystem.update = function(deltaTime) { return; };
+                console.log('🔧 Added safe update method to inventory system');
+            }
+            
+        } catch (error) {
+            console.error('🚨 Error ensuring safe update methods:', error);
         }
-        
-        // Render the scene
-        if (this.renderer && this.scene && this.camera) {
-            this.renderer.render(this.scene, this.camera);
-        }
-        
-        // Update performance metrics
-        this.updatePerformanceMetrics();
     }
 
     handleResize() {
@@ -1226,24 +1337,41 @@ export class GameEngine {
     addOtherPlayer(playerData) {
         if (this.players.has(playerData.id)) return;
         
-        // Create a simple player representation
-        const playerMesh = new THREE.Mesh(
-            new THREE.CapsuleGeometry(0.5, 1, 4, 8),
-            new THREE.MeshLambertMaterial({ color: 0x00ff00 })
-        );
-        
-        playerMesh.position.set(playerData.position.x, playerData.position.y, playerData.position.z);
-        playerMesh.userData = { playerId: playerData.id, playerName: playerData.name };
-        
-        // Add name tag
-        const nameTag = this.createNameTag(playerData.name);
-        nameTag.position.set(0, 2, 0);
-        playerMesh.add(nameTag);
-        
-        this.scene.add(playerMesh);
-        this.players.set(playerData.id, playerMesh);
-        
-        console.log(`✅ Added player ${playerData.name} to the world`);
+        try {
+            console.log(`👥 Creating player mesh for: ${playerData.name}`);
+            
+            // Create a simple player representation
+            const playerMesh = new THREE.Mesh(
+                new THREE.CapsuleGeometry(0.5, 1, 4, 8),
+                new THREE.MeshLambertMaterial({ color: 0x00ff00 })
+            );
+            
+            playerMesh.position.set(playerData.position.x, playerData.position.y, playerData.position.z);
+            playerMesh.userData = { 
+                playerId: playerData.id, 
+                playerName: playerData.name,
+                isOtherPlayer: true
+            };
+            
+            // Add name tag
+            const nameTag = this.createNameTag(playerData.name);
+            nameTag.position.set(0, 2, 0);
+            playerMesh.add(nameTag);
+            
+            // Add a safe update method that does nothing (prevents crashes)
+            playerMesh.update = function(deltaTime) {
+                // Other players don't need complex updates, just keep the method safe
+                return;
+            };
+            
+            this.scene.add(playerMesh);
+            this.players.set(playerData.id, playerMesh);
+            
+            console.log(`✅ Added player ${playerData.name} to the world`);
+            
+        } catch (error) {
+            console.error(`❌ Failed to add player ${playerData.name}:`, error);
+        }
     }
     
     // Remove other player from the world
