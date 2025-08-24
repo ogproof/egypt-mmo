@@ -429,7 +429,7 @@ app.get('*', (req, res) => {
 });
 
 // Start server
-const PORT = process.env.PORT || 3001;
+const PORT = 3000; // Force port 3000 for Railway
 server.listen(PORT, '0.0.0.0', () => {
     const railwayDomain = process.env.RAILWAY_PUBLIC_DOMAIN || 'railway.app';
     console.log(`🏺 Egypt MMO Server running on port ${PORT}`);
