@@ -443,7 +443,7 @@ app.get('*', (req, res) => {
 });
 
 // Start server
-const PORT = 3000; // Force port 3000 for Railway
+const PORT = process.env.PORT || 3000; // Use Railway's PORT or fallback to 3000
 server.listen(PORT, '0.0.0.0', () => {
     const railwayDomain = process.env.RAILWAY_PUBLIC_DOMAIN || 'railway.app';
     console.log(`🏺 Egypt MMO Server running on port ${PORT}`);
@@ -455,12 +455,6 @@ server.listen(PORT, '0.0.0.0', () => {
     console.log(`📁 Current directory: ${__dirname}`);
     console.log(`📁 Dist path: ${path.join(__dirname, '../dist')}`);
     console.log(`🔍 Checking if dist folder exists...`);
-    
-    // Log Railway environment variables
-    console.log(`🔧 Railway Environment Variables:`);
-    console.log(`🔧 PORT: ${process.env.PORT || 'not set'}`);
-    console.log(`🔧 RAILWAY_PUBLIC_DOMAIN: ${process.env.RAILWAY_PUBLIC_DOMAIN || 'not set'}`);
-    console.log(`🔧 RAILWAY_ENVIRONMENT: ${process.env.RAILWAY_ENVIRONMENT || 'not set'}`);
     
     // Check if dist folder exists
     const fs = require('fs');
