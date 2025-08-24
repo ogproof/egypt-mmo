@@ -91,7 +91,9 @@ export class NetworkManager {
                 timeout: 10000, // Increased timeout for Railway
                 reconnection: true, // Enable reconnection for multiplayer
                 reconnectionAttempts: 5,
-                reconnectionDelay: 1000
+                reconnectionDelay: 1000,
+                pingTimeout: 60000, // 60 second ping timeout
+                pingInterval: 25000  // 25 second ping interval
             });
 
             this.setupSocketEvents();
@@ -107,6 +109,9 @@ export class NetworkManager {
                     this.isConnected = true;
                     this.playerId = this.socket.id;
                     console.log(`🌐 Connected to Railway server - Player ID: ${this.playerId}`);
+                    
+                    // Start connection heartbeat
+                    this.startHeartbeat();
                     
                     // Join the world immediately after connection
                     this.joinWorld();
@@ -124,15 +129,56 @@ export class NetworkManager {
             throw error;
         }
     }
+    
+    // Start connection heartbeat
+    startHeartbeat() {
+        if (this.heartbeatInterval) {
+            clearInterval(this.heartbeatInterval);
+        }
+        
+        this.heartbeatInterval = setInterval(() => {
+            if (this.socket && this.isConnected) {
+                this.socket.emit('heartbeat', { timestamp: Date.now() });
+            }
+        }, 30000); // Send heartbeat every 30 seconds
+    }
+    
+    // Stop connection heartbeat
+    stopHeartbeat() {
+        if (this.heartbeatInterval) {
+            clearInterval(this.heartbeatInterval);
+            this.heartbeatInterval = null;
+        }
+    }
 
     setupSocketEvents() {
         if (!this.socket) return;
 
         console.log('🔧 Setting up Socket.IO event handlers...');
 
-        this.socket.on('disconnect', () => {
+        this.socket.on('disconnect', (reason) => {
             this.isConnected = false;
-            console.log('🌐 Disconnected from server');
+            console.log('🌐 Disconnected from server. Reason:', reason);
+            
+            // Attempt to reconnect if it wasn't intentional
+            if (reason !== 'io client disconnect') {
+                console.log('🔄 Attempting to reconnect...');
+                setTimeout(() => {
+                    if (!this.isConnected) {
+                        this.connect().catch(err => {
+                            console.log('🔄 Reconnection failed:', err.message);
+                        });
+                    }
+                }, 2000);
+            }
+        });
+
+        this.socket.on('connect_error', (error) => {
+            console.log('🌐 Connection error:', error.message);
+        });
+
+        this.socket.on('error', (error) => {
+            console.log('🌐 Socket error:', error);
         });
 
         this.socket.on('player_join', (playerData) => {
@@ -194,6 +240,10 @@ export class NetworkManager {
         }
         this.isConnected = false;
         this.playerId = null;
+        
+        // Stop heartbeat
+        this.stopHeartbeat();
+        
         console.log('🌐 Disconnected from server');
     }
 

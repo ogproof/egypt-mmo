@@ -19,9 +19,12 @@ app.use(express.json());
 
 // Add request logging middleware
 app.use((req, res, next) => {
+    // Only log game-related requests, not static assets
+    if (req.path.startsWith('/sounds/') || req.path.startsWith('/assets/')) {
+        return next(); // Skip logging for static assets
+    }
+    
     console.log(`📥 Incoming request: ${req.method} ${req.url} from ${req.ip}`);
-    console.log(`📥 Headers:`, req.headers);
-    console.log(`📥 User-Agent: ${req.headers['user-agent']}`);
     
     // Log response completion
     res.on('finish', () => {
@@ -71,6 +74,9 @@ io.on('connection', (socket) => {
     console.log(`🔌 New socket connection: ${socket.id}`);
     console.log(`📊 Current players in world: ${gameState.players.size}`);
     
+    // Track connection time
+    const connectionTime = Date.now();
+    
     // Player joins
     socket.on('player_join', (playerData) => {
         console.log(`🌍 Player join request from ${socket.id}:`, playerData);
@@ -92,7 +98,7 @@ io.on('connection', (socket) => {
             skills: playerData.skills || {},
             inventory: playerData.inventory || [],
             equipment: playerData.equipment || {},
-            connectedAt: Date.now()
+            connectedAt: connectionTime
         };
         
         gameState.players.set(socket.id, player);
@@ -165,6 +171,12 @@ io.on('connection', (socket) => {
         }
     });
     
+    // Heartbeat to keep connection alive
+    socket.on('heartbeat', (data) => {
+        // Just acknowledge the heartbeat to keep connection alive
+        socket.emit('heartbeat_ack', { timestamp: data.timestamp });
+    });
+    
     // Chat messages
     socket.on('chat_message', (data) => {
         const player = gameState.players.get(socket.id);
@@ -198,16 +210,19 @@ io.on('connection', (socket) => {
     });
     
     // Disconnect handling
-    socket.on('disconnect', () => {
+    socket.on('disconnect', (reason) => {
         const player = gameState.players.get(socket.id);
         if (player) {
-            console.log(`Player ${player.name} disconnected`);
+            const connectionDuration = Date.now() - connectionTime;
+            console.log(`🔌 Player ${player.name} disconnected after ${connectionDuration}ms. Reason: ${reason}`);
             
             // Remove from game state
             gameState.players.delete(socket.id);
             
             // Notify other players
             socket.broadcast.emit('player_leave', socket.id);
+            
+            console.log(`📊 Players remaining in world: ${gameState.players.size}`);
         }
     });
 });
