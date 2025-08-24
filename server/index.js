@@ -390,17 +390,42 @@ app.get('/api/ssl-status', (req, res) => {
 
 // Health check
 app.get('/health', (req, res) => {
-    res.json({ 
+    console.log(`🏥 Health check requested from: ${req.ip}`);
+    console.log(`🏥 Headers:`, req.headers);
+    
+    const healthData = { 
         status: 'healthy', 
         players: gameState.players.size,
         uptime: process.uptime(),
-        ssl: req.headers['x-forwarded-proto'] === 'https'
-    });
+        ssl: req.headers['x-forwarded-proto'] === 'https',
+        timestamp: new Date().toISOString(),
+        distExists: require('fs').existsSync(path.join(__dirname, '../dist'))
+    };
+    
+    console.log(`🏥 Health check response:`, healthData);
+    res.json(healthData);
 });
 
 // Serve the game (both development and production)
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../dist/index.html'));
+    console.log(`🌐 Request to: ${req.url} from ${req.ip}`);
+    console.log(`🌐 Headers:`, req.headers);
+    
+    const indexPath = path.join(__dirname, '../dist/index.html');
+    console.log(`🌐 Serving index.html from: ${indexPath}`);
+    
+    if (require('fs').existsSync(indexPath)) {
+        console.log(`✅ index.html found, serving...`);
+        res.sendFile(indexPath);
+    } else {
+        console.log(`❌ index.html NOT found at: ${indexPath}`);
+        res.status(404).json({ 
+            error: 'Game files not found',
+            path: indexPath,
+            currentDir: __dirname,
+            files: require('fs').readdirSync(__dirname)
+        });
+    }
 });
 
 // Start server
@@ -413,6 +438,20 @@ server.listen(PORT, '0.0.0.0', () => {
     console.log(`🚀 Server ready for multiplayer connections!`);
     console.log(`🔒 SSL: ${process.env.PORT ? 'Enabled (Railway)' : 'Local development'}`);
     console.log(`📡 Listening on: 0.0.0.0:${PORT}`);
+    console.log(`📁 Current directory: ${__dirname}`);
+    console.log(`📁 Dist path: ${path.join(__dirname, '../dist')}`);
+    console.log(`🔍 Checking if dist folder exists...`);
+    
+    // Check if dist folder exists
+    const fs = require('fs');
+    const distPath = path.join(__dirname, '../dist');
+    if (fs.existsSync(distPath)) {
+        console.log(`✅ Dist folder exists at: ${distPath}`);
+        const files = fs.readdirSync(distPath);
+        console.log(`📁 Dist folder contains: ${files.join(', ')}`);
+    } else {
+        console.log(`❌ Dist folder NOT found at: ${distPath}`);
+    }
 });
 
 // Graceful shutdown
