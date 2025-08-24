@@ -217,6 +217,15 @@ export class NetworkManager {
             }
         });
 
+        this.socket.on('world_time_update', (timeData) => {
+            console.log('🕐 Received world_time_update event:', timeData);
+            if (this.onTimeUpdate) {
+                this.onTimeUpdate(timeData);
+            } else {
+                console.log('❌ No onTimeUpdate callback set');
+            }
+        });
+
         this.socket.on('chat_message', (message) => {
             console.log('💬 Received chat_message event:', message);
             if (this.onChatMessage) {

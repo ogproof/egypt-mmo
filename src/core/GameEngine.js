@@ -1315,12 +1315,24 @@ export class GameEngine {
             this.handleWorldStateUpdate(worldData);
         };
         
+        // Handle time updates
+        this.networkManager.onTimeUpdate = (timeData) => {
+            console.log(`🕐 Time update received:`, timeData);
+            this.handleTimeUpdate(timeData);
+        };
+        
         console.log('✅ Multiplayer callbacks set up successfully');
     }
     
     // Handle world state update from server
     handleWorldStateUpdate(worldData) {
         console.log(`🌍 Processing world state with ${worldData.players?.length || 0} players`);
+        
+        // Sync world time first
+        if (worldData.worldTime && this.worldManager && this.worldManager.dayNightCycle) {
+            this.worldManager.dayNightCycle.time = worldData.worldTime.time;
+            console.log(`🕐 Initial time sync: ${(worldData.worldTime.time * 24).toFixed(1)}h`);
+        }
         
         if (worldData.players) {
             worldData.players.forEach(playerData => {
@@ -1330,6 +1342,15 @@ export class GameEngine {
                     this.addOtherPlayer(playerData);
                 }
             });
+        }
+    }
+    
+    // Handle time update from server
+    handleTimeUpdate(timeData) {
+        if (this.worldManager && this.worldManager.dayNightCycle) {
+            // Sync the world time with the server
+            this.worldManager.dayNightCycle.time = timeData.time;
+            console.log(`🕐 Synced world time to: ${(timeData.time * 24).toFixed(1)}h`);
         }
     }
     

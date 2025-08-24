@@ -1326,23 +1326,19 @@ export class WorldManager {
     }
     
     updateDayNightCycleProgress(deltaTime) {
-        // Progress the day/night cycle
-        this.dayNightCycle.time += this.dayNightCycle.cycleSpeed * deltaTime * 60;
-        
-        // Wrap around when we reach a full cycle
-        if (this.dayNightCycle.time >= 1.0) {
-            this.dayNightCycle.time = 0.0;
+        // Time progression is now controlled by the server for multiplayer sync
+        // Only update locally if no server connection (single player mode)
+        if (typeof window !== 'undefined' && window.egyptMMO?.networkManager?.isConnected()) {
+            // Multiplayer mode - time comes from server
+            return;
         }
         
-        // Update the lighting and sky
-        this.updateDayNightCycle();
+        // Single player mode - local time progression
+        this.dayNightCycle.time += this.dayNightCycle.cycleSpeed * deltaTime * 60;
         
-        // Add some atmospheric effects
-        this.updateAtmosphericEffects();
-        
-        // Notify UI of time change
-        if (this.uiManager) {
-            this.uiManager.updateTimeDisplay(this.dayNightCycle.time);
+        // Wrap around at 24 hours
+        if (this.dayNightCycle.time >= 1.0) {
+            this.dayNightCycle.time = 0.0;
         }
     }
     
@@ -2038,342 +2034,25 @@ export class WorldManager {
             });
         }
         
-        console.log(`🌍 World integrity check: ${validObjects} valid, ${invalidObjects} invalid out of ${totalObjects} total objects`);
+        // Log validation results
+        console.log(`🌍 World integrity validation complete:`);
+        console.log(`   Total objects: ${totalObjects}`);
+        console.log(`   Valid objects: ${validObjects}`);
+        console.log(`   Invalid objects: ${invalidObjects}`);
         
-        if (invalidObjects > 0) {
-            console.warn(`⚠️ ${invalidObjects} invalid objects detected - running cleanup...`);
-            this.cleanupCorruptedObjects();
-        }
-        
-        return { total: totalObjects, valid: validObjects, invalid: invalidObjects };
+        return {
+            total: totalObjects,
+            valid: validObjects,
+            invalid: invalidObjects
+        };
     }
     
-    // Debug object visibility and prevent disappearing
-    debugObjectVisibility() {
-        if (!this.camera) return;
-        
-        const cameraPos = this.camera.position;
-        console.log('🔍 Debugging object visibility near camera:', cameraPos.toArray().map(v => v.toFixed(1)));
-        
-        let hiddenObjects = 0;
-        let visibleObjects = 0;
-        
-        // Check pyramids
-        this.pyramids.forEach((pyramid, index) => {
-            const distance = cameraPos.distanceTo(pyramid.position);
-            if (!pyramid.visible) {
-                hiddenObjects++;
-                console.warn(`⚠️ Hidden pyramid at index ${index}, distance: ${distance.toFixed(1)}`);
-                // Force visibility
-                pyramid.visible = true;
-            } else {
-                visibleObjects++;
-            }
-        });
-        
-        // Check temples
-        this.temples.forEach((temple, index) => {
-            const distance = cameraPos.distanceTo(temple.position);
-            if (!temple.visible) {
-                hiddenObjects++;
-                console.warn(`⚠️ Hidden temple at index ${index}, distance: ${distance.toFixed(1)}`);
-                // Force visibility
-                temple.visible = true;
-            } else {
-                visibleObjects++;
-            }
-        });
-        
-        // Check sphinxes
-        this.sphinxes.forEach((sphinx, index) => {
-            const distance = cameraPos.distanceTo(sphinx.position);
-            if (!sphinx.visible) {
-                hiddenObjects++;
-                console.warn(`⚠️ Hidden sphinx at index ${index}, distance: ${distance.toFixed(1)}`);
-                // Force visibility
-                sphinx.visible = true;
-            } else {
-                visibleObjects++;
-            }
-        });
-        
-        // Check obelisks
-        this.obelisks.forEach((obelisk, index) => {
-            const distance = cameraPos.distanceTo(obelisk.position);
-            if (!obelisk.visible) {
-                hiddenObjects++;
-                console.warn(`⚠️ Hidden obelisk at index ${index}, distance: ${distance.toFixed(1)}`);
-                // Force visibility
-                obelisk.visible = true;
-            } else {
-                visibleObjects++;
-            }
-        });
-        
-        // Check resource nodes
-        this.resourceNodes.forEach((resource, index) => {
-            const distance = cameraPos.distanceTo(resource.position);
-            if (!resource.visible) {
-                hiddenObjects++;
-                console.warn(`⚠️ Hidden resource at index ${index}, distance: ${distance.toFixed(1)}`);
-                // Force visibility
-                resource.visible = true;
-            } else {
-                visibleObjects++;
-            }
-        });
-        
-        // Check decorations
-        this.decorations.forEach((decoration, index) => {
-            const distance = cameraPos.distanceTo(decoration.position);
-            if (!decoration.visible) {
-                hiddenObjects++;
-                console.warn(`⚠️ Hidden decoration at index ${index}, distance: ${distance.toFixed(1)}`);
-                // Force visibility
-                decoration.visible = true;
-            } else {
-                visibleObjects++;
-            }
-        });
-        
-        if (hiddenObjects > 0) {
-            console.warn(`🔧 Fixed ${hiddenObjects} hidden objects, ${visibleObjects} were already visible`);
-        } else {
-            console.log(`✅ All objects are visible (${visibleObjects} total)`);
-        }
-        
-        return { hidden: hiddenObjects, visible: visibleObjects };
-    }
-    
-    // Force all objects to be visible (emergency fix)
-    forceAllObjectsVisible() {
-        console.log('🔧 Force making all objects visible...');
-        
-        this.pyramids.forEach(obj => obj.visible = true);
-        this.temples.forEach(obj => obj.visible = true);
-        this.sphinxes.forEach(obj => obj.visible = true);
-        this.obelisks.forEach(obj => obj.visible = true);
-        this.resourceNodes.forEach(obj => obj.visible = true);
-        this.decorations.forEach(obj => obj.visible = true);
-        
-        console.log('✅ All objects forced to visible');
-    }
-    
-    // Protect important objects from accidental removal
-    protectImportantObjects() {
-        // Mark terrain as protected
-        if (this.terrain) {
-            this.terrain.userData.protected = true;
-            this.terrain.userData.critical = true;
-        }
-        
-        // Mark day/night cycle lights as protected
-        if (this.dayNightCycle) {
-            if (this.dayNightCycle.ambientLight) {
-                this.dayNightCycle.ambientLight.userData.protected = true;
-                this.dayNightCycle.ambientLight.userData.critical = true;
-            }
-            if (this.dayNightCycle.directionalLight) {
-                this.dayNightCycle.directionalLight.userData.protected = true;
-                this.dayNightCycle.directionalLight.userData.critical = true;
-            }
-        }
-        
-        // Mark player torch light as protected
-        if (this.torchLight) { // Changed from this.playerTorchLight to this.torchLight
-            this.torchLight.userData.protected = true;
-            this.torchLight.userData.critical = true;
-        }
-    }
-    
-    // Enhanced object removal that respects protected objects
-    removeObjectSafely(object, type, index) {
-        // Don't remove protected objects
-        if (object.userData && object.userData.protected) {
-            console.warn(`⚠️ Attempted to remove protected ${type}, skipping:`, object);
-            return false;
-        }
-        
-        try {
-            // Remove from scene
-            if (this.scene && object.parent) {
-                this.scene.remove(object);
-            }
-            
-            // Dispose of geometry and material
-            if (object.geometry) {
-                object.geometry.dispose();
-            }
-            if (object.material) {
-                if (Array.isArray(object.material)) {
-                    object.material.forEach(mat => mat.dispose());
-                } else {
-                    object.material.dispose();
-                }
-            }
-            
-            // Remove from tracking arrays
-            switch (type) {
-                case 'pyramid':
-                    this.pyramids.splice(index, 1);
-                    break;
-                case 'temple':
-                    this.temples.splice(index, 1);
-                    break;
-                case 'sphinx':
-                    this.sphinxes.splice(index, 1);
-                    break;
-                case 'obelisk':
-                    this.obelisks.splice(index, 1);
-                    break;
-                case 'resource':
-                    this.resourceNodes.splice(index, 1);
-                    break;
-                case 'decoration':
-                    this.decorations.splice(index, 1);
-                    break;
-            }
-            
-            console.log(`✅ Successfully removed corrupted ${type} at index ${index}`);
-            return true;
-        } catch (error) {
-            console.error(`❌ Error removing corrupted ${type}:`, error);
-            return false;
-        }
-    }
-    
-    // Monitor object health and prevent drift
-    monitorObjectHealth() {
-        const maxDriftDistance = this.worldSize * 0.1; // 10% of world size
-        const center = new THREE.Vector3(0, 0, 0);
-        
-        // Check for objects that have drifted too far
-        const driftedObjects = [];
-        
-        this.pyramids.forEach((pyramid, index) => {
-            if (pyramid.position.distanceTo(center) > maxDriftDistance) {
-                driftedObjects.push({ object: pyramid, type: 'pyramid', index, distance: pyramid.position.distanceTo(center) });
-            }
-        });
-        
-        this.temples.forEach((temple, index) => {
-            if (temple.position.distanceTo(center) > maxDriftDistance) {
-                driftedObjects.push({ object: temple, type: 'temple', index, distance: temple.position.distanceTo(center) });
-            }
-        });
-        
-        this.sphinxes.forEach((sphinx, index) => {
-            if (sphinx.position.distanceTo(center) > maxDriftDistance) {
-                driftedObjects.push({ object: sphinx, type: 'sphinx', index, distance: sphinx.position.distanceTo(center) });
-            }
-        });
-        
-        this.obelisks.forEach((obelisk, index) => {
-            if (obelisk.position.distanceTo(center) > maxDriftDistance) {
-                driftedObjects.push({ object: obelisk, type: 'obelisk', index, distance: obelisk.position.distanceTo(center) });
-            }
-        });
-        
-        // Log drifted objects
-        if (driftedObjects.length > 0) {
-            console.warn(`⚠️ ${driftedObjects.length} objects have drifted too far from center:`);
-            driftedObjects.forEach(({ type, index, distance }) => {
-                console.warn(`  - ${type} at index ${index}: ${distance.toFixed(1)} units from center`);
-            });
-        }
-        
-        return driftedObjects;
-    }
-    
-    // Restore drifted objects to their original positions
-    restoreDriftedObjects() {
-        const driftedObjects = this.monitorObjectHealth();
-        
-        driftedObjects.forEach(({ object, type, index }) => {
-            // Try to restore to a reasonable position
-            const restoredPosition = this.getRestoredPosition(object, type);
-            if (restoredPosition) {
-                object.position.copy(restoredPosition);
-                console.log(`✅ Restored ${type} at index ${index} to position:`, restoredPosition);
-            }
-        });
-    }
-    
-    getRestoredPosition(object, type) {
-        // Generate a reasonable position based on object type and world layout
-        const worldRadius = this.worldSize / 2;
-        
-        switch (type) {
-            case 'pyramid':
-                return new THREE.Vector3(
-                    (Math.random() - 0.5) * worldRadius * 0.8,
-                    0,
-                    (Math.random() - 0.5) * worldRadius * 0.8
-                );
-            case 'temple':
-                return new THREE.Vector3(
-                    (Math.random() - 0.5) * worldRadius * 0.6,
-                    0,
-                    (Math.random() - 0.5) * worldRadius * 0.6
-                );
-            case 'sphinx':
-                return new THREE.Vector3(
-                    (Math.random() - 0.5) * worldRadius * 0.7,
-                    0,
-                    (Math.random() - 0.5) * worldRadius * 0.7
-                );
-            case 'obelisk':
-                return new THREE.Vector3(
-                    (Math.random() - 0.5) * worldRadius * 0.5,
-                    0,
-                    (Math.random() - 0.5) * worldRadius * 0.5
-                );
-            default:
-                return new THREE.Vector3(
-                    (Math.random() - 0.5) * worldRadius * 0.4,
-                    0,
-                    (Math.random() - 0.5) * worldRadius * 0.4
-                );
-        }
-    }
-
-    // Safety check to ensure objects close to player are never hidden
-    ensureCloseObjectsVisible() {
-        if (!this.camera) return;
-        
-        const cameraPos = this.camera.position;
-        const safetyDistance = 100; // Objects within this distance should always be visible
-        
-        const allObjects = [
-            ...this.pyramids,
-            ...this.temples,
-            ...this.sphinxes,
-            ...this.obelisks,
-            ...this.resourceNodes,
-            ...this.decorations
-        ];
-        
-        let closeObjectsCount = 0;
-        
-        allObjects.forEach(object => {
-            if (object && object.position) {
-                const distance = cameraPos.distanceTo(object.position);
-                if (distance <= safetyDistance) {
-                    // Force visibility for close objects
-                    object.visible = true;
-                    closeObjectsCount++;
-                    
-                    // Ensure full detail for close objects
-                    if (object.geometry && object.geometry.attributes.position) {
-                        object.geometry.setDrawRange(0, object.geometry.attributes.position.count);
-                    }
-                }
-            }
-        });
-        
-        // Debug log occasionally
-        if (closeObjectsCount > 0 && this.frameCount % 300 === 0) { // Every 5 seconds
-            console.log(`🔒 Safety check: Ensuring ${closeObjectsCount} objects within ${safetyDistance}m are visible`);
-        }
+    // Check if an object is corrupted
+    isObjectCorrupted(object) {
+        if (!object) return true;
+        if (!object.isObject3D) return true;
+        if (!object.position) return true;
+        if (!object.geometry) return true;
+        return false;
     }
 }

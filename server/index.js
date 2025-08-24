@@ -66,8 +66,38 @@ const gameState = {
         chunks: new Map()
     },
     resources: new Map(),
-    buildings: new Map()
+    buildings: new Map(),
+    // Add synchronized world time
+    worldTime: {
+        time: 0.35, // Start at 8:24 AM (same as client)
+        cycleSpeed: 0.001, // Same speed as client
+        lastUpdate: Date.now()
+    }
 };
+
+// Update world time every second
+setInterval(() => {
+    const now = Date.now();
+    const deltaTime = (now - gameState.worldTime.lastUpdate) / 1000;
+    
+    // Update time (same calculation as client)
+    gameState.worldTime.time += gameState.worldTime.cycleSpeed * deltaTime * 60;
+    
+    // Wrap around at 24 hours
+    if (gameState.worldTime.time >= 1.0) {
+        gameState.worldTime.time = 0.0;
+    }
+    
+    gameState.worldTime.lastUpdate = now;
+    
+    // Broadcast time update to all connected players
+    if (gameState.players.size > 0) {
+        io.emit('world_time_update', {
+            time: gameState.worldTime.time,
+            timestamp: now
+        });
+    }
+}, 1000); // Update every second
 
 // Socket.io connection handling
 io.on('connection', (socket) => {
@@ -114,11 +144,16 @@ io.on('connection', (socket) => {
         const worldState = {
             players: Array.from(gameState.players.values()),
             resources: Array.from(gameState.resources.values()),
-            buildings: Array.from(gameState.buildings.values())
+            buildings: Array.from(gameState.buildings.values()),
+            // Include synchronized world time
+            worldTime: {
+                time: gameState.worldTime.time,
+                timestamp: gameState.worldTime.lastUpdate
+            }
         };
         
         socket.emit('world_state', worldState);
-        console.log(`🌍 Sent world state to ${player.name} with ${worldState.players.length} players`);
+        console.log(`🌍 Sent world state to ${player.name} with ${worldState.players.length} players and time ${(gameState.worldTime.time * 24).toFixed(1)}h`);
         
         // Send confirmation to the player
         socket.emit('player_joined', {
@@ -456,6 +491,12 @@ app.get('/debug', (req, res) => {
         })),
         resources: gameState.resources.size,
         buildings: gameState.buildings.size,
+        // Add world time info
+        worldTime: {
+            time: gameState.worldTime.time,
+            timeInHours: (gameState.worldTime.time * 24).toFixed(1),
+            lastUpdate: new Date(gameState.worldTime.lastUpdate).toISOString()
+        },
         uptime: process.uptime()
     };
     
