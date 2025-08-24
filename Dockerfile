@@ -33,7 +33,7 @@ COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/server ./server
 COPY --from=builder /app/package*.json ./
 
-# Expose port
+# Expose port 3000 (Railway's expected port)
 EXPOSE 3000
 
 # Start the server
