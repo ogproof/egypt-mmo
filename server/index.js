@@ -396,22 +396,28 @@ app.get('/api/ssl-status', (req, res) => {
     res.json(sslInfo);
 });
 
+// Test endpoint
+app.get('/test', (req, res) => {
+    console.log(`🧪 Test endpoint called from: ${req.ip}`);
+    res.json({ 
+        message: 'Server is working!', 
+        timestamp: new Date().toISOString(),
+        port: PORT,
+        uptime: process.uptime()
+    });
+});
+
 // Health check
 app.get('/health', (req, res) => {
     console.log(`🏥 Health check requested from: ${req.ip}`);
-    console.log(`🏥 Headers:`, req.headers);
     
-    const healthData = { 
+    // Simple, reliable health check
+    res.status(200).json({ 
         status: 'healthy', 
-        players: gameState.players.size,
-        uptime: process.uptime(),
-        ssl: req.headers['x-forwarded-proto'] === 'https',
         timestamp: new Date().toISOString(),
-        distExists: require('fs').existsSync(path.join(__dirname, '../dist'))
-    };
-    
-    console.log(`🏥 Health check response:`, healthData);
-    res.json(healthData);
+        port: PORT,
+        uptime: process.uptime()
+    });
 });
 
 // Serve the game (both development and production)
@@ -449,6 +455,12 @@ server.listen(PORT, '0.0.0.0', () => {
     console.log(`📁 Current directory: ${__dirname}`);
     console.log(`📁 Dist path: ${path.join(__dirname, '../dist')}`);
     console.log(`🔍 Checking if dist folder exists...`);
+    
+    // Log Railway environment variables
+    console.log(`🔧 Railway Environment Variables:`);
+    console.log(`🔧 PORT: ${process.env.PORT || 'not set'}`);
+    console.log(`🔧 RAILWAY_PUBLIC_DOMAIN: ${process.env.RAILWAY_PUBLIC_DOMAIN || 'not set'}`);
+    console.log(`🔧 RAILWAY_ENVIRONMENT: ${process.env.RAILWAY_ENVIRONMENT || 'not set'}`);
     
     // Check if dist folder exists
     const fs = require('fs');
