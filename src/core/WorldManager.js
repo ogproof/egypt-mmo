@@ -107,6 +107,52 @@ export class WorldManager {
         }
     }
 
+    // Safely remove objects from the scene
+    removeObjectSafely(object, type = 'unknown') {
+        try {
+            if (!object) {
+                console.warn(`⚠️ Attempted to remove null/undefined ${type}`);
+                return false;
+            }
+            
+            // Check if object is protected
+            if (object.userData && object.userData.protected) {
+                console.log(`🛡️ Skipping removal of protected ${type}: ${object.name || 'unnamed'}`);
+                return false;
+            }
+            
+            // Remove from parent
+            if (object.parent) {
+                object.parent.remove(object);
+            }
+            
+            // Remove from scene
+            if (this.scene && this.scene.children.includes(object)) {
+                this.scene.remove(object);
+            }
+            
+            // Dispose of geometries and materials
+            if (object.geometry) {
+                object.geometry.dispose();
+            }
+            
+            if (object.material) {
+                if (Array.isArray(object.material)) {
+                    object.material.forEach(mat => mat.dispose());
+                } else {
+                    object.material.dispose();
+                }
+            }
+            
+            console.log(`✅ Safely removed ${type}: ${object.name || 'unnamed'}`);
+            return true;
+            
+        } catch (error) {
+            console.error(`❌ Error removing ${type}:`, error);
+            return false;
+        }
+    }
+
     createTerrain() {
         // Create ground plane with minimal detail for maximum performance
         const groundGeometry = new THREE.PlaneGeometry(this.worldSize, this.worldSize, 8, 8);
@@ -1314,73 +1360,64 @@ export class WorldManager {
 
     // World update methods
     update(deltaTime) {
-        // Update day/night cycle
-        this.updateDayNightCycleProgress(deltaTime);
-        
-        // Update any animated world elements
-        this.updateDecorations(deltaTime);
-        
-        // Performance optimizations (less frequent to reduce FPS spikes)
-        if (this.camera) {
-            // Add frame counter for performance optimizations
-            if (!this.frameCount) this.frameCount = 0;
-            this.frameCount++;
+        try {
+            // Update day/night cycle
+            this.updateDayNightCycleProgress(deltaTime);
             
-            // Update frustum and culling less frequently
-            if (this.frameCount % 10 === 0) { // Every 10 frames instead of every 3 frames
-                this.updateFrustum();
-                this.updateObjectVisibility();
-                this.updateLOD(this.camera.position);
+            // Update any animated world elements
+            this.updateDecorations(deltaTime);
+            
+            // Performance optimizations (less frequent to reduce FPS spikes)
+            if (this.camera) {
+                // Add frame counter for performance optimizations
+                if (!this.frameCount) this.frameCount = 0;
+                this.frameCount++;
+                
+                // Update frustum and culling less frequently
+                if (this.frameCount % 10 === 0) { // Every 10 frames instead of every 3 frames
+                    try {
+                        this.updateFrustum();
+                        this.updateObjectVisibility();
+                        this.updateLOD(this.camera.position);
+                    } catch (error) {
+                        console.warn('⚠️ Error in performance optimization:', error);
+                    }
+                }
+                
+                // Safety check - ensure objects close to player are always visible
+                if (this.frameCount % 5 === 0) { // Every 5 frames
+                    try {
+                        this.ensureCloseObjectsVisible();
+                    } catch (error) {
+                        console.warn('⚠️ Error ensuring close objects visible:', error);
+                    }
+                }
             }
             
-            // Safety check - ensure objects close to player are always visible
-            if (this.frameCount % 5 === 0) { // Every 5 frames
-                this.ensureCloseObjectsVisible();
+            // Update shadows every frame to ensure they move with the sun
+            try {
+                this.updateShadowCamera();
+            } catch (error) {
+                console.warn('⚠️ Error updating shadow camera:', error);
             }
             
-                    // Update shadows every frame to ensure they move with the sun
-        this.updateShadowCamera();
-        
-        // Debug shadow camera position occasionally
-        if (this.frameCount % 300 === 0) { // Every 5 seconds
-            const shadowCamera = this.dayNightCycle.directionalLight.shadow.camera;
-            console.log(`📷 Shadow Camera - Pos: (${shadowCamera.position.x.toFixed(1)}, ${shadowCamera.position.y.toFixed(1)}, ${shadowCamera.position.z.toFixed(1)}) | Looking at: (${this.dayNightCycle.directionalLight.target.position.x.toFixed(1)}, ${this.dayNightCycle.directionalLight.target.position.y.toFixed(1)}, ${this.dayNightCycle.directionalLight.target.position.z.toFixed(1)})`);
-        }
-            
-                    // Debug: Log when day/night cycle is running
-        if (this.frameCount % 60 === 0) { // Every 60 frames (about once per second)
-            console.log(`🌍 World update - Time: ${(this.dayNightCycle.time * 24).toFixed(1)}h | Camera set: ${!!this.camera} | Light: ${!!this.dayNightCycle.directionalLight}`);
-            
-            // Debug lights every 10 seconds to find duplicates
-            if (this.frameCount % 600 === 0) {
-                this.debugLights();
+            // Debug shadow camera position occasionally
+            if (this.frameCount % 300 === 0) { // Every 5 seconds
+                try {
+                    const shadowCamera = this.dayNightCycle.directionalLight.shadow.camera;
+                    console.log(`📷 Shadow Camera - Pos: (${shadowCamera.position.x.toFixed(1)}, ${shadowCamera.position.y.toFixed(1)}, ${shadowCamera.position.z.toFixed(1)}) | Looking at: (${this.dayNightCycle.directionalLight.target.position.x.toFixed(1)}, ${this.dayNightCycle.directionalLight.target.position.y.toFixed(1)}, ${this.dayNightCycle.directionalLight.target.position.z.toFixed(1)})`);
+                } catch (error) {
+                    console.warn('⚠️ Error logging shadow camera debug info:', error);
+                }
             }
             
-            // Also check for any default scene lights that might have been added
-            if (this.frameCount === 1) { // Only once at the start
-                this.checkForDefaultLights();
+            // Debug: Log when day/night cycle is running
+            if (this.frameCount % 600 === 0) { // Every 10 seconds
+                console.log(`🌞 Day/Night Cycle Update - Time: ${(this.dayNightCycle.time * 24).toFixed(1)}h | Frame: ${this.frameCount}`);
             }
             
-            // Periodic object health monitoring (every 5 minutes)
-            if (this.frameCount % 1800 === 0) {
-                this.monitorObjectHealth();
-            }
-            
-            // Object visibility check (every 2 minutes)
-            if (this.frameCount % 720 === 0) {
-                this.debugObjectVisibility();
-            }
-            
-            // Comprehensive world integrity check (every 10 minutes)
-            if (this.frameCount % 3600 === 0) {
-                this.validateWorldIntegrity();
-            }
-        }
-        } else {
-            // Debug: Log when camera is not set
-            if (!this.frameCount || this.frameCount % 120 === 0) { // Every 120 frames
-                console.log(`🌍 World update - Camera not set in WorldManager`);
-            }
+        } catch (error) {
+            console.error('❌ Error in WorldManager update:', error);
         }
     }
     
@@ -1812,64 +1849,133 @@ export class WorldManager {
     }
     
     cleanupCorruptedObjects() {
-        // Remove any objects with invalid properties that could cause them to disappear
-        const objectsToRemove = [];
-        
-        // Check pyramids
-        this.pyramids.forEach((pyramid, index) => {
-            if (this.isObjectCorrupted(pyramid)) {
-                console.warn('⚠️ Corrupted pyramid detected, removing:', pyramid);
-                objectsToRemove.push({ object: pyramid, type: 'pyramid', index });
+        try {
+            // Remove any objects with invalid properties that could cause them to disappear
+            const objectsToRemove = [];
+            
+            // Check pyramids
+            this.pyramids.forEach((pyramid, index) => {
+                try {
+                    if (this.isObjectCorrupted(pyramid)) {
+                        console.warn('⚠️ Corrupted pyramid detected, removing:', pyramid);
+                        objectsToRemove.push({ object: pyramid, type: 'pyramid', index });
+                    }
+                } catch (error) {
+                    console.warn('⚠️ Error checking pyramid:', error);
+                    objectsToRemove.push({ object: pyramid, type: 'pyramid', index });
+                }
+            });
+            
+            // Check temples
+            this.temples.forEach((temple, index) => {
+                try {
+                    if (this.isObjectCorrupted(temple)) {
+                        console.warn('⚠️ Corrupted temple detected, removing:', temple);
+                        objectsToRemove.push({ object: temple, type: 'temple', index });
+                    }
+                } catch (error) {
+                    console.warn('⚠️ Error checking temple:', error);
+                    objectsToRemove.push({ object: temple, type: 'temple', index });
+                }
+            });
+            
+            // Check sphinxes
+            this.sphinxes.forEach((sphinx, index) => {
+                try {
+                    if (this.isObjectCorrupted(sphinx)) {
+                        console.warn('⚠️ Corrupted sphinx detected, removing:', sphinx);
+                        objectsToRemove.push({ object: sphinx, type: 'sphinx', index });
+                    }
+                } catch (error) {
+                    console.warn('⚠️ Error checking sphinx:', error);
+                    objectsToRemove.push({ object: sphinx, type: 'sphinx', index });
+                }
+            });
+            
+            // Check obelisks
+            this.obelisks.forEach((obelisk, index) => {
+                try {
+                    if (this.isObjectCorrupted(obelisk)) {
+                        console.warn('⚠️ Corrupted obelisk detected, removing:', obelisk);
+                        objectsToRemove.push({ object: obelisk, type: 'obelisk', index });
+                    }
+                } catch (error) {
+                    console.warn('⚠️ Error checking obelisk:', error);
+                    objectsToRemove.push({ object: obelisk, type: 'obelisk', index });
+                }
+            });
+            
+            // Check resource nodes
+            this.resourceNodes.forEach((resource, index) => {
+                try {
+                    if (this.isObjectCorrupted(resource)) {
+                        console.warn('⚠️ Corrupted resource node detected, removing:', resource);
+                        objectsToRemove.push({ object: resource, type: 'resource', index });
+                    }
+                } catch (error) {
+                    console.warn('⚠️ Error checking resource node:', error);
+                    objectsToRemove.push({ object: resource, type: 'resource', index });
+                }
+            });
+            
+            // Check decorations
+            this.decorations.forEach((decoration, index) => {
+                try {
+                    if (this.isObjectCorrupted(decoration)) {
+                        console.warn('⚠️ Corrupted decoration detected, removing:', decoration);
+                        objectsToRemove.push({ object: decoration, type: 'decoration', index });
+                    }
+                } catch (error) {
+                    console.warn('⚠️ Error checking decoration:', error);
+                    objectsToRemove.push({ object: decoration, type: 'decoration', index });
+                }
+            });
+            
+            // Remove corrupted objects
+            objectsToRemove.forEach(({ object, type, index }) => {
+                try {
+                    const success = this.removeObjectSafely(object, type);
+                    if (success) {
+                        // Remove from the appropriate array
+                        switch (type) {
+                            case 'pyramid':
+                                this.pyramids[index] = null;
+                                break;
+                            case 'temple':
+                                this.temples[index] = null;
+                                break;
+                            case 'sphinx':
+                                this.sphinxes[index] = null;
+                                break;
+                            case 'obelisk':
+                                this.obelisks[index] = null;
+                                break;
+                            case 'resource':
+                                this.resourceNodes[index] = null;
+                                break;
+                            case 'decoration':
+                                this.decorations[index] = null;
+                                break;
+                        }
+                    }
+                } catch (error) {
+                    console.error(`❌ Error removing ${type}:`, error);
+                }
+            });
+            
+            // Clean up null entries from arrays
+            this.pyramids = this.pyramids.filter(p => p !== null);
+            this.temples = this.temples.filter(t => t !== null);
+            this.sphinxes = this.sphinxes.filter(s => s !== null);
+            this.obelisks = this.obelisks.filter(o => o !== null);
+            this.resourceNodes = this.resourceNodes.filter(r => r !== null);
+            this.decorations = this.decorations.filter(d => d !== null);
+            
+            if (objectsToRemove.length > 0) {
+                console.log(`🔧 Removed ${objectsToRemove.length} corrupted objects`);
             }
-        });
-        
-        // Check temples
-        this.temples.forEach((temple, index) => {
-            if (this.isObjectCorrupted(temple)) {
-                console.warn('⚠️ Corrupted temple detected, removing:', temple);
-                objectsToRemove.push({ object: temple, type: 'temple', index });
-            }
-        });
-        
-        // Check sphinxes
-        this.sphinxes.forEach((sphinx, index) => {
-            if (this.isObjectCorrupted(sphinx)) {
-                console.warn('⚠️ Corrupted sphinx detected, removing:', sphinx);
-                objectsToRemove.push({ object: sphinx, type: 'sphinx', index });
-            }
-        });
-        
-        // Check obelisks
-        this.obelisks.forEach((obelisk, index) => {
-            if (this.isObjectCorrupted(obelisk)) {
-                console.warn('⚠️ Corrupted obelisk detected, removing:', obelisk);
-                objectsToRemove.push({ object: obelisk, type: 'obelisk', index });
-            }
-        });
-        
-        // Check resource nodes
-        this.resourceNodes.forEach((resource, index) => {
-            if (this.isObjectCorrupted(resource)) {
-                console.warn('⚠️ Corrupted resource node detected, removing:', resource);
-                objectsToRemove.push({ object: resource, type: 'resource', index });
-            }
-        });
-        
-        // Check decorations
-        this.decorations.forEach((decoration, index) => {
-            if (this.isObjectCorrupted(decoration)) {
-                console.warn('⚠️ Corrupted decoration detected, removing:', decoration);
-                objectsToRemove.push({ object: decoration, type: 'decoration', index });
-            }
-        });
-        
-        // Remove corrupted objects
-        objectsToRemove.forEach(({ object, type, index }) => {
-            this.removeObjectSafely(object, type, index);
-        });
-        
-        if (objectsToRemove.length > 0) {
-            console.log(`🔧 Removed ${objectsToRemove.length} corrupted objects`);
+        } catch (error) {
+            console.error('❌ Error in cleanupCorruptedObjects:', error);
         }
     }
     
@@ -2113,5 +2219,47 @@ export class WorldManager {
         if (!object.position) return true;
         if (!object.geometry) return true;
         return false;
+    }
+
+    // Ensure objects close to the player are always visible
+    ensureCloseObjectsVisible() {
+        try {
+            if (!this.camera) return;
+            
+            const playerPos = this.camera.position;
+            const closeDistance = 50; // Objects within 50 units should always be visible
+            
+            // Check all world objects and ensure close ones are visible
+            const allObjects = [
+                ...this.pyramids,
+                ...this.temples,
+                ...this.sphinxes,
+                ...this.obelisks,
+                ...this.resourceNodes,
+                ...this.decorations
+            ].filter(obj => obj && obj.isObject3D);
+            
+            allObjects.forEach(object => {
+                if (!object || !object.position) return;
+                
+                const distance = playerPos.distanceTo(object.position);
+                
+                if (distance <= closeDistance) {
+                    // Object is close - ensure it's visible
+                    if (object.visible === false) {
+                        object.visible = true;
+                        console.log(`👁️ Made close object visible: ${object.name || 'unnamed'} (${distance.toFixed(1)} units)`);
+                    }
+                    
+                    // Ensure LOD is at highest detail for close objects
+                    if (object.userData && object.userData.lodLevel !== undefined) {
+                        object.userData.lodLevel = 0; // Highest detail
+                    }
+                }
+            });
+            
+        } catch (error) {
+            console.error('❌ Error ensuring close objects visible:', error);
+        }
     }
 }
