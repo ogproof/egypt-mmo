@@ -22,6 +22,12 @@ app.use((req, res, next) => {
     console.log(`📥 Incoming request: ${req.method} ${req.url} from ${req.ip}`);
     console.log(`📥 Headers:`, req.headers);
     console.log(`📥 User-Agent: ${req.headers['user-agent']}`);
+    
+    // Log response completion
+    res.on('finish', () => {
+        console.log(`📤 Response sent: ${req.method} ${req.url} - Status: ${res.statusCode}`);
+    });
+    
     next();
 });
 
@@ -410,14 +416,27 @@ app.get('/test', (req, res) => {
 // Health check
 app.get('/health', (req, res) => {
     console.log(`🏥 Health check requested from: ${req.ip}`);
+    console.log(`🏥 Starting health check response...`);
     
-    // Simple, reliable health check
-    res.status(200).json({ 
-        status: 'healthy', 
-        timestamp: new Date().toISOString(),
-        port: PORT,
-        uptime: process.uptime()
-    });
+    try {
+        // Simple, reliable health check
+        const healthData = { 
+            status: 'healthy', 
+            timestamp: new Date().toISOString(),
+            port: PORT,
+            uptime: process.uptime()
+        };
+        
+        console.log(`🏥 Health check data prepared:`, healthData);
+        console.log(`🏥 Sending response...`);
+        
+        res.status(200).json(healthData);
+        
+        console.log(`🏥 Health check response sent successfully`);
+    } catch (error) {
+        console.log(`🏥 Health check error:`, error);
+        res.status(500).json({ error: 'Health check failed', message: error.message });
+    }
 });
 
 // Serve the game (both development and production)
