@@ -4,12 +4,277 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' ws: wss:;">
-    <title>Egypt MMO - Ancient Egyptian Crafting Adventure</title>
+    <title>Egypt MMO - Ancient Adventures Await</title>
     <meta name="description" content="Embark on an epic journey through ancient Egypt in this browser-based MMO crafting game">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="./assets/index-F8-c_N58.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        /* Title Screen */
+        #title-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        }
+
+        .title-container {
+            text-align: center;
+            max-width: 600px;
+            padding: 2rem;
+        }
+
+        .game-title {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .game-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+            color: #E0E0E0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .login-section {
+            margin-bottom: 2rem;
+        }
+
+        .google-btn {
+            background: #4285f4;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
+        }
+
+        .google-btn:hover {
+            background: #3367d6;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(66, 133, 244, 0.4);
+        }
+
+        .google-btn img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .or-divider {
+            margin: 2rem 0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .or-divider::before,
+        .or-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: rgba(255,255,255,0.3);
+        }
+
+        .guest-btn {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .guest-btn:hover {
+            background: rgba(255,255,255,0.2);
+            border-color: rgba(255,255,255,0.5);
+        }
+
+        /* Character Creator */
+        #character-creator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1001;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        }
+
+        .creator-container {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            max-width: 500px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .creator-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #FFD700;
+        }
+
+        .input-group {
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            color: #E0E0E0;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.9);
+            color: #333;
+            font-size: 16px;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.3);
+        }
+
+        .create-btn {
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            color: #333;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+        }
+
+        .create-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+        }
+
+        .back-btn {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: rgba(255,255,255,0.2);
+            border-color: rgba(255,255,255,0.5);
+        }
+
+        /* Loading Screen */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1002;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        }
+
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(255,255,255,0.3);
+            border-top: 4px solid #FFD700;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 2rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            font-size: 1.5rem;
+            color: #E0E0E0;
+            text-align: center;
+        }
+
+        /* Main Game (Hidden initially) */
+        #game-container {
+            display: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .game-title {
+                font-size: 2.5rem;
+            }
+            
+            .game-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .creator-container {
+                margin: 1rem;
+                padding: 2rem;
+            }
+        }
+    </style>
+  <script type="module" crossorigin src="./assets/index-B29p46V8.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/three-C8PiImrb.js">
   <link rel="modulepreload" crossorigin href="./assets/networking-BsC3Nmyy.js">
   <link rel="stylesheet" crossorigin href="./assets/index-Dndrepyh.css">
@@ -17,174 +282,241 @@
   <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
 </head>
 <body>
-    <div id="game-container">
-        <!-- Loading Screen -->
-        <div id="loading-screen" class="loading-screen">
-            <div class="loading-content">
-                <div class="egyptian-symbol">☥</div>
-                <h1>Egypt MMO</h1>
-                <p>Ancient Egyptian Crafting Adventure</p>
-                <div class="loading-bar">
-                    <div class="loading-progress"></div>
+    <!-- Title Screen -->
+    <div id="title-screen">
+        <div class="title-container">
+            <h1 class="game-title">Egypt MMO</h1>
+            <p class="game-subtitle">Embark on an epic journey through ancient Egypt</p>
+            
+            <div class="login-section">
+                <button class="google-btn" onclick="googleLogin()">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0xNy42IDkuMmMwLS4zIDAtLjYgMC0uOSAwLTQuNi0zLjctOC4zLTguMy04LjNTMSAzLjcgMSA4LjNjMCA0LjYgMy43IDguMyA4LjMgOC4zIDIuMiAwIDQuMy0uOSA1LjgtMi40bC0yLjYtMi42Yy0uNy40Ny0xLjYgLjc0LTIuNi43NC0yLjIgMC00LTEuOC00LTQgMC0yLjIgMS44LTQgNC00IC44IDAgMS41LjMgMi4xLjc4bDEuNi0xLjNjLS45LS44LTIuMS0xLjMtMy40LTEuMy0yLjggMC01LjEgMi4zLTUuMSA1LjFzMi4zIDUuMSA1LjEgNS4xYzIuNyAwIDQuOS0xLjkgNS4zLTQuNWgtNS4zVjkuMnoiIGZpbGw9IiNGRkYiLz48L2c+PC9zdmc+" alt="Google">
+                    Sign in with Google
+                </button>
+                
+                <div class="or-divider">
+                    <span>or</span>
                 </div>
-                <div class="loading-text">Loading ancient wisdom...</div>
+                
+                <button class="guest-btn" onclick="guestLogin()">Play as Guest</button>
             </div>
         </div>
-
-        <!-- Game UI -->
-        <div id="game-ui" class="game-ui hidden">
-            <!-- Top HUD -->
-            <div class="top-hud">
-                <div class="player-info">
-                    <div class="player-avatar">👤</div>
-                    <div class="player-details">
-                        <div class="player-name">Player</div>
-                        <div class="player-level">Level 1</div>
-                    </div>
-                </div>
-                <div class="resources">
-                    <div class="resource gold">🪙 <span id="gold-amount">0</span></div>
-                    <div class="resource experience">⭐ <span id="exp-amount">0</span></div>
-                    <div class="resource time">🌅 <span id="time-display">Morning</span></div>
-                </div>
-            </div>
-
-            <!-- Crafting Panel -->
-            <div id="crafting-panel" class="crafting-panel hidden">
-                <div class="panel-header">
-                    <h3>Ancient Crafting</h3>
-                    <button class="close-btn" id="close-crafting">×</button>
-                </div>
-                <div class="crafting-categories">
-                    <button class="category-btn active" data-category="weapons">⚔️ Weapons</button>
-                    <button class="category-btn" data-category="armor">🛡️ Armor</button>
-                    <button class="category-btn" data-category="tools">🔨 Tools</button>
-                    <button class="category-btn" data-category="potions">🧪 Potions</button>
-                </div>
-                <div class="crafting-items" id="crafting-items">
-                    <!-- Items will be populated dynamically -->
-                </div>
-            </div>
-
-            <!-- Inventory -->
-            <div id="inventory" class="inventory hidden">
-                <div class="panel-header">
-                    <h3>Inventory</h3>
-                    <button class="close-btn" id="close-inventory">×</button>
-                </div>
-                <div class="inventory-content">
-                    <!-- Character Doll and Equipment -->
-                    <div class="character-doll">
-                        <h4>Equipment</h4>
-                        <div class="equipment-slots">
-                            <div class="equipment-slot" data-slot="head" title="Head">
-                                <div class="slot-label">Head</div>
-                            </div>
-                            <div class="equipment-slot" data-slot="chest" title="Chest">
-                                <div class="slot-label">Chest</div>
-                            </div>
-                            <div class="equipment-slot" data-slot="legs" title="Legs">
-                                <div class="slot-label">Legs</div>
-                            </div>
-                            <div class="equipment-slot" data-slot="feet" title="Feet">
-                                <div class="slot-label">Feet</div>
-                            </div>
-                            <div class="equipment-slot" data-slot="weapon" title="Weapon">
-                                <div class="slot-label">Weapon</div>
-                            </div>
-                            <div class="equipment-slot" data-slot="offhand" title="Offhand">
-                                <div class="slot-label">Offhand</div>
-                            </div>
-                            <div class="equipment-slot" data-slot="accessory" title="Accessory">
-                                <div class="slot-label">Accessory</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Inventory Grid -->
-                    <div class="inventory-section">
-                        <h4>Items</h4>
-                        <div class="inventory-grid" id="inventory-grid">
-                            <!-- Inventory slots will be populated dynamically -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Action Buttons -->
-            <div class="action-buttons">
-                <button id="crafting-btn" class="action-btn">⚒️ Craft</button>
-                <button id="inventory-btn" class="action-btn">🎒 Inventory</button>
-                <button id="map-btn" class="action-btn">🗺️ Map</button>
-                <button id="skills-btn" class="action-btn">📚 Skills</button>
-            </div>
-
-            <!-- Options Menu -->
-            <div id="options-menu" class="options-menu hidden">
-                <div class="options-content">
-                    <div class="options-header">
-                        <h2>⚙️ Options</h2>
-                        <button id="close-options" class="close-btn">✕</button>
-                    </div>
-                    
-                    <div class="options-tabs">
-                        <button class="tab-btn active" data-tab="video">🎮 Video</button>
-                        <button class="tab-btn" data-tab="audio">🔊 Audio</button>
-                        <button class="tab-btn" data-tab="controls">⌨️ Controls</button>
-                    </div>
-                    
-                    <div class="tab-content active" id="video-tab">
-                        <div class="setting-group">
-                            <label for="graphics-quality">Graphics Quality:</label>
-                            <select id="graphics-quality">
-                                <option value="low">Low (Performance)</option>
-                                <option value="medium" selected>Medium (Balanced)</option>
-                                <option value="high">High (Quality)</option>
-                                <option value="ultra">Ultra (Maximum)</option>
-                            </select>
-                        </div>
-                        
-                        <div class="setting-group">
-                            <label for="shadow-quality">Shadow Quality:</label>
-                            <select id="shadow-quality">
-                                <option value="off">Off</option>
-                                <option value="low">Low</option>
-                                <option value="medium" selected>Medium</option>
-                                <option value="high">High</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <div class="tab-content" id="audio-tab">
-                        <div class="setting-group">
-                            <label for="master-volume">Master Volume:</label>
-                            <input type="range" id="master-volume" min="0" max="100" value="50">
-                            <span id="master-volume-value">50%</span>
-                        </div>
-                    </div>
-                    
-                    <div class="tab-content" id="controls-tab">
-                        <div class="setting-group">
-                            <label for="mouse-sensitivity">Mouse Sensitivity:</label>
-                            <input type="range" id="mouse-sensitivity" min="0.1" max="2.0" step="0.1" value="1.0">
-                            <span id="mouse-sensitivity-value">1.0</span>
-                        </div>
-                    </div>
-                    
-                    <div class="options-actions">
-                        <button id="apply-settings" class="apply-btn">Apply Settings</button>
-                        <button id="reset-settings" class="reset-btn">Reset to Default</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Game Canvas -->
-        <canvas id="game-canvas"></canvas>
     </div>
-
+
+    <!-- Character Creator -->
+    <div id="character-creator">
+        <div class="creator-container">
+            <h2 class="creator-title">Create Your Character</h2>
+            
+            <div class="input-group">
+                <label for="character-name">Character Name</label>
+                <input type="text" id="character-name" placeholder="Enter your character's name" maxlength="20">
+            </div>
+            
+            <button class="create-btn" onclick="createCharacter()">Create Character</button>
+            <button class="back-btn" onclick="showTitleScreen()">Back</button>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Loading Egypt MMO...</div>
+    </div>
+
+    <!-- Main Game Container -->
+    <div id="game-container">
+        <!-- Your existing game content will go here -->
+        <div id="loading-screen-game" style="display: none;">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">Initializing Game...</div>
+        </div>
+        
+        <!-- Game UI will be dynamically created -->
+    </div>
+
+    <script>
+        // Google Login (Mock implementation for now)
+        function googleLogin() {
+            console.log('🔐 Google login initiated');
+            // In a real implementation, this would use Google OAuth
+            // For now, we'll simulate a successful login
+            simulateGoogleLogin();
+        }
+
+        function simulateGoogleLogin() {
+            // Show loading
+            document.getElementById('title-screen').style.display = 'none';
+            document.getElementById('loading-screen').style.display = 'flex';
+            
+            // Simulate API call delay
+            setTimeout(() => {
+                // Mock user data
+                const userData = {
+                    id: 'google_' + Math.random().toString(36).substr(2, 9),
+                    email: 'player@gmail.com',
+                    name: 'Google Player',
+                    picture: null
+                };
+                
+                // Store user data
+                localStorage.setItem('egyptMMO_user', JSON.stringify(userData));
+                
+                // Show character creator
+                showCharacterCreator();
+            }, 2000);
+        }
+
+        // Guest Login
+        function guestLogin() {
+            console.log('👤 Guest login initiated');
+            
+            // Mock user data for guest
+            const userData = {
+                id: 'guest_' + Math.random().toString(36).substr(2, 9),
+                email: null,
+                name: 'Guest Player',
+                picture: null,
+                isGuest: true
+            };
+            
+            // Store user data
+            localStorage.setItem('egyptMMO_user', JSON.stringify(userData));
+            
+            // Show character creator
+            showCharacterCreator();
+        }
+
+        // Show Character Creator
+        function showCharacterCreator() {
+            document.getElementById('loading-screen').style.display = 'none';
+            document.getElementById('character-creator').style.display = 'flex';
+        }
+
+        // Show Title Screen
+        function showTitleScreen() {
+            document.getElementById('character-creator').style.display = 'none';
+            document.getElementById('title-screen').style.display = 'flex';
+            
+            // Clear stored user data
+            localStorage.removeItem('egyptMMO_user');
+        }
+
+        // Create Character
+        function createCharacter() {
+            const characterName = document.getElementById('character-name').value.trim();
+            
+            if (!characterName) {
+                alert('Please enter a character name!');
+                return;
+            }
+            
+            if (characterName.length < 2) {
+                alert('Character name must be at least 2 characters long!');
+                return;
+            }
+            
+            // Store character data
+            const characterData = {
+                name: characterName,
+                createdAt: new Date().toISOString()
+            };
+            
+            localStorage.setItem('egyptMMO_character', JSON.stringify(characterData));
+            
+            console.log('👤 Character created:', characterData);
+            
+            // Start the game
+            startGame();
+        }
+
+        // Start Game
+        function startGame() {
+            console.log('🚀 Starting Egypt MMO...');
+            
+            // Hide character creator
+            document.getElementById('character-creator').style.display = 'none';
+            
+            // Show game container
+            document.getElementById('game-container').style.display = 'block';
+            
+            // Initialize the game
+            initializeGame();
+        }
+
+        // Initialize Game (will be called when your game loads)
+        function initializeGame() {
+            // This function will be called by your game engine
+            console.log('🎮 Game initialization started');
+            
+            // Check if Egypt MMO is available
+            if (window.egyptMMO) {
+                console.log('✅ Egypt MMO found, starting game...');
+                window.egyptMMO.startGame();
+            } else {
+                console.log('⏳ Egypt MMO not ready yet, waiting...');
+                // Wait for Egypt MMO to be available
+                const checkInterval = setInterval(() => {
+                    if (window.egyptMMO) {
+                        clearInterval(checkInterval);
+                        console.log('✅ Egypt MMO ready, starting game...');
+                        window.egyptMMO.startGame();
+                    }
+                }, 100);
+            }
+        }
+
+        // Check if user is already logged in
+        function checkExistingSession() {
+            const userData = localStorage.getItem('egyptMMO_user');
+            const characterData = localStorage.getItem('egyptMMO_character');
+            
+            if (userData && characterData) {
+                // User is already logged in and has a character
+                console.log('🔐 Existing session found, starting game...');
+                startGame();
+            }
+        }
+
+        // Logout function
+        function logout() {
+            console.log('🚪 Logging out...');
+            
+            // Clear stored data
+            localStorage.removeItem('egyptMMO_user');
+            localStorage.removeItem('egyptMMO_character');
+            
+            // Stop the game if it's running
+            if (window.egyptMMO && window.egyptMMO.gameEngine) {
+                try {
+                    window.egyptMMO.gameEngine.pause();
+                } catch (error) {
+                    console.log('Game already stopped');
+                }
+            }
+            
+            // Hide game container
+            document.getElementById('game-container').style.display = 'none';
+            
+            // Show title screen
+            document.getElementById('title-screen').style.display = 'flex';
+            
+            console.log('✅ Logged out successfully');
+        }
+
+        // Make logout function globally available
+        window.logout = logout;
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('🎮 Egypt MMO Title Screen Loaded');
+            checkExistingSession();
+        });
+    </script>
+
+    <!-- Your existing game scripts will be loaded here -->
   <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
   <script nomodule crossorigin id="vite-legacy-polyfill" src="./assets/polyfills-legacy-aLPCCT8d.js"></script>
-  <script nomodule crossorigin id="vite-legacy-entry" data-src="./assets/index-legacy-J3QNJwnk.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+  <script nomodule crossorigin id="vite-legacy-entry" data-src="./assets/index-legacy-84sojlqS.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
 </body>
 </html>

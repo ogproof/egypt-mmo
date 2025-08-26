@@ -8,22 +8,47 @@ import { LoadingManager } from './core/LoadingManager.js';
 class EgyptMMO {
     constructor() {
         this.gameEngine = null;
+        this.audioManager = null;
+        this.networkManager = null;
         this.uiManager = null;
         this.optionsManager = null;
-        this.networkManager = null;
-        this.audioManager = null;
         this.loadingManager = null;
         this.isInitialized = false;
+        
+        // User and character data
+        this.userData = null;
+        this.characterData = null;
     }
 
     async init() {
-        // Prevent double initialization
-        if (this.isInitialized) {
-            console.warn('⚠️ Egypt MMO already initialized, skipping...');
-            return;
+        // Check if we should show title screen or start game directly
+        const userData = localStorage.getItem('egyptMMO_user');
+        const characterData = localStorage.getItem('egyptMMO_character');
+        
+        if (!userData || !characterData) {
+            console.log('🔐 No user session found, title screen will handle initialization');
+            return; // Let the title screen handle login/character creation
         }
         
+        // User is logged in and has character, start game
+        this.userData = JSON.parse(userData);
+        this.characterData = JSON.parse(characterData);
+        
+        console.log('👤 User session found:', this.userData.name);
+        console.log('👤 Character found:', this.characterData.name);
+        
+        // Start the game
+        await this.startGame();
+    }
+
+    async startGame() {
         try {
+            // Prevent double initialization
+            if (this.isInitialized) {
+                console.warn('⚠️ Egypt MMO already initialized, skipping...');
+                return;
+            }
+            
             // Handle Redux DevTools errors gracefully
             window.addEventListener('error', (event) => {
                 if (event.error && event.error.message && event.error.message.includes('detectStore')) {
@@ -34,7 +59,7 @@ class EgyptMMO {
                 }
             });
             
-            console.log('🚀 Initializing Egypt MMO...');
+            console.log('🚀 Starting Egypt MMO...');
             console.log('🔍 Init called at:', new Date().toISOString());
             console.log('🔍 Stack trace:', new Error().stack);
             
@@ -68,9 +93,20 @@ class EgyptMMO {
             this.gameEngine.setNetworkManager(this.networkManager);
             this.gameEngine.setAudioManager(this.audioManager);
             this.gameEngine.setOptionsManager(this.optionsManager);
-            this.uiManager.setGameEngine(this.gameEngine);
             
-            // Start the game
+            // Set player name from character data
+            if (this.characterData && this.characterData.name) {
+                this.gameEngine.setPlayerName(this.characterData.name);
+            }
+            
+            // Setup event listeners
+            this.setupEventListeners();
+            
+            // Mark as initialized
+            this.isInitialized = true;
+            console.log('✅ Egypt MMO started successfully!');
+            
+            // Start the game loop
             await this.start();
             
         } catch (error) {

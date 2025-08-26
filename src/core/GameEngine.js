@@ -88,12 +88,26 @@ export class GameEngine {
         // Setup camera first
         this.setupCamera();
         
-        // Initialize player (no physics)
-        this.player = new Player(this.scene, null);
+        // Create player
+        this.player = new Player(this.scene, this.physicsWorld);
         await this.player.init();
         
+        // Set player name if we have one from character creator
+        if (this.pendingPlayerName) {
+            this.player.setName(this.pendingPlayerName);
+            this.pendingPlayerName = null;
+        }
+        
+        // Set camera to follow player
+        this.camera = this.player.camera;
+        
         // Set camera reference for player movement
-        this.player.setCamera(this.camera);
+        if (this.player) {
+            this.player.setCamera(this.camera);
+        }
+        
+        // Check for pending player name
+        this.checkPendingPlayerName();
         
         // Setup lighting
         this.setupLighting();
@@ -1323,6 +1337,34 @@ export class GameEngine {
         
         console.log('✅ Multiplayer callbacks set up successfully');
     }
+
+    // Logout and cleanup
+    logout() {
+        console.log('🚪 GameEngine logout initiated...');
+        
+        try {
+            // Pause the game
+            this.pause();
+            
+            // Disconnect from network
+            if (this.networkManager) {
+                this.networkManager.disconnect();
+            }
+            
+            // Clear any game state
+            this.isInitialized = false;
+            
+            console.log('✅ GameEngine logout completed');
+            
+        } catch (error) {
+            console.error('❌ Error during logout:', error);
+        }
+    }
+
+    // Get player reference
+    getPlayer() {
+        return this.player;
+    }
     
     // Handle world state update from server
     handleWorldStateUpdate(worldData) {
@@ -1485,6 +1527,27 @@ export class GameEngine {
         this.networkManager.sendPlayerPosition(testPosition);
         
         console.log('🧪 Movement sync test completed');
+    }
+
+    // Set player name from character creator
+    setPlayerName(name) {
+        if (this.player) {
+            this.player.setName(name);
+            console.log(`👤 Player name set to: ${name}`);
+        } else {
+            // Store name for when player is created
+            this.pendingPlayerName = name;
+            console.log(`👤 Player name stored for later: ${name}`);
+        }
+    }
+
+    // Check and apply pending player name (called after player creation)
+    checkPendingPlayerName() {
+        if (this.pendingPlayerName && this.player) {
+            this.player.setName(this.pendingPlayerName);
+            this.pendingPlayerName = null;
+            console.log(`👤 Applied pending player name: ${this.player.name}`);
+        }
     }
 
     // System setters

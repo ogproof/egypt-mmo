@@ -49,13 +49,30 @@ export class UIManager {
         }
         
         this.setupEventListeners();
+        // Create logout button
+        this.createLogoutButton();
+        
+        // Create player info display
+        this.createPlayerInfoDisplay();
+        
+        // Initialize UI elements
         this.initializeCraftingItems();
         this.initializeInventory();
         this.initializeEquipmentSlots();
         this.initializeTimeDisplay();
         
+        // Start updating player info
+        this.startPlayerInfoUpdates();
+        
         this.isInitialized = true; // Mark as initialized
         console.log('✅ UI Manager initialized');
+    }
+
+    startPlayerInfoUpdates() {
+        // Update player info every second
+        setInterval(() => {
+            this.updatePlayerInfo();
+        }, 1000);
     }
 
     setupEventListeners() {
@@ -1554,6 +1571,112 @@ export class UIManager {
             console.warn('❌ Failed to export model specs');
             this.showNotification('❌ Failed to export model specs', 'error');
         }
+    }
+
+    createLogoutButton() {
+        const logoutButton = document.createElement('button');
+        logoutButton.id = 'logout-btn';
+        logoutButton.innerHTML = '🚪 Logout';
+        logoutButton.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #f44336, #d32f2f);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            z-index: 1000;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: 'Arial', sans-serif;
+            box-shadow: 0 4px 15px rgba(244, 67, 54, 0.3);
+            transition: all 0.3s ease;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        `;
+        
+        // Hover effects
+        logoutButton.addEventListener('mouseenter', () => {
+            logoutButton.style.transform = 'translateY(-2px)';
+            logoutButton.style.boxShadow = '0 6px 20px rgba(244, 67, 54, 0.4)';
+        });
+        
+        logoutButton.addEventListener('mouseleave', () => {
+            logoutButton.style.transform = 'translateY(0)';
+            logoutButton.style.boxShadow = '0 4px 15px rgba(244, 67, 54, 0.3)';
+        });
+        
+        document.body.appendChild(logoutButton);
+
+        logoutButton.addEventListener('click', () => {
+            if (confirm('Are you sure you want to logout?')) {
+                if (this.gameEngine) {
+                    this.gameEngine.logout();
+                }
+                // Call the global logout function
+                if (window.logout) {
+                    window.logout();
+                }
+            }
+        });
+    }
+
+    createPlayerInfoDisplay() {
+        const playerInfoContainer = document.createElement('div');
+        playerInfoContainer.id = 'player-info-display';
+        playerInfoContainer.innerHTML = `
+            <h3>Player Info</h3>
+            <p>Name: <span id="player-name">Loading...</span></p>
+            <p>Level: <span id="player-level">N/A</span></p>
+            <p>Health: <span id="player-health">N/A</span></p>
+            <p>Energy: <span id="player-energy">N/A</span></p>
+            <p>Gold: <span id="player-gold">N/A</span></p>
+        `;
+        playerInfoContainer.style.cssText = `
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            z-index: 1000;
+            font-size: 1em;
+            font-weight: 600;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        `;
+        document.body.appendChild(playerInfoContainer);
+    }
+
+    updatePlayerInfo() {
+        if (!this.gameEngine || !this.gameEngine.getPlayer()) {
+            this.updatePlayerInfoDisplay('Loading...', 'N/A', 'N/A', 'N/A', 'N/A');
+            return;
+        }
+
+        const player = this.gameEngine.getPlayer();
+        this.updatePlayerInfoDisplay(
+            player.name,
+            player.level,
+            player.health,
+            player.energy,
+            player.gold
+        );
+    }
+
+    updatePlayerInfoDisplay(name, level, health, energy, gold) {
+        const playerNameElement = document.getElementById('player-name');
+        const playerLevelElement = document.getElementById('player-level');
+        const playerHealthElement = document.getElementById('player-health');
+        const playerEnergyElement = document.getElementById('player-energy');
+        const playerGoldElement = document.getElementById('player-gold');
+
+        if (playerNameElement) playerNameElement.textContent = name;
+        if (playerLevelElement) playerLevelElement.textContent = `Level: ${level}`;
+        if (playerHealthElement) playerHealthElement.textContent = `Health: ${health}`;
+        if (playerEnergyElement) playerEnergyElement.textContent = `Energy: ${energy}`;
+        if (playerGoldElement) playerGoldElement.textContent = `Gold: ${gold}`;
     }
 }
 

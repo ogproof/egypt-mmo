@@ -62,7 +62,10 @@ export class Player {
             health: 100,
             maxHealth: 100,
             level: 1,
-            experience: 0
+            experience: 0,
+            energy: 100,
+            maxEnergy: 100,
+            gold: 0
         };
         
         // Initialization flag
@@ -88,6 +91,52 @@ export class Player {
         
         this.isInitialized = true; // Mark as initialized
         console.log('✅ Player initialized');
+    }
+
+    // Set player name
+    setName(name) {
+        this.name = name;
+        if (this.nameTag) {
+            // Update name tag text
+            this.updateNameTag();
+        }
+        console.log(`👤 Player name set to: ${name}`);
+    }
+
+    // Getter methods for stats
+    get health() { return this.stats.health; }
+    get maxHealth() { return this.stats.maxHealth; }
+    get level() { return this.stats.level; }
+    get experience() { return this.stats.experience; }
+    get energy() { return this.stats.energy || 100; }
+    get maxEnergy() { return this.stats.maxEnergy || 100; }
+    get gold() { return this.stats.gold || 0; }
+
+    // Update name tag with current name
+    updateNameTag() {
+        if (!this.nameTag || !this.name) return;
+        
+        // Create new canvas with updated name
+        const canvas = document.createElement('canvas');
+        const context = canvas.getContext('2d');
+        canvas.width = 256;
+        canvas.height = 64;
+        
+        // Background
+        context.fillStyle = 'rgba(0, 0, 0, 0.7)';
+        context.fillRect(0, 0, canvas.width, canvas.height);
+        
+        // Text
+        context.fillStyle = '#FFD700';
+        context.font = 'bold 24px Arial';
+        context.textAlign = 'center';
+        context.fillText(this.name, canvas.width / 2, canvas.height / 2 + 8);
+        
+        // Update texture
+        if (this.nameTag.material && this.nameTag.material.map) {
+            this.nameTag.material.map.image = canvas;
+            this.nameTag.material.map.needsUpdate = true;
+        }
     }
 
     createMesh() {
