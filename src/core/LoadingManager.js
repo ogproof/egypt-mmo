@@ -34,11 +34,37 @@ export class LoadingManager {
             this.createMinimalLoading();
         }
         
-        // Start loading assets
-        await this.loadAssets();
+        // Start loading assets with timeout protection
+        await this.loadAssetsWithTimeout();
         
         this.isInitialized = true; // Mark as initialized
         console.log('✅ Loading Manager initialized');
+    }
+
+    async loadAssetsWithTimeout() {
+        // Add timeout protection to prevent infinite loading
+        const loadingPromise = this.loadAssets();
+        const timeoutPromise = new Promise((_, reject) => {
+            setTimeout(() => reject(new Error('Loading timeout - forcing completion')), 15000); // 15 second timeout
+        });
+        
+        try {
+            await Promise.race([loadingPromise, timeoutPromise]);
+        } catch (error) {
+            if (error.message.includes('timeout')) {
+                console.warn('⚠️ Loading timeout reached, forcing completion...');
+                this.isLoading = false;
+                this.updateLoadingText('Loading complete (timeout reached)');
+                
+                // Hide loading screen after timeout
+                setTimeout(() => {
+                    this.hide();
+                    console.log('✅ Loading screen hidden after timeout');
+                }, 1000);
+            } else {
+                throw error;
+            }
+        }
     }
 
     createMinimalLoading() {
@@ -144,6 +170,12 @@ export class LoadingManager {
         await this.simulateLoading(500);
         
         this.isLoading = false;
+        
+        // Automatically hide loading screen after a short delay
+        setTimeout(() => {
+            this.hide();
+            console.log('✅ Loading screen hidden automatically');
+        }, 1000);
     }
 
     simulateLoading(duration) {

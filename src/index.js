@@ -14,6 +14,7 @@ class EgyptMMO {
         this.optionsManager = null;
         this.loadingManager = null;
         this.isInitialized = false;
+        this.isInitializing = false; // New flag for initialization state
         
         // User and character data
         this.userData = null;
@@ -28,6 +29,12 @@ class EgyptMMO {
         if (!userData || !characterData) {
             console.log('🔐 No user session found, title screen will handle initialization');
             return; // Let the title screen handle login/character creation
+        }
+        
+        // Prevent double initialization
+        if (this.isInitialized || this.isInitializing) {
+            console.warn('⚠️ Egypt MMO already initialized or initializing, skipping...');
+            return;
         }
         
         // User is logged in and has character, start game
@@ -48,6 +55,9 @@ class EgyptMMO {
                 console.warn('⚠️ Egypt MMO already initialized, skipping...');
                 return;
             }
+            
+            // Set initialization flag early to prevent double calls
+            this.isInitializing = true;
             
             // Handle Redux DevTools errors gracefully
             window.addEventListener('error', (event) => {
@@ -105,12 +115,14 @@ class EgyptMMO {
             
             // Mark as initialized
             this.isInitialized = true;
+            this.isInitializing = false;
             console.log('✅ Egypt MMO started successfully!');
             
             // Start the game loop
             await this.start();
             
         } catch (error) {
+            this.isInitializing = false;
             console.error('Failed to initialize Egypt MMO:', error);
             
             // Show more specific error messages

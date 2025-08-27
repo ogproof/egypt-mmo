@@ -136,9 +136,36 @@ export class GameEngine {
         this.scene = new THREE.Scene();
         this.scene.fog = new THREE.Fog(0x1a1a2e, 50, 200);
         
+        // Ensure game canvas exists
+        let gameCanvas = document.getElementById('game-canvas');
+        if (!gameCanvas) {
+            console.log('🔧 Creating game canvas...');
+            gameCanvas = document.createElement('canvas');
+            gameCanvas.id = 'game-canvas';
+            gameCanvas.style.cssText = `
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            `;
+            
+            // Add to game container
+            const gameContainer = document.getElementById('game-container');
+            if (gameContainer) {
+                gameContainer.appendChild(gameCanvas);
+                console.log('✅ Game canvas added to container');
+            } else {
+                // Fallback to body if game container doesn't exist
+                document.body.appendChild(gameCanvas);
+                console.log('✅ Game canvas added to body');
+            }
+        }
+        
         // Create renderer with performance optimizations
         this.renderer = new THREE.WebGLRenderer({
-            canvas: document.getElementById('game-canvas'),
+            canvas: gameCanvas,
             antialias: true,
             alpha: false,
             powerPreference: 'high-performance',

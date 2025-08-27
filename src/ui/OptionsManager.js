@@ -43,8 +43,8 @@ export class OptionsManager {
         // Initialize DOM elements
         this.optionsMenu = document.getElementById('options-menu');
         if (!this.optionsMenu) {
-            console.error('❌ Options menu element not found in DOM');
-            return;
+            console.warn('⚠️ Options menu element not found in DOM, using minimal mode');
+            this.createMinimalOptionsMenu();
         }
         
         this.loadSettings();
@@ -53,6 +53,37 @@ export class OptionsManager {
         
         this.isInitialized = true; // Mark as initialized
         console.log('✅ Options Manager initialized');
+    }
+
+    createMinimalOptionsMenu() {
+        // Create a minimal options menu if the DOM element doesn't exist
+        console.log('🔧 Creating minimal options menu...');
+        
+        this.optionsMenu = document.createElement('div');
+        this.optionsMenu.id = 'options-menu';
+        this.optionsMenu.style.cssText = `
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 1000;
+            display: none;
+            min-width: 300px;
+        `;
+        
+        this.optionsMenu.innerHTML = `
+            <h3>Options</h3>
+            <p>Options menu will be available in future updates.</p>
+            <button id="close-options" style="margin-top: 10px; padding: 8px 16px; background: #666; color: white; border: none; border-radius: 5px; cursor: pointer;">Close</button>
+        `;
+        
+        // Add to body
+        document.body.appendChild(this.optionsMenu);
+        console.log('✅ Minimal options menu created');
     }
     
     setupEventListeners() {
