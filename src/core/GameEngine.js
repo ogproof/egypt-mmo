@@ -100,13 +100,23 @@ export class GameEngine {
             this.pendingPlayerName = null;
         }
         
-        // Set camera to follow player
-        this.camera = this.player.camera;
+        // Ensure camera exists and is properly set
+        if (!this.camera) {
+            console.warn('⚠️ Camera not found, creating default camera...');
+            this.setupCamera();
+        }
         
-        // Set camera reference for player movement
-        if (this.player) {
+        // Set camera reference for player movement (don't overwrite the camera)
+        if (this.player && this.camera) {
             this.player.setCamera(this.camera);
         }
+        
+        // Verify camera is properly set
+        if (!this.camera) {
+            throw new Error('Camera initialization failed - cannot proceed without camera');
+        }
+        
+        console.log('📷 Camera properly initialized:', this.camera.position);
         
         // Check for pending player name
         this.checkPendingPlayerName();
@@ -498,6 +508,12 @@ export class GameEngine {
         
         // Only render if camera has moved (performance optimization)
         if (this.shouldRender()) {
+            // Safety check: ensure camera and renderer exist before rendering
+            if (!this.camera || !this.renderer || !this.scene) {
+                console.warn('⚠️ Missing required components for rendering, skipping...');
+                return;
+            }
+            
             // Render scene
             this.renderer.render(this.scene, this.camera);
             
@@ -526,6 +542,12 @@ export class GameEngine {
     }
     
     shouldRender() {
+        // Safety check: ensure camera exists
+        if (!this.camera) {
+            console.warn('⚠️ Camera is null in shouldRender, skipping render...');
+            return false;
+        }
+        
         // Only render if camera has moved or significant time has passed
         if (!this.lastCameraPosition) {
             this.lastCameraPosition = this.camera.position.clone();
@@ -1036,6 +1058,12 @@ export class GameEngine {
     }
 
     updateCamera() {
+        // Safety check: ensure camera exists
+        if (!this.camera) {
+            console.warn('⚠️ Camera is null in updateCamera, skipping update...');
+            return;
+        }
+        
         if (!this.player) return;
         
         const playerPosition = this.player.getPosition();

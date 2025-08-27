@@ -112,6 +112,52 @@ export class Player {
     get maxEnergy() { return this.stats.maxEnergy || 100; }
     get gold() { return this.stats.gold || 0; }
 
+    // Get player stats
+    getGold() {
+        return this.stats.gold || 0;
+    }
+
+    // Export model specifications for debugging
+    exportModelSpecs() {
+        if (!this.mesh) {
+            console.warn('❌ Player mesh not available for export');
+            return null;
+        }
+
+        try {
+            const specs = {
+                player: {
+                    name: this.name || 'Unknown',
+                    position: this.position.toArray(),
+                    rotation: this.rotation,
+                    stats: { ...this.stats },
+                    equipment: { ...this.equipment }
+                },
+                mesh: {
+                    geometry: this.mesh.geometry ? {
+                        type: this.mesh.geometry.type,
+                        vertices: this.mesh.geometry.attributes.position ? this.mesh.geometry.attributes.position.count : 0,
+                        faces: this.mesh.geometry.index ? this.mesh.geometry.index.count / 3 : 0
+                    } : null,
+                    material: this.mesh.material ? {
+                        type: this.mesh.material.type,
+                        color: this.mesh.material.color ? this.mesh.material.color.getHexString() : null
+                    } : null
+                },
+                scene: {
+                    children: this.scene ? this.scene.children.length : 0
+                },
+                timestamp: new Date().toISOString()
+            };
+
+            console.log('📋 Model specifications exported:', specs);
+            return specs;
+        } catch (error) {
+            console.error('❌ Error exporting model specifications:', error);
+            return null;
+        }
+    }
+
     // Update name tag with current name
     updateNameTag() {
         if (!this.nameTag || !this.name) return;

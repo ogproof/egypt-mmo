@@ -1678,6 +1678,33 @@ export class UIManager {
         if (playerEnergyElement) playerEnergyElement.textContent = `Energy: ${energy}`;
         if (playerGoldElement) playerGoldElement.textContent = `Gold: ${gold}`;
     }
+
+    // Check if game loop is running safely
+    isGameLoopRunning() {
+        return this.isRunning && !this.isPaused && this.isInitialized;
+    }
+
+    // Toggle inventory panel
+    toggleInventory() {
+        if (!this.inventory) return;
+        
+        if (this.inventory.style.display === 'none' || this.inventory.style.display === '') {
+            this.showInventory();
+        } else {
+            this.hideInventory();
+        }
+    }
+
+    // Toggle crafting panel
+    toggleCraftingPanel() {
+        if (!this.craftingPanel) return;
+        
+        if (this.craftingPanel.style.display === 'none' || this.craftingPanel.style.display === '') {
+            this.showCraftingPanel();
+        } else {
+            this.hideCraftingPanel();
+        }
+    }
 }
 
 // Add CSS animations for notifications
