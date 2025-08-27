@@ -38,13 +38,15 @@ export class GameEngine {
         this.players = new Map(); // Store other players
         this.entities = []; // Store game entities
         this.lastCameraPosition = null; // For camera movement detection
+        this.isRunning = false;
+        this.isPaused = false;
+        this.isInitialized = false;
+        this.animationFrameId = null;
         
         // Performance monitoring
         this.fps = 0;
         this.frameCount = 0;
         this.lastTime = 0;
-        this.isRunning = false;
-        this.isInitialized = false; // Add initialization guard
         
         // Initialize clock for timing
         this.clock = new THREE.Clock();
@@ -342,18 +344,30 @@ export class GameEngine {
     }
 
     start() {
-        if (this.isRunning) return;
+        if (this.isRunning) {
+            console.warn('⚠️ Game loop already running, skipping start...');
+            return;
+        }
         
+        console.log('🎮 Starting game loop...');
         this.isRunning = true;
+        this.isPaused = false;
         this.clock.start();
         this.gameLoop();
-        
-        console.log('🎮 Game loop started');
+        console.log('✅ Game loop started');
     }
 
     stop() {
+        if (!this.isRunning) {
+            console.warn('⚠️ Game loop not running, skipping stop...');
+            return;
+        }
+        
+        console.log('🛑 Stopping game loop...');
         this.isRunning = false;
+        this.isPaused = true;
         this.clock.stop();
+        console.log('✅ Game loop stopped');
     }
 
     pause() {
@@ -361,13 +375,96 @@ export class GameEngine {
     }
 
     resume() {
+        if (!this.isRunning) {
+            console.warn('⚠️ Cannot resume - game loop not running');
+            return;
+        }
+        
+        console.log('▶️ Resuming game loop...');
         this.isPaused = false;
     }
 
-    gameLoop() {
-        if (!this.isRunning) return;
+    // Safe restart method
+    restart() {
+        console.log('🔄 Restarting game loop...');
+        this.stop();
+        // Small delay to ensure clean stop
+        setTimeout(() => {
+            this.start();
+        }, 100);
+    }
+
+    // Check if game loop is running safely
+    isGameLoopRunning() {
+        return this.isRunning && !this.isPaused && this.isInitialized;
+    }
+
+    // Safely destroy the game engine
+    destroy() {
+        console.log('🗑️ Destroying Game Engine...');
         
-        requestAnimationFrame(() => this.gameLoop());
+        // Stop the game loop first
+        this.stop();
+        
+        // Clear any pending animation frames
+        if (this.animationFrameId) {
+            cancelAnimationFrame(this.animationFrameId);
+            this.animationFrameId = null;
+        }
+        
+        // Reset all state
+        this.isRunning = false;
+        this.isPaused = true;
+        this.isInitialized = false;
+        
+        // Clear collections
+        this.players.clear();
+        this.entities = [];
+        
+        // Dispose of Three.js resources
+        if (this.renderer) {
+            this.renderer.dispose();
+            this.renderer = null;
+        }
+        
+        if (this.scene) {
+            // Dispose of all geometries and materials
+            this.scene.traverse((object) => {
+                if (object.geometry) {
+                    object.geometry.dispose();
+                }
+                if (object.material) {
+                    if (Array.isArray(object.material)) {
+                        object.material.forEach(material => material.dispose());
+                    } else {
+                        object.material.dispose();
+                    }
+                }
+            });
+            this.scene = null;
+        }
+        
+        // Clear references
+        this.camera = null;
+        this.player = null;
+        this.worldManager = null;
+        this.gridManager = null;
+        this.inputManager = null;
+        this.craftingSystem = null;
+        this.inventorySystem = null;
+        
+        console.log('✅ Game Engine destroyed');
+    }
+
+    gameLoop() {
+        // Safety check: ensure game engine is properly initialized
+        if (!this.isInitialized) {
+            console.warn('⚠️ Game loop called before initialization, stopping...');
+            this.isRunning = false;
+            return;
+        }
+        
+        if (!this.isRunning) return;
         
         if (this.isPaused) return;
         
@@ -416,6 +513,16 @@ export class GameEngine {
         
         // Increment frame count
         this.frameCount++;
+        
+        // Schedule next frame ONLY if game is still running
+        if (this.isRunning && !this.isPaused) {
+            this.animationFrameId = requestAnimationFrame(() => this.gameLoop());
+        } else {
+            // Debug logging for unexpected game loop termination
+            if (this.frameCount > 0) {
+                console.log(`🔄 Game loop terminated - Running: ${this.isRunning}, Paused: ${this.isPaused}, Frames: ${this.frameCount}`);
+            }
+        }
     }
     
     shouldRender() {
