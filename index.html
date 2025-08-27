@@ -259,6 +259,262 @@
             display: none;
         }
 
+        /* Game UI Styles */
+        #game-ui {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        .top-hud {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            pointer-events: auto;
+        }
+
+        .player-stats {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .action-buttons {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            pointer-events: auto;
+        }
+
+        .action-btn {
+            background: linear-gradient(135deg, #8B4513, #A0522D);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .action-btn:hover {
+            background: linear-gradient(135deg, #A0522D, #CD853F);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .time-display {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            pointer-events: auto;
+        }
+
+        .panel {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(135deg, #2C1810, #3D2314);
+            border: 2px solid #8B4513;
+            border-radius: 15px;
+            min-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            pointer-events: auto;
+        }
+
+        .panel-header {
+            background: linear-gradient(135deg, #8B4513, #A0522D);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 13px 13px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .panel-header h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+        }
+
+        .close-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .panel-content {
+            padding: 20px;
+        }
+
+        .crafting-categories {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .category-btn {
+            background: linear-gradient(135deg, #654321, #8B4513);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .category-btn:hover {
+            background: linear-gradient(135deg, #8B4513, #A0522D);
+            transform: translateY(-2px);
+        }
+
+        .inventory-grid {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 8px;
+            max-width: 100%;
+        }
+
+        .inventory-slot {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #654321, #8B4513);
+            border: 2px solid #8B4513;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .inventory-slot:hover {
+            background: linear-gradient(135deg, #8B4513, #A0522D);
+            transform: scale(1.05);
+        }
+
+        .inventory-slot.filled {
+            background: linear-gradient(135deg, #228B22, #32CD32);
+        }
+
+        .crafting-category {
+            margin-bottom: 20px;
+        }
+
+        .crafting-category h4 {
+            color: #FFD700;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .crafting-item {
+            background: linear-gradient(135deg, #654321, #8B4513);
+            border: 1px solid #8B4513;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .crafting-item:hover {
+            background: linear-gradient(135deg, #8B4513, #A0522D);
+            transform: translateX(5px);
+        }
+
+        .item-name {
+            color: white;
+            font-weight: bold;
+        }
+
+        .item-level {
+            color: #FFD700;
+            font-size: 12px;
+        }
+
+        .equipment-section, .inventory-section {
+            margin-bottom: 20px;
+        }
+
+        .equipment-section h4, .inventory-section h4 {
+            color: #FFD700;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .equipment-slot {
+            background: linear-gradient(135deg, #654321, #8B4513);
+            border: 2px solid #8B4513;
+            border-radius: 8px;
+            padding: 15px 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 12px;
+            color: white;
+        }
+
+        .equipment-slot:hover {
+            background: linear-gradient(135deg, #8B4513, #A0522D);
+            transform: scale(1.05);
+        }
+
+        .equipment-slot.equipped {
+            background: linear-gradient(135deg, #228B22, #32CD32);
+            border-color: #32CD32;
+        }
+
+        /* Loading Screen Styles */
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .game-title {
@@ -319,15 +575,171 @@
         <div class="loading-text">Loading Egypt MMO...</div>
     </div>
 
-    <!-- Main Game Container -->
-    <div id="game-container">
-        <!-- Your existing game content will go here -->
-        <div id="loading-screen-game" style="display: none;">
-            <div class="loading-spinner"></div>
-            <div class="loading-text">Initializing Game...</div>
+    <!-- Game Container -->
+    <div id="game-container" style="display: none;">
+        <canvas id="game-canvas"></canvas>
+        
+        <!-- Game UI -->
+        <div id="game-ui">
+            <!-- Top HUD -->
+            <div class="top-hud">
+                <div class="player-stats">
+                    <span id="player-name">Player</span>
+                    <span id="player-level">Level 1</span>
+                    <span id="player-health">❤️ 100/100</span>
+                    <span id="player-energy">⚡ 100/100</span>
+                    <span id="player-gold">💰 0</span>
+                </div>
+            </div>
+            
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button id="crafting-btn" class="action-btn">⚒️ Crafting</button>
+                <button id="inventory-btn" class="action-btn">🎒 Inventory</button>
+                <button id="map-btn" class="action-btn">🗺️ Map</button>
+                <button id="skills-btn" class="action-btn">⚔️ Skills</button>
+            </div>
+            
+            <!-- Time Display -->
+            <div id="time-display" class="time-display">
+                <span id="current-time">Day 1, 12:00</span>
+            </div>
         </div>
         
-        <!-- Game UI will be dynamically created -->
+        <!-- Crafting Panel -->
+        <div id="crafting-panel" class="panel" style="display: none;">
+            <div class="panel-header">
+                <h3>⚒️ Crafting</h3>
+                <button id="close-crafting" class="close-btn">×</button>
+            </div>
+            <div class="panel-content">
+                <div class="crafting-categories">
+                    <button class="category-btn" data-category="weapons">⚔️ Weapons</button>
+                    <button class="category-btn" data-category="armor">🛡️ Armor</button>
+                    <button class="category-btn" data-category="tools">🔧 Tools</button>
+                    <button class="category-btn" data-category="potions">🧪 Potions</button>
+                </div>
+                <div class="crafting-items" id="crafting-items">
+                    <!-- Crafting items will be populated by JavaScript -->
+                    <div class="crafting-category" data-category="weapons">
+                        <h4>⚔️ Weapons</h4>
+                        <div class="crafting-item" data-item="bronze_sword">
+                            <span class="item-name">Bronze Sword</span>
+                            <span class="item-level">Level 1</span>
+                        </div>
+                        <div class="crafting-item" data-item="iron_sword">
+                            <span class="item-name">Iron Sword</span>
+                            <span class="item-level">Level 5</span>
+                        </div>
+                    </div>
+                    <div class="crafting-category" data-category="armor">
+                        <h4>🛡️ Armor</h4>
+                        <div class="crafting-item" data-item="leather_armor">
+                            <span class="item-name">Leather Armor</span>
+                            <span class="item-level">Level 1</span>
+                        </div>
+                    </div>
+                    <div class="crafting-category" data-category="tools">
+                        <h4>🔧 Tools</h4>
+                        <div class="crafting-item" data-item="hammer">
+                            <span class="item-name">Hammer</span>
+                            <span class="item-level">Level 1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Inventory Panel -->
+        <div id="inventory" class="panel" style="display: none;">
+            <div class="panel-header">
+                <h3>🎒 Inventory</h3>
+                <button id="close-inventory" class="close-btn">×</button>
+            </div>
+            <div class="panel-content">
+                <div class="equipment-section">
+                    <h4>🛡️ Equipment</h4>
+                    <div class="equipment-grid">
+                        <div class="equipment-slot" data-slot="head">👤 Head</div>
+                        <div class="equipment-slot" data-slot="chest">👕 Chest</div>
+                        <div class="equipment-slot" data-slot="legs">👖 Legs</div>
+                        <div class="equipment-slot" data-slot="feet">👟 Feet</div>
+                        <div class="equipment-slot" data-slot="weapon">⚔️ Weapon</div>
+                        <div class="equipment-slot" data-slot="shield">🛡️ Shield</div>
+                    </div>
+                </div>
+                <div class="inventory-section">
+                    <h4>🎒 Inventory</h4>
+                    <div class="inventory-grid" id="inventory-grid">
+                        <!-- 64 inventory slots -->
+                        <div class="inventory-slot" data-slot="0"></div>
+                        <div class="inventory-slot" data-slot="1"></div>
+                        <div class="inventory-slot" data-slot="2"></div>
+                        <div class="inventory-slot" data-slot="3"></div>
+                        <div class="inventory-slot" data-slot="4"></div>
+                        <div class="inventory-slot" data-slot="5"></div>
+                        <div class="inventory-slot" data-slot="6"></div>
+                        <div class="inventory-slot" data-slot="7"></div>
+                        <div class="inventory-slot" data-slot="8"></div>
+                        <div class="inventory-slot" data-slot="9"></div>
+                        <div class="inventory-slot" data-slot="10"></div>
+                        <div class="inventory-slot" data-slot="11"></div>
+                        <div class="inventory-slot" data-slot="12"></div>
+                        <div class="inventory-slot" data-slot="13"></div>
+                        <div class="inventory-slot" data-slot="14"></div>
+                        <div class="inventory-slot" data-slot="15"></div>
+                        <div class="inventory-slot" data-slot="16"></div>
+                        <div class="inventory-slot" data-slot="17"></div>
+                        <div class="inventory-slot" data-slot="18"></div>
+                        <div class="inventory-slot" data-slot="19"></div>
+                        <div class="inventory-slot" data-slot="20"></div>
+                        <div class="inventory-slot" data-slot="21"></div>
+                        <div class="inventory-slot" data-slot="22"></div>
+                        <div class="inventory-slot" data-slot="23"></div>
+                        <div class="inventory-slot" data-slot="24"></div>
+                        <div class="inventory-slot" data-slot="25"></div>
+                        <div class="inventory-slot" data-slot="26"></div>
+                        <div class="inventory-slot" data-slot="27"></div>
+                        <div class="inventory-slot" data-slot="28"></div>
+                        <div class="inventory-slot" data-slot="29"></div>
+                        <div class="inventory-slot" data-slot="30"></div>
+                        <div class="inventory-slot" data-slot="31"></div>
+                        <div class="inventory-slot" data-slot="32"></div>
+                        <div class="inventory-slot" data-slot="33"></div>
+                        <div class="inventory-slot" data-slot="34"></div>
+                        <div class="inventory-slot" data-slot="35"></div>
+                        <div class="inventory-slot" data-slot="36"></div>
+                        <div class="inventory-slot" data-slot="37"></div>
+                        <div class="inventory-slot" data-slot="38"></div>
+                        <div class="inventory-slot" data-slot="39"></div>
+                        <div class="inventory-slot" data-slot="40"></div>
+                        <div class="inventory-slot" data-slot="41"></div>
+                        <div class="inventory-slot" data-slot="42"></div>
+                        <div class="inventory-slot" data-slot="43"></div>
+                        <div class="inventory-slot" data-slot="44"></div>
+                        <div class="inventory-slot" data-slot="45"></div>
+                        <div class="inventory-slot" data-slot="46"></div>
+                        <div class="inventory-slot" data-slot="47"></div>
+                        <div class="inventory-slot" data-slot="48"></div>
+                        <div class="inventory-slot" data-slot="49"></div>
+                        <div class="inventory-slot" data-slot="50"></div>
+                        <div class="inventory-slot" data-slot="51"></div>
+                        <div class="inventory-slot" data-slot="52"></div>
+                        <div class="inventory-slot" data-slot="53"></div>
+                        <div class="inventory-slot" data-slot="54"></div>
+                        <div class="inventory-slot" data-slot="55"></div>
+                        <div class="inventory-slot" data-slot="56"></div>
+                        <div class="inventory-slot" data-slot="57"></div>
+                        <div class="inventory-slot" data-slot="58"></div>
+                        <div class="inventory-slot" data-slot="59"></div>
+                        <div class="inventory-slot" data-slot="60"></div>
+                        <div class="inventory-slot" data-slot="61"></div>
+                        <div class="inventory-slot" data-slot="62"></div>
+                        <div class="inventory-slot" data-slot="63"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
