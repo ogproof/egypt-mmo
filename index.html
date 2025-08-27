@@ -425,6 +425,30 @@
             startGame();
         }
 
+        // Ensure game container exists
+        function ensureGameContainer() {
+            let gameContainer = document.getElementById('game-container');
+            
+            if (!gameContainer) {
+                console.log('🔧 Creating game container...');
+                gameContainer = document.createElement('div');
+                gameContainer.id = 'game-container';
+                gameContainer.style.cssText = `
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 999;
+                    display: none;
+                `;
+                document.body.appendChild(gameContainer);
+                console.log('✅ Game container created');
+            }
+            
+            return gameContainer;
+        }
+
         // Start Game
         function startGame() {
             console.log('🚀 Starting Egypt MMO...');
@@ -432,8 +456,10 @@
             // Hide character creator
             document.getElementById('character-creator').style.display = 'none';
             
-            // Show game container
-            document.getElementById('game-container').style.display = 'block';
+            // Ensure game container exists and show it
+            const gameContainer = ensureGameContainer();
+            gameContainer.style.display = 'block';
+            console.log('✅ Game container shown');
             
             // Initialize the game
             initializeGame();

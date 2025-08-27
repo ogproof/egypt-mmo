@@ -274,7 +274,7 @@
             }
         }
     </style>
-  <script type="module" crossorigin src="./assets/index-B29p46V8.js"></script>
+  <script type="module" crossorigin src="./assets/index-BBW1v0HO.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/three-C8PiImrb.js">
   <link rel="modulepreload" crossorigin href="./assets/networking-BsC3Nmyy.js">
   <link rel="stylesheet" crossorigin href="./assets/index-Dndrepyh.css">
@@ -430,6 +430,30 @@
             startGame();
         }
 
+        // Ensure game container exists
+        function ensureGameContainer() {
+            let gameContainer = document.getElementById('game-container');
+            
+            if (!gameContainer) {
+                console.log('🔧 Creating game container...');
+                gameContainer = document.createElement('div');
+                gameContainer.id = 'game-container';
+                gameContainer.style.cssText = `
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 999;
+                    display: none;
+                `;
+                document.body.appendChild(gameContainer);
+                console.log('✅ Game container created');
+            }
+            
+            return gameContainer;
+        }
+
         // Start Game
         function startGame() {
             console.log('🚀 Starting Egypt MMO...');
@@ -437,8 +461,10 @@
             // Hide character creator
             document.getElementById('character-creator').style.display = 'none';
             
-            // Show game container
-            document.getElementById('game-container').style.display = 'block';
+            // Ensure game container exists and show it
+            const gameContainer = ensureGameContainer();
+            gameContainer.style.display = 'block';
+            console.log('✅ Game container shown');
             
             // Initialize the game
             initializeGame();
@@ -517,6 +543,6 @@
     <!-- Your existing game scripts will be loaded here -->
   <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
   <script nomodule crossorigin id="vite-legacy-polyfill" src="./assets/polyfills-legacy-aLPCCT8d.js"></script>
-  <script nomodule crossorigin id="vite-legacy-entry" data-src="./assets/index-legacy-84sojlqS.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+  <script nomodule crossorigin id="vite-legacy-entry" data-src="./assets/index-legacy-CBWIyVh-.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
 </body>
 </html>

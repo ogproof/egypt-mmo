@@ -93,6 +93,7 @@ class EgyptMMO {
             this.gameEngine.setNetworkManager(this.networkManager);
             this.gameEngine.setAudioManager(this.audioManager);
             this.gameEngine.setOptionsManager(this.optionsManager);
+            this.gameEngine.setLoadingManager(this.loadingManager);
             
             // Set player name from character data
             if (this.characterData && this.characterData.name) {

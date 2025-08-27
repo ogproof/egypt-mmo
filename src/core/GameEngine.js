@@ -121,11 +121,14 @@ export class GameEngine {
         // Ensure all game objects have safe update methods
         this.ensureSafeUpdateMethods();
         
-        this.isInitialized = true; // Mark as initialized
+        // Mark as initialized
+        this.isInitialized = true;
         console.log('✅ Game Engine initialized');
         
-        // Start viewport monitoring
-        this.monitorViewport();
+        // Hide loading screen if it exists
+        if (this.loadingManager) {
+            this.loadingManager.hide();
+        }
     }
 
     initScene() {
@@ -1527,6 +1530,12 @@ export class GameEngine {
         this.networkManager.sendPlayerPosition(testPosition);
         
         console.log('🧪 Movement sync test completed');
+    }
+
+    // Set loading manager
+    setLoadingManager(loadingManager) {
+        this.loadingManager = loadingManager;
+        console.log('📦 Loading Manager connected to Game Engine');
     }
 
     // Set player name from character creator
