@@ -305,7 +305,7 @@
             
             <div class="input-group">
                 <label for="character-name">Character Name</label>
-                <input type="text" id="character-name" placeholder="Enter your character's name" maxlength="20">
+                <input type="text" id="character-name" class="character-name-input" placeholder="Enter your character's name" maxlength="20">
             </div>
             
             <button class="create-btn" onclick="createCharacter()">Create Character</button>
@@ -386,6 +386,11 @@
         function showCharacterCreator() {
             document.getElementById('loading-screen').style.display = 'none';
             document.getElementById('character-creator').style.display = 'flex';
+            
+            // Enable character creator mode in InputManager if available
+            if (window.egyptMMO?.gameEngine?.inputManager) {
+                window.egyptMMO.gameEngine.inputManager.enableCharacterCreatorMode();
+            }
         }
 
         // Show Title Screen
@@ -452,6 +457,11 @@
         // Start Game
         function startGame() {
             console.log('🚀 Starting Egypt MMO...');
+            
+            // Disable character creator mode in InputManager if available
+            if (window.egyptMMO?.gameEngine?.inputManager) {
+                window.egyptMMO.gameEngine.inputManager.disableCharacterCreatorMode();
+            }
             
             // Hide character creator
             document.getElementById('character-creator').style.display = 'none';

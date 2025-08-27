@@ -274,7 +274,7 @@
             }
         }
     </style>
-  <script type="module" crossorigin src="./assets/index-BvRzP9dX.js"></script>
+  <script type="module" crossorigin src="./assets/index-B7j_6ZqB.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/three-C8PiImrb.js">
   <link rel="modulepreload" crossorigin href="./assets/networking-BsC3Nmyy.js">
   <link rel="stylesheet" crossorigin href="./assets/index-Dndrepyh.css">
@@ -310,7 +310,7 @@
             
             <div class="input-group">
                 <label for="character-name">Character Name</label>
-                <input type="text" id="character-name" placeholder="Enter your character's name" maxlength="20">
+                <input type="text" id="character-name" class="character-name-input" placeholder="Enter your character's name" maxlength="20">
             </div>
             
             <button class="create-btn" onclick="createCharacter()">Create Character</button>
@@ -391,6 +391,11 @@
         function showCharacterCreator() {
             document.getElementById('loading-screen').style.display = 'none';
             document.getElementById('character-creator').style.display = 'flex';
+            
+            // Enable character creator mode in InputManager if available
+            if (window.egyptMMO?.gameEngine?.inputManager) {
+                window.egyptMMO.gameEngine.inputManager.enableCharacterCreatorMode();
+            }
         }
 
         // Show Title Screen
@@ -457,6 +462,11 @@
         // Start Game
         function startGame() {
             console.log('🚀 Starting Egypt MMO...');
+            
+            // Disable character creator mode in InputManager if available
+            if (window.egyptMMO?.gameEngine?.inputManager) {
+                window.egyptMMO.gameEngine.inputManager.disableCharacterCreatorMode();
+            }
             
             // Hide character creator
             document.getElementById('character-creator').style.display = 'none';
@@ -543,6 +553,6 @@
     <!-- Your existing game scripts will be loaded here -->
   <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
   <script nomodule crossorigin id="vite-legacy-polyfill" src="./assets/polyfills-legacy-aLPCCT8d.js"></script>
-  <script nomodule crossorigin id="vite-legacy-entry" data-src="./assets/index-legacy-AYgxMKWe.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+  <script nomodule crossorigin id="vite-legacy-entry" data-src="./assets/index-legacy-BSj4oiWq.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
 </body>
 </html>

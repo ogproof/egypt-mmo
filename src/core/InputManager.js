@@ -23,6 +23,9 @@ export class InputManager {
         this.onTouchEnd = null;
         
         // Don't auto-init, wait for explicit init() call
+
+        // Character creator mode
+        this.characterCreatorMode = false;
     }
 
     init() {
@@ -52,8 +55,8 @@ export class InputManager {
                 this.onKeyDown(key);
             }
             
-            // Prevent default for game keys
-            if (this.isGameKey(key)) {
+            // Don't prevent default if user is typing in an input field or character creator mode is active
+            if (this.isGameKey(key) && !this.isUserTyping(event)) {
                 event.preventDefault();
             }
         });
@@ -260,5 +263,42 @@ export class InputManager {
         
         // Remove event listeners (in a real implementation, you'd store references)
         console.log('🎮 Input Manager destroyed');
+    }
+
+    // Check if user is typing in an input field
+    isUserTyping(event) {
+        // If character creator mode is active, allow all keys
+        if (this.characterCreatorMode) {
+            return true;
+        }
+        
+        const target = event.target;
+        
+        // Check if target is an input field
+        const isInputField = target && (
+            target.tagName === 'INPUT' ||
+            target.tagName === 'TEXTAREA' ||
+            target.contentEditable === 'true' ||
+            target.classList.contains('character-name-input') ||
+            target.id === 'character-name'
+        );
+        
+        // Check if character creator or title screen is active
+        const isCharacterCreatorActive = document.getElementById('character-creator')?.style.display === 'flex';
+        const isTitleScreenActive = document.getElementById('title-screen')?.style.display === 'flex';
+        
+        return isInputField || isCharacterCreatorActive || isTitleScreenActive;
+    }
+
+    // Enable character creator mode (allows all keys to work)
+    enableCharacterCreatorMode() {
+        this.characterCreatorMode = true;
+        console.log('🎮 Character creator mode enabled - all keys work normally');
+    }
+
+    // Disable character creator mode (restores game key blocking)
+    disableCharacterCreatorMode() {
+        this.characterCreatorMode = false;
+        console.log('🎮 Character creator mode disabled - game keys blocked again');
     }
 }

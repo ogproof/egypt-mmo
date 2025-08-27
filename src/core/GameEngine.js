@@ -1395,6 +1395,11 @@ export class GameEngine {
     getPlayer() {
         return this.player;
     }
+
+    // Get InputManager reference
+    getInputManager() {
+        return this.inputManager;
+    }
     
     // Handle world state update from server
     handleWorldStateUpdate(worldData) {
