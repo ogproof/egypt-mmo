@@ -48,6 +48,9 @@ export class UIManager {
             throw new Error('UI elements not found');
         }
         
+        // HIDE all UI elements initially - they'll be shown when game is ready
+        this.hideAllUI();
+        
         this.setupEventListeners();
         // Create logout button
         this.createLogoutButton();
@@ -65,7 +68,7 @@ export class UIManager {
         this.startPlayerInfoUpdates();
         
         this.isInitialized = true; // Mark as initialized
-        console.log('✅ UI Manager initialized');
+        console.log('✅ UI Manager initialized (UI hidden until game ready)');
     }
 
     startPlayerInfoUpdates() {
@@ -1703,6 +1706,87 @@ export class UIManager {
             this.showCraftingPanel();
         } else {
             this.hideCraftingPanel();
+        }
+    }
+
+    hideAllUI() {
+        if (this.gameUI) this.gameUI.style.display = 'none';
+        if (this.craftingPanel) this.craftingPanel.style.display = 'none';
+        if (this.inventory) this.inventory.style.display = 'none';
+        if (this.topHUD) this.topHUD.style.display = 'none';
+        if (this.actionButtons) this.actionButtons.style.display = 'none';
+        if (this.timeDisplay) this.timeDisplay.style.display = 'none';
+        
+        // Hide player info display if it exists
+        const playerInfoDisplay = document.getElementById('player-info-display');
+        if (playerInfoDisplay) playerInfoDisplay.style.display = 'none';
+    }
+
+    showAllUI() {
+        if (this.gameUI) this.gameUI.style.display = 'block';
+        if (this.topHUD) this.topHUD.style.display = 'block';
+        if (this.actionButtons) this.actionButtons.style.display = 'block';
+        if (this.timeDisplay) this.timeDisplay.style.display = 'block';
+        
+        // Show player info display if it exists
+        const playerInfoDisplay = document.getElementById('player-info-display');
+        if (playerInfoDisplay) playerInfoDisplay.style.display = 'block';
+        
+        // Hide the game loading indicator
+        const loadingIndicator = document.getElementById('game-loading-indicator');
+        if (loadingIndicator) {
+            loadingIndicator.style.display = 'none';
+            console.log('🎯 Game loading indicator hidden');
+        }
+        
+        console.log('🎨 All UI elements now visible - game is ready!');
+    }
+
+    // Show UI only when game is fully loaded and running
+    showUIWhenGameReady() {
+        // Wait a bit to ensure game is fully initialized
+        setTimeout(() => {
+            this.showAllUI();
+        }, 1000); // 1 second delay to ensure game is ready
+    }
+
+    // Connect to GameEngine for notifications
+    setGameEngine(gameEngine) {
+        this.gameEngine = gameEngine;
+        console.log('🎮 UIManager connected to GameEngine');
+        
+        // If game is already ready, show UI immediately
+        if (this.gameEngine && this.gameEngine.isInitialized) {
+            console.log('🎨 Game already ready, showing UI immediately...');
+            this.showUIWhenGameReady();
+        }
+    }
+
+    // Check if game is ready and show UI accordingly
+    checkGameReady() {
+        if (this.gameEngine && this.gameEngine.isInitialized && this.gameEngine.isRunning) {
+            console.log('🎨 Game is ready and running, showing UI...');
+            this.showAllUI();
+            return true;
+        }
+        return false;
+    }
+
+    // Show game loading indicator
+    showGameLoading() {
+        const loadingIndicator = document.getElementById('game-loading-indicator');
+        if (loadingIndicator) {
+            loadingIndicator.style.display = 'flex';
+            console.log('🎯 Game loading indicator shown');
+        }
+    }
+
+    // Hide game loading indicator
+    hideGameLoading() {
+        const loadingIndicator = document.getElementById('game-loading-indicator');
+        if (loadingIndicator) {
+            loadingIndicator.style.display = 'none';
+            console.log('🎯 Game loading indicator hidden');
         }
     }
 }

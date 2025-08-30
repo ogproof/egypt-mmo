@@ -513,6 +513,44 @@
             border-color: #32CD32;
         }
 
+        /* Game Loading Indicator */
+        .game-loading-indicator {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            z-index: 1001;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .game-loading-indicator .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid #FFD700;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        .game-loading-indicator .loading-text {
+            font-size: 18px;
+            font-weight: bold;
+            color: #FFD700;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
         /* Loading Screen Styles */
 
         /* Responsive Design */
@@ -579,8 +617,14 @@
     <div id="game-container" style="display: none;">
         <canvas id="game-canvas"></canvas>
         
+        <!-- Game Loading Indicator -->
+        <div id="game-loading-indicator" class="game-loading-indicator">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">Loading Game World...</div>
+        </div>
+        
         <!-- Game UI -->
-        <div id="game-ui">
+        <div id="game-ui" style="display: none;">
             <!-- Top HUD -->
             <div class="top-hud">
                 <div class="player-stats">

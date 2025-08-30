@@ -65,6 +65,11 @@ export class GameEngine {
         
         console.log('🎮 Initializing Game Engine...');
         
+        // Show game loading indicator if UIManager is available
+        if (this.uiManager && typeof this.uiManager.showGameLoading === 'function') {
+            this.uiManager.showGameLoading();
+        }
+        
         // Initialize Three.js scene
         this.initScene();
         
@@ -140,6 +145,12 @@ export class GameEngine {
         // Hide loading screen if it exists
         if (this.loadingManager) {
             this.loadingManager.hide();
+        }
+        
+        // Notify UIManager that game is ready (UI can now be shown)
+        if (this.uiManager && typeof this.uiManager.showUIWhenGameReady === 'function') {
+            console.log('🎨 Notifying UIManager that game is ready...');
+            this.uiManager.showUIWhenGameReady();
         }
     }
 
@@ -365,6 +376,11 @@ export class GameEngine {
         this.clock.start();
         this.gameLoop();
         console.log('✅ Game loop started');
+        
+        // Hide game loading indicator when game loop starts successfully
+        if (this.uiManager && typeof this.uiManager.hideGameLoading === 'function') {
+            this.uiManager.hideGameLoading();
+        }
     }
 
     stop() {
