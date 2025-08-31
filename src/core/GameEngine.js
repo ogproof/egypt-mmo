@@ -42,6 +42,7 @@ export class GameEngine {
         this.isPaused = false;
         this.isInitialized = false;
         this.animationFrameId = null;
+        this.duplicateCleanupInterval = null; // For duplicate player cleanup
         
         // Performance monitoring
         this.fps = 0;
@@ -111,10 +112,15 @@ export class GameEngine {
             this.networkManager.setPlayerId(this.player.name);
             console.log(`🆔 Set network player ID to: ${this.player.name}`);
             
-            // Clean up any duplicate players that might have been created before
-            setTimeout(() => {
+            // IMMEDIATE cleanup of any existing duplicates
+            this.cleanupDuplicatePlayers();
+            
+            // Set up periodic cleanup to catch any that slip through
+            this.duplicateCleanupInterval = setInterval(() => {
                 this.cleanupDuplicatePlayers();
-            }, 1000); // Wait a bit for any network updates to settle
+            }, 2000); // Check every 2 seconds
+            
+            console.log(`🧹 Set up duplicate player cleanup system`);
         }
         
         // Ensure camera exists and is properly set
@@ -439,59 +445,66 @@ export class GameEngine {
 
     // Safely destroy the game engine
     destroy() {
-        console.log('🗑️ Destroying Game Engine...');
+        console.log('🗑️ Destroying GameEngine...');
         
-        // Stop the game loop first
-        this.stop();
-        
-        // Clear any pending animation frames
-        if (this.animationFrameId) {
-            cancelAnimationFrame(this.animationFrameId);
-            this.animationFrameId = null;
-        }
-        
-        // Reset all state
-        this.isRunning = false;
-        this.isPaused = true;
-        this.isInitialized = false;
-        
-        // Clear collections
-        this.players.clear();
-        this.entities = [];
-        
-        // Dispose of Three.js resources
-        if (this.renderer) {
-            this.renderer.dispose();
-            this.renderer = null;
-        }
-        
-        if (this.scene) {
-            // Dispose of all geometries and materials
-            this.scene.traverse((object) => {
-                if (object.geometry) {
-                    object.geometry.dispose();
-                }
-                if (object.material) {
-                    if (Array.isArray(object.material)) {
-                        object.material.forEach(material => material.dispose());
-                    } else {
-                        object.material.dispose();
+        try {
+            // Stop the game loop
+            this.stop();
+            
+            // Clear duplicate cleanup interval
+            if (this.duplicateCleanupInterval) {
+                clearInterval(this.duplicateCleanupInterval);
+                this.duplicateCleanupInterval = null;
+                console.log('🧹 Cleared duplicate cleanup interval');
+            }
+            
+            // Cancel any pending animation frames
+            if (this.animationFrameId) {
+                cancelAnimationFrame(this.animationFrameId);
+                this.animationFrameId = null;
+            }
+            
+            // Dispose of Three.js resources
+            if (this.renderer) {
+                this.renderer.dispose();
+                this.renderer = null;
+            }
+            
+            // Dispose of scene objects
+            if (this.scene) {
+                this.scene.traverse((object) => {
+                    if (object.geometry) {
+                        object.geometry.dispose();
                     }
-                }
-            });
-            this.scene = null;
+                    if (object.material) {
+                        if (Array.isArray(object.material)) {
+                            object.material.forEach(material => material.dispose());
+                        } else {
+                            object.material.dispose();
+                        }
+                    }
+                });
+                this.scene = null;
+            }
+            
+            // Clear all system references
+            this.player = null;
+            this.camera = null;
+            this.networkManager = null;
+            this.uiManager = null;
+            this.inputManager = null;
+            this.worldManager = null;
+            this.players.clear();
+            
+            this.isInitialized = false;
+            this.isRunning = false;
+            this.isPaused = false;
+            
+            console.log('✅ GameEngine destroyed successfully');
+            
+        } catch (error) {
+            console.error('❌ Error destroying GameEngine:', error);
         }
-        
-        // Clear references
-        this.camera = null;
-        this.player = null;
-        this.worldManager = null;
-        this.gridManager = null;
-        this.inputManager = null;
-        this.craftingSystem = null;
-        this.inventorySystem = null;
-        
-        console.log('✅ Game Engine destroyed');
     }
 
     gameLoop() {
@@ -1294,6 +1307,11 @@ export class GameEngine {
             // Update other players
             this.updateOtherPlayers(deltaTime);
             
+            // Continuous duplicate player monitoring (every 30 frames)
+            if (this.frameCount % 30 === 0) {
+                this.cleanupDuplicatePlayers();
+            }
+            
         } catch (error) {
             console.error('🚨 System update error:', error);
             console.error('🚨 Failed system update at time:', currentTime);
@@ -1303,9 +1321,9 @@ export class GameEngine {
     // Update other players with error handling
     updateOtherPlayers(deltaTime) {
         try {
-            this.players.forEach((playerMesh, playerId) => {
-                if (playerMesh && typeof playerMesh.update === 'function') {
-                    playerMesh.update(deltaTime);
+            this.players.forEach((player, playerId) => {
+                if (player && typeof player.update === 'function') {
+                    player.update(deltaTime);
                 }
             });
         } catch (error) {
@@ -1602,17 +1620,51 @@ export class GameEngine {
         
         const localPlayerName = this.player.name;
         const localPlayerId = this.networkManager.getPlayerId();
+        const localPlayerPosition = this.player.position;
         
         console.log(`🧹 Cleaning up duplicate players for: ${localPlayerName} (ID: ${localPlayerId})`);
+        
+        let duplicatesRemoved = 0;
         
         // Remove any players that match the local player
         for (const [playerId, playerMesh] of this.players.entries()) {
             const playerName = playerMesh.userData?.playerName;
+            const playerPosition = playerMesh.position;
             
-            if (this.isLocalPlayer(playerId, playerName)) {
-                console.log(`🗑️ Removing duplicate player: ${playerName} (ID: ${playerId})`);
+            // Check by ID, name, or position (if very close to local player)
+            const isDuplicate = this.isLocalPlayer(playerId, playerName) || 
+                               (localPlayerPosition && 
+                                Math.abs(playerPosition.x - localPlayerPosition.x) < 0.1 &&
+                                Math.abs(playerPosition.z - localPlayerPosition.z) < 0.1);
+            
+            if (isDuplicate) {
+                console.log(`🗑️ Removing duplicate player: ${playerName} (ID: ${playerId}) at position (${playerPosition.x.toFixed(1)}, ${playerPosition.z.toFixed(1)})`);
                 this.removeOtherPlayer(playerId);
+                duplicatesRemoved++;
             }
+        }
+        
+        if (duplicatesRemoved > 0) {
+            console.log(`🧹 Removed ${duplicatesRemoved} duplicate players`);
+        } else {
+            console.log(`🧹 No duplicate players found`);
+        }
+    }
+
+    // Debug method to show all current players
+    debugShowAllPlayers() {
+        console.log(`🔍 Current players in scene:`);
+        console.log(`   Local player: ${this.player?.name || 'None'} at position ${this.player?.position ? `(${this.player.position.x.toFixed(1)}, ${this.player.position.z.toFixed(1)})` : 'None'}`);
+        console.log(`   Network ID: ${this.networkManager?.getPlayerId() || 'None'}`);
+        console.log(`   Other players: ${this.players.size}`);
+        
+        for (const [playerId, playerMesh] of this.players.entries()) {
+            const playerName = playerMesh.userData?.playerName;
+            const position = playerMesh.position;
+            const createdAt = playerMesh.userData?.createdAt;
+            const age = createdAt ? Math.round((Date.now() - createdAt) / 1000) : 'Unknown';
+            
+            console.log(`     - ${playerName} (ID: ${playerId}) at (${position.x.toFixed(1)}, ${position.z.toFixed(1)}) - Age: ${age}s`);
         }
     }
 
@@ -1627,13 +1679,25 @@ export class GameEngine {
 
     // Add other player to the world
     addOtherPlayer(playerData) {
-        // Double-check that this is not the local player
+        // IMMEDIATE duplicate check - prevent creation at source
         if (this.isLocalPlayer(playerData.id, playerData.name)) {
-            console.log(`🔄 Skipping local player in addOtherPlayer: ${playerData.name}`);
+            console.log(`🚫 BLOCKED duplicate player creation: ${playerData.name} (ID: ${playerData.id})`);
             return;
         }
         
-        if (this.players.has(playerData.id)) return;
+        // Check if we already have this player
+        if (this.players.has(playerData.id)) {
+            console.log(`🚫 Player already exists: ${playerData.name} (ID: ${playerData.id})`);
+            return;
+        }
+        
+        // Additional safety check - look for players with same name
+        for (const [existingId, existingPlayer] of this.players.entries()) {
+            if (existingPlayer.userData?.playerName === playerData.name) {
+                console.log(`🚫 Player with same name already exists: ${playerData.name}`);
+                return;
+            }
+        }
         
         try {
             console.log(`👥 Creating player mesh for: ${playerData.name}`);
@@ -1648,7 +1712,8 @@ export class GameEngine {
             playerMesh.userData = { 
                 playerId: playerData.id, 
                 playerName: playerData.name,
-                isOtherPlayer: true
+                isOtherPlayer: true,
+                createdAt: Date.now() // Track when created for debugging
             };
             
             // Add name tag
@@ -1692,6 +1757,20 @@ export class GameEngine {
         
         const playerMesh = this.players.get(data.playerId);
         if (playerMesh) {
+            // Check if this player is too close to local player (potential duplicate)
+            if (this.player && this.player.position) {
+                const distance = Math.sqrt(
+                    Math.pow(playerMesh.position.x - this.player.position.x, 2) +
+                    Math.pow(playerMesh.position.z - this.player.position.z, 2)
+                );
+                
+                if (distance < 0.5) { // Very close - likely a duplicate
+                    console.log(`🚫 Removing duplicate player too close to local player: ${data.playerId} (distance: ${distance.toFixed(2)})`);
+                    this.removeOtherPlayer(data.playerId);
+                    return;
+                }
+            }
+            
             playerMesh.position.set(data.position.x, data.position.y, data.position.z);
             if (data.rotation) {
                 playerMesh.rotation.set(data.rotation.x, data.rotation.y, data.rotation.z);

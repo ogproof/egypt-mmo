@@ -212,21 +212,40 @@ class EgyptMMO {
             this.networkManager?.disconnect();
         });
 
-        // Debug shortcuts for movement sync testing
+        // Debug shortcuts
         document.addEventListener('keydown', (event) => {
-            switch (event.key) {
-                case 'F1':
-                    console.log('🔍 Debug: Multiplayer Status');
-                    this.gameEngine?.debugMultiplayerStatus();
-                    break;
-                case 'F2':
-                    console.log('🧪 Debug: Test Movement Sync');
-                    this.gameEngine?.testMovementSync();
-                    break;
-                case 'F3':
-                    console.log('🌐 Debug: Test Network Connection');
-                    this.networkManager?.testConnection();
-                    break;
+            if (event.key === 'F1') {
+                console.log('🔍 Debug: Multiplayer Status');
+                if (window.egyptMMO?.networkManager) {
+                    const status = window.egyptMMO.networkManager.getConnectionStatus();
+                    console.log('Network Status:', status);
+                }
+            }
+            
+            if (event.key === 'F2') {
+                console.log('🔍 Debug: Testing Movement Sync');
+                if (window.egyptMMO?.gameEngine?.player) {
+                    const player = window.egyptMMO.gameEngine.player;
+                    const testPosition = player.position.clone();
+                    testPosition.x += 5;
+                    testPosition.z += 5;
+                    window.egyptMMO.networkManager.sendPlayerPosition(testPosition);
+                    console.log('📡 Sent test position:', testPosition);
+                }
+            }
+            
+            if (event.key === 'F3') {
+                console.log('🔍 Debug: Testing Network Connection');
+                if (window.egyptMMO?.networkManager) {
+                    window.egyptMMO.networkManager.testConnection();
+                }
+            }
+            
+            if (event.key === 'F4') {
+                console.log('🔍 Debug: Show All Players');
+                if (window.egyptMMO?.gameEngine) {
+                    window.egyptMMO.gameEngine.debugShowAllPlayers();
+                }
             }
         });
     }
