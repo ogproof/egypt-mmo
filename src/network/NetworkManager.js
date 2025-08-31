@@ -49,7 +49,12 @@ export class NetworkManager {
         // Simulate connection delay
         setTimeout(() => {
             this.isConnected = true;
-            this.playerId = this.generatePlayerId();
+            
+            // If player ID is already set (by GameEngine), use it; otherwise generate one
+            if (!this.playerId) {
+                this.playerId = this.generatePlayerId();
+            }
+            
             console.log(`🌐 Connected to server (simulated) - Player ID: ${this.playerId}`);
             
             // Simulate other players joining
@@ -62,10 +67,16 @@ export class NetworkManager {
     }
 
     simulateOtherPlayers() {
-        // Simulate a few other players in the world
+        // Simulate a few other players in the world (excluding the local player)
         const playerNames = ['Anubis', 'Cleopatra', 'Ramses', 'Nefertiti'];
         
         playerNames.forEach((name, index) => {
+            // Skip if this is the local player's name
+            if (name === this.playerId) {
+                console.log(`🔄 Skipping local player ${name} from simulated players`);
+                return;
+            }
+            
             setTimeout(() => {
                 const playerData = {
                     id: `player_${index}`,
@@ -199,8 +210,16 @@ export class NetworkManager {
             }
         });
 
+        // Handle player movement
         this.socket.on('player_move', (data) => {
-            console.log('👥 Received player_move event:', data);
+            // Filter out our own movement updates to prevent duplicates
+            if (data.playerId === this.playerId) {
+                console.log(`🔄 Ignoring own movement update for player ${data.playerId}`);
+                return;
+            }
+            
+            console.log(`👥 Received movement update for player ${data.playerId}:`, data);
+            
             if (this.onPlayerMove) {
                 this.onPlayerMove(data);
             } else {
@@ -274,14 +293,22 @@ export class NetworkManager {
         this.socket.emit('player_join', playerData);
     }
 
-    // Player movement
+    // Send player position to server
     sendPlayerPosition(position) {
-        if (this.socket && this.isConnected) {
-            this.socket.emit('player_move', {
-                position: position,
-                timestamp: Date.now()
-            });
+        if (!this.socket || !this.isConnected) {
+            console.warn('⚠️ Cannot send position - not connected to server');
+            return;
         }
+        
+        // Include player ID to prevent receiving own updates
+        const positionData = {
+            playerId: this.playerId,
+            position: position,
+            timestamp: Date.now()
+        };
+        
+        this.socket.emit('player_move', positionData);
+        console.log(`📡 Sent position update for player ${this.playerId}:`, position);
     }
 
     sendPlayerAction(action, data) {
@@ -379,6 +406,13 @@ export class NetworkManager {
         return this.playerId;
     }
 
+    // Set player ID (called by GameEngine to prevent duplicates)
+    setPlayerId(id) {
+        this.playerId = id;
+        console.log(`🆔 Network player ID set to: ${id}`);
+    }
+
+    // Get connected players
     getConnectedPlayers() {
         return Array.from(this.players.values());
     }

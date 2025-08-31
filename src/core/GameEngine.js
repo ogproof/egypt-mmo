@@ -105,6 +105,18 @@ export class GameEngine {
             this.pendingPlayerName = null;
         }
         
+        // Set the player ID in the network manager to prevent duplicates
+        if (this.networkManager && this.player.name) {
+            // Use the player name as the ID to prevent duplicates
+            this.networkManager.setPlayerId(this.player.name);
+            console.log(`🆔 Set network player ID to: ${this.player.name}`);
+            
+            // Clean up any duplicate players that might have been created before
+            setTimeout(() => {
+                this.cleanupDuplicatePlayers();
+            }, 1000); // Wait a bit for any network updates to settle
+        }
+        
         // Ensure camera exists and is properly set
         if (!this.camera) {
             console.warn('⚠️ Camera not found, creating default camera...');
@@ -1564,10 +1576,12 @@ export class GameEngine {
         
         if (worldData.players) {
             worldData.players.forEach(playerData => {
-                // Don't add our own player
-                if (playerData.id !== this.networkManager?.getPlayerId()) {
-                    console.log(`🌍 Adding existing player: ${playerData.name}`);
+                // Don't add our own player - use the helper method
+                if (!this.isLocalPlayer(playerData.id, playerData.name)) {
+                    console.log(`🌍 Adding existing player: ${playerData.name} (ID: ${playerData.id})`);
                     this.addOtherPlayer(playerData);
+                } else {
+                    console.log(`🔄 Skipping local player: ${playerData.name} (ID: ${playerData.id})`);
                 }
             });
         }
@@ -1582,8 +1596,43 @@ export class GameEngine {
         }
     }
     
+    // Clean up any duplicate players (call this after fixing the ID system)
+    cleanupDuplicatePlayers() {
+        if (!this.player || !this.networkManager) return;
+        
+        const localPlayerName = this.player.name;
+        const localPlayerId = this.networkManager.getPlayerId();
+        
+        console.log(`🧹 Cleaning up duplicate players for: ${localPlayerName} (ID: ${localPlayerId})`);
+        
+        // Remove any players that match the local player
+        for (const [playerId, playerMesh] of this.players.entries()) {
+            const playerName = playerMesh.userData?.playerName;
+            
+            if (this.isLocalPlayer(playerId, playerName)) {
+                console.log(`🗑️ Removing duplicate player: ${playerName} (ID: ${playerId})`);
+                this.removeOtherPlayer(playerId);
+            }
+        }
+    }
+
+    // Check if a player is the local player
+    isLocalPlayer(playerId, playerName) {
+        const localPlayerId = this.networkManager?.getPlayerId();
+        const localPlayerName = this.player?.name;
+        
+        return playerId === localPlayerId || playerName === localPlayerId || 
+               playerId === localPlayerName || playerName === localPlayerName;
+    }
+
     // Add other player to the world
     addOtherPlayer(playerData) {
+        // Double-check that this is not the local player
+        if (this.isLocalPlayer(playerData.id, playerData.name)) {
+            console.log(`🔄 Skipping local player in addOtherPlayer: ${playerData.name}`);
+            return;
+        }
+        
         if (this.players.has(playerData.id)) return;
         
         try {
@@ -1635,6 +1684,12 @@ export class GameEngine {
     
     // Update other player position
     updateOtherPlayer(data) {
+        // Double-check that this is not the local player
+        if (this.isLocalPlayer(data.playerId, data.playerName)) {
+            console.log(`🔄 Ignoring movement update for local player: ${data.playerId}`);
+            return;
+        }
+        
         const playerMesh = this.players.get(data.playerId);
         if (playerMesh) {
             playerMesh.position.set(data.position.x, data.position.y, data.position.z);
