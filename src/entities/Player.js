@@ -3,7 +3,7 @@ import * as THREE from 'three';
 export class Player {
     constructor(scene, physicsWorld) {
         this.scene = scene;
-        this.physicsWorld = physicsWorld;
+        this.physicsWorld = physicsWorld || null; // Handle null physics world gracefully
         
         // Player state
         this.position = new THREE.Vector3(0, 0, 0);

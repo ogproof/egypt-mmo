@@ -22,6 +22,7 @@ export class GameEngine {
         this.uiManager = null;
         this.optionsManager = null; // Add options manager
         this.clickIndicator = null; // Visual indicator for clicks
+        this.physicsWorld = null; // Add physics world property
         
         // Camera orbital rotation properties
         this.cameraOrbitAngle = 0; // Current orbit angle around player
@@ -115,12 +116,12 @@ export class GameEngine {
             // IMMEDIATE cleanup of any existing duplicates
             this.cleanupDuplicatePlayers();
             
-            // Set up periodic cleanup to catch any that slip through
+            // Set up periodic cleanup to catch any that slip through (less frequent)
             this.duplicateCleanupInterval = setInterval(() => {
                 this.cleanupDuplicatePlayers();
-            }, 2000); // Check every 2 seconds
+            }, 10000); // Check every 10 seconds instead of 2 seconds
             
-            console.log(`🧹 Set up duplicate player cleanup system`);
+            console.log(`🧹 Set up duplicate player cleanup system (10s interval)`);
         }
         
         // Ensure camera exists and is properly set
@@ -565,8 +566,34 @@ export class GameEngine {
             }
         }
         
-        // Update performance metrics
-        this.updatePerformanceMetrics(elapsedTime);
+        // Performance monitoring (less frequent for better performance)
+        if (this.frameCount % 600 === 0) { // Every 10 seconds at 60 FPS instead of every frame
+            const currentFPS = this.frameCount;
+            this.frameCount = 0;
+            
+            // Calculate FPS
+            if (currentFPS > 0) {
+                this.fps = Math.round(60000 / currentFPS); // 60000ms / frames = FPS
+            }
+            
+            // Update UI with performance info
+            if (this.uiManager && typeof this.uiManager.updatePerformanceInfo === 'function') {
+                this.uiManager.updatePerformanceInfo(this.fps);
+            }
+            
+            // Less frequent cleanup operations
+            if (this.frameCount % 1800 === 0) { // Every 30 seconds
+                this.cleanupMemory();
+            }
+            
+            if (this.frameCount % 3600 === 0) { // Every 1 minute
+                this.cleanupUnusedResources();
+            }
+            
+            if (this.frameCount % 7200 === 0) { // Every 2 minutes
+                this.validateSceneIntegrity();
+            }
+        }
         
         // Increment frame count
         this.frameCount++;
@@ -1307,8 +1334,8 @@ export class GameEngine {
             // Update other players
             this.updateOtherPlayers(deltaTime);
             
-            // Continuous duplicate player monitoring (every 30 frames)
-            if (this.frameCount % 30 === 0) {
+            // Continuous duplicate player monitoring (less frequent for performance)
+            if (this.frameCount % 300 === 0) { // Every 5 seconds at 60 FPS instead of every 30 frames
                 this.cleanupDuplicatePlayers();
             }
             
