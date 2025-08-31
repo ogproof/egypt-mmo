@@ -1913,6 +1913,66 @@ export class GameEngine {
         console.log('🔍 Local Players:', Array.from(this.players.keys()));
         console.log('🔍 ===============================');
     }
+    
+    // View server logs for debugging
+    async viewServerLogs() {
+        try {
+            const serverUrl = this.networkManager?.serverUrl || 'http://localhost:3001';
+            const response = await fetch(`${serverUrl}/api/logs`);
+            
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+            }
+            
+            const logData = await response.json();
+            
+            console.log('📋 === Server Logs ===');
+            console.log(`📁 Log File: ${logData.logFile}`);
+            console.log(`📊 Total Lines: ${logData.totalLines}`);
+            console.log(`📝 Last ${logData.lastLines.length} lines:`);
+            console.log('─'.repeat(50));
+            
+            logData.lastLines.forEach((line, index) => {
+                console.log(`${index + 1}: ${line}`);
+            });
+            
+            console.log('─'.repeat(50));
+            console.log('📋 === End Server Logs ===');
+            
+            // Also create a downloadable log file
+            this.downloadLogFile(serverUrl, logData.logFile);
+            
+        } catch (error) {
+            console.error('❌ Failed to fetch server logs:', error);
+            console.log('💡 Make sure the server is running and accessible');
+        }
+    }
+    
+    // Download log file
+    async downloadLogFile(serverUrl, filename) {
+        try {
+            const response = await fetch(`${serverUrl}/api/logs/${filename}`);
+            
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+            }
+            
+            const blob = await response.blob();
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(url);
+            document.body.removeChild(a);
+            
+            console.log(`📥 Downloaded log file: ${filename}`);
+            
+        } catch (error) {
+            console.error('❌ Failed to download log file:', error);
+        }
+    }
 
     // Test movement sync
     testMovementSync() {

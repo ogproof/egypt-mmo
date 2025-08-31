@@ -3,6 +3,59 @@ const http = require('http');
 const socketIo = require('socket.io');
 const cors = require('cors');
 const path = require('path');
+const fs = require('fs');
+
+// Logging system
+class Logger {
+    constructor() {
+        this.logDir = path.join(__dirname, 'logs');
+        this.ensureLogDirectory();
+        this.logFile = path.join(this.logDir, `server-${new Date().toISOString().split('T')[0]}.log`);
+    }
+
+    ensureLogDirectory() {
+        if (!fs.existsSync(this.logDir)) {
+            fs.mkdirSync(this.logDir, { recursive: true });
+        }
+    }
+
+    formatMessage(level, message, data = null) {
+        const timestamp = new Date().toISOString();
+        let logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
+        
+        if (data) {
+            if (typeof data === 'object') {
+                logMessage += `\n${JSON.stringify(data, null, 2)}`;
+            } else {
+                logMessage += ` ${data}`;
+            }
+        }
+        
+        return logMessage;
+    }
+
+    log(level, message, data = null) {
+        const logMessage = this.formatMessage(level, message, data);
+        
+        // Console output
+        console.log(logMessage);
+        
+        // File output
+        try {
+            fs.appendFileSync(this.logFile, logMessage + '\n');
+        } catch (error) {
+            console.error('Failed to write to log file:', error);
+        }
+    }
+
+    info(message, data = null) { this.log('info', message, data); }
+    warn(message, data = null) { this.log('warn', message, data); }
+    error(message, data = null) { this.log('error', message, data); }
+    debug(message, data = null) { this.log('debug', message, data); }
+}
+
+const logger = new Logger();
+logger.info('🚀 Server starting up...');
 
 const app = express();
 const server = http.createServer(app);
@@ -24,14 +77,67 @@ app.use((req, res, next) => {
         return next(); // Skip logging for static assets
     }
     
-    console.log(`📥 Incoming request: ${req.method} ${req.url} from ${req.ip}`);
+    logger.info(`📥 Incoming request: ${req.method} ${req.url} from ${req.ip}`);
     
     // Log response completion
     res.on('finish', () => {
-        console.log(`📤 Response sent: ${req.method} ${req.url} - Status: ${res.statusCode}`);
+        logger.info(`📤 Response sent: ${req.method} ${req.url} - Status: ${res.statusCode}`);
     });
     
     next();
+});
+
+// Log viewing endpoint
+app.get('/api/logs', (req, res) => {
+    try {
+        const logFiles = fs.readdirSync(logger.logDir)
+            .filter(file => file.endsWith('.log'))
+            .sort((a, b) => {
+                const aTime = fs.statSync(path.join(logger.logDir, a)).mtime;
+                const bTime = fs.statSync(path.join(logger.logDir, b)).mtime;
+                return bTime - aTime; // Most recent first
+            });
+
+        if (logFiles.length === 0) {
+            return res.json({ logs: [], message: 'No log files found' });
+        }
+
+        // Get the most recent log file
+        const latestLogFile = logFiles[0];
+        const logPath = path.join(logger.logDir, latestLogFile);
+        const logContent = fs.readFileSync(logPath, 'utf8');
+        
+        // Get last 100 lines
+        const lines = logContent.split('\n').filter(line => line.trim());
+        const lastLines = lines.slice(-100);
+        
+        res.json({
+            logFile: latestLogFile,
+            totalLines: lines.length,
+            lastLines: lastLines,
+            message: `Retrieved last ${lastLines.length} lines from ${latestLogFile}`
+        });
+    } catch (error) {
+        logger.error('Failed to read logs:', error);
+        res.status(500).json({ error: 'Failed to read logs', details: error.message });
+    }
+});
+
+// Download specific log file
+app.get('/api/logs/:filename', (req, res) => {
+    try {
+        const filename = req.params.filename;
+        const logPath = path.join(logger.logDir, filename);
+        
+        if (!fs.existsSync(logPath)) {
+            return res.status(404).json({ error: 'Log file not found' });
+        }
+        
+        res.download(logPath);
+    } catch (error) {
+        logger.error('Failed to download log:', error);
+        res.status(500).json({ error: 'Failed to download log', details: error.message });
+    }
 });
 
 // HTTPS redirects and security headers
@@ -102,15 +208,15 @@ setInterval(() => {
 
 // Socket.io connection handling
 io.on('connection', (socket) => {
-    console.log(`🔌 New socket connection: ${socket.id}`);
-    console.log(`📊 Current players in world: ${gameState.players.size}`);
+    logger.info(`🔌 New socket connection: ${socket.id}`);
+    logger.info(`📊 Current players in world: ${gameState.players.size}`);
     
     // Track connection time
     const connectionTime = Date.now();
     
     // Player joins
     socket.on('player_join', (playerData) => {
-        console.log(`🌍 Player join request from ${socket.id}:`, playerData);
+        logger.info(`🌍 Player join request from ${socket.id}:`, playerData);
         
         // Check if this is a new session for an existing player
         let playerId = playerData.sessionId; // Use session ID if provided
@@ -148,23 +254,23 @@ io.on('connection', (socket) => {
             };
             
             gameState.players.set(playerId, player);
-            console.log(`🌍 New player ${player.name} created with ID: ${playerId}`);
+            logger.info(`🌍 New player ${player.name} created with ID: ${playerId}`);
         } else {
-            console.log(`🌍 Existing player ${player.name} (ID: ${playerId}) joining with new session`);
+            logger.info(`🌍 Existing player ${player.name} (ID: ${playerId}) joining with new session`);
         }
         
         // Add this socket to the player's sessions
         player.sessions.add(socket.id);
         gameState.playerSessions.set(socket.id, playerId);
         
-        console.log(`🌍 Player ${player.name} joined at position (${player.position.x.toFixed(1)}, 0, ${player.position.z.toFixed(1)})`);
-        console.log(`📊 Total players in world: ${gameState.players.size}`);
-        console.log(`📊 Total active sessions: ${gameState.playerSessions.size}`);
+        logger.info(`🌍 Player ${player.name} joined at position (${player.position.x.toFixed(1)}, 0, ${player.position.z.toFixed(1)})`);
+        logger.info(`📊 Total players in world: ${gameState.players.size}`);
+        logger.info(`📊 Total active sessions: ${gameState.playerSessions.size}`);
         
         // Notify other players about the new player (only if it's a new player)
         if (isNewPlayer) {
             socket.broadcast.emit('player_join', player);
-            console.log(`📢 Broadcasted player_join to ${gameState.players.size - 1} other players`);
+            logger.info(`📢 Broadcasted player_join to ${gameState.players.size - 1} other players`);
         }
         
         // Send current world state to new player
@@ -183,7 +289,7 @@ io.on('connection', (socket) => {
         };
         
         socket.emit('world_state', worldState);
-        console.log(`🌍 Sent world state to ${player.name} with ${worldState.players.length} players and time ${(gameState.worldTime.time * 24).toFixed(1)}h`);
+        logger.info(`🌍 Sent world state to ${player.name} with ${worldState.players.length} players and time ${(gameState.worldTime.time * 24).toFixed(1)}h`);
         
         // Send confirmation to the player with their session info
         socket.emit('player_joined', {
@@ -196,14 +302,14 @@ io.on('connection', (socket) => {
             message: `Welcome to Egypt MMO, ${player.name}!`
         });
         
-        console.log(`✅ Player ${player.name} successfully joined the world`);
+        logger.info(`✅ Player ${player.name} successfully joined the world`);
     });
     
     // Player movement
     socket.on('player_move', (data) => {
         const playerId = gameState.playerSessions.get(socket.id);
         if (!playerId) {
-            console.log(`⚠️ Movement update from unknown session: ${socket.id}`);
+            logger.warn(`⚠️ Movement update from unknown session: ${socket.id}`);
             return;
         }
         
@@ -297,7 +403,7 @@ io.on('connection', (socket) => {
             const player = gameState.players.get(playerId);
             if (player) {
                 const connectionDuration = Date.now() - connectionTime;
-                console.log(`🔌 Player ${player.name} (session ${socket.id}) disconnected after ${connectionDuration}ms. Reason: ${reason}`);
+                logger.info(`🔌 Player ${player.name} (session ${socket.id}) disconnected after ${connectionDuration}ms. Reason: ${reason}`);
                 
                 // Remove this session from the player's sessions
                 player.sessions.delete(socket.id);
@@ -306,19 +412,19 @@ io.on('connection', (socket) => {
                 // If this was the last session for this player, remove the player entirely
                 if (player.sessions.size === 0) {
                     gameState.players.delete(playerId);
-                    console.log(`🌍 Player ${player.name} completely removed from world (no more active sessions)`);
+                    logger.info(`🌍 Player ${player.name} completely removed from world (no more active sessions)`);
                     
                     // Notify other players about the player leaving
                     socket.broadcast.emit('player_leave', playerId);
                 } else {
-                    console.log(`🌍 Player ${player.name} still has ${player.sessions.size} active sessions`);
+                    logger.info(`🌍 Player ${player.name} still has ${player.sessions.size} active sessions`);
                 }
                 
-                console.log(`📊 Players remaining in world: ${gameState.players.size}`);
-                console.log(`📊 Total active sessions: ${gameState.playerSessions.size}`);
+                logger.info(`📊 Players remaining in world: ${gameState.players.size}`);
+                logger.info(`📊 Total active sessions: ${gameState.playerSessions.size}`);
             }
         } else {
-            console.log(`🔌 Unknown session disconnected: ${socket.id}`);
+            logger.warn(`🔌 Unknown session disconnected: ${socket.id}`);
         }
     });
 });

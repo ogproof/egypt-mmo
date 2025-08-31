@@ -613,6 +613,14 @@
         <div class="loading-text">Loading Egypt MMO...</div>
     </div>
 
+    <!-- Debug Panel -->
+    <div id="debug-panel" style="position: fixed; top: 10px; right: 10px; z-index: 1000; display: none;">
+        <button id="view-logs-btn" style="background: #ff6b6b; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">
+            📋 View Server Logs
+        </button>
+        <div id="logs-display" style="background: rgba(0,0,0,0.9); color: #00ff00; padding: 15px; border-radius: 8px; max-width: 600px; max-height: 400px; overflow-y: auto; font-family: monospace; font-size: 12px; white-space: pre-wrap;"></div>
+    </div>
+
     <!-- Game Container -->
     <div id="game-container" style="display: none;">
         <canvas id="game-canvas"></canvas>
@@ -999,6 +1007,65 @@
             console.log('🎮 Egypt MMO Title Screen Loaded');
             checkExistingSession();
         });
+
+        // Setup log viewer functionality
+        function setupLogViewer() {
+            const viewLogsBtn = document.getElementById('view-logs-btn');
+            const logsDisplay = document.getElementById('logs-display');
+            
+            if (viewLogsBtn && logsDisplay) {
+                viewLogsBtn.addEventListener('click', async () => {
+                    try {
+                        viewLogsBtn.textContent = '⏳ Loading...';
+                        viewLogsBtn.disabled = true;
+                        
+                        // Get server logs
+                        const serverUrl = window.location.hostname === 'localhost' 
+                            ? 'http://localhost:3001' 
+                            : 'https://egypt-mmo-production.up.railway.app';
+                            
+                        const response = await fetch(`${serverUrl}/api/logs`);
+                        
+                        if (!response.ok) {
+                            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                        }
+                        
+                        const logData = await response.json();
+                        
+                        // Display logs
+                        logsDisplay.innerHTML = `📁 Log File: ${logData.logFile}\n`;
+                        logsDisplay.innerHTML += `📊 Total Lines: ${logData.totalLines}\n`;
+                        logsDisplay.innerHTML += `📝 Last ${logData.lastLines.length} lines:\n`;
+                        logsDisplay.innerHTML += '─'.repeat(50) + '\n';
+                        
+                        logData.lastLines.forEach((line, index) => {
+                            logsDisplay.innerHTML += `${index + 1}: ${line}\n`;
+                        });
+                        
+                        logsDisplay.innerHTML += '─'.repeat(50) + '\n';
+                        
+                        // Download log file
+                        const downloadResponse = await fetch(`${serverUrl}/api/logs/${logData.logFile}`);
+                        if (downloadResponse.ok) {
+                            const blob = await downloadResponse.blob();
+                            const url = window.URL.createObjectURL(blob);
+                            const a = document.createElement('a');
+                            a.href = url;
+                            a.download = logData.logFile;
+                            a.click();
+                            window.URL.revokeObjectURL(url);
+                        }
+                        
+                    } catch (error) {
+                        logsDisplay.innerHTML = `❌ Error: ${error.message}\n💡 Make sure the server is running and accessible`;
+                        console.error('Failed to fetch logs:', error);
+                    } finally {
+                        viewLogsBtn.textContent = '📋 View Server Logs';
+                        viewLogsBtn.disabled = false;
+                    }
+                });
+            }
+        }
     </script>
 
     <!-- Your existing game scripts will be loaded here -->
