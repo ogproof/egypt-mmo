@@ -61,6 +61,7 @@ app.use(express.static(path.join(__dirname, '../dist')));
 // Game state
 const gameState = {
     players: new Map(),
+    playerSessions: new Map(), // Track multiple sessions per player
     world: {
         size: 1000,
         chunks: new Map()
@@ -111,38 +112,67 @@ io.on('connection', (socket) => {
     socket.on('player_join', (playerData) => {
         console.log(`🌍 Player join request from ${socket.id}:`, playerData);
         
-        // Generate a random starting position for the player
-        const startX = (Math.random() - 0.5) * 50; // Random position within 50 units
-        const startZ = (Math.random() - 0.5) * 50;
+        // Check if this is a new session for an existing player
+        let playerId = playerData.sessionId; // Use session ID if provided
+        let isNewPlayer = false;
         
-        const player = {
-            id: socket.id,
-            name: playerData.name || `Player_${socket.id.slice(-4)}`,
-            position: { 
-                x: startX, 
-                y: 0, 
-                z: startZ 
-            },
-            rotation: playerData.rotation || { x: 0, y: 0, z: 0 },
-            level: playerData.level || 1,
-            skills: playerData.skills || {},
-            inventory: playerData.inventory || [],
-            equipment: playerData.equipment || {},
-            connectedAt: connectionTime
-        };
+        if (!playerId) {
+            // Generate a new player ID for first-time players
+            playerId = `player_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+            isNewPlayer = true;
+        }
         
-        gameState.players.set(socket.id, player);
+        // Check if we already have this player
+        let player = gameState.players.get(playerId);
         
-        console.log(`🌍 Player ${player.name} joined at position (${startX.toFixed(1)}, 0, ${startZ.toFixed(1)})`);
+        if (!player) {
+            // Generate a random starting position for the player
+            const startX = (Math.random() - 0.5) * 50; // Random position within 50 units
+            const startZ = (Math.random() - 0.5) * 50;
+            
+            player = {
+                id: playerId,
+                name: playerData.name || `Player_${playerId.slice(-4)}`,
+                position: { 
+                    x: startX, 
+                    y: 0, 
+                    z: startZ 
+                },
+                rotation: playerData.rotation || { x: 0, y: 0, z: 0 },
+                level: playerData.level || 1,
+                skills: playerData.skills || {},
+                inventory: playerData.inventory || [],
+                equipment: playerData.equipment || {},
+                connectedAt: connectionTime,
+                sessions: new Set() // Track all active sessions
+            };
+            
+            gameState.players.set(playerId, player);
+            console.log(`🌍 New player ${player.name} created with ID: ${playerId}`);
+        } else {
+            console.log(`🌍 Existing player ${player.name} (ID: ${playerId}) joining with new session`);
+        }
+        
+        // Add this socket to the player's sessions
+        player.sessions.add(socket.id);
+        gameState.playerSessions.set(socket.id, playerId);
+        
+        console.log(`🌍 Player ${player.name} joined at position (${player.position.x.toFixed(1)}, 0, ${player.position.z.toFixed(1)})`);
         console.log(`📊 Total players in world: ${gameState.players.size}`);
+        console.log(`📊 Total active sessions: ${gameState.playerSessions.size}`);
         
-        // Notify other players about the new player
-        socket.broadcast.emit('player_join', player);
-        console.log(`📢 Broadcasted player_join to ${gameState.players.size - 1} other players`);
+        // Notify other players about the new player (only if it's a new player)
+        if (isNewPlayer) {
+            socket.broadcast.emit('player_join', player);
+            console.log(`📢 Broadcasted player_join to ${gameState.players.size - 1} other players`);
+        }
         
         // Send current world state to new player
         const worldState = {
-            players: Array.from(gameState.players.values()),
+            players: Array.from(gameState.players.values()).map(p => ({
+                ...p,
+                sessions: undefined // Don't send session info to client
+            })),
             resources: Array.from(gameState.resources.values()),
             buildings: Array.from(gameState.buildings.values()),
             // Include synchronized world time
@@ -155,10 +185,14 @@ io.on('connection', (socket) => {
         socket.emit('world_state', worldState);
         console.log(`🌍 Sent world state to ${player.name} with ${worldState.players.length} players and time ${(gameState.worldTime.time * 24).toFixed(1)}h`);
         
-        // Send confirmation to the player
+        // Send confirmation to the player with their session info
         socket.emit('player_joined', {
             success: true,
-            player: player,
+            player: {
+                ...player,
+                sessions: undefined // Don't send session info to client
+            },
+            sessionId: playerId, // Send back the session ID for future connections
             message: `Welcome to Egypt MMO, ${player.name}!`
         });
         
@@ -167,7 +201,13 @@ io.on('connection', (socket) => {
     
     // Player movement
     socket.on('player_move', (data) => {
-        const player = gameState.players.get(socket.id);
+        const playerId = gameState.playerSessions.get(socket.id);
+        if (!playerId) {
+            console.log(`⚠️ Movement update from unknown session: ${socket.id}`);
+            return;
+        }
+        
+        const player = gameState.players.get(playerId);
         if (player) {
             player.position = data.position;
             player.rotation = data.rotation;
@@ -175,7 +215,7 @@ io.on('connection', (socket) => {
             
             // Broadcast to other players
             socket.broadcast.emit('player_move', {
-                playerId: socket.id,
+                playerId: playerId, // Use the actual player ID, not socket ID
                 position: data.position,
                 rotation: data.rotation,
                 timestamp: data.timestamp
@@ -214,10 +254,16 @@ io.on('connection', (socket) => {
     
     // Chat messages
     socket.on('chat_message', (data) => {
-        const player = gameState.players.get(socket.id);
+        const playerId = gameState.playerSessions.get(socket.id);
+        if (!playerId) {
+            console.log(`⚠️ Chat message from unknown session: ${socket.id}`);
+            return;
+        }
+        
+        const player = gameState.players.get(playerId);
         if (player) {
             const message = {
-                playerId: socket.id,
+                playerId: playerId, // Use the actual player ID, not socket ID
                 playerName: player.name,
                 message: data.message,
                 channel: data.channel || 'global',
@@ -246,18 +292,33 @@ io.on('connection', (socket) => {
     
     // Disconnect handling
     socket.on('disconnect', (reason) => {
-        const player = gameState.players.get(socket.id);
-        if (player) {
-            const connectionDuration = Date.now() - connectionTime;
-            console.log(`🔌 Player ${player.name} disconnected after ${connectionDuration}ms. Reason: ${reason}`);
-            
-            // Remove from game state
-            gameState.players.delete(socket.id);
-            
-            // Notify other players
-            socket.broadcast.emit('player_leave', socket.id);
-            
-            console.log(`📊 Players remaining in world: ${gameState.players.size}`);
+        const playerId = gameState.playerSessions.get(socket.id);
+        if (playerId) {
+            const player = gameState.players.get(playerId);
+            if (player) {
+                const connectionDuration = Date.now() - connectionTime;
+                console.log(`🔌 Player ${player.name} (session ${socket.id}) disconnected after ${connectionDuration}ms. Reason: ${reason}`);
+                
+                // Remove this session from the player's sessions
+                player.sessions.delete(socket.id);
+                gameState.playerSessions.delete(socket.id);
+                
+                // If this was the last session for this player, remove the player entirely
+                if (player.sessions.size === 0) {
+                    gameState.players.delete(playerId);
+                    console.log(`🌍 Player ${player.name} completely removed from world (no more active sessions)`);
+                    
+                    // Notify other players about the player leaving
+                    socket.broadcast.emit('player_leave', playerId);
+                } else {
+                    console.log(`🌍 Player ${player.name} still has ${player.sessions.size} active sessions`);
+                }
+                
+                console.log(`📊 Players remaining in world: ${gameState.players.size}`);
+                console.log(`📊 Total active sessions: ${gameState.playerSessions.size}`);
+            }
+        } else {
+            console.log(`🔌 Unknown session disconnected: ${socket.id}`);
         }
     });
 });

@@ -1574,6 +1574,31 @@ export class GameEngine {
         };
         
         console.log('✅ Multiplayer callbacks set up successfully');
+        
+        // Join the world after setting up callbacks
+        this.joinWorld();
+    }
+    
+    // Join the world with player data
+    joinWorld() {
+        if (!this.networkManager || !this.networkManager.isConnected) {
+            console.log('⚠️ Cannot join world: network not connected');
+            return;
+        }
+        
+        // Prepare player data for joining
+        const playerData = {
+            name: this.player?.name || `Player_${Math.floor(Math.random() * 1000)}`,
+            position: this.player?.position || { x: 0, y: 0, z: 0 },
+            rotation: this.player?.rotation || { x: 0, y: 0, z: 0 },
+            level: 1,
+            skills: {},
+            inventory: [],
+            equipment: {}
+        };
+        
+        console.log('🌍 Joining world with player data:', playerData);
+        this.networkManager.joinWorld(playerData);
     }
 
     // Logout and cleanup
@@ -1700,8 +1725,21 @@ export class GameEngine {
         const localPlayerId = this.networkManager?.getPlayerId();
         const localPlayerName = this.player?.name;
         
-        return playerId === localPlayerId || playerName === localPlayerId || 
+        const isLocal = playerId === localPlayerId || playerName === localPlayerId || 
                playerId === localPlayerName || playerName === localPlayerName;
+        
+        // Debug logging
+        if (!isLocal) {
+            console.log(`🔍 Player comparison:`, {
+                playerId,
+                playerName,
+                localPlayerId,
+                localPlayerName,
+                result: isLocal
+            });
+        }
+        
+        return isLocal;
     }
 
     // Add other player to the world
@@ -1805,6 +1843,28 @@ export class GameEngine {
             console.log(`👥 Updated player ${data.playerId} position: (${data.position.x.toFixed(1)}, ${data.position.y.toFixed(1)}, ${data.position.z.toFixed(1)})`);
         } else {
             console.warn(`⚠️ Received movement update for unknown player: ${data.playerId}`);
+            console.log(`🔍 Available players:`, Array.from(this.players.keys()));
+            console.log(`🔍 Movement data:`, data);
+            
+            // Try to find the player by name if ID doesn't match
+            let foundPlayer = null;
+            for (const [id, player] of this.players.entries()) {
+                if (player.userData?.playerName === data.playerName) {
+                    foundPlayer = { id, player };
+                    break;
+                }
+            }
+            
+            if (foundPlayer) {
+                console.log(`🔍 Found player by name: ${foundPlayer.id} (${foundPlayer.player.userData?.playerName})`);
+                // Update the player's ID mapping
+                this.players.delete(foundPlayer.id);
+                this.players.set(data.playerId, foundPlayer.player);
+                foundPlayer.player.userData.playerId = data.playerId;
+                
+                // Now update the position
+                this.updateOtherPlayer(data);
+            }
         }
     }
     

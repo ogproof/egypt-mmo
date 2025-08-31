@@ -1982,34 +1982,33 @@ export class WorldManager {
     isObjectCorrupted(object) {
         if (!object || !object.isObject3D) return true;
         
-        // Check for invalid position
-        if (object.position && (
-            isNaN(object.position.x) || 
-            isNaN(object.position.y) || 
-            isNaN(object.position.z) ||
-            !isFinite(object.position.x) ||
-            !isFinite(object.position.y) ||
-            !isFinite(object.position.z)
-        )) {
-            return true;
+        // Check for invalid position - only if position exists and is clearly wrong
+        if (object.position) {
+            // Check for NaN or infinite values
+            if (isNaN(object.position.x) || 
+                isNaN(object.position.y) || 
+                isNaN(object.position.z) ||
+                !isFinite(object.position.x) ||
+                !isFinite(object.position.y) ||
+                !isFinite(object.position.z)) {
+                return true;
+            }
+            
+            // Check if object is extremely far from world bounds (might have drifted)
+            if (Math.abs(object.position.x) > this.worldSize * 5 ||
+                Math.abs(object.position.z) > this.worldSize * 5 ||
+                object.position.y < -1000 || object.position.y > 10000) {
+                return true;
+            }
         }
         
-        // Check for invalid geometry
+        // Check for invalid geometry - only if it's clearly broken
         if (object.geometry && !object.geometry.attributes) {
             return true;
         }
         
-        // Check for invalid material
+        // Check for invalid material - only if it's clearly broken
         if (object.material && !object.material.isMaterial) {
-            return true;
-        }
-        
-        // Check if object is too far from world bounds (might have drifted)
-        if (object.position && (
-            Math.abs(object.position.x) > this.worldSize * 2 ||
-            Math.abs(object.position.z) > this.worldSize * 2 ||
-            object.position.y < -100 || object.position.y > 1000
-        )) {
             return true;
         }
         

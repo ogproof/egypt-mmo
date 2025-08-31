@@ -9,6 +9,7 @@ export class NetworkManager {
             ? 'http://localhost:3001' 
             : 'https://egypt-mmo-production.up.railway.app';
         this.playerId = null;
+        this.sessionId = null; // Track session ID for reconnections
         this.players = new Map();
         
         // Event callbacks
@@ -34,6 +35,12 @@ export class NetworkManager {
         }
         
         console.log('🌐 Initializing Network Manager...');
+        
+        // Load session ID from localStorage if available
+        this.sessionId = localStorage.getItem('egypt_mmo_session_id');
+        if (this.sessionId) {
+            console.log(`🔑 Loaded existing session ID: ${this.sessionId}`);
+        }
         
         this.socket = null;
         this.isConnected = false;
@@ -124,8 +131,7 @@ export class NetworkManager {
                     // Start connection heartbeat
                     this.startHeartbeat();
                     
-                    // Join the world immediately after connection
-                    this.joinWorld();
+                    // Don't auto-join - let GameEngine handle this
                     resolve();
                 });
 
@@ -255,7 +261,18 @@ export class NetworkManager {
         });
 
         this.socket.on('player_joined', (data) => {
-            console.log('✅ Received player_joined confirmation:', data);
+            console.log('✅ Player joined successfully:', data);
+            if (data.success && data.player) {
+                this.playerId = data.player.id;
+                this.sessionId = data.sessionId; // Store the session ID
+                console.log(`🎯 Player ID set to: ${this.playerId}`);
+                console.log(`🔑 Session ID set to: ${this.sessionId}`);
+                
+                // Store session ID in localStorage for persistence across browser sessions
+                if (this.sessionId) {
+                    localStorage.setItem('egypt_mmo_session_id', this.sessionId);
+                }
+            }
         });
 
         console.log('✅ Socket.IO event handlers set up successfully');
@@ -275,22 +292,21 @@ export class NetworkManager {
         console.log('🌐 Disconnected from server');
     }
 
-    // Join the game world
-    joinWorld() {
-        if (!this.socket || !this.isConnected) return;
+    // Join the world
+    joinWorld(playerData = {}) {
+        if (!this.socket || !this.isConnected) {
+            console.log('⚠️ Cannot join world: not connected to server');
+            return;
+        }
         
-        const playerData = {
-            name: `Player_${Math.floor(Math.random() * 1000)}`,
-            position: { x: 0, y: 0, z: 0 },
-            rotation: { x: 0, y: 0, z: 0 },
-            level: 1,
-            skills: {},
-            inventory: [],
-            equipment: {}
+        // Include session ID if we have one (for reconnections)
+        const joinData = {
+            ...playerData,
+            sessionId: this.sessionId // Send session ID for reconnection
         };
         
-        console.log('🌍 Joining the Egypt MMO world...');
-        this.socket.emit('player_join', playerData);
+        console.log('🌍 Joining world with data:', joinData);
+        this.socket.emit('player_join', joinData);
     }
 
     // Send player position to server
