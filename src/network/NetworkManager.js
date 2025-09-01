@@ -27,6 +27,7 @@ export class NetworkManager {
         this.isInitialized = false;
         this.eventsSetup = false; // Prevent duplicate event setup
         this.connecting = false; // Track if a connection attempt is in progress
+        this.lastPositionUpdate = 0; // Track last position update for debouncing
     }
 
     async init() {
@@ -342,6 +343,11 @@ export class NetworkManager {
             return;
         }
         
+        // Debounce position updates to prevent spam
+        if (this.lastPositionUpdate && Date.now() - this.lastPositionUpdate < 100) {
+            return; // Skip if last update was less than 100ms ago
+        }
+        
         // Include player ID to prevent receiving own updates
         const positionData = {
             playerId: this.playerId,
@@ -350,6 +356,7 @@ export class NetworkManager {
         };
         
         this.socket.emit('player_move', positionData);
+        this.lastPositionUpdate = Date.now();
         console.log(`📡 Sent position update for player ${this.playerId}:`, position);
     }
 

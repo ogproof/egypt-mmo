@@ -1584,12 +1584,18 @@ export class GameEngine {
         console.log('✅ Multiplayer callbacks set up successfully');
         this.multiplayerCallbacksSetup = true; // Mark callbacks as set up
         
-        // Join the world after setting up callbacks
-        this.joinWorld();
+        // Don't auto-join world here - let the network manager handle it
+        // this.joinWorld(); // Commented out to prevent duplicate joins
     }
     
     // Join the world with player data
     async joinWorld() {
+        // Prevent duplicate world joins
+        if (this.worldJoined) {
+            console.log('⚠️ Already joined world, skipping...');
+            return;
+        }
+        
         if (!this.networkManager) {
             console.log('⚠️ Cannot join world: no network manager');
             return;
@@ -1607,19 +1613,25 @@ export class GameEngine {
                 await new Promise(resolve => setTimeout(resolve, 500));
                 attempts++;
                 console.log(`⏳ Connection attempt ${attempts}/${maxAttempts}...`);
+                
+                // Check if we're connected after each attempt
+                if (this.networkManager.isConnected) {
+                    console.log('✅ Network connected, proceeding to join world...');
+                    break;
+                }
             }
             
             if (!this.networkManager.isConnected) {
                 console.error('❌ Failed to connect to network after 10 seconds');
                 return;
             }
-            
-            console.log('✅ Network connected, proceeding to join world...');
+        } else {
+            console.log('✅ Network already connected, proceeding to join world...');
         }
         
         // Prepare player data for joining
         const playerData = {
-            name: this.player?.name || `Player_${Math.floor(Math.random() * 1000)}`,
+            name: this.player?.name || this.characterName || `Player_${Math.floor(Math.random() * 1000)}`,
             position: this.player?.position || { x: 0, y: 0, z: 0 },
             rotation: this.player?.rotation || { x: 0, y: 0, z: 0 },
             level: 1,
@@ -2234,5 +2246,21 @@ export class GameEngine {
         console.log('⌨️ Key released:', key);
         
         // Handle key release events if needed
+    }
+
+    // Set player name from character data
+    setPlayerName(name) {
+        if (name && typeof name === 'string') {
+            this.characterName = name;
+            if (this.player) {
+                this.player.name = name;
+            }
+            console.log(`👤 Character name set to: ${name}`);
+        }
+    }
+
+    // Get player name
+    getPlayerName() {
+        return this.characterName || this.player?.name || 'Unknown';
     }
 }

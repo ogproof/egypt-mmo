@@ -900,6 +900,14 @@
             // Start the game
             console.log('🚀 Calling startGame()...');
             startGame();
+            
+            // After the game starts, ensure the character name is set
+            setTimeout(() => {
+                if (window.egyptMMO?.gameEngine) {
+                    window.egyptMMO.gameEngine.setPlayerName(characterName);
+                    console.log(`🎯 Character name "${characterName}" set in game engine`);
+                }
+            }, 2000); // Wait for game to fully initialize
         }
 
         // Ensure game container exists

@@ -157,7 +157,18 @@ class EgyptMMO {
         // Connect to server (only if not already connected)
         if (!this.networkManager.isConnected) {
             try {
+                console.log('🌐 Connecting to network...');
                 await this.networkManager.connect();
+                console.log('✅ Network connection established');
+                
+                // Wait a moment for the connection to stabilize
+                await new Promise(resolve => setTimeout(resolve, 1000));
+                
+                // Now join the world
+                if (this.gameEngine && !this.gameEngine.worldJoined) {
+                    console.log('🌍 Joining world after network connection...');
+                    await this.gameEngine.joinWorld();
+                }
             } catch (error) {
                 console.warn('⚠️ Network connection failed, running in single-player mode:', error.message);
             }
