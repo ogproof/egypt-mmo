@@ -830,20 +830,38 @@
         function guestLogin() {
             console.log('👤 Guest login initiated');
             
+            // Generate unique guest ID
+            const guestId = 'guest_' + Math.random().toString(36).substr(2, 9);
+            
             // Mock user data for guest
             const userData = {
-                id: 'guest_' + Math.random().toString(36).substr(2, 9),
+                id: guestId,
                 email: null,
                 name: 'Guest Player',
                 picture: null,
                 isGuest: true
             };
             
-            // Store user data
-            localStorage.setItem('egyptMMO_user', JSON.stringify(userData));
+            // Create guest character data
+            const characterData = {
+                name: `Guest_${guestId.slice(-4)}`,
+                createdAt: new Date().toISOString(),
+                isGuest: true
+            };
             
-            // Show character creator
-            showCharacterCreator();
+            // Store both user and character data
+            localStorage.setItem('egyptMMO_user', JSON.stringify(userData));
+            localStorage.setItem('egyptMMO_character', JSON.stringify(characterData));
+            
+            console.log('👤 Guest user created:', userData);
+            console.log('👤 Guest character created:', characterData);
+            
+            // Clear any existing session ID to ensure fresh multiplayer session
+            localStorage.removeItem('egypt_mmo_session_id');
+            
+            // Start the game directly for guest
+            console.log('🚀 Starting game for guest...');
+            startGame();
         }
 
         // Show Character Creator
@@ -881,6 +899,9 @@
             }
             
             console.log('🎯 Creating character:', characterName);
+            
+            // Force a new player identity for this character
+            localStorage.removeItem('egypt_mmo_session_id');
             
             // Store character data
             const characterData = {
@@ -1032,6 +1053,7 @@
             // Clear stored data
             localStorage.removeItem('egyptMMO_user');
             localStorage.removeItem('egyptMMO_character');
+            localStorage.removeItem('egypt_mmo_session_id');
             
             // Stop the game if it's running
             if (window.egyptMMO && window.egyptMMO.gameEngine) {

@@ -1666,6 +1666,8 @@ export class GameEngine {
         } catch (error) {
             console.error('❌ Error during logout:', error);
         }
+        
+        localStorage.removeItem('egypt_mmo_session_id');
     }
 
     // Get player reference

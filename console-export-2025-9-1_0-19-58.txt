@@ -1,0 +1,1561 @@
+🎮 Egypt MMO Title Screen Loaded egypt-mmo-production.up.railway.app:1064:21
+🔐 Existing session found, starting game... egypt-mmo-production.up.railway.app:1028:25
+🚀 startGame() called - gameStarted flag: false egypt-mmo-production.up.railway.app:947:21
+🚀 Starting Egypt MMO... egypt-mmo-production.up.railway.app:955:21
+✅ Set gameStarted flag to: true egypt-mmo-production.up.railway.app:957:21
+✅ Hidden character creator egypt-mmo-production.up.railway.app:966:21
+✅ Game container shown egypt-mmo-production.up.railway.app:971:21
+🎮 Calling initializeGame()... egypt-mmo-production.up.railway.app:974:21
+🎮 initializeGame() called egypt-mmo-production.up.railway.app:980:21
+🔍 Checking Egypt MMO status... egypt-mmo-production.up.railway.app:981:21
+🔍 window.egyptMMO exists: false egypt-mmo-production.up.railway.app:982:21
+🔍 window.egyptMMO.isInitialized: undefined egypt-mmo-production.up.railway.app:983:21
+🎮 Game initialization started egypt-mmo-production.up.railway.app:991:21
+⏳ Egypt MMO not ready yet, waiting... egypt-mmo-production.up.railway.app:1003:25
+👤 User session found: Google Player index-CFDRvt5H.js:19:23176
+👤 Character found: Bob index-CFDRvt5H.js:19:23233
+🚀 Starting Egypt MMO... index-CFDRvt5H.js:19:23688
+🔍 Init called at: 2025-09-01T04:18:24.194Z index-CFDRvt5H.js:19:23728
+🔍 Stack trace: startGame@https://egypt-mmo-production.up.railway.app/assets/index-CFDRvt5H.js:19:23809
+init@https://egypt-mmo-production.up.railway.app/assets/index-CFDRvt5H.js:19:23295
+@https://egypt-mmo-production.up.railway.app/assets/index-CFDRvt5H.js:19:28294
+index-CFDRvt5H.js:19:23787
+📦 Initializing Loading Manager... index-CFDRvt5H.js:19:17546
+⚠️ Loading screen elements not found, using minimal loading... index-CFDRvt5H.js:19:17837
+✅ Created minimal loading screen index-CFDRvt5H.js:19:20603
+TypeError: a.default.detectStore(...) is undefined h1-check.js:1:1301
+✅ Egypt MMO ready, starting game... egypt-mmo-production.up.railway.app:1008:33
+⚠️ Egypt MMO already initialized or initializing, skipping... index-CFDRvt5H.js:19:23381
+✅ Loading Manager initialized index-CFDRvt5H.js:19:18001
+🔍 Creating AudioManager... index-CFDRvt5H.js:19:23896
+🎵 Initializing Audio Manager... index-CFDRvt5H.js:19:9856
+An AudioContext was prevented from starting automatically. It must be created or resumed after a user gesture on the page. index-CFDRvt5H.js:9:25841
+🎵 Placeholder sound created for: button_click index-CFDRvt5H.js:19:16278
+🎵 Placeholder sound created for: panel_open index-CFDRvt5H.js:19:16278
+🎵 Placeholder sound created for: panel_close index-CFDRvt5H.js:19:16278
+🎵 Placeholder sound created for: notification index-CFDRvt5H.js:19:16278
+🎵 Placeholder sound created for: hammer_strike index-CFDRvt5H.js:19:16278
+🎵 Placeholder sound created for: metal_clang index-CFDRvt5H.js:19:16278
+🎵 Placeholder sound created for: wood_cut index-CFDRvt5H.js:19:16278
+🎵 Placeholder sound created for: potion_bubble index-CFDRvt5H.js:19:16278
+🎵 Placeholder sound created for: wind_ambient index-CFDRvt5H.js:19:16278
+🎵 Placeholder sound created for: sand_footstep index-CFDRvt5H.js:19:16278
+🎵 Placeholder sound created for: water_splash index-CFDRvt5H.js:19:16278
+🎵 Placeholder sound created for: fire_crackle index-CFDRvt5H.js:19:16278
+🎵 Placeholder sound created for: sword_swing index-CFDRvt5H.js:19:16278
+🎵 Placeholder sound created for: armor_clank index-CFDRvt5H.js:19:16278
+🎵 Placeholder sound created for: magic_cast index-CFDRvt5H.js:19:16278
+An AudioContext was prevented from starting automatically. It must be created or resumed after a user gesture on the page. index-CFDRvt5H.js:19:11866
+✅ Audio Manager initialized index-CFDRvt5H.js:19:10009
+🔍 Creating NetworkManager... index-CFDRvt5H.js:19:23964
+🔍 Creating GameEngine... index-CFDRvt5H.js:19:24036
+🔍 Creating UIManager... index-CFDRvt5H.js:19:24100
+🔍 Creating OptionsManager... index-CFDRvt5H.js:19:24162
+⚠️ AudioManager already initialized, skipping... index-CFDRvt5H.js:19:9784
+🌐 Initializing Network Manager... index-CFDRvt5H.js:1:160024
+🔑 Loaded existing session ID: player_1756689232587_95yupwiub index-CFDRvt5H.js:1:160150
+✅ Network Manager initialized index-CFDRvt5H.js:1:160351
+🎮 Initializing Game Engine... index-CFDRvt5H.js:1:73084
+🗺️ Grid Manager initialized: 500x500 cells (250000 total) - 2x2 units each index-CFDRvt5H.js:1:48461
+🎮 Input Manager initialized index-CFDRvt5H.js:1:52706
+🎒 Initializing Inventory System... index-CFDRvt5H.js:1:62348
+📚 Loading item database... index-CFDRvt5H.js:1:62399
+📚 Starting to load item database... index-CFDRvt5H.js:1:62705
+📚 Adding item to database: bronze_ingot index-CFDRvt5H.js:1:66204
+📚 Item bronze_ingot added to database. Current size: 1 index-CFDRvt5H.js:1:66295
+📚 Added bronze_ingot to database index-CFDRvt5H.js:1:62934
+📚 Adding item to database: iron_ingot index-CFDRvt5H.js:1:66204
+📚 Item iron_ingot added to database. Current size: 2 index-CFDRvt5H.js:1:66295
+📚 Added iron_ingot to database index-CFDRvt5H.js:1:63155
+📚 Adding item to database: steel_ingot index-CFDRvt5H.js:1:66204
+📚 Item steel_ingot added to database. Current size: 3 index-CFDRvt5H.js:1:66295
+📚 Added steel_ingot to database index-CFDRvt5H.js:1:63379
+📚 Adding item to database: wood index-CFDRvt5H.js:1:66204
+📚 Item wood added to database. Current size: 4 index-CFDRvt5H.js:1:66295
+📚 Added wood to database index-CFDRvt5H.js:1:63576
+📚 Adding item to database: leather index-CFDRvt5H.js:1:66204
+📚 Item leather added to database. Current size: 5 index-CFDRvt5H.js:1:66295
+📚 Added leather to database index-CFDRvt5H.js:1:63776
+📚 Adding item to database: thread index-CFDRvt5H.js:1:66204
+📚 Item thread added to database. Current size: 6 index-CFDRvt5H.js:1:66295
+📚 Added thread to database index-CFDRvt5H.js:1:63974
+📚 Adding item to database: herbs index-CFDRvt5H.js:1:66204
+📚 Item herbs added to database. Current size: 7 index-CFDRvt5H.js:1:66295
+📚 Added herbs to database index-CFDRvt5H.js:1:64172
+📚 Adding item to database: water index-CFDRvt5H.js:1:66204
+📚 Item water added to database. Current size: 8 index-CFDRvt5H.js:1:66295
+📚 Added water to database index-CFDRvt5H.js:1:64364
+📚 Adding item to database: crystal index-CFDRvt5H.js:1:66204
+📚 Item crystal added to database. Current size: 9 index-CFDRvt5H.js:1:66295
+📚 Added crystal to database index-CFDRvt5H.js:1:64567
+📚 Adding item to database: bronze_sword index-CFDRvt5H.js:1:66204
+📚 Item bronze_sword added to database. Current size: 10 index-CFDRvt5H.js:1:66295
+📚 Adding item to database: iron_sword index-CFDRvt5H.js:1:66204
+📚 Item iron_sword added to database. Current size: 11 index-CFDRvt5H.js:1:66295
+📚 Adding item to database: leather_armor index-CFDRvt5H.js:1:66204
+📚 Item leather_armor added to database. Current size: 12 index-CFDRvt5H.js:1:66295
+📚 Adding item to database: hammer index-CFDRvt5H.js:1:66204
+📚 Item hammer added to database. Current size: 13 index-CFDRvt5H.js:1:66295
+📚 Adding item to database: needle index-CFDRvt5H.js:1:66204
+📚 Item needle added to database. Current size: 14 index-CFDRvt5H.js:1:66295
+📚 Adding item to database: mortar index-CFDRvt5H.js:1:66204
+📚 Item mortar added to database. Current size: 15 index-CFDRvt5H.js:1:66295
+📚 Adding item to database: chisel index-CFDRvt5H.js:1:66204
+📚 Item chisel added to database. Current size: 16 index-CFDRvt5H.js:1:66295
+📚 Adding item to database: torch index-CFDRvt5H.js:1:66204
+📚 Item torch added to database. Current size: 17 index-CFDRvt5H.js:1:66295
+📚 Item database loaded with 17 items index-CFDRvt5H.js:1:62466
+📦 Adding starting items... index-CFDRvt5H.js:1:62551
+🎒 Adding starting items to inventory... index-CFDRvt5H.js:1:66416
+📦 Adding bronze_ingot x5... index-CFDRvt5H.js:1:66472
+🎒 Adding item: bronze_ingot x5 index-CFDRvt5H.js:1:67242
+Inventory updated: 
+Object { slots: 1, gold: undefined, level: undefined, experience: undefined }
+index-CFDRvt5H.js:1:70578
+✅ Successfully added bronze_ingot x5 index-CFDRvt5H.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, null, null, null, null, null, null, null, null, null, … ]
+index-CFDRvt5H.js:1:67559
+📦 Adding wood x10... index-CFDRvt5H.js:1:66547
+🎒 Adding item: wood x10 index-CFDRvt5H.js:1:67242
+Inventory updated: 
+Object { slots: 2, gold: undefined, level: undefined, experience: undefined }
+index-CFDRvt5H.js:1:70578
+✅ Successfully added wood x10 index-CFDRvt5H.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, null, null, null, null, null, null, null, null, … ]
+index-CFDRvt5H.js:1:67559
+📦 Adding leather x3... index-CFDRvt5H.js:1:66608
+🎒 Adding item: leather x3 index-CFDRvt5H.js:1:67242
+Inventory updated: 
+Object { slots: 3, gold: undefined, level: undefined, experience: undefined }
+index-CFDRvt5H.js:1:70578
+✅ Successfully added leather x3 index-CFDRvt5H.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, null, null, null, null, null, null, null, … ]
+index-CFDRvt5H.js:1:67559
+📦 Adding thread x5... index-CFDRvt5H.js:1:66673
+🎒 Adding item: thread x5 index-CFDRvt5H.js:1:67242
+Inventory updated: 
+Object { slots: 4, gold: undefined, level: undefined, experience: undefined }
+index-CFDRvt5H.js:1:70578
+✅ Successfully added thread x5 index-CFDRvt5H.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, null, null, null, null, null, null, … ]
+index-CFDRvt5H.js:1:67559
+📦 Adding herbs x8... index-CFDRvt5H.js:1:66736
+🎒 Adding item: herbs x8 index-CFDRvt5H.js:1:67242
+Inventory updated: 
+Object { slots: 5, gold: undefined, level: undefined, experience: undefined }
+index-CFDRvt5H.js:1:70578
+✅ Successfully added herbs x8 index-CFDRvt5H.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, null, null, null, null, null, … ]
+index-CFDRvt5H.js:1:67559
+📦 Adding water x20... index-CFDRvt5H.js:1:66797
+🎒 Adding item: water x20 index-CFDRvt5H.js:1:67242
+Inventory updated: 
+Object { slots: 6, gold: undefined, level: undefined, experience: undefined }
+index-CFDRvt5H.js:1:70578
+✅ Successfully added water x20 index-CFDRvt5H.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, null, null, null, null, … ]
+index-CFDRvt5H.js:1:67559
+📦 Adding hammer... index-CFDRvt5H.js:1:66860
+🎒 Adding item: hammer x1 index-CFDRvt5H.js:1:67242
+Inventory updated: 
+Object { slots: 7, gold: undefined, level: undefined, experience: undefined }
+index-CFDRvt5H.js:1:70578
+✅ Successfully added hammer x1 index-CFDRvt5H.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, null, null, null, … ]
+index-CFDRvt5H.js:1:67559
+📦 Adding needle... index-CFDRvt5H.js:1:66918
+🎒 Adding item: needle x1 index-CFDRvt5H.js:1:67242
+Inventory updated: 
+Object { slots: 8, gold: undefined, level: undefined, experience: undefined }
+index-CFDRvt5H.js:1:70578
+✅ Successfully added needle x1 index-CFDRvt5H.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, null, null, … ]
+index-CFDRvt5H.js:1:67559
+📦 Adding mortar... index-CFDRvt5H.js:1:66976
+🎒 Adding item: mortar x1 index-CFDRvt5H.js:1:67242
+Inventory updated: 
+Object { slots: 9, gold: undefined, level: undefined, experience: undefined }
+index-CFDRvt5H.js:1:70578
+✅ Successfully added mortar x1 index-CFDRvt5H.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, null, … ]
+index-CFDRvt5H.js:1:67559
+📦 Adding chisel... index-CFDRvt5H.js:1:67034
+🎒 Adding item: chisel x1 index-CFDRvt5H.js:1:67242
+Inventory updated: 
+Object { slots: 10, gold: undefined, level: undefined, experience: undefined }
+index-CFDRvt5H.js:1:70578
+✅ Successfully added chisel x1 index-CFDRvt5H.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-CFDRvt5H.js:1:67559
+📦 Adding torch... index-CFDRvt5H.js:1:67092
+🎒 Adding item: torch x1 index-CFDRvt5H.js:1:67242
+Inventory updated: 
+Object { slots: 11, gold: undefined, level: undefined, experience: undefined }
+index-CFDRvt5H.js:1:70578
+✅ Successfully added torch x1 index-CFDRvt5H.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-CFDRvt5H.js:1:67559
+🎒 Starting items added. Current inventory: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-CFDRvt5H.js:1:67148
+✅ Inventory System initialized index-CFDRvt5H.js:1:62640
+🎨 Initializing UI Manager... index-CFDRvt5H.js:1:112557
+🎒 Inventory initialized with sample items index-CFDRvt5H.js:1:117231
+✅ UI Manager initialized (UI hidden until game ready) index-CFDRvt5H.js:1:113291
+⚙️ Initializing Options Manager... index-CFDRvt5H.js:1:149217
+⚠️ Options menu element not found in DOM, using minimal mode index-CFDRvt5H.js:1:149343
+🔧 Creating minimal options menu... index-CFDRvt5H.js:1:149610
+✅ Minimal options menu created index-CFDRvt5H.js:1:150499
+✅ Options Manager initialized index-CFDRvt5H.js:1:149538
+🗺️ Initializing Grid Manager... index-CFDRvt5H.js:1:48644
+🗺️ Grid visualization created (hidden by default - press G to show) index-CFDRvt5H.js:1:49551
+✅ Grid Manager initialized index-CFDRvt5H.js:1:48769
+🌍 Initializing World Manager... index-CFDRvt5H.js:1:13485
+🏠 Creating world decorations... index-CFDRvt5H.js:1:19990
+THREE.Material: 'roughness' is not a property of THREE.MeshLambertMaterial. 4 three-C8PiImrb.js:5:82611
+🏠 Creating detailed medieval house... index-CFDRvt5H.js:1:20195
+✅ Medieval house created at position: 
+Object { x: 15, y: 0, z: 15 }
+index-CFDRvt5H.js:1:20459
+✅ World decorations created index-CFDRvt5H.js:1:20130
+🔥 Torch created and placed in the world index-CFDRvt5H.js:1:32760
+🛡️ Protecting important world objects... index-CFDRvt5H.js:1:13786
+✅ Important objects protected index-CFDRvt5H.js:1:14596
+✅ World Manager initialized index-CFDRvt5H.js:1:13713
+🌍 Camera set in WorldManager: YES index-CFDRvt5H.js:1:37220
+🔍 Checking all lights after camera set: index-CFDRvt5H.js:1:37314
+🔍 Debugging all lights in scene: index-CFDRvt5H.js:1:39358
+  Light 1: PointLight at (0.0, 0.8, -5.2) index-CFDRvt5H.js:1:39455
+    - Intensity: 1 index-CFDRvt5H.js:1:39627
+    - Casts shadows: false index-CFDRvt5H.js:1:39680
+    - Name: unnamed index-CFDRvt5H.js:1:39738
+    - ℹ️ Additional light source index-CFDRvt5H.js:1:40077
+  Light 2: PointLight at (5.0, 2.3, 0.0) index-CFDRvt5H.js:1:39455
+    - Intensity: 0.6 index-CFDRvt5H.js:1:39627
+    - Casts shadows: false index-CFDRvt5H.js:1:39680
+    - Name: unnamed index-CFDRvt5H.js:1:39738
+    - ℹ️ Additional light source index-CFDRvt5H.js:1:40077
+  Light 3: AmbientLight at (0.0, 0.0, 0.0) index-CFDRvt5H.js:1:39455
+    - Intensity: 0.8 index-CFDRvt5H.js:1:39627
+    - Casts shadows: false index-CFDRvt5H.js:1:39680
+    - Name: unnamed index-CFDRvt5H.js:1:39738
+    - ✅ This is the day/night cycle ambient light index-CFDRvt5H.js:1:39925
+  Light 4: DirectionalLight at (50.0, 100.0, 50.0) index-CFDRvt5H.js:1:39455
+    - Intensity: 2 index-CFDRvt5H.js:1:39627
+    - Casts shadows: true index-CFDRvt5H.js:1:39680
+    - Name: unnamed index-CFDRvt5H.js:1:39738
+    - ✅ This is the day/night cycle light index-CFDRvt5H.js:1:39832
+  Light 5: PointLight at (0.0, 2.5, 0.0) index-CFDRvt5H.js:1:39455
+    - Intensity: 1.5 index-CFDRvt5H.js:1:39627
+    - Casts shadows: true index-CFDRvt5H.js:1:39680
+    - Name: unnamed index-CFDRvt5H.js:1:39738
+    - ℹ️ Additional light source index-CFDRvt5H.js:1:40077
+Total lights found: 5 index-CFDRvt5H.js:1:40128
+👤 Initializing Player... index-CFDRvt5H.js:1:2102
+👤 Simple capsule character created index-CFDRvt5H.js:1:4363
+✅ Player initialized index-CFDRvt5H.js:1:2291
+📷 Camera reference set for player index-CFDRvt5H.js:1:12825
+📷 Camera properly initialized: 
+Object { x: 8.62248260505259, y: 5, z: 14.739993951978136 }
+index-CFDRvt5H.js:1:74311
+🔧 Lighting setup skipped - handled by WorldManager index-CFDRvt5H.js:1:76299
+🔧 Added safe update method to crafting system index-CFDRvt5H.js:1:96179
+🔧 Added safe update method to inventory system index-CFDRvt5H.js:1:96355
+✅ Game Engine initialized index-CFDRvt5H.js:1:74535
+🔧 Setting up multiplayer callbacks... index-CFDRvt5H.js:1:98626
+✅ Network manager found, setting up callbacks... index-CFDRvt5H.js:1:98781
+✅ Multiplayer callbacks set up successfully index-CFDRvt5H.js:1:99406
+⚙️ Options Manager connected to Game Engine index-CFDRvt5H.js:1:109559
+📦 Loading Manager connected to Game Engine index-CFDRvt5H.js:1:108835
+👤 Character name set to: Bob index-CFDRvt5H.js:1:112009
+✅ Egypt MMO started successfully! index-CFDRvt5H.js:19:24829
+🎮 Starting Egypt MMO... index-CFDRvt5H.js:19:25389
+✅ Minimal loading screen removed index-CFDRvt5H.js:19:21680
+🎮 Starting game loop... index-CFDRvt5H.js:1:78236
+🔧 Renderer info reset (manual GC recommended) index-CFDRvt5H.js:1:87985
+🔧 Starting comprehensive resource cleanup... index-CFDRvt5H.js:1:88111
+🌍 Starting WorldManager resource cleanup... index-CFDRvt5H.js:1:40199
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "4b9b8a37-e38b-44b0-9865-cc140e818572", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "0bd1b520-26d2-4854-b8c5-64b72f435eac", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "8ca8afa0-a9d1-459a-ba51-63be77a612ce", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41335
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "eb24e711-b276-4ce6-9c2d-8357751692cb", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "2a9eeebf-80a9-4cad-8306-8e022140f094", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "42672f62-2a03-4127-ad8e-38a7cc9f2756", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41594
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "fd417ac2-dc4a-4dd4-b26b-d7118c63c0ec", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "a9fccbb4-80ca-4f94-920f-4ab5b50617e2", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "af615f62-03fe-4b59-846b-b0deb90dda80", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "c9543b28-6758-4e5f-9c2e-de8ff5f0525d", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41853
+⚠️ Corrupted decoration detected, removing: 
+Object { isObject3D: true, uuid: "caa783da-f01f-4aaa-bc34-82bace99664e", name: "", type: "Group", parent: null, children: (25) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:42401
+⚠️ Corrupted decoration detected, removing: 
+Object { isObject3D: true, uuid: "24b1fc60-d88b-43eb-b4fc-271f761e5e0a", name: "", type: "Group", parent: null, children: (25) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:42401
+⚠️ Corrupted decoration detected, removing: 
+Object { isObject3D: true, uuid: "9988c664-2248-4c77-bf4e-fe5e46c7ec19", name: "", type: "Group", parent: null, children: (25) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:42401
+⚠️ Corrupted decoration detected, removing: 
+Object { isObject3D: true, uuid: "50d2f952-4403-4409-9165-b580eaf580d4", name: "", type: "Group", parent: null, children: (25) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:42401
+⚠️ Corrupted decoration detected, removing: 
+Object { isObject3D: true, uuid: "89505471-62b2-4580-bc98-a8c9237f8f7a", name: "", type: "Group", parent: null, children: (53) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:42401
+🛡️ Skipping removal of protected temple: unnamed 3 index-CFDRvt5H.js:1:14789
+🛡️ Skipping removal of protected sphinx: unnamed 3 index-CFDRvt5H.js:1:14789
+🛡️ Skipping removal of protected obelisk: unnamed 4 index-CFDRvt5H.js:1:14789
+✅ Safely removed decoration: unnamed 5 index-CFDRvt5H.js:1:15109
+🔧 Removed 15 corrupted objects index-CFDRvt5H.js:1:43339
+🌍 Cleanup completed: index-CFDRvt5H.js:1:40473
+  - Pyramids: 3 → 3 index-CFDRvt5H.js:1:40510
+  - Temples: 3 → 3 index-CFDRvt5H.js:1:40585
+  - Sphinxes: 3 → 3 index-CFDRvt5H.js:1:40658
+  - Obelisks: 4 → 4 index-CFDRvt5H.js:1:40733
+  - Resources: 5 → 5 index-CFDRvt5H.js:1:40808
+  - Decorations: 16 → 11 index-CFDRvt5H.js:1:40889
+🌍 Starting WorldManager resource cleanup... index-CFDRvt5H.js:1:40199
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "4b9b8a37-e38b-44b0-9865-cc140e818572", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "0bd1b520-26d2-4854-b8c5-64b72f435eac", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "8ca8afa0-a9d1-459a-ba51-63be77a612ce", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41335
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "eb24e711-b276-4ce6-9c2d-8357751692cb", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "2a9eeebf-80a9-4cad-8306-8e022140f094", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "42672f62-2a03-4127-ad8e-38a7cc9f2756", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41594
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "fd417ac2-dc4a-4dd4-b26b-d7118c63c0ec", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "a9fccbb4-80ca-4f94-920f-4ab5b50617e2", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "af615f62-03fe-4b59-846b-b0deb90dda80", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "c9543b28-6758-4e5f-9c2e-de8ff5f0525d", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41853
+🛡️ Skipping removal of protected temple: unnamed 3 index-CFDRvt5H.js:1:14789
+🛡️ Skipping removal of protected sphinx: unnamed 3 index-CFDRvt5H.js:1:14789
+🛡️ Skipping removal of protected obelisk: unnamed 4 index-CFDRvt5H.js:1:14789
+🔧 Removed 10 corrupted objects index-CFDRvt5H.js:1:43339
+🌍 Cleanup completed: index-CFDRvt5H.js:1:40473
+  - Pyramids: 3 → 3 index-CFDRvt5H.js:1:40510
+  - Temples: 3 → 3 index-CFDRvt5H.js:1:40585
+  - Sphinxes: 3 → 3 index-CFDRvt5H.js:1:40658
+  - Obelisks: 4 → 4 index-CFDRvt5H.js:1:40733
+  - Resources: 5 → 5 index-CFDRvt5H.js:1:40808
+  - Decorations: 11 → 11 index-CFDRvt5H.js:1:40889
+🔧 Cleanup completed - Objects: 94 → 89 index-CFDRvt5H.js:1:88395
+🔧 Geometries: 245 → 245 index-CFDRvt5H.js:1:88494
+🔧 Materials: undefined → undefined index-CFDRvt5H.js:1:88586
+✅ Scene integrity check: 1146 valid objects index-CFDRvt5H.js:1:89413
+✅ Game loop started index-CFDRvt5H.js:1:78346
+🎯 Game loading indicator hidden index-CFDRvt5H.js:1:148309
+🌐 Connecting to network... index-CFDRvt5H.js:19:25589
+🌐 Attempting to connect to: https://egypt-mmo-production.up.railway.app index-CFDRvt5H.js:1:161318
+🔧 Setting up Socket.IO event handlers... index-CFDRvt5H.js:1:162682
+✅ Socket.IO event handlers set up successfully index-CFDRvt5H.js:1:164721
+📷 Camera position: 
+Array(3) [ "0.00", "5.00", "10.00" ]
+index-CFDRvt5H.js:1:91848
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-CFDRvt5H.js:1:91935
+📷 Camera offsets: 0.00 5.00 10.00 index-CFDRvt5H.js:1:92003
+✅ Minimal loading screen removed index-CFDRvt5H.js:19:21680
+✅ Loading screen hidden automatically index-CFDRvt5H.js:19:21147
+🎵 Music track loaded: Ancient Egypt Theme index-CFDRvt5H.js:19:13648
+🎵 Music track loaded: Desert Wind index-CFDRvt5H.js:19:13648
+🎵 Music track loaded: Pyramid Mystery index-CFDRvt5H.js:19:13648
+🎵 Music track loaded: Crafting Peace index-CFDRvt5H.js:19:13648
+🎵 Music track loaded: Battle Theme index-CFDRvt5H.js:19:13648
+🌐 Connected to Railway server - Player ID: 4eeNsUb4lRPuuGD1AAAB index-CFDRvt5H.js:1:161826
+✅ Network connection established index-CFDRvt5H.js:19:25668
+🔐 Google login initiated egypt-mmo-production.up.railway.app:805:21
+📷 Camera position: 
+Array(3) [ "0.00", "5.00", "10.00" ]
+index-CFDRvt5H.js:1:91848
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-CFDRvt5H.js:1:91935
+📷 Camera offsets: 0.00 5.00 10.00 index-CFDRvt5H.js:1:92003
+🌍 Joining world after network connection... index-CFDRvt5H.js:19:25804
+✅ Network already connected, proceeding to join world... index-CFDRvt5H.js:1:99730
+🌍 Joining world with player data: 
+Object { name: "Bob", position: {…}, rotation: {…}, level: 1, skills: {}, inventory: [], equipment: {} }
+index-CFDRvt5H.js:1:100546
+🌍 Joining world with data: 
+Object { name: "Bob", position: {…}, rotation: {…}, level: 1, skills: {}, inventory: [], equipment: {}, sessionId: "player_1756689232587_95yupwiub" }
+index-CFDRvt5H.js:1:165137
+✅ Egypt MMO started successfully! index-CFDRvt5H.js:19:26017
+🌍 Received world_state event: 
+Object { players: (1) […], resources: [], buildings: [], worldTime: {…} }
+index-CFDRvt5H.js:1:163874
+🌍 World state update received: 
+Object { players: (1) […], resources: [], buildings: [], worldTime: {…} }
+index-CFDRvt5H.js:1:99220
+🌍 Processing world state with 1 players index-CFDRvt5H.js:1:101005
+🕐 Initial time sync: 10.1h index-CFDRvt5H.js:1:101232
+🔄 Skipping local player: Bob (ID: player_1756689232587_95yupwiub) index-CFDRvt5H.js:1:101381
+✅ Player joined successfully: 
+Object { success: true, player: {…}, sessionId: "player_1756689232587_95yupwiub", message: "Welcome to Egypt MMO, Bob!" }
+index-CFDRvt5H.js:1:164400
+🎯 Player ID set to: player_1756689232587_95yupwiub index-CFDRvt5H.js:1:164522
+🔑 Session ID set to: player_1756689232587_95yupwiub index-CFDRvt5H.js:1:164581
+🕐 Received world_time_update event: 
+Object { time: 0.48035999999999995, timestamp: 1756700309380 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.48035999999999995, timestamp: 1756700309380 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 11.5h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.5404199999999999, timestamp: 1756700310381 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.5404199999999999, timestamp: 1756700310381 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 13.0h index-CFDRvt5H.js:1:101692
+🎮 Character creator mode enabled - all keys work normally index-CFDRvt5H.js:1:56055
+🕐 Received world_time_update event: 
+Object { time: 0.6004799999999999, timestamp: 1756700311382 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.6004799999999999, timestamp: 1756700311382 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 14.4h index-CFDRvt5H.js:1:101692
+⌨️ Key pressed: ShiftLeft index-CFDRvt5H.js:1:110486
+🕐 Received world_time_update event: 
+Object { time: 0.6605399999999999, timestamp: 1756700312383 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.6605399999999999, timestamp: 1756700312383 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 15.9h index-CFDRvt5H.js:1:101692
+⌨️ Key pressed: KeyR index-CFDRvt5H.js:1:110486
+📷 Camera reset to default orbital position index-CFDRvt5H.js:1:111805
+🔄 R key pressed - resetting camera... index-CFDRvt5H.js:1:114490
+🔄 Resetting camera... index-CFDRvt5H.js:1:140964
+📷 Camera reset to default orbital position index-CFDRvt5H.js:1:111805
+⌨️ Key released: KeyR index-CFDRvt5H.js:1:111879
+⌨️ Key released: ShiftLeft index-CFDRvt5H.js:1:111879
+⌨️ Key pressed: KeyE index-CFDRvt5H.js:1:110486
+📋 E key pressed - exporting model specifications... index-CFDRvt5H.js:1:114922
+📋 Exporting model specifications... index-CFDRvt5H.js:1:142579
+📋 Model specifications exported: 
+Object { player: {…}, mesh: {…}, scene: {…}, timestamp: "2025-09-01T04:18:37.893Z" }
+index-CFDRvt5H.js:1:3491
+✅ Model specs exported successfully: 
+Object { player: {…}, mesh: {…}, scene: {…}, timestamp: "2025-09-01T04:18:37.893Z" }
+index-CFDRvt5H.js:1:142989
+⌨️ Key released: KeyE index-CFDRvt5H.js:1:111879
+🕐 Received world_time_update event: 
+Object { time: 0.7205999999999999, timestamp: 1756700313384 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.7205999999999999, timestamp: 1756700313384 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 17.3h index-CFDRvt5H.js:1:101692
+📷 Shadow Camera - Pos: (-36.7, 1.7, 10.0) | Looking at: (36.7, 0.0, 10.0) index-CFDRvt5H.js:1:33665
+🕐 Received world_time_update event: 
+Object { time: 0.7806, timestamp: 1756700314384 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.7806, timestamp: 1756700314384 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 18.7h index-CFDRvt5H.js:1:101692
+📷 Camera position: 
+Array(3) [ "0.00", "5.00", "10.00" ]
+index-CFDRvt5H.js:1:91848
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-CFDRvt5H.js:1:91935
+📷 Camera offsets: 0.00 5.00 10.00 index-CFDRvt5H.js:1:92003
+🔄 Restoring viewport to full dimensions... index-CFDRvt5H.js:1:97105
+✅ Viewport restored to 1536x711 index-CFDRvt5H.js:1:97401
+🔄 Restoring viewport to full dimensions... index-CFDRvt5H.js:1:97105
+✅ Viewport restored to 1536x711 index-CFDRvt5H.js:1:97401
+⌨️ Key pressed: KeyP index-CFDRvt5H.js:1:110486
+🕐 Received world_time_update event: 
+Object { time: 0.84066, timestamp: 1756700315385 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.84066, timestamp: 1756700315385 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 20.2h index-CFDRvt5H.js:1:101692
+📷 Camera position: 
+Array(3) [ "0.00", "5.00", "10.00" ]
+index-CFDRvt5H.js:1:91848
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-CFDRvt5H.js:1:91935
+📷 Camera offsets: 0.00 5.00 10.00 index-CFDRvt5H.js:1:92003
+⌨️ Key released: KeyP index-CFDRvt5H.js:1:111879
+📷 Camera position: 
+Array(3) [ "0.00", "5.00", "10.00" ]
+index-CFDRvt5H.js:1:91848
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-CFDRvt5H.js:1:91935
+📷 Camera offsets: 0.00 5.00 10.00 index-CFDRvt5H.js:1:92003
+⌨️ Key pressed: KeyT index-CFDRvt5H.js:1:110486
+🔥 T key pressed - testing torch equipping... index-CFDRvt5H.js:1:114273
+🧪 Testing torch equipping system... index-CFDRvt5H.js:1:136376
+✅ All systems found, testing torch equipping... index-CFDRvt5H.js:1:136676
+🔥 Equipping torch from slot 3 index-CFDRvt5H.js:1:118764
+Failed to equip torch index-CFDRvt5H.js:1:119162
+📷 Camera position: 
+Array(3) [ "0.00", "5.00", "10.00" ]
+index-CFDRvt5H.js:1:91848
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-CFDRvt5H.js:1:91935
+📷 Camera offsets: 0.00 5.00 10.00 index-CFDRvt5H.js:1:92003
+⌨️ Key released: KeyT index-CFDRvt5H.js:1:111879
+⌨️ Key pressed: KeyI index-CFDRvt5H.js:1:110486
+🎒 Showing inventory... index-CFDRvt5H.js:1:132871
+🔄 Updating inventory display from system... index-CFDRvt5H.js:1:130664
+🎒 Inventory from system: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-CFDRvt5H.js:1:130749
+🎒 Inventory panel shown index-CFDRvt5H.js:1:133059
+🎒 I key pressed - testing inventory... index-CFDRvt5H.js:1:114387
+🎒 Testing inventory system... index-CFDRvt5H.js:1:136945
+✅ All systems found, testing inventory... index-CFDRvt5H.js:1:137239
+📊 Inventory System Status: index-CFDRvt5H.js:1:137296
+  - Initialized: true index-CFDRvt5H.js:1:137339
+  - Item Database Size: 17 index-CFDRvt5H.js:1:137387
+  - Max Slots: 64 index-CFDRvt5H.js:1:137446
+  - Current Slots: 11 index-CFDRvt5H.js:1:137487
+📚 Item Database Contents: index-CFDRvt5H.js:1:137556
+  - bronze_ingot: Bronze Ingot (material) index-CFDRvt5H.js:1:137630
+  - iron_ingot: Iron Ingot (material) index-CFDRvt5H.js:1:137630
+  - steel_ingot: Steel Ingot (material) index-CFDRvt5H.js:1:137630
+  - wood: Wood (material) index-CFDRvt5H.js:1:137630
+  - leather: Leather (material) index-CFDRvt5H.js:1:137630
+  - thread: Thread (material) index-CFDRvt5H.js:1:137630
+  - herbs: Herbs (material) index-CFDRvt5H.js:1:137630
+  - water: Water (material) index-CFDRvt5H.js:1:137630
+  - crystal: Crystal (material) index-CFDRvt5H.js:1:137630
+  - bronze_sword: Bronze Sword (weapon) index-CFDRvt5H.js:1:137630
+  - iron_sword: Iron Sword (weapon) index-CFDRvt5H.js:1:137630
+  - leather_armor: Leather Armor (armor) index-CFDRvt5H.js:1:137630
+  - hammer: Hammer (tool) index-CFDRvt5H.js:1:137630
+  - needle: Needle (tool) index-CFDRvt5H.js:1:137630
+  - mortar: Mortar (tool) index-CFDRvt5H.js:1:137630
+  - chisel: Chisel (tool) index-CFDRvt5H.js:1:137630
+  - torch: Torch (light) index-CFDRvt5H.js:1:137630
+📦 Current Inventory: index-CFDRvt5H.js:1:137704
+  - Slot 0: bronze_ingot x5 index-CFDRvt5H.js:1:137777
+  - Slot 1: wood x10 index-CFDRvt5H.js:1:137777
+  - Slot 2: leather x3 index-CFDRvt5H.js:1:137777
+  - Slot 3: thread x5 index-CFDRvt5H.js:1:137777
+  - Slot 4: herbs x8 index-CFDRvt5H.js:1:137777
+  - Slot 5: water x20 index-CFDRvt5H.js:1:137777
+  - Slot 6: hammer x1 index-CFDRvt5H.js:1:137777
+  - Slot 7: needle x1 index-CFDRvt5H.js:1:137777
+  - Slot 8: mortar x1 index-CFDRvt5H.js:1:137777
+  - Slot 9: chisel x1 index-CFDRvt5H.js:1:137777
+  - Slot 10: torch x1 index-CFDRvt5H.js:1:137777
+⚔️ Current Equipment: index-CFDRvt5H.js:1:137856
+  - head: empty index-CFDRvt5H.js:1:137954
+  - chest: empty index-CFDRvt5H.js:1:137954
+  - legs: empty index-CFDRvt5H.js:1:137954
+  - feet: empty index-CFDRvt5H.js:1:137954
+  - weapon: empty index-CFDRvt5H.js:1:137954
+  - offhand: empty index-CFDRvt5H.js:1:137954
+  - accessory: empty index-CFDRvt5H.js:1:137954
+📦 bronze_ingot already exists, increasing quantity index-CFDRvt5H.js:1:138426
+🎒 Adding item: bronze_ingot x5 index-CFDRvt5H.js:1:67242
+Inventory updated: 
+Object { slots: 11, gold: undefined, level: undefined, experience: undefined }
+index-CFDRvt5H.js:1:70578
+✅ Successfully added bronze_ingot x5 index-CFDRvt5H.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-CFDRvt5H.js:1:67559
+📦 wood already exists, increasing quantity index-CFDRvt5H.js:1:138426
+🎒 Adding item: wood x10 index-CFDRvt5H.js:1:67242
+Inventory updated: 
+Object { slots: 11, gold: undefined, level: undefined, experience: undefined }
+index-CFDRvt5H.js:1:70578
+✅ Successfully added wood x10 index-CFDRvt5H.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-CFDRvt5H.js:1:67559
+📦 leather already exists, increasing quantity index-CFDRvt5H.js:1:138426
+🎒 Adding item: leather x3 index-CFDRvt5H.js:1:67242
+Inventory updated: 
+Object { slots: 11, gold: undefined, level: undefined, experience: undefined }
+index-CFDRvt5H.js:1:70578
+✅ Successfully added leather x3 index-CFDRvt5H.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-CFDRvt5H.js:1:67559
+📦 torch already exists, increasing quantity index-CFDRvt5H.js:1:138426
+🎒 Adding item: torch x1 index-CFDRvt5H.js:1:67242
+Inventory updated: 
+Object { slots: 12, gold: undefined, level: undefined, experience: undefined }
+index-CFDRvt5H.js:1:70578
+✅ Successfully added torch x1 index-CFDRvt5H.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-CFDRvt5H.js:1:67559
+🔄 Updating inventory display from system... index-CFDRvt5H.js:1:130664
+🎒 Inventory from system: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-CFDRvt5H.js:1:130749
+🎒 Inventory system tested successfully. index-CFDRvt5H.js:1:138658
+⌨️ Key released: KeyI index-CFDRvt5H.js:1:111879
+⌨️ Key pressed: KeyC index-CFDRvt5H.js:1:110486
+🎯 C key pressed - testing click detection... index-CFDRvt5H.js:1:114687
+🎯 Testing click detection system... index-CFDRvt5H.js:1:140328
+✅ Grid manager found, testing grid system... index-CFDRvt5H.js:1:140545
+✅ Grid cell lookup working: 
+Object { x: 250, z: 250, worldX: 1, worldZ: 1, center: {…}, state: "walkable", occupied: false, height: 0, objects: [] }
+index-CFDRvt5H.js:1:140651
+Cell 250, 250 is walkable index-CFDRvt5H.js:1:140696
+✅ Walkable check: true index-CFDRvt5H.js:1:140836
+✅ Nearest walkable position: 
+Object { x: 1, y: 0, z: 1 }
+index-CFDRvt5H.js:1:140904
+⌨️ Key released: KeyC index-CFDRvt5H.js:1:111879
+🕐 Received world_time_update event: 
+Object { time: 0.90072, timestamp: 1756700316386 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.90072, timestamp: 1756700316386 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 21.6h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.96078, timestamp: 1756700317387 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.96078, timestamp: 1756700317387 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 23.1h index-CFDRvt5H.js:1:101692
+🎯 Creating character: Reptic egypt-mmo-production.up.railway.app:888:21
+👤 Character created: 
+Object { name: "Reptic", createdAt: "2025-09-01T04:18:42.529Z" }
+egypt-mmo-production.up.railway.app:898:21
+🔄 Current gameStarted flag: true egypt-mmo-production.up.railway.app:899:21
+🔄 Reset gameStarted flag to: false egypt-mmo-production.up.railway.app:903:21
+🚀 Calling startGame()... egypt-mmo-production.up.railway.app:906:21
+🚀 startGame() called - gameStarted flag: false egypt-mmo-production.up.railway.app:947:21
+🚀 Starting Egypt MMO... egypt-mmo-production.up.railway.app:955:21
+✅ Set gameStarted flag to: true egypt-mmo-production.up.railway.app:957:21
+🎮 Character creator mode disabled - game keys blocked again index-CFDRvt5H.js:1:56188
+✅ Hidden character creator egypt-mmo-production.up.railway.app:966:21
+✅ Game container shown egypt-mmo-production.up.railway.app:971:21
+🎮 Calling initializeGame()... egypt-mmo-production.up.railway.app:974:21
+🎮 initializeGame() called egypt-mmo-production.up.railway.app:980:21
+🔍 Checking Egypt MMO status... egypt-mmo-production.up.railway.app:981:21
+🔍 window.egyptMMO exists: true egypt-mmo-production.up.railway.app:982:21
+🔍 window.egyptMMO.isInitialized: true egypt-mmo-production.up.railway.app:983:21
+✅ Egypt MMO already initialized egypt-mmo-production.up.railway.app:987:25
+📷 Camera position: 
+Array(3) [ "0.00", "5.00", "10.00" ]
+index-CFDRvt5H.js:1:91848
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-CFDRvt5H.js:1:91935
+📷 Camera offsets: 0.00 5.00 10.00 index-CFDRvt5H.js:1:92003
+📷 Camera position: 
+Array(3) [ "0.00", "5.00", "10.00" ]
+index-CFDRvt5H.js:1:91848
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-CFDRvt5H.js:1:91935
+📷 Camera offsets: 0.00 5.00 10.00 index-CFDRvt5H.js:1:92003
+🕐 Received world_time_update event: 
+Object { time: 0, timestamp: 1756700318388 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0, timestamp: 1756700318388 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 0.0h index-CFDRvt5H.js:1:101692
+📷 Camera position: 
+Array(3) [ "0.00", "5.00", "10.00" ]
+index-CFDRvt5H.js:1:91848
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-CFDRvt5H.js:1:91935
+📷 Camera offsets: 0.00 5.00 10.00 index-CFDRvt5H.js:1:92003
+📷 Camera position: 
+Array(3) [ "0.00", "5.00", "10.00" ]
+index-CFDRvt5H.js:1:91848
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-CFDRvt5H.js:1:91935
+📷 Camera offsets: 0.00 5.00 10.00 index-CFDRvt5H.js:1:92003
+🎯 Mouse click detected: 
+Object { x: 0.28515625, y: -0.23172101372939125 }
+index-CFDRvt5H.js:1:76426
+🎯 Processing mouse click: 
+Object { x: 0.28515625, y: -0.23172101372939125 }
+index-CFDRvt5H.js:1:76620
+🎯 Ground intersection found: 
+Object { x: 4.405569880643006, y: 0, z: 1.9620250864390876 }
+index-CFDRvt5H.js:1:77693
+🎯 World position from mouse: 
+Object { x: 4.405569880643006, y: 0, z: 1.9620250864390876 }
+index-CFDRvt5H.js:1:76714
+✅ Position is walkable, moving player index-CFDRvt5H.js:1:76837
+👤 Player.moveToPosition called with: 
+Object { x: 4.405569880643006, y: 0, z: 1.9620250864390876 }
+index-CFDRvt5H.js:1:8939
+👤 Moving to clicked position: 4.4, 2.0 index-CFDRvt5H.js:1:9233
+🗺️ Direct path to target index-CFDRvt5H.js:1:9865
+📡 Sent position update for player player_1756689232587_95yupwiub: 
+Object { x: 8.62248260505259, y: 0, z: 4.739993951978136 }
+index-CFDRvt5H.js:1:165555
+🌐 Sent position update: (0.1, 0.0, 0.0) index-CFDRvt5H.js:1:7288
+📡 Sent position update for player player_1756689232587_95yupwiub: 
+Object { x: 8.62248260505259, y: 0, z: 4.739993951978136 }
+index-CFDRvt5H.js:1:165555
+🌐 Sent position update: (2.2, 0.0, 1.0) index-CFDRvt5H.js:1:7288
+🕐 Received world_time_update event: 
+Object { time: 0.060059999999999995, timestamp: 1756700319389 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.060059999999999995, timestamp: 1756700319389 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 1.4h index-CFDRvt5H.js:1:101692
+👤 Character name set to: Reptic index-CFDRvt5H.js:1:112009
+🎯 Character name "Reptic" set in game engine egypt-mmo-production.up.railway.app:913:29
+📡 Sent position update for player player_1756689232587_95yupwiub: 
+Object { x: 8.62248260505259, y: 0, z: 4.739993951978136 }
+index-CFDRvt5H.js:1:165555
+🌐 Sent position update: (3.7, 0.0, 1.6) index-CFDRvt5H.js:1:7288
+✅ Reached destination index-CFDRvt5H.js:1:6801
+🌞 PROPER Shadow System - Sun at (185.9, 136.8) | Time: 1.4h index-CFDRvt5H.js:1:35487
+🔍 Light pos: (190.2, 136.8, 11.9) | Target: (-181.7, 0, 11.9) index-CFDRvt5H.js:1:35627
+📷 Shadow Camera - Pos: (190.2, 136.8, 11.9) | Looking at: (-181.7, 0.0, 11.9) index-CFDRvt5H.js:1:33665
+🌞 Day/Night Cycle Update - Time: 1.4h | Frame: 600 index-CFDRvt5H.js:1:34160
+🔧 Renderer info reset (manual GC recommended) index-CFDRvt5H.js:1:87985
+🔧 Starting comprehensive resource cleanup... index-CFDRvt5H.js:1:88111
+🌍 Starting WorldManager resource cleanup... index-CFDRvt5H.js:1:40199
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "4b9b8a37-e38b-44b0-9865-cc140e818572", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "0bd1b520-26d2-4854-b8c5-64b72f435eac", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "8ca8afa0-a9d1-459a-ba51-63be77a612ce", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41335
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "eb24e711-b276-4ce6-9c2d-8357751692cb", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "2a9eeebf-80a9-4cad-8306-8e022140f094", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "42672f62-2a03-4127-ad8e-38a7cc9f2756", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41594
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "fd417ac2-dc4a-4dd4-b26b-d7118c63c0ec", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "a9fccbb4-80ca-4f94-920f-4ab5b50617e2", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "af615f62-03fe-4b59-846b-b0deb90dda80", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "c9543b28-6758-4e5f-9c2e-de8ff5f0525d", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41853
+🛡️ Skipping removal of protected temple: unnamed 3 index-CFDRvt5H.js:1:14789
+🛡️ Skipping removal of protected sphinx: unnamed 3 index-CFDRvt5H.js:1:14789
+🛡️ Skipping removal of protected obelisk: unnamed 4 index-CFDRvt5H.js:1:14789
+🔧 Removed 10 corrupted objects index-CFDRvt5H.js:1:43339
+🌍 Cleanup completed: index-CFDRvt5H.js:1:40473
+  - Pyramids: 3 → 3 index-CFDRvt5H.js:1:40510
+  - Temples: 3 → 3 index-CFDRvt5H.js:1:40585
+  - Sphinxes: 3 → 3 index-CFDRvt5H.js:1:40658
+  - Obelisks: 4 → 4 index-CFDRvt5H.js:1:40733
+  - Resources: 5 → 5 index-CFDRvt5H.js:1:40808
+  - Decorations: 11 → 11 index-CFDRvt5H.js:1:40889
+🌍 Starting WorldManager resource cleanup... index-CFDRvt5H.js:1:40199
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "4b9b8a37-e38b-44b0-9865-cc140e818572", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "0bd1b520-26d2-4854-b8c5-64b72f435eac", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "8ca8afa0-a9d1-459a-ba51-63be77a612ce", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41335
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "eb24e711-b276-4ce6-9c2d-8357751692cb", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "2a9eeebf-80a9-4cad-8306-8e022140f094", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "42672f62-2a03-4127-ad8e-38a7cc9f2756", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41594
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "fd417ac2-dc4a-4dd4-b26b-d7118c63c0ec", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "a9fccbb4-80ca-4f94-920f-4ab5b50617e2", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "af615f62-03fe-4b59-846b-b0deb90dda80", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "c9543b28-6758-4e5f-9c2e-de8ff5f0525d", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-CFDRvt5H.js:1:41853
+🛡️ Skipping removal of protected temple: unnamed 3 index-CFDRvt5H.js:1:14789
+🛡️ Skipping removal of protected sphinx: unnamed 3 index-CFDRvt5H.js:1:14789
+🛡️ Skipping removal of protected obelisk: unnamed 4 index-CFDRvt5H.js:1:14789
+🔧 Removed 10 corrupted objects index-CFDRvt5H.js:1:43339
+🌍 Cleanup completed: index-CFDRvt5H.js:1:40473
+  - Pyramids: 3 → 3 index-CFDRvt5H.js:1:40510
+  - Temples: 3 → 3 index-CFDRvt5H.js:1:40585
+  - Sphinxes: 3 → 3 index-CFDRvt5H.js:1:40658
+  - Obelisks: 4 → 4 index-CFDRvt5H.js:1:40733
+  - Resources: 5 → 5 index-CFDRvt5H.js:1:40808
+  - Decorations: 11 → 11 index-CFDRvt5H.js:1:40889
+🔧 Cleanup completed - Objects: 91 → 91 index-CFDRvt5H.js:1:88395
+🔧 Geometries: 260 → 260 index-CFDRvt5H.js:1:88494
+🔧 Materials: undefined → undefined index-CFDRvt5H.js:1:88586
+✅ Scene integrity check: 1148 valid objects index-CFDRvt5H.js:1:89413
+🕐 Received world_time_update event: 
+Object { time: 0.12, timestamp: 1756700320388 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.12, timestamp: 1756700320388 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 2.9h index-CFDRvt5H.js:1:101692
+🎯 Mouse click detected: 
+Object { x: 0.31119791666666674, y: -0.3048368729918667 }
+index-CFDRvt5H.js:1:76426
+🎯 Processing mouse click: 
+Object { x: 0.31119791666666674, y: -0.3048368729918667 }
+index-CFDRvt5H.js:1:76620
+🎯 Ground intersection found: 
+Object { x: 8.616475071369866, y: 0, z: 4.736086477941022 }
+index-CFDRvt5H.js:1:77693
+🎯 World position from mouse: 
+Object { x: 8.616475071369866, y: 0, z: 4.736086477941022 }
+index-CFDRvt5H.js:1:76714
+✅ Position is walkable, moving player index-CFDRvt5H.js:1:76837
+👤 Player.moveToPosition called with: 
+Object { x: 8.616475071369866, y: 0, z: 4.736086477941022 }
+index-CFDRvt5H.js:1:8939
+👤 Moving to clicked position: 8.6, 4.7 index-CFDRvt5H.js:1:9233
+🗺️ Direct path to target index-CFDRvt5H.js:1:9865
+📡 Sent position update for player player_1756689232587_95yupwiub: 
+Object { x: 8.62248260505259, y: 0, z: 4.739993951978136 }
+index-CFDRvt5H.js:1:165555
+🌐 Sent position update: (4.3, 0.0, 1.9) index-CFDRvt5H.js:1:7288
+📡 Sent position update for player player_1756689232587_95yupwiub: 
+Object { x: 8.62248260505259, y: 0, z: 4.739993951978136 }
+index-CFDRvt5H.js:1:165555
+🌐 Sent position update: (5.8, 0.0, 2.9) index-CFDRvt5H.js:1:7288
+📡 Sent position update for player player_1756689232587_95yupwiub: 
+Object { x: 8.62248260505259, y: 0, z: 4.739993951978136 }
+index-CFDRvt5H.js:1:165555
+🌐 Sent position update: (7.0, 0.0, 3.7) index-CFDRvt5H.js:1:7288
+📡 Sent position update for player player_1756689232587_95yupwiub: 
+Object { x: 8.62248260505259, y: 0, z: 4.739993951978136 }
+index-CFDRvt5H.js:1:165555
+🌐 Sent position update: (8.6, 0.0, 4.7) index-CFDRvt5H.js:1:7288
+✅ Reached destination index-CFDRvt5H.js:1:6801
+🕐 Received world_time_update event: 
+Object { time: 0.18, timestamp: 1756700321388 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.18, timestamp: 1756700321388 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 4.3h index-CFDRvt5H.js:1:101692
+📷 Camera position: 
+Array(3) [ "8.62", "5.00", "14.74" ]
+index-CFDRvt5H.js:1:91848
+👤 Player position: 
+Array(3) [ "8.62", "0.00", "4.74" ]
+index-CFDRvt5H.js:1:91935
+📷 Camera offsets: 0.00 5.00 10.00 index-CFDRvt5H.js:1:92003
+📷 Camera position: 
+Array(3) [ "8.62", "5.00", "14.74" ]
+index-CFDRvt5H.js:1:91848
+👤 Player position: 
+Array(3) [ "8.62", "0.00", "4.74" ]
+index-CFDRvt5H.js:1:91935
+📷 Camera offsets: 0.00 5.00 10.00 index-CFDRvt5H.js:1:92003
+🕐 Received world_time_update event: 
+Object { time: 0.24006, timestamp: 1756700322389 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.24006, timestamp: 1756700322389 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 5.8h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.30012, timestamp: 1756700323390 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.30012, timestamp: 1756700323390 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 7.2h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.36012, timestamp: 1756700324390 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.36012, timestamp: 1756700324390 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 8.6h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.42018, timestamp: 1756700325391 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.42018, timestamp: 1756700325391 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 10.1h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.48018, timestamp: 1756700326391 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.48018, timestamp: 1756700326391 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 11.5h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.5402399999999999, timestamp: 1756700327392 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.5402399999999999, timestamp: 1756700327392 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 13.0h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.6003, timestamp: 1756700328393 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.6003, timestamp: 1756700328393 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 14.4h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.6602999999999999, timestamp: 1756700329393 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.6602999999999999, timestamp: 1756700329393 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 15.8h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.7203599999999999, timestamp: 1756700330394 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.7203599999999999, timestamp: 1756700330394 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 17.3h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.7803599999999999, timestamp: 1756700331394 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.7803599999999999, timestamp: 1756700331394 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 18.7h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.84042, timestamp: 1756700332395 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.84042, timestamp: 1756700332395 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 20.2h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.90048, timestamp: 1756700333396 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.90048, timestamp: 1756700333396 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 21.6h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.96054, timestamp: 1756700334397 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.96054, timestamp: 1756700334397 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 23.1h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0, timestamp: 1756700335397 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0, timestamp: 1756700335397 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 0.0h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.060059999999999995, timestamp: 1756700336398 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.060059999999999995, timestamp: 1756700336398 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 1.4h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.12011999999999999, timestamp: 1756700337399 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.12011999999999999, timestamp: 1756700337399 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 2.9h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.18017999999999998, timestamp: 1756700338400 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.18017999999999998, timestamp: 1756700338400 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 4.3h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.24029999999999999, timestamp: 1756700339402 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.24029999999999999, timestamp: 1756700339402 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 5.8h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.3003, timestamp: 1756700340402 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.3003, timestamp: 1756700340402 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 7.2h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.36036, timestamp: 1756700341403 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.36036, timestamp: 1756700341403 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 8.6h index-CFDRvt5H.js:1:101692
+🔄 Ignoring own movement update for player player_1756689232587_95yupwiub 2 index-CFDRvt5H.js:1:163589
+🕐 Received world_time_update event: 
+Object { time: 0.42036, timestamp: 1756700342403 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.42036, timestamp: 1756700342403 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 10.1h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.48042, timestamp: 1756700343404 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.48042, timestamp: 1756700343404 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 11.5h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.54048, timestamp: 1756700344405 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.54048, timestamp: 1756700344405 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 13.0h index-CFDRvt5H.js:1:101692
+▶️ Resuming game loop... 2 index-CFDRvt5H.js:1:78820
+🔄 Restoring viewport to full dimensions... index-CFDRvt5H.js:1:97105
+✅ Viewport restored to 1536x711 index-CFDRvt5H.js:1:97401
+🔄 Restoring viewport to full dimensions... index-CFDRvt5H.js:1:97105
+✅ Viewport restored to 1536x711 index-CFDRvt5H.js:1:97401
+🔄 Restoring viewport to full dimensions... index-CFDRvt5H.js:1:97105
+✅ Viewport restored to 1536x711 index-CFDRvt5H.js:1:97401
+🔄 Restoring viewport to full dimensions... index-CFDRvt5H.js:1:97105
+✅ Viewport restored to 1536x711 index-CFDRvt5H.js:1:97401
+🕐 Received world_time_update event: 
+Object { time: 0.60054, timestamp: 1756700345406 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.60054, timestamp: 1756700345406 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 14.4h index-CFDRvt5H.js:1:101692
+⌨️ Key pressed: ArrowLeft index-CFDRvt5H.js:1:110486
+⌨️ Key released: ArrowLeft index-CFDRvt5H.js:1:111879
+⌨️ Key pressed: ArrowLeft index-CFDRvt5H.js:1:110486
+🕐 Received world_time_update event: 
+Object { time: 0.6606, timestamp: 1756700346407 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.6606, timestamp: 1756700346407 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 15.9h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.72066, timestamp: 1756700347408 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.72066, timestamp: 1756700347408 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 17.3h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.78072, timestamp: 1756700348409 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.78072, timestamp: 1756700348409 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 18.7h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.84078, timestamp: 1756700349410 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.84078, timestamp: 1756700349410 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 20.2h index-CFDRvt5H.js:1:101692
+🔄 Restoring viewport to full dimensions... index-CFDRvt5H.js:1:97105
+✅ Viewport restored to 1536x711 index-CFDRvt5H.js:1:97401
+🔄 Restoring viewport to full dimensions... index-CFDRvt5H.js:1:97105
+✅ Viewport restored to 1536x711 index-CFDRvt5H.js:1:97401
+🕐 Received world_time_update event: 
+Object { time: 0.9007799999999999, timestamp: 1756700350410 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.9007799999999999, timestamp: 1756700350410 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 21.6h index-CFDRvt5H.js:1:101692
+⌨️ Key pressed: ArrowLeft index-CFDRvt5H.js:1:110486
+⌨️ Key released: ArrowLeft index-CFDRvt5H.js:1:111879
+🎯 Mouse click detected: 
+Object { x: 0.15234375, y: -0.29077613082600595 }
+index-CFDRvt5H.js:1:76426
+🎯 Processing mouse click: 
+Object { x: 0.15234375, y: -0.29077613082600595 }
+index-CFDRvt5H.js:1:76620
+🎯 Ground intersection found: 
+Object { x: 10.80498022263287, y: 0, z: 7.432001059048073 }
+index-CFDRvt5H.js:1:77693
+🎯 World position from mouse: 
+Object { x: 10.80498022263287, y: 0, z: 7.432001059048073 }
+index-CFDRvt5H.js:1:76714
+✅ Position is walkable, moving player index-CFDRvt5H.js:1:76837
+👤 Player.moveToPosition called with: 
+Object { x: 10.80498022263287, y: 0, z: 7.432001059048073 }
+index-CFDRvt5H.js:1:8939
+👤 Moving to clicked position: 10.8, 7.4 index-CFDRvt5H.js:1:9233
+🗺️ Direct path to target index-CFDRvt5H.js:1:9865
+🕐 Received world_time_update event: 
+Object { time: 0.9608399999999999, timestamp: 1756700351411 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.9608399999999999, timestamp: 1756700351411 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 23.1h index-CFDRvt5H.js:1:101692
+⌨️ Key pressed: ArrowLeft index-CFDRvt5H.js:1:110486
+⌨️ Key released: ArrowLeft index-CFDRvt5H.js:1:111879
+🕐 Received world_time_update event: 
+Object { time: 0, timestamp: 1756700352412 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0, timestamp: 1756700352412 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 0.0h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.060059999999999995, timestamp: 1756700353413 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.060059999999999995, timestamp: 1756700353413 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 1.4h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.12011999999999999, timestamp: 1756700354414 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.12011999999999999, timestamp: 1756700354414 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 2.9h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.18017999999999998, timestamp: 1756700355415 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.18017999999999998, timestamp: 1756700355415 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 4.3h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.24017999999999998, timestamp: 1756700356415 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.24017999999999998, timestamp: 1756700356415 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 5.8h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.30023999999999995, timestamp: 1756700357416 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.30023999999999995, timestamp: 1756700357416 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 7.2h index-CFDRvt5H.js:1:101692
+▶️ Resuming game loop... 2 index-CFDRvt5H.js:1:78820
+🔄 Restoring viewport to full dimensions... index-CFDRvt5H.js:1:97105
+✅ Viewport restored to 1536x711 index-CFDRvt5H.js:1:97401
+🔄 Restoring viewport to full dimensions... index-CFDRvt5H.js:1:97105
+✅ Viewport restored to 1536x711 index-CFDRvt5H.js:1:97401
+🔄 Restoring viewport to full dimensions... index-CFDRvt5H.js:1:97105
+✅ Viewport restored to 1536x711 index-CFDRvt5H.js:1:97401
+🔄 Restoring viewport to full dimensions... index-CFDRvt5H.js:1:97105
+✅ Viewport restored to 1536x711 index-CFDRvt5H.js:1:97401
+⌨️ Key pressed: ArrowLeft index-CFDRvt5H.js:1:110486
+🕐 Received world_time_update event: 
+Object { time: 0.36029999999999995, timestamp: 1756700358417 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.36029999999999995, timestamp: 1756700358417 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 8.6h index-CFDRvt5H.js:1:101692
+⌨️ Key released: ArrowLeft index-CFDRvt5H.js:1:111879
+🕐 Received world_time_update event: 
+Object { time: 0.42035999999999996, timestamp: 1756700359418 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.42035999999999996, timestamp: 1756700359418 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 10.1h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.48041999999999996, timestamp: 1756700360419 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.48041999999999996, timestamp: 1756700360419 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 11.5h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.54048, timestamp: 1756700361420 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.54048, timestamp: 1756700361420 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 13.0h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.6006, timestamp: 1756700362422 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.6006, timestamp: 1756700362422 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 14.4h index-CFDRvt5H.js:1:101692
+🎯 Mouse click detected: 
+Object { x: -0.22135416666666663, y: -0.4482564430836451 }
+index-CFDRvt5H.js:1:76426
+🎯 Processing mouse click: 
+Object { x: -0.22135416666666663, y: -0.4482564430836451 }
+index-CFDRvt5H.js:1:76620
+🎯 Ground intersection found: 
+Object { x: 5.9664119049734925, y: 0, z: 8.943868192647052 }
+index-CFDRvt5H.js:1:77693
+🎯 World position from mouse: 
+Object { x: 5.9664119049734925, y: 0, z: 8.943868192647052 }
+index-CFDRvt5H.js:1:76714
+✅ Position is walkable, moving player index-CFDRvt5H.js:1:76837
+👤 Player.moveToPosition called with: 
+Object { x: 5.9664119049734925, y: 0, z: 8.943868192647052 }
+index-CFDRvt5H.js:1:8939
+👤 Moving to clicked position: 6.0, 8.9 index-CFDRvt5H.js:1:9233
+🗺️ Direct path to target index-CFDRvt5H.js:1:9865
+🕐 Received world_time_update event: 
+Object { time: 0.6606000000000001, timestamp: 1756700363422 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.6606000000000001, timestamp: 1756700363422 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 15.9h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.7206000000000001, timestamp: 1756700364422 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.7206000000000001, timestamp: 1756700364422 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 17.3h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.7806600000000001, timestamp: 1756700365423 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.7806600000000001, timestamp: 1756700365423 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 18.7h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.8407200000000001, timestamp: 1756700366424 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.8407200000000001, timestamp: 1756700366424 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 20.2h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.9007800000000001, timestamp: 1756700367425 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.9007800000000001, timestamp: 1756700367425 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 21.6h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.9608400000000001, timestamp: 1756700368426 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.9608400000000001, timestamp: 1756700368426 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 23.1h index-CFDRvt5H.js:1:101692
+▶️ Resuming game loop... 2 index-CFDRvt5H.js:1:78820
+🔄 Restoring viewport to full dimensions... index-CFDRvt5H.js:1:97105
+✅ Viewport restored to 1536x711 index-CFDRvt5H.js:1:97401
+🔄 Restoring viewport to full dimensions... index-CFDRvt5H.js:1:97105
+✅ Viewport restored to 1536x711 index-CFDRvt5H.js:1:97401
+🔄 Restoring viewport to full dimensions... index-CFDRvt5H.js:1:97105
+✅ Viewport restored to 1536x711 index-CFDRvt5H.js:1:97401
+🕐 Received world_time_update event: 
+Object { time: 0, timestamp: 1756700369426 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0, timestamp: 1756700369426 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 0.0h index-CFDRvt5H.js:1:101692
+🔄 Restoring viewport to full dimensions... index-CFDRvt5H.js:1:97105
+✅ Viewport restored to 1536x711 index-CFDRvt5H.js:1:97401
+⌨️ Key pressed: ArrowLeft index-CFDRvt5H.js:1:110486
+⌨️ Key released: ArrowLeft index-CFDRvt5H.js:1:111879
+⌨️ Key pressed: ArrowLeft index-CFDRvt5H.js:1:110486
+⌨️ Key released: ArrowLeft index-CFDRvt5H.js:1:111879
+⌨️ Key pressed: ArrowLeft index-CFDRvt5H.js:1:110486
+⌨️ Key released: ArrowLeft index-CFDRvt5H.js:1:111879
+🕐 Received world_time_update event: 
+Object { time: 0.06012000000000001, timestamp: 1756700370428 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.06012000000000001, timestamp: 1756700370428 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 1.4h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.12012, timestamp: 1756700371428 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.12012, timestamp: 1756700371428 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 2.9h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.18024, timestamp: 1756700372430 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.18024, timestamp: 1756700372430 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 4.3h index-CFDRvt5H.js:1:101692
+▶️ Resuming game loop... 2 index-CFDRvt5H.js:1:78820
+🔄 Restoring viewport to full dimensions... index-CFDRvt5H.js:1:97105
+✅ Viewport restored to 1536x711 index-CFDRvt5H.js:1:97401
+🔄 Restoring viewport to full dimensions... index-CFDRvt5H.js:1:97105
+✅ Viewport restored to 1536x711 index-CFDRvt5H.js:1:97401
+🔄 Restoring viewport to full dimensions... index-CFDRvt5H.js:1:97105
+✅ Viewport restored to 1536x711 index-CFDRvt5H.js:1:97401
+🔄 Restoring viewport to full dimensions... index-CFDRvt5H.js:1:97105
+✅ Viewport restored to 1536x711 index-CFDRvt5H.js:1:97401
+🕐 Received world_time_update event: 
+Object { time: 0.2403, timestamp: 1756700373431 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.2403, timestamp: 1756700373431 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 5.8h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.3003, timestamp: 1756700374431 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.3003, timestamp: 1756700374431 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 7.2h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.36036, timestamp: 1756700375432 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.36036, timestamp: 1756700375432 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 8.6h index-CFDRvt5H.js:1:101692
+▶️ Resuming game loop... 2 index-CFDRvt5H.js:1:78820
+🔄 Restoring viewport to full dimensions... index-CFDRvt5H.js:1:97105
+✅ Viewport restored to 1536x711 index-CFDRvt5H.js:1:97401
+🔄 Restoring viewport to full dimensions... index-CFDRvt5H.js:1:97105
+✅ Viewport restored to 1536x711 index-CFDRvt5H.js:1:97401
+🔄 Restoring viewport to full dimensions... index-CFDRvt5H.js:1:97105
+✅ Viewport restored to 1536x711 index-CFDRvt5H.js:1:97401
+🔄 Restoring viewport to full dimensions... index-CFDRvt5H.js:1:97105
+✅ Viewport restored to 1536x711 index-CFDRvt5H.js:1:97401
+🕐 Received world_time_update event: 
+Object { time: 0.42042, timestamp: 1756700376433 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.42042, timestamp: 1756700376433 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 10.1h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.48054, timestamp: 1756700377435 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.48054, timestamp: 1756700377435 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 11.5h index-CFDRvt5H.js:1:101692
+▶️ Resuming game loop... 2 index-CFDRvt5H.js:1:78820
+🕐 Received world_time_update event: 
+Object { time: 0.5406, timestamp: 1756700378436 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.5406, timestamp: 1756700378436 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 13.0h index-CFDRvt5H.js:1:101692
+🔄 Restoring viewport to full dimensions... index-CFDRvt5H.js:1:97105
+✅ Viewport restored to 1536x711 index-CFDRvt5H.js:1:97401
+🔄 Restoring viewport to full dimensions... index-CFDRvt5H.js:1:97105
+✅ Viewport restored to 1536x711 index-CFDRvt5H.js:1:97401
+🔄 Restoring viewport to full dimensions... index-CFDRvt5H.js:1:97105
+✅ Viewport restored to 1536x711 index-CFDRvt5H.js:1:97401
+🔄 Restoring viewport to full dimensions... index-CFDRvt5H.js:1:97105
+✅ Viewport restored to 1536x711 index-CFDRvt5H.js:1:97401
+🕐 Received world_time_update event: 
+Object { time: 0.6007199999999999, timestamp: 1756700379438 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.6007199999999999, timestamp: 1756700379438 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 14.4h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.66072, timestamp: 1756700380438 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.66072, timestamp: 1756700380438 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 15.9h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.72078, timestamp: 1756700381439 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.72078, timestamp: 1756700381439 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 17.3h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.78084, timestamp: 1756700382440 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.78084, timestamp: 1756700382440 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 18.7h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.8409599999999999, timestamp: 1756700383442 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.8409599999999999, timestamp: 1756700383442 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 20.2h index-CFDRvt5H.js:1:101692
+▶️ Resuming game loop... 2 index-CFDRvt5H.js:1:78820
+🔄 Restoring viewport to full dimensions... index-CFDRvt5H.js:1:97105
+✅ Viewport restored to 1536x711 index-CFDRvt5H.js:1:97401
+🔄 Restoring viewport to full dimensions... index-CFDRvt5H.js:1:97105
+✅ Viewport restored to 1536x711 index-CFDRvt5H.js:1:97401
+🔄 Restoring viewport to full dimensions... index-CFDRvt5H.js:1:97105
+✅ Viewport restored to 1536x711 index-CFDRvt5H.js:1:97401
+🔄 Restoring viewport to full dimensions... index-CFDRvt5H.js:1:97105
+✅ Viewport restored to 1536x711 index-CFDRvt5H.js:1:97401
+⌨️ Key pressed: ArrowLeft index-CFDRvt5H.js:1:110486
+🕐 Received world_time_update event: 
+Object { time: 0.9010199999999999, timestamp: 1756700384443 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.9010199999999999, timestamp: 1756700384443 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 21.6h index-CFDRvt5H.js:1:101692
+⌨️ Key released: ArrowLeft index-CFDRvt5H.js:1:111879
+⌨️ Key pressed: ArrowRight index-CFDRvt5H.js:1:110486
+⌨️ Key released: ArrowRight index-CFDRvt5H.js:1:111879
+⌨️ Key pressed: ArrowLeft index-CFDRvt5H.js:1:110486
+⌨️ Key released: ArrowLeft index-CFDRvt5H.js:1:111879
+⌨️ Key pressed: ArrowRight index-CFDRvt5H.js:1:110486
+⌨️ Key released: ArrowRight index-CFDRvt5H.js:1:111879
+🕐 Received world_time_update event: 
+Object { time: 0.9610799999999999, timestamp: 1756700385444 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.9610799999999999, timestamp: 1756700385444 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 23.1h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0, timestamp: 1756700386445 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0, timestamp: 1756700386445 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 0.0h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.060059999999999995, timestamp: 1756700387446 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.060059999999999995, timestamp: 1756700387446 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 1.4h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.12011999999999999, timestamp: 1756700388447 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.12011999999999999, timestamp: 1756700388447 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 2.9h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.18024, timestamp: 1756700389449 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.18024, timestamp: 1756700389449 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 4.3h index-CFDRvt5H.js:1:101692
+🔄 Handling resize event... index-CFDRvt5H.js:1:96541
+📐 Viewport dimensions: 1536x460 index-CFDRvt5H.js:1:96631
+🎨 UI Manager handling resize: 1536x460 index-CFDRvt5H.js:1:139385
+✅ UI resize handled index-CFDRvt5H.js:1:139504
+✅ Resize handled successfully index-CFDRvt5H.js:1:96904
+🔄 Handling resize event... index-CFDRvt5H.js:1:96541
+📐 Viewport dimensions: 1536x460 index-CFDRvt5H.js:1:96631
+🎨 UI Manager handling resize: 1536x460 index-CFDRvt5H.js:1:139385
+✅ UI resize handled index-CFDRvt5H.js:1:139504
+✅ Resize handled successfully index-CFDRvt5H.js:1:96904
+🕐 Received world_time_update event: 
+Object { time: 0.2403, timestamp: 1756700390450 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.2403, timestamp: 1756700390450 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 5.8h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.30036, timestamp: 1756700391451 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.30036, timestamp: 1756700391451 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 7.2h index-CFDRvt5H.js:1:101692
+🕐 Received world_time_update event: 
+Object { time: 0.36042, timestamp: 1756700392452 }
+index-CFDRvt5H.js:1:164051
+🕐 Time update received: 
+Object { time: 0.36042, timestamp: 1756700392452 }
+index-CFDRvt5H.js:1:99338
+🕐 Synced world time to: 8.7h index-CFDRvt5H.js:1:101692
