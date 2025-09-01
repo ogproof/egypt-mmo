@@ -1,0 +1,1504 @@
+🎮 Egypt MMO Title Screen Loaded egypt-mmo-production.up.railway.app:1038:21
+🔐 Existing session found, starting game... egypt-mmo-production.up.railway.app:1002:25
+🚀 Starting Egypt MMO... egypt-mmo-production.up.railway.app:937:21
+✅ Game container shown egypt-mmo-production.up.railway.app:951:21
+🎮 Game initialization started egypt-mmo-production.up.railway.app:965:21
+⏳ Egypt MMO not ready yet, waiting... egypt-mmo-production.up.railway.app:977:25
+👤 User session found: Google Player index-Bg6NS5Jh.js:19:23176
+👤 Character found: Ralph index-Bg6NS5Jh.js:19:23233
+🚀 Starting Egypt MMO... index-Bg6NS5Jh.js:19:23688
+🔍 Init called at: 2025-09-01T01:28:33.618Z index-Bg6NS5Jh.js:19:23728
+🔍 Stack trace: startGame@https://egypt-mmo-production.up.railway.app/assets/index-Bg6NS5Jh.js:19:23809
+init@https://egypt-mmo-production.up.railway.app/assets/index-Bg6NS5Jh.js:19:23295
+@https://egypt-mmo-production.up.railway.app/assets/index-Bg6NS5Jh.js:19:28020
+index-Bg6NS5Jh.js:19:23787
+📦 Initializing Loading Manager... index-Bg6NS5Jh.js:19:17546
+⚠️ Loading screen elements not found, using minimal loading... index-Bg6NS5Jh.js:19:17837
+✅ Created minimal loading screen index-Bg6NS5Jh.js:19:20603
+TypeError: a.default.detectStore(...) is undefined h1-check.js:1:1301
+✅ Egypt MMO ready, starting game... egypt-mmo-production.up.railway.app:982:33
+⚠️ Egypt MMO already initialized or initializing, skipping... index-Bg6NS5Jh.js:19:23381
+✅ Loading Manager initialized index-Bg6NS5Jh.js:19:18001
+🔍 Creating AudioManager... index-Bg6NS5Jh.js:19:23896
+🎵 Initializing Audio Manager... index-Bg6NS5Jh.js:19:9856
+An AudioContext was prevented from starting automatically. It must be created or resumed after a user gesture on the page. index-Bg6NS5Jh.js:9:25841
+🎵 Placeholder sound created for: button_click index-Bg6NS5Jh.js:19:16278
+🎵 Placeholder sound created for: panel_open index-Bg6NS5Jh.js:19:16278
+🎵 Placeholder sound created for: panel_close index-Bg6NS5Jh.js:19:16278
+🎵 Placeholder sound created for: notification index-Bg6NS5Jh.js:19:16278
+🎵 Placeholder sound created for: hammer_strike index-Bg6NS5Jh.js:19:16278
+🎵 Placeholder sound created for: metal_clang index-Bg6NS5Jh.js:19:16278
+🎵 Placeholder sound created for: wood_cut index-Bg6NS5Jh.js:19:16278
+🎵 Placeholder sound created for: potion_bubble index-Bg6NS5Jh.js:19:16278
+🎵 Placeholder sound created for: wind_ambient index-Bg6NS5Jh.js:19:16278
+🎵 Placeholder sound created for: sand_footstep index-Bg6NS5Jh.js:19:16278
+🎵 Placeholder sound created for: water_splash index-Bg6NS5Jh.js:19:16278
+🎵 Placeholder sound created for: fire_crackle index-Bg6NS5Jh.js:19:16278
+🎵 Placeholder sound created for: sword_swing index-Bg6NS5Jh.js:19:16278
+🎵 Placeholder sound created for: armor_clank index-Bg6NS5Jh.js:19:16278
+🎵 Placeholder sound created for: magic_cast index-Bg6NS5Jh.js:19:16278
+An AudioContext was prevented from starting automatically. It must be created or resumed after a user gesture on the page. index-Bg6NS5Jh.js:19:11866
+✅ Audio Manager initialized index-Bg6NS5Jh.js:19:10009
+🔍 Creating NetworkManager... index-Bg6NS5Jh.js:19:23964
+🔍 Creating GameEngine... index-Bg6NS5Jh.js:19:24036
+🔍 Creating UIManager... index-Bg6NS5Jh.js:19:24100
+🔍 Creating OptionsManager... index-Bg6NS5Jh.js:19:24162
+⚠️ AudioManager already initialized, skipping... index-Bg6NS5Jh.js:19:9784
+🌐 Initializing Network Manager... index-Bg6NS5Jh.js:1:159550
+🔑 Loaded existing session ID: player_1756689232587_95yupwiub index-Bg6NS5Jh.js:1:159676
+✅ Network Manager initialized index-Bg6NS5Jh.js:1:159877
+🎮 Initializing Game Engine... index-Bg6NS5Jh.js:1:73084
+🗺️ Grid Manager initialized: 500x500 cells (250000 total) - 2x2 units each index-Bg6NS5Jh.js:1:48461
+🎮 Input Manager initialized index-Bg6NS5Jh.js:1:52706
+🎒 Initializing Inventory System... index-Bg6NS5Jh.js:1:62348
+📚 Loading item database... index-Bg6NS5Jh.js:1:62399
+📚 Starting to load item database... index-Bg6NS5Jh.js:1:62705
+📚 Adding item to database: bronze_ingot index-Bg6NS5Jh.js:1:66204
+📚 Item bronze_ingot added to database. Current size: 1 index-Bg6NS5Jh.js:1:66295
+📚 Added bronze_ingot to database index-Bg6NS5Jh.js:1:62934
+📚 Adding item to database: iron_ingot index-Bg6NS5Jh.js:1:66204
+📚 Item iron_ingot added to database. Current size: 2 index-Bg6NS5Jh.js:1:66295
+📚 Added iron_ingot to database index-Bg6NS5Jh.js:1:63155
+📚 Adding item to database: steel_ingot index-Bg6NS5Jh.js:1:66204
+📚 Item steel_ingot added to database. Current size: 3 index-Bg6NS5Jh.js:1:66295
+📚 Added steel_ingot to database index-Bg6NS5Jh.js:1:63379
+📚 Adding item to database: wood index-Bg6NS5Jh.js:1:66204
+📚 Item wood added to database. Current size: 4 index-Bg6NS5Jh.js:1:66295
+📚 Added wood to database index-Bg6NS5Jh.js:1:63576
+📚 Adding item to database: leather index-Bg6NS5Jh.js:1:66204
+📚 Item leather added to database. Current size: 5 index-Bg6NS5Jh.js:1:66295
+📚 Added leather to database index-Bg6NS5Jh.js:1:63776
+📚 Adding item to database: thread index-Bg6NS5Jh.js:1:66204
+📚 Item thread added to database. Current size: 6 index-Bg6NS5Jh.js:1:66295
+📚 Added thread to database index-Bg6NS5Jh.js:1:63974
+📚 Adding item to database: herbs index-Bg6NS5Jh.js:1:66204
+📚 Item herbs added to database. Current size: 7 index-Bg6NS5Jh.js:1:66295
+📚 Added herbs to database index-Bg6NS5Jh.js:1:64172
+📚 Adding item to database: water index-Bg6NS5Jh.js:1:66204
+📚 Item water added to database. Current size: 8 index-Bg6NS5Jh.js:1:66295
+📚 Added water to database index-Bg6NS5Jh.js:1:64364
+📚 Adding item to database: crystal index-Bg6NS5Jh.js:1:66204
+📚 Item crystal added to database. Current size: 9 index-Bg6NS5Jh.js:1:66295
+📚 Added crystal to database index-Bg6NS5Jh.js:1:64567
+📚 Adding item to database: bronze_sword index-Bg6NS5Jh.js:1:66204
+📚 Item bronze_sword added to database. Current size: 10 index-Bg6NS5Jh.js:1:66295
+📚 Adding item to database: iron_sword index-Bg6NS5Jh.js:1:66204
+📚 Item iron_sword added to database. Current size: 11 index-Bg6NS5Jh.js:1:66295
+📚 Adding item to database: leather_armor index-Bg6NS5Jh.js:1:66204
+📚 Item leather_armor added to database. Current size: 12 index-Bg6NS5Jh.js:1:66295
+📚 Adding item to database: hammer index-Bg6NS5Jh.js:1:66204
+📚 Item hammer added to database. Current size: 13 index-Bg6NS5Jh.js:1:66295
+📚 Adding item to database: needle index-Bg6NS5Jh.js:1:66204
+📚 Item needle added to database. Current size: 14 index-Bg6NS5Jh.js:1:66295
+📚 Adding item to database: mortar index-Bg6NS5Jh.js:1:66204
+📚 Item mortar added to database. Current size: 15 index-Bg6NS5Jh.js:1:66295
+📚 Adding item to database: chisel index-Bg6NS5Jh.js:1:66204
+📚 Item chisel added to database. Current size: 16 index-Bg6NS5Jh.js:1:66295
+📚 Adding item to database: torch index-Bg6NS5Jh.js:1:66204
+📚 Item torch added to database. Current size: 17 index-Bg6NS5Jh.js:1:66295
+📚 Item database loaded with 17 items index-Bg6NS5Jh.js:1:62466
+📦 Adding starting items... index-Bg6NS5Jh.js:1:62551
+🎒 Adding starting items to inventory... index-Bg6NS5Jh.js:1:66416
+📦 Adding bronze_ingot x5... index-Bg6NS5Jh.js:1:66472
+🎒 Adding item: bronze_ingot x5 index-Bg6NS5Jh.js:1:67242
+Inventory updated: 
+Object { slots: 1, gold: undefined, level: undefined, experience: undefined }
+index-Bg6NS5Jh.js:1:70578
+✅ Successfully added bronze_ingot x5 index-Bg6NS5Jh.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, null, null, null, null, null, null, null, null, null, … ]
+index-Bg6NS5Jh.js:1:67559
+📦 Adding wood x10... index-Bg6NS5Jh.js:1:66547
+🎒 Adding item: wood x10 index-Bg6NS5Jh.js:1:67242
+Inventory updated: 
+Object { slots: 2, gold: undefined, level: undefined, experience: undefined }
+index-Bg6NS5Jh.js:1:70578
+✅ Successfully added wood x10 index-Bg6NS5Jh.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, null, null, null, null, null, null, null, null, … ]
+index-Bg6NS5Jh.js:1:67559
+📦 Adding leather x3... index-Bg6NS5Jh.js:1:66608
+🎒 Adding item: leather x3 index-Bg6NS5Jh.js:1:67242
+Inventory updated: 
+Object { slots: 3, gold: undefined, level: undefined, experience: undefined }
+index-Bg6NS5Jh.js:1:70578
+✅ Successfully added leather x3 index-Bg6NS5Jh.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, null, null, null, null, null, null, null, … ]
+index-Bg6NS5Jh.js:1:67559
+📦 Adding thread x5... index-Bg6NS5Jh.js:1:66673
+🎒 Adding item: thread x5 index-Bg6NS5Jh.js:1:67242
+Inventory updated: 
+Object { slots: 4, gold: undefined, level: undefined, experience: undefined }
+index-Bg6NS5Jh.js:1:70578
+✅ Successfully added thread x5 index-Bg6NS5Jh.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, null, null, null, null, null, null, … ]
+index-Bg6NS5Jh.js:1:67559
+📦 Adding herbs x8... index-Bg6NS5Jh.js:1:66736
+🎒 Adding item: herbs x8 index-Bg6NS5Jh.js:1:67242
+Inventory updated: 
+Object { slots: 5, gold: undefined, level: undefined, experience: undefined }
+index-Bg6NS5Jh.js:1:70578
+✅ Successfully added herbs x8 index-Bg6NS5Jh.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, null, null, null, null, null, … ]
+index-Bg6NS5Jh.js:1:67559
+📦 Adding water x20... index-Bg6NS5Jh.js:1:66797
+🎒 Adding item: water x20 index-Bg6NS5Jh.js:1:67242
+Inventory updated: 
+Object { slots: 6, gold: undefined, level: undefined, experience: undefined }
+index-Bg6NS5Jh.js:1:70578
+✅ Successfully added water x20 index-Bg6NS5Jh.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, null, null, null, null, … ]
+index-Bg6NS5Jh.js:1:67559
+📦 Adding hammer... index-Bg6NS5Jh.js:1:66860
+🎒 Adding item: hammer x1 index-Bg6NS5Jh.js:1:67242
+Inventory updated: 
+Object { slots: 7, gold: undefined, level: undefined, experience: undefined }
+index-Bg6NS5Jh.js:1:70578
+✅ Successfully added hammer x1 index-Bg6NS5Jh.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, null, null, null, … ]
+index-Bg6NS5Jh.js:1:67559
+📦 Adding needle... index-Bg6NS5Jh.js:1:66918
+🎒 Adding item: needle x1 index-Bg6NS5Jh.js:1:67242
+Inventory updated: 
+Object { slots: 8, gold: undefined, level: undefined, experience: undefined }
+index-Bg6NS5Jh.js:1:70578
+✅ Successfully added needle x1 index-Bg6NS5Jh.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, null, null, … ]
+index-Bg6NS5Jh.js:1:67559
+📦 Adding mortar... index-Bg6NS5Jh.js:1:66976
+🎒 Adding item: mortar x1 index-Bg6NS5Jh.js:1:67242
+Inventory updated: 
+Object { slots: 9, gold: undefined, level: undefined, experience: undefined }
+index-Bg6NS5Jh.js:1:70578
+✅ Successfully added mortar x1 index-Bg6NS5Jh.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, null, … ]
+index-Bg6NS5Jh.js:1:67559
+📦 Adding chisel... index-Bg6NS5Jh.js:1:67034
+🎒 Adding item: chisel x1 index-Bg6NS5Jh.js:1:67242
+Inventory updated: 
+Object { slots: 10, gold: undefined, level: undefined, experience: undefined }
+index-Bg6NS5Jh.js:1:70578
+✅ Successfully added chisel x1 index-Bg6NS5Jh.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-Bg6NS5Jh.js:1:67559
+📦 Adding torch... index-Bg6NS5Jh.js:1:67092
+🎒 Adding item: torch x1 index-Bg6NS5Jh.js:1:67242
+Inventory updated: 
+Object { slots: 11, gold: undefined, level: undefined, experience: undefined }
+index-Bg6NS5Jh.js:1:70578
+✅ Successfully added torch x1 index-Bg6NS5Jh.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-Bg6NS5Jh.js:1:67559
+🎒 Starting items added. Current inventory: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-Bg6NS5Jh.js:1:67148
+✅ Inventory System initialized index-Bg6NS5Jh.js:1:62640
+🎨 Initializing UI Manager... index-Bg6NS5Jh.js:1:112109
+🎒 Inventory initialized with sample items index-Bg6NS5Jh.js:1:116783
+✅ UI Manager initialized (UI hidden until game ready) index-Bg6NS5Jh.js:1:112843
+⚙️ Initializing Options Manager... index-Bg6NS5Jh.js:1:148769
+⚠️ Options menu element not found in DOM, using minimal mode index-Bg6NS5Jh.js:1:148895
+🔧 Creating minimal options menu... index-Bg6NS5Jh.js:1:149162
+✅ Minimal options menu created index-Bg6NS5Jh.js:1:150051
+✅ Options Manager initialized index-Bg6NS5Jh.js:1:149090
+🗺️ Initializing Grid Manager... index-Bg6NS5Jh.js:1:48644
+🗺️ Grid visualization created (hidden by default - press G to show) index-Bg6NS5Jh.js:1:49551
+✅ Grid Manager initialized index-Bg6NS5Jh.js:1:48769
+🌍 Initializing World Manager... index-Bg6NS5Jh.js:1:13485
+🏠 Creating world decorations... index-Bg6NS5Jh.js:1:19990
+THREE.Material: 'roughness' is not a property of THREE.MeshLambertMaterial. 4 three-C8PiImrb.js:5:82611
+🏠 Creating detailed medieval house... index-Bg6NS5Jh.js:1:20195
+✅ Medieval house created at position: 
+Object { x: 15, y: 0, z: 15 }
+index-Bg6NS5Jh.js:1:20459
+✅ World decorations created index-Bg6NS5Jh.js:1:20130
+🔥 Torch created and placed in the world index-Bg6NS5Jh.js:1:32760
+🛡️ Protecting important world objects... index-Bg6NS5Jh.js:1:13786
+✅ Important objects protected index-Bg6NS5Jh.js:1:14596
+✅ World Manager initialized index-Bg6NS5Jh.js:1:13713
+🌍 Camera set in WorldManager: YES index-Bg6NS5Jh.js:1:37220
+🔍 Checking all lights after camera set: index-Bg6NS5Jh.js:1:37314
+🔍 Debugging all lights in scene: index-Bg6NS5Jh.js:1:39358
+  Light 1: PointLight at (0.0, 0.8, -5.2) index-Bg6NS5Jh.js:1:39455
+    - Intensity: 1 index-Bg6NS5Jh.js:1:39627
+    - Casts shadows: false index-Bg6NS5Jh.js:1:39680
+    - Name: unnamed index-Bg6NS5Jh.js:1:39738
+    - ℹ️ Additional light source index-Bg6NS5Jh.js:1:40077
+  Light 2: PointLight at (5.0, 2.3, 0.0) index-Bg6NS5Jh.js:1:39455
+    - Intensity: 0.6 index-Bg6NS5Jh.js:1:39627
+    - Casts shadows: false index-Bg6NS5Jh.js:1:39680
+    - Name: unnamed index-Bg6NS5Jh.js:1:39738
+    - ℹ️ Additional light source index-Bg6NS5Jh.js:1:40077
+  Light 3: AmbientLight at (0.0, 0.0, 0.0) index-Bg6NS5Jh.js:1:39455
+    - Intensity: 0.8 index-Bg6NS5Jh.js:1:39627
+    - Casts shadows: false index-Bg6NS5Jh.js:1:39680
+    - Name: unnamed index-Bg6NS5Jh.js:1:39738
+    - ✅ This is the day/night cycle ambient light index-Bg6NS5Jh.js:1:39925
+  Light 4: DirectionalLight at (50.0, 100.0, 50.0) index-Bg6NS5Jh.js:1:39455
+    - Intensity: 2 index-Bg6NS5Jh.js:1:39627
+    - Casts shadows: true index-Bg6NS5Jh.js:1:39680
+    - Name: unnamed index-Bg6NS5Jh.js:1:39738
+    - ✅ This is the day/night cycle light index-Bg6NS5Jh.js:1:39832
+  Light 5: PointLight at (0.0, 2.5, 0.0) index-Bg6NS5Jh.js:1:39455
+    - Intensity: 1.5 index-Bg6NS5Jh.js:1:39627
+    - Casts shadows: true index-Bg6NS5Jh.js:1:39680
+    - Name: unnamed index-Bg6NS5Jh.js:1:39738
+    - ℹ️ Additional light source index-Bg6NS5Jh.js:1:40077
+Total lights found: 5 index-Bg6NS5Jh.js:1:40128
+👤 Initializing Player... index-Bg6NS5Jh.js:1:2102
+👤 Simple capsule character created index-Bg6NS5Jh.js:1:4363
+✅ Player initialized index-Bg6NS5Jh.js:1:2291
+📷 Camera reference set for player index-Bg6NS5Jh.js:1:12825
+📷 Camera properly initialized: 
+Object { x: 0, y: 5, z: 10 }
+index-Bg6NS5Jh.js:1:74311
+🔧 Lighting setup skipped - handled by WorldManager index-Bg6NS5Jh.js:1:76299
+🔧 Added safe update method to crafting system index-Bg6NS5Jh.js:1:96179
+🔧 Added safe update method to inventory system index-Bg6NS5Jh.js:1:96355
+✅ Game Engine initialized index-Bg6NS5Jh.js:1:74535
+🔧 Setting up multiplayer callbacks... index-Bg6NS5Jh.js:1:98626
+✅ Network manager found, setting up callbacks... index-Bg6NS5Jh.js:1:98781
+✅ Multiplayer callbacks set up successfully index-Bg6NS5Jh.js:1:99406
+⏳ Waiting for network connection... index-Bg6NS5Jh.js:1:99669
+⚙️ Options Manager connected to Game Engine index-Bg6NS5Jh.js:1:109358
+📦 Loading Manager connected to Game Engine index-Bg6NS5Jh.js:1:108634
+👤 Player name set to: Ralph index-Bg6NS5Jh.js:1:2385
+👤 Player name set to: Ralph index-Bg6NS5Jh.js:1:108746
+✅ Egypt MMO started successfully! index-Bg6NS5Jh.js:19:24829
+🎮 Starting Egypt MMO... index-Bg6NS5Jh.js:19:25389
+✅ Minimal loading screen removed index-Bg6NS5Jh.js:19:21680
+🎮 Starting game loop... index-Bg6NS5Jh.js:1:78236
+🔧 Renderer info reset (manual GC recommended) index-Bg6NS5Jh.js:1:87985
+🔧 Starting comprehensive resource cleanup... index-Bg6NS5Jh.js:1:88111
+🌍 Starting WorldManager resource cleanup... index-Bg6NS5Jh.js:1:40199
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "dddd5d05-82b1-4924-9b63-c00e46fc2e26", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "785a41b8-663e-4d55-910e-4cd82723b0bf", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "17b0c922-cdcf-4b31-82e5-2900f8883fe6", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41335
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "a648927f-9b0c-4837-aba6-a7648964c77c", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "a25b20a0-52af-4bfa-bbe2-198bc3a1cae8", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "216b52d1-8655-4e9d-a36c-a0ff0b10249f", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41594
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "16a9c1d5-e6fd-4892-84da-223c56600e3c", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "d4ed16d8-4a25-4bca-a5f2-0917e9187d74", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "4e6b5900-6b57-42f7-992e-765e08fda1f5", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "f1f5c891-4c12-4928-bc2b-f88ec884ef49", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted decoration detected, removing: 
+Object { isObject3D: true, uuid: "4a3b8ff6-2117-4acb-bf75-2f79509c84fc", name: "", type: "Group", parent: null, children: (25) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:42401
+⚠️ Corrupted decoration detected, removing: 
+Object { isObject3D: true, uuid: "3c53d51f-3500-4e0b-971f-244a3d2c7035", name: "", type: "Group", parent: null, children: (25) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:42401
+⚠️ Corrupted decoration detected, removing: 
+Object { isObject3D: true, uuid: "71d85894-d831-4513-99eb-1921db8a8020", name: "", type: "Group", parent: null, children: (25) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:42401
+⚠️ Corrupted decoration detected, removing: 
+Object { isObject3D: true, uuid: "234748c2-cc07-4cc7-8a12-34d77bba9117", name: "", type: "Group", parent: null, children: (25) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:42401
+⚠️ Corrupted decoration detected, removing: 
+Object { isObject3D: true, uuid: "eea2280a-3a12-4805-a220-079568d0a869", name: "", type: "Group", parent: null, children: (53) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:42401
+🛡️ Skipping removal of protected temple: unnamed 3 index-Bg6NS5Jh.js:1:14789
+🛡️ Skipping removal of protected sphinx: unnamed 3 index-Bg6NS5Jh.js:1:14789
+🛡️ Skipping removal of protected obelisk: unnamed 4 index-Bg6NS5Jh.js:1:14789
+✅ Safely removed decoration: unnamed 5 index-Bg6NS5Jh.js:1:15109
+🔧 Removed 15 corrupted objects index-Bg6NS5Jh.js:1:43339
+🌍 Cleanup completed: index-Bg6NS5Jh.js:1:40473
+  - Pyramids: 3 → 3 index-Bg6NS5Jh.js:1:40510
+  - Temples: 3 → 3 index-Bg6NS5Jh.js:1:40585
+  - Sphinxes: 3 → 3 index-Bg6NS5Jh.js:1:40658
+  - Obelisks: 4 → 4 index-Bg6NS5Jh.js:1:40733
+  - Resources: 5 → 5 index-Bg6NS5Jh.js:1:40808
+  - Decorations: 16 → 11 index-Bg6NS5Jh.js:1:40889
+🌍 Starting WorldManager resource cleanup... index-Bg6NS5Jh.js:1:40199
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "dddd5d05-82b1-4924-9b63-c00e46fc2e26", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "785a41b8-663e-4d55-910e-4cd82723b0bf", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "17b0c922-cdcf-4b31-82e5-2900f8883fe6", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41335
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "a648927f-9b0c-4837-aba6-a7648964c77c", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "a25b20a0-52af-4bfa-bbe2-198bc3a1cae8", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "216b52d1-8655-4e9d-a36c-a0ff0b10249f", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41594
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "16a9c1d5-e6fd-4892-84da-223c56600e3c", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "d4ed16d8-4a25-4bca-a5f2-0917e9187d74", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "4e6b5900-6b57-42f7-992e-765e08fda1f5", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "f1f5c891-4c12-4928-bc2b-f88ec884ef49", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+🛡️ Skipping removal of protected temple: unnamed 3 index-Bg6NS5Jh.js:1:14789
+🛡️ Skipping removal of protected sphinx: unnamed 3 index-Bg6NS5Jh.js:1:14789
+🛡️ Skipping removal of protected obelisk: unnamed 4 index-Bg6NS5Jh.js:1:14789
+🔧 Removed 10 corrupted objects index-Bg6NS5Jh.js:1:43339
+🌍 Cleanup completed: index-Bg6NS5Jh.js:1:40473
+  - Pyramids: 3 → 3 index-Bg6NS5Jh.js:1:40510
+  - Temples: 3 → 3 index-Bg6NS5Jh.js:1:40585
+  - Sphinxes: 3 → 3 index-Bg6NS5Jh.js:1:40658
+  - Obelisks: 4 → 4 index-Bg6NS5Jh.js:1:40733
+  - Resources: 5 → 5 index-Bg6NS5Jh.js:1:40808
+  - Decorations: 11 → 11 index-Bg6NS5Jh.js:1:40889
+🔧 Cleanup completed - Objects: 94 → 89 index-Bg6NS5Jh.js:1:88395
+🔧 Geometries: 242 → 242 index-Bg6NS5Jh.js:1:88494
+🔧 Materials: undefined → undefined index-Bg6NS5Jh.js:1:88586
+✅ Scene integrity check: 1146 valid objects index-Bg6NS5Jh.js:1:89413
+✅ Game loop started index-Bg6NS5Jh.js:1:78346
+🎯 Game loading indicator hidden index-Bg6NS5Jh.js:1:147861
+🌐 Attempting to connect to: https://egypt-mmo-production.up.railway.app index-Bg6NS5Jh.js:1:160844
+🔧 Setting up Socket.IO event handlers... index-Bg6NS5Jh.js:1:162208
+✅ Socket.IO event handlers set up successfully index-Bg6NS5Jh.js:1:164247
+✅ Minimal loading screen removed index-Bg6NS5Jh.js:19:21680
+✅ Loading screen hidden automatically index-Bg6NS5Jh.js:19:21147
+⏳ Connection attempt 1/20... index-Bg6NS5Jh.js:1:99827
+🎵 Music track loaded: Ancient Egypt Theme index-Bg6NS5Jh.js:19:13648
+🎵 Music track loaded: Desert Wind index-Bg6NS5Jh.js:19:13648
+🎵 Music track loaded: Pyramid Mystery index-Bg6NS5Jh.js:19:13648
+🎵 Music track loaded: Crafting Peace index-Bg6NS5Jh.js:19:13648
+🎵 Music track loaded: Battle Theme index-Bg6NS5Jh.js:19:13648
+🔐 Google login initiated egypt-mmo-production.up.railway.app:805:21
+⏳ Connection attempt 2/20... index-Bg6NS5Jh.js:1:99827
+🌐 Connected to Railway server - Player ID: LTObVLd4FGqUZmrFAAAP index-Bg6NS5Jh.js:1:161352
+✅ Egypt MMO started successfully! index-Bg6NS5Jh.js:19:25743
+⏳ Connection attempt 3/20... index-Bg6NS5Jh.js:1:99827
+✅ Network connected, proceeding to join world... index-Bg6NS5Jh.js:1:100003
+🌍 Joining world with player data: 
+Object { name: "Ralph", position: {…}, rotation: {…}, level: 1, skills: {}, inventory: [], equipment: {} }
+index-Bg6NS5Jh.js:1:100345
+🌍 Joining world with data: 
+Object { name: "Ralph", position: {…}, rotation: {…}, level: 1, skills: {}, inventory: [], equipment: {}, sessionId: "player_1756689232587_95yupwiub" }
+index-Bg6NS5Jh.js:1:164663
+🌍 Received world_state event: 
+Object { players: (1) […], resources: [], buildings: [], worldTime: {…} }
+index-Bg6NS5Jh.js:1:163400
+🌍 World state update received: 
+Object { players: (1) […], resources: [], buildings: [], worldTime: {…} }
+index-Bg6NS5Jh.js:1:99220
+🌍 Processing world state with 1 players index-Bg6NS5Jh.js:1:100804
+🕐 Initial time sync: 10.1h index-Bg6NS5Jh.js:1:101031
+🔄 Skipping local player: Ralph (ID: player_1756689232587_95yupwiub) index-Bg6NS5Jh.js:1:101180
+✅ Player joined successfully: 
+Object { success: true, player: {…}, sessionId: "player_1756689232587_95yupwiub", message: "Welcome to Egypt MMO, Ralph!" }
+index-Bg6NS5Jh.js:1:163926
+🎯 Player ID set to: player_1756689232587_95yupwiub index-Bg6NS5Jh.js:1:164048
+🔑 Session ID set to: player_1756689232587_95yupwiub index-Bg6NS5Jh.js:1:164107
+🕐 Received world_time_update event: 
+Object { time: 0.48036, timestamp: 1756690119795 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.48036, timestamp: 1756690119795 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 11.5h index-Bg6NS5Jh.js:1:101491
+🎮 Character creator mode enabled - all keys work normally index-Bg6NS5Jh.js:1:56055
+🕐 Received world_time_update event: 
+Object { time: 0.5404800000000001, timestamp: 1756690120797 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.5404800000000001, timestamp: 1756690120797 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 13.0h index-Bg6NS5Jh.js:1:101491
+🕐 Received world_time_update event: 
+Object { time: 0.6004800000000001, timestamp: 1756690121797 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.6004800000000001, timestamp: 1756690121797 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 14.4h index-Bg6NS5Jh.js:1:101491
+⌨️ Key pressed: ShiftLeft index-Bg6NS5Jh.js:1:110285
+⌨️ Key pressed: KeyR index-Bg6NS5Jh.js:1:110285
+📷 Camera reset to default orbital position index-Bg6NS5Jh.js:1:111604
+🔄 R key pressed - resetting camera... index-Bg6NS5Jh.js:1:114042
+🔄 Resetting camera... index-Bg6NS5Jh.js:1:140516
+📷 Camera reset to default orbital position index-Bg6NS5Jh.js:1:111604
+⌨️ Key released: KeyR index-Bg6NS5Jh.js:1:111678
+⌨️ Key released: ShiftLeft index-Bg6NS5Jh.js:1:111678
+⌨️ Key pressed: KeyE index-Bg6NS5Jh.js:1:110285
+📋 E key pressed - exporting model specifications... index-Bg6NS5Jh.js:1:114474
+📋 Exporting model specifications... index-Bg6NS5Jh.js:1:142131
+📋 Model specifications exported: 
+Object { player: {…}, mesh: {…}, scene: {…}, timestamp: "2025-09-01T01:28:47.883Z" }
+index-Bg6NS5Jh.js:1:3491
+✅ Model specs exported successfully: 
+Object { player: {…}, mesh: {…}, scene: {…}, timestamp: "2025-09-01T01:28:47.883Z" }
+index-Bg6NS5Jh.js:1:142541
+⌨️ Key released: KeyE index-Bg6NS5Jh.js:1:111678
+🕐 Received world_time_update event: 
+Object { time: 0.6605400000000001, timestamp: 1756690122798 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.6605400000000001, timestamp: 1756690122798 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 15.9h index-Bg6NS5Jh.js:1:101491
+🕐 Received world_time_update event: 
+Object { time: 0.7205400000000002, timestamp: 1756690123798 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.7205400000000002, timestamp: 1756690123798 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 17.3h index-Bg6NS5Jh.js:1:101491
+🔄 Restoring viewport to full dimensions... index-Bg6NS5Jh.js:1:97105
+✅ Viewport restored to 1536x711 index-Bg6NS5Jh.js:1:97401
+🔄 Restoring viewport to full dimensions... index-Bg6NS5Jh.js:1:97105
+✅ Viewport restored to 1536x711 index-Bg6NS5Jh.js:1:97401
+📷 Shadow Camera - Pos: (-36.8, 1.7, 10.0) | Looking at: (36.8, 0.0, 10.0) index-Bg6NS5Jh.js:1:33665
+🕐 Received world_time_update event: 
+Object { time: 0.7806000000000002, timestamp: 1756690124799 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.7806000000000002, timestamp: 1756690124799 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 18.7h index-Bg6NS5Jh.js:1:101491
+⌨️ Key pressed: KeyP index-Bg6NS5Jh.js:1:110285
+⌨️ Key released: KeyP index-Bg6NS5Jh.js:1:111678
+⌨️ Key pressed: KeyT index-Bg6NS5Jh.js:1:110285
+🔥 T key pressed - testing torch equipping... index-Bg6NS5Jh.js:1:113825
+🧪 Testing torch equipping system... index-Bg6NS5Jh.js:1:135928
+✅ All systems found, testing torch equipping... index-Bg6NS5Jh.js:1:136228
+🔥 Equipping torch from slot 3 index-Bg6NS5Jh.js:1:118316
+Failed to equip torch index-Bg6NS5Jh.js:1:118714
+⌨️ Key released: KeyT index-Bg6NS5Jh.js:1:111678
+⌨️ Key pressed: KeyI index-Bg6NS5Jh.js:1:110285
+🎒 Showing inventory... index-Bg6NS5Jh.js:1:132423
+🔄 Updating inventory display from system... index-Bg6NS5Jh.js:1:130216
+🎒 Inventory from system: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-Bg6NS5Jh.js:1:130301
+🎒 Inventory panel shown index-Bg6NS5Jh.js:1:132611
+🎒 I key pressed - testing inventory... index-Bg6NS5Jh.js:1:113939
+🎒 Testing inventory system... index-Bg6NS5Jh.js:1:136497
+✅ All systems found, testing inventory... index-Bg6NS5Jh.js:1:136791
+📊 Inventory System Status: index-Bg6NS5Jh.js:1:136848
+  - Initialized: true index-Bg6NS5Jh.js:1:136891
+  - Item Database Size: 17 index-Bg6NS5Jh.js:1:136939
+  - Max Slots: 64 index-Bg6NS5Jh.js:1:136998
+  - Current Slots: 11 index-Bg6NS5Jh.js:1:137039
+📚 Item Database Contents: index-Bg6NS5Jh.js:1:137108
+  - bronze_ingot: Bronze Ingot (material) index-Bg6NS5Jh.js:1:137182
+  - iron_ingot: Iron Ingot (material) index-Bg6NS5Jh.js:1:137182
+  - steel_ingot: Steel Ingot (material) index-Bg6NS5Jh.js:1:137182
+  - wood: Wood (material) index-Bg6NS5Jh.js:1:137182
+  - leather: Leather (material) index-Bg6NS5Jh.js:1:137182
+  - thread: Thread (material) index-Bg6NS5Jh.js:1:137182
+  - herbs: Herbs (material) index-Bg6NS5Jh.js:1:137182
+  - water: Water (material) index-Bg6NS5Jh.js:1:137182
+  - crystal: Crystal (material) index-Bg6NS5Jh.js:1:137182
+  - bronze_sword: Bronze Sword (weapon) index-Bg6NS5Jh.js:1:137182
+  - iron_sword: Iron Sword (weapon) index-Bg6NS5Jh.js:1:137182
+  - leather_armor: Leather Armor (armor) index-Bg6NS5Jh.js:1:137182
+  - hammer: Hammer (tool) index-Bg6NS5Jh.js:1:137182
+  - needle: Needle (tool) index-Bg6NS5Jh.js:1:137182
+  - mortar: Mortar (tool) index-Bg6NS5Jh.js:1:137182
+  - chisel: Chisel (tool) index-Bg6NS5Jh.js:1:137182
+  - torch: Torch (light) index-Bg6NS5Jh.js:1:137182
+📦 Current Inventory: index-Bg6NS5Jh.js:1:137256
+  - Slot 0: bronze_ingot x5 index-Bg6NS5Jh.js:1:137329
+  - Slot 1: wood x10 index-Bg6NS5Jh.js:1:137329
+  - Slot 2: leather x3 index-Bg6NS5Jh.js:1:137329
+  - Slot 3: thread x5 index-Bg6NS5Jh.js:1:137329
+  - Slot 4: herbs x8 index-Bg6NS5Jh.js:1:137329
+  - Slot 5: water x20 index-Bg6NS5Jh.js:1:137329
+  - Slot 6: hammer x1 index-Bg6NS5Jh.js:1:137329
+  - Slot 7: needle x1 index-Bg6NS5Jh.js:1:137329
+  - Slot 8: mortar x1 index-Bg6NS5Jh.js:1:137329
+  - Slot 9: chisel x1 index-Bg6NS5Jh.js:1:137329
+  - Slot 10: torch x1 index-Bg6NS5Jh.js:1:137329
+⚔️ Current Equipment: index-Bg6NS5Jh.js:1:137408
+  - head: empty index-Bg6NS5Jh.js:1:137506
+  - chest: empty index-Bg6NS5Jh.js:1:137506
+  - legs: empty index-Bg6NS5Jh.js:1:137506
+  - feet: empty index-Bg6NS5Jh.js:1:137506
+  - weapon: empty index-Bg6NS5Jh.js:1:137506
+  - offhand: empty index-Bg6NS5Jh.js:1:137506
+  - accessory: empty index-Bg6NS5Jh.js:1:137506
+📦 bronze_ingot already exists, increasing quantity index-Bg6NS5Jh.js:1:137978
+🎒 Adding item: bronze_ingot x5 index-Bg6NS5Jh.js:1:67242
+Inventory updated: 
+Object { slots: 11, gold: undefined, level: undefined, experience: undefined }
+index-Bg6NS5Jh.js:1:70578
+✅ Successfully added bronze_ingot x5 index-Bg6NS5Jh.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-Bg6NS5Jh.js:1:67559
+📦 wood already exists, increasing quantity index-Bg6NS5Jh.js:1:137978
+🎒 Adding item: wood x10 index-Bg6NS5Jh.js:1:67242
+Inventory updated: 
+Object { slots: 11, gold: undefined, level: undefined, experience: undefined }
+index-Bg6NS5Jh.js:1:70578
+✅ Successfully added wood x10 index-Bg6NS5Jh.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-Bg6NS5Jh.js:1:67559
+📦 leather already exists, increasing quantity index-Bg6NS5Jh.js:1:137978
+🎒 Adding item: leather x3 index-Bg6NS5Jh.js:1:67242
+Inventory updated: 
+Object { slots: 11, gold: undefined, level: undefined, experience: undefined }
+index-Bg6NS5Jh.js:1:70578
+✅ Successfully added leather x3 index-Bg6NS5Jh.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-Bg6NS5Jh.js:1:67559
+📦 torch already exists, increasing quantity index-Bg6NS5Jh.js:1:137978
+🎒 Adding item: torch x1 index-Bg6NS5Jh.js:1:67242
+Inventory updated: 
+Object { slots: 12, gold: undefined, level: undefined, experience: undefined }
+index-Bg6NS5Jh.js:1:70578
+✅ Successfully added torch x1 index-Bg6NS5Jh.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-Bg6NS5Jh.js:1:67559
+🔄 Updating inventory display from system... index-Bg6NS5Jh.js:1:130216
+🎒 Inventory from system: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-Bg6NS5Jh.js:1:130301
+🎒 Inventory system tested successfully. index-Bg6NS5Jh.js:1:138210
+⌨️ Key released: KeyI index-Bg6NS5Jh.js:1:111678
+🕐 Received world_time_update event: 
+Object { time: 0.8407200000000001, timestamp: 1756690125801 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.8407200000000001, timestamp: 1756690125801 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 20.2h index-Bg6NS5Jh.js:1:101491
+⌨️ Key pressed: KeyC index-Bg6NS5Jh.js:1:110285
+🎯 C key pressed - testing click detection... index-Bg6NS5Jh.js:1:114239
+🎯 Testing click detection system... index-Bg6NS5Jh.js:1:139880
+✅ Grid manager found, testing grid system... index-Bg6NS5Jh.js:1:140097
+✅ Grid cell lookup working: 
+Object { x: 250, z: 250, worldX: 1, worldZ: 1, center: {…}, state: "walkable", occupied: false, height: 0, objects: [] }
+index-Bg6NS5Jh.js:1:140203
+Cell 250, 250 is walkable index-Bg6NS5Jh.js:1:140248
+✅ Walkable check: true index-Bg6NS5Jh.js:1:140388
+✅ Nearest walkable position: 
+Object { x: 1, y: 0, z: 1 }
+index-Bg6NS5Jh.js:1:140456
+⌨️ Key released: KeyC index-Bg6NS5Jh.js:1:111678
+🕐 Received world_time_update event: 
+Object { time: 0.9007800000000001, timestamp: 1756690126802 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.9007800000000001, timestamp: 1756690126802 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 21.6h index-Bg6NS5Jh.js:1:101491
+👤 Character created: 
+Object { name: "Reptic", createdAt: "2025-09-01T01:28:52.170Z" }
+egypt-mmo-production.up.railway.app:896:21
+⚠️ Game already started, skipping... egypt-mmo-production.up.railway.app:933:25
+📷 Camera position: 
+Array(3) [ "0.00", "5.00", "10.00" ]
+index-Bg6NS5Jh.js:1:91848
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-Bg6NS5Jh.js:1:91935
+📷 Camera offsets: 0.00 5.00 10.00 index-Bg6NS5Jh.js:1:92003
+🕐 Received world_time_update event: 
+Object { time: 0.9607800000000002, timestamp: 1756690127802 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.9607800000000002, timestamp: 1756690127802 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 23.1h index-Bg6NS5Jh.js:1:101491
+🕐 Received world_time_update event: 
+Object { time: 0, timestamp: 1756690128803 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0, timestamp: 1756690128803 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 0.0h index-Bg6NS5Jh.js:1:101491
+📷 Camera position: 
+Array(3) [ "0.00", "5.00", "10.00" ]
+index-Bg6NS5Jh.js:1:91848
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-Bg6NS5Jh.js:1:91935
+📷 Camera offsets: 0.00 5.00 10.00 index-Bg6NS5Jh.js:1:92003
+🕐 Received world_time_update event: 
+Object { time: 0.060059999999999995, timestamp: 1756690129804 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.060059999999999995, timestamp: 1756690129804 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 1.4h index-Bg6NS5Jh.js:1:101491
+🌞 PROPER Shadow System - Sun at (185.9, 136.8) | Time: 1.4h index-Bg6NS5Jh.js:1:35487
+🔍 Light pos: (185.9, 136.8, 10.0) | Target: (-185.9, 0, 10.0) index-Bg6NS5Jh.js:1:35627
+📷 Shadow Camera - Pos: (185.9, 136.8, 10.0) | Looking at: (-185.9, 0.0, 10.0) index-Bg6NS5Jh.js:1:33665
+🌞 Day/Night Cycle Update - Time: 1.4h | Frame: 600 index-Bg6NS5Jh.js:1:34160
+🔧 Renderer info reset (manual GC recommended) index-Bg6NS5Jh.js:1:87985
+🔧 Starting comprehensive resource cleanup... index-Bg6NS5Jh.js:1:88111
+🌍 Starting WorldManager resource cleanup... index-Bg6NS5Jh.js:1:40199
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "dddd5d05-82b1-4924-9b63-c00e46fc2e26", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "785a41b8-663e-4d55-910e-4cd82723b0bf", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "17b0c922-cdcf-4b31-82e5-2900f8883fe6", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41335
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "a648927f-9b0c-4837-aba6-a7648964c77c", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "a25b20a0-52af-4bfa-bbe2-198bc3a1cae8", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "216b52d1-8655-4e9d-a36c-a0ff0b10249f", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41594
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "16a9c1d5-e6fd-4892-84da-223c56600e3c", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "d4ed16d8-4a25-4bca-a5f2-0917e9187d74", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "4e6b5900-6b57-42f7-992e-765e08fda1f5", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "f1f5c891-4c12-4928-bc2b-f88ec884ef49", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+🛡️ Skipping removal of protected temple: unnamed 3 index-Bg6NS5Jh.js:1:14789
+🛡️ Skipping removal of protected sphinx: unnamed 3 index-Bg6NS5Jh.js:1:14789
+🛡️ Skipping removal of protected obelisk: unnamed 4 index-Bg6NS5Jh.js:1:14789
+🔧 Removed 10 corrupted objects index-Bg6NS5Jh.js:1:43339
+🌍 Cleanup completed: index-Bg6NS5Jh.js:1:40473
+  - Pyramids: 3 → 3 index-Bg6NS5Jh.js:1:40510
+  - Temples: 3 → 3 index-Bg6NS5Jh.js:1:40585
+  - Sphinxes: 3 → 3 index-Bg6NS5Jh.js:1:40658
+  - Obelisks: 4 → 4 index-Bg6NS5Jh.js:1:40733
+  - Resources: 5 → 5 index-Bg6NS5Jh.js:1:40808
+  - Decorations: 11 → 11 index-Bg6NS5Jh.js:1:40889
+🌍 Starting WorldManager resource cleanup... index-Bg6NS5Jh.js:1:40199
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "dddd5d05-82b1-4924-9b63-c00e46fc2e26", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "785a41b8-663e-4d55-910e-4cd82723b0bf", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "17b0c922-cdcf-4b31-82e5-2900f8883fe6", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41335
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "a648927f-9b0c-4837-aba6-a7648964c77c", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "a25b20a0-52af-4bfa-bbe2-198bc3a1cae8", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "216b52d1-8655-4e9d-a36c-a0ff0b10249f", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41594
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "16a9c1d5-e6fd-4892-84da-223c56600e3c", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "d4ed16d8-4a25-4bca-a5f2-0917e9187d74", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "4e6b5900-6b57-42f7-992e-765e08fda1f5", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "f1f5c891-4c12-4928-bc2b-f88ec884ef49", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+🛡️ Skipping removal of protected temple: unnamed 3 index-Bg6NS5Jh.js:1:14789
+🛡️ Skipping removal of protected sphinx: unnamed 3 index-Bg6NS5Jh.js:1:14789
+🛡️ Skipping removal of protected obelisk: unnamed 4 index-Bg6NS5Jh.js:1:14789
+🔧 Removed 10 corrupted objects index-Bg6NS5Jh.js:1:43339
+🌍 Cleanup completed: index-Bg6NS5Jh.js:1:40473
+  - Pyramids: 3 → 3 index-Bg6NS5Jh.js:1:40510
+  - Temples: 3 → 3 index-Bg6NS5Jh.js:1:40585
+  - Sphinxes: 3 → 3 index-Bg6NS5Jh.js:1:40658
+  - Obelisks: 4 → 4 index-Bg6NS5Jh.js:1:40733
+  - Resources: 5 → 5 index-Bg6NS5Jh.js:1:40808
+  - Decorations: 11 → 11 index-Bg6NS5Jh.js:1:40889
+🔧 Cleanup completed - Objects: 89 → 89 index-Bg6NS5Jh.js:1:88395
+🔧 Geometries: 255 → 255 index-Bg6NS5Jh.js:1:88494
+🔧 Materials: undefined → undefined index-Bg6NS5Jh.js:1:88586
+✅ Scene integrity check: 1146 valid objects index-Bg6NS5Jh.js:1:89413
+🕐 Received world_time_update event: 
+Object { time: 0.1203, timestamp: 1756690130808 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.1203, timestamp: 1756690130808 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 2.9h index-Bg6NS5Jh.js:1:101491
+👤 Character created: 
+Object { name: "Reptic", createdAt: "2025-09-01T01:28:56.670Z" }
+egypt-mmo-production.up.railway.app:896:21
+⚠️ Game already started, skipping... egypt-mmo-production.up.railway.app:933:25
+🕐 Received world_time_update event: 
+Object { time: 0.18036, timestamp: 1756690131809 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.18036, timestamp: 1756690131809 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 4.3h index-Bg6NS5Jh.js:1:101491
+🕐 Received world_time_update event: 
+Object { time: 0.24048, timestamp: 1756690132811 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.24048, timestamp: 1756690132811 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 5.8h index-Bg6NS5Jh.js:1:101491
+🕐 Received world_time_update event: 
+Object { time: 0.30047999999999997, timestamp: 1756690133811 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.30047999999999997, timestamp: 1756690133811 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 7.2h index-Bg6NS5Jh.js:1:101491
+📷 Camera position: 
+Array(3) [ "0.00", "5.00", "10.00" ]
+index-Bg6NS5Jh.js:1:91848
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-Bg6NS5Jh.js:1:91935
+📷 Camera offsets: 0.00 5.00 10.00 index-Bg6NS5Jh.js:1:92003
+🕐 Received world_time_update event: 
+Object { time: 0.36047999999999997, timestamp: 1756690134811 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.36047999999999997, timestamp: 1756690134811 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 8.7h index-Bg6NS5Jh.js:1:101491
+📷 Shadow Camera - Pos: (-127.9, 176.9, 10.0) | Looking at: (127.9, 0.0, 10.0) index-Bg6NS5Jh.js:1:33665
+🕐 Received world_time_update event: 
+Object { time: 0.4206, timestamp: 1756690135813 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.4206, timestamp: 1756690135813 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 10.1h index-Bg6NS5Jh.js:1:101491
+🕐 Received world_time_update event: 
+Object { time: 0.48059999999999997, timestamp: 1756690136813 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.48059999999999997, timestamp: 1756690136813 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 11.5h index-Bg6NS5Jh.js:1:101491
+🕐 Received world_time_update event: 
+Object { time: 0.5406599999999999, timestamp: 1756690137814 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.5406599999999999, timestamp: 1756690137814 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 13.0h index-Bg6NS5Jh.js:1:101491
+🕐 Received world_time_update event: 
+Object { time: 0.6008399999999999, timestamp: 1756690138817 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.6008399999999999, timestamp: 1756690138817 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 14.4h index-Bg6NS5Jh.js:1:101491
+📷 Camera position: 
+Array(3) [ "0.00", "5.00", "10.00" ]
+index-Bg6NS5Jh.js:1:91848
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-Bg6NS5Jh.js:1:91935
+📷 Camera offsets: 0.00 5.00 10.00 index-Bg6NS5Jh.js:1:92003
+📷 Camera position: 
+Array(3) [ "0.00", "5.00", "10.00" ]
+index-Bg6NS5Jh.js:1:91848
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-Bg6NS5Jh.js:1:91935
+📷 Camera offsets: 0.00 5.00 10.00 index-Bg6NS5Jh.js:1:92003
+🕐 Received world_time_update event: 
+Object { time: 0.6610199999999999, timestamp: 1756690139820 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.6610199999999999, timestamp: 1756690139820 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 15.9h index-Bg6NS5Jh.js:1:101491
+🌞 PROPER Shadow System - Sun at (-106.1, 15.2) | Time: 15.9h index-Bg6NS5Jh.js:1:35487
+🔍 Light pos: (-106.1, 15.2, 10.0) | Target: (106.1, 0, 10.0) index-Bg6NS5Jh.js:1:35627
+📷 Shadow Camera - Pos: (-106.1, 15.2, 10.0) | Looking at: (106.1, 0.0, 10.0) index-Bg6NS5Jh.js:1:33665
+🌞 Day/Night Cycle Update - Time: 15.9h | Frame: 1200 index-Bg6NS5Jh.js:1:34160
+🔧 Renderer info reset (manual GC recommended) index-Bg6NS5Jh.js:1:87985
+🔧 Starting comprehensive resource cleanup... index-Bg6NS5Jh.js:1:88111
+🌍 Starting WorldManager resource cleanup... index-Bg6NS5Jh.js:1:40199
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "dddd5d05-82b1-4924-9b63-c00e46fc2e26", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "785a41b8-663e-4d55-910e-4cd82723b0bf", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "17b0c922-cdcf-4b31-82e5-2900f8883fe6", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41335
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "a648927f-9b0c-4837-aba6-a7648964c77c", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "a25b20a0-52af-4bfa-bbe2-198bc3a1cae8", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "216b52d1-8655-4e9d-a36c-a0ff0b10249f", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41594
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "16a9c1d5-e6fd-4892-84da-223c56600e3c", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "d4ed16d8-4a25-4bca-a5f2-0917e9187d74", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "4e6b5900-6b57-42f7-992e-765e08fda1f5", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "f1f5c891-4c12-4928-bc2b-f88ec884ef49", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+🛡️ Skipping removal of protected temple: unnamed 3 index-Bg6NS5Jh.js:1:14789
+🛡️ Skipping removal of protected sphinx: unnamed 3 index-Bg6NS5Jh.js:1:14789
+🛡️ Skipping removal of protected obelisk: unnamed 4 index-Bg6NS5Jh.js:1:14789
+🔧 Removed 10 corrupted objects index-Bg6NS5Jh.js:1:43339
+🌍 Cleanup completed: index-Bg6NS5Jh.js:1:40473
+  - Pyramids: 3 → 3 index-Bg6NS5Jh.js:1:40510
+  - Temples: 3 → 3 index-Bg6NS5Jh.js:1:40585
+  - Sphinxes: 3 → 3 index-Bg6NS5Jh.js:1:40658
+  - Obelisks: 4 → 4 index-Bg6NS5Jh.js:1:40733
+  - Resources: 5 → 5 index-Bg6NS5Jh.js:1:40808
+  - Decorations: 11 → 11 index-Bg6NS5Jh.js:1:40889
+🌍 Starting WorldManager resource cleanup... index-Bg6NS5Jh.js:1:40199
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "dddd5d05-82b1-4924-9b63-c00e46fc2e26", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "785a41b8-663e-4d55-910e-4cd82723b0bf", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "17b0c922-cdcf-4b31-82e5-2900f8883fe6", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41335
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "a648927f-9b0c-4837-aba6-a7648964c77c", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "a25b20a0-52af-4bfa-bbe2-198bc3a1cae8", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "216b52d1-8655-4e9d-a36c-a0ff0b10249f", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41594
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "16a9c1d5-e6fd-4892-84da-223c56600e3c", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "d4ed16d8-4a25-4bca-a5f2-0917e9187d74", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "4e6b5900-6b57-42f7-992e-765e08fda1f5", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "f1f5c891-4c12-4928-bc2b-f88ec884ef49", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+🛡️ Skipping removal of protected temple: unnamed 3 index-Bg6NS5Jh.js:1:14789
+🛡️ Skipping removal of protected sphinx: unnamed 3 index-Bg6NS5Jh.js:1:14789
+🛡️ Skipping removal of protected obelisk: unnamed 4 index-Bg6NS5Jh.js:1:14789
+🔧 Removed 10 corrupted objects index-Bg6NS5Jh.js:1:43339
+🌍 Cleanup completed: index-Bg6NS5Jh.js:1:40473
+  - Pyramids: 3 → 3 index-Bg6NS5Jh.js:1:40510
+  - Temples: 3 → 3 index-Bg6NS5Jh.js:1:40585
+  - Sphinxes: 3 → 3 index-Bg6NS5Jh.js:1:40658
+  - Obelisks: 4 → 4 index-Bg6NS5Jh.js:1:40733
+  - Resources: 5 → 5 index-Bg6NS5Jh.js:1:40808
+  - Decorations: 11 → 11 index-Bg6NS5Jh.js:1:40889
+🔧 Cleanup completed - Objects: 89 → 89 index-Bg6NS5Jh.js:1:88395
+🔧 Geometries: 255 → 255 index-Bg6NS5Jh.js:1:88494
+🔧 Materials: undefined → undefined index-Bg6NS5Jh.js:1:88586
+✅ Scene integrity check: 1146 valid objects index-Bg6NS5Jh.js:1:89413
+🕐 Received world_time_update event: 
+Object { time: 0.7210799999999999, timestamp: 1756690140821 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.7210799999999999, timestamp: 1756690140821 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 17.3h index-Bg6NS5Jh.js:1:101491
+📷 Camera position: 
+Array(3) [ "0.00", "5.00", "10.00" ]
+index-Bg6NS5Jh.js:1:91848
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-Bg6NS5Jh.js:1:91935
+📷 Camera offsets: 0.00 5.00 10.00 index-Bg6NS5Jh.js:1:92003
+👤 Character created: 
+Object { name: "Reptic", createdAt: "2025-09-01T01:29:06.323Z" }
+egypt-mmo-production.up.railway.app:896:21
+⚠️ Game already started, skipping... egypt-mmo-production.up.railway.app:933:25
+🕐 Received world_time_update event: 
+Object { time: 0.78114, timestamp: 1756690141822 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.78114, timestamp: 1756690141822 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 18.7h index-Bg6NS5Jh.js:1:101491
+🕐 Received world_time_update event: 
+Object { time: 0.8410799999999999, timestamp: 1756690142821 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.8410799999999999, timestamp: 1756690142821 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 20.2h index-Bg6NS5Jh.js:1:101491
+🕐 Received world_time_update event: 
+Object { time: 0.9011399999999999, timestamp: 1756690143822 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.9011399999999999, timestamp: 1756690143822 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 21.6h index-Bg6NS5Jh.js:1:101491
+🕐 Received world_time_update event: 
+Object { time: 0.96126, timestamp: 1756690144824 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.96126, timestamp: 1756690144824 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 23.1h index-Bg6NS5Jh.js:1:101491
+🕐 Received world_time_update event: 
+Object { time: 0, timestamp: 1756690145825 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0, timestamp: 1756690145825 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 0.0h index-Bg6NS5Jh.js:1:101491
+📷 Shadow Camera - Pos: (194.1, 75.9, 10.0) | Looking at: (-200.0, 0.0, 10.0) index-Bg6NS5Jh.js:1:33665
+🕐 Received world_time_update event: 
+Object { time: 0.06012000000000001, timestamp: 1756690146827 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.06012000000000001, timestamp: 1756690146827 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 1.4h index-Bg6NS5Jh.js:1:101491
+🕐 Received world_time_update event: 
+Object { time: 0.12012, timestamp: 1756690147827 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.12012, timestamp: 1756690147827 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 2.9h index-Bg6NS5Jh.js:1:101491
+📷 Camera position: 
+Array(3) [ "0.00", "5.00", "10.00" ]
+index-Bg6NS5Jh.js:1:91848
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-Bg6NS5Jh.js:1:91935
+📷 Camera offsets: 0.00 5.00 10.00 index-Bg6NS5Jh.js:1:92003
+🔄 Handling resize event... index-Bg6NS5Jh.js:1:96541
+📐 Viewport dimensions: 1536x460 index-Bg6NS5Jh.js:1:96631
+🎨 UI Manager handling resize: 1536x460 index-Bg6NS5Jh.js:1:138937
+✅ UI resize handled index-Bg6NS5Jh.js:1:139056
+✅ Resize handled successfully index-Bg6NS5Jh.js:1:96904
+🔄 Handling resize event... index-Bg6NS5Jh.js:1:96541
+📐 Viewport dimensions: 1536x460 index-Bg6NS5Jh.js:1:96631
+🎨 UI Manager handling resize: 1536x460 index-Bg6NS5Jh.js:1:138937
+✅ UI resize handled index-Bg6NS5Jh.js:1:139056
+✅ Resize handled successfully index-Bg6NS5Jh.js:1:96904
+🕐 Received world_time_update event: 
+Object { time: 0.18018, timestamp: 1756690148828 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.18018, timestamp: 1756690148828 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 4.3h index-Bg6NS5Jh.js:1:101491
+🕐 Received world_time_update event: 
+Object { time: 0.24024, timestamp: 1756690149829 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.24024, timestamp: 1756690149829 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 5.8h index-Bg6NS5Jh.js:1:101491
+🕐 Received world_time_update event: 
+Object { time: 0.30036, timestamp: 1756690150831 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.30036, timestamp: 1756690150831 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 7.2h index-Bg6NS5Jh.js:1:101491
+🌞 PROPER Shadow System - Sun at (-62.2, 195.0) | Time: 7.2h index-Bg6NS5Jh.js:1:35487
+🔍 Light pos: (-62.2, 195.0, 10.0) | Target: (62.2, 0, 10.0) index-Bg6NS5Jh.js:1:35627
+📷 Shadow Camera - Pos: (-62.2, 195.0, 10.0) | Looking at: (62.2, 0.0, 10.0) index-Bg6NS5Jh.js:1:33665
+🌞 Day/Night Cycle Update - Time: 7.2h | Frame: 1800 index-Bg6NS5Jh.js:1:34160
+🔧 Renderer info reset (manual GC recommended) index-Bg6NS5Jh.js:1:87985
+🔧 Starting comprehensive resource cleanup... index-Bg6NS5Jh.js:1:88111
+🌍 Starting WorldManager resource cleanup... index-Bg6NS5Jh.js:1:40199
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "dddd5d05-82b1-4924-9b63-c00e46fc2e26", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "785a41b8-663e-4d55-910e-4cd82723b0bf", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "17b0c922-cdcf-4b31-82e5-2900f8883fe6", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41335
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "a648927f-9b0c-4837-aba6-a7648964c77c", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "a25b20a0-52af-4bfa-bbe2-198bc3a1cae8", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "216b52d1-8655-4e9d-a36c-a0ff0b10249f", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41594
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "16a9c1d5-e6fd-4892-84da-223c56600e3c", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "d4ed16d8-4a25-4bca-a5f2-0917e9187d74", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "4e6b5900-6b57-42f7-992e-765e08fda1f5", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "f1f5c891-4c12-4928-bc2b-f88ec884ef49", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+🛡️ Skipping removal of protected temple: unnamed 3 index-Bg6NS5Jh.js:1:14789
+🛡️ Skipping removal of protected sphinx: unnamed 3 index-Bg6NS5Jh.js:1:14789
+🛡️ Skipping removal of protected obelisk: unnamed 4 index-Bg6NS5Jh.js:1:14789
+🔧 Removed 10 corrupted objects index-Bg6NS5Jh.js:1:43339
+🌍 Cleanup completed: index-Bg6NS5Jh.js:1:40473
+  - Pyramids: 3 → 3 index-Bg6NS5Jh.js:1:40510
+  - Temples: 3 → 3 index-Bg6NS5Jh.js:1:40585
+  - Sphinxes: 3 → 3 index-Bg6NS5Jh.js:1:40658
+  - Obelisks: 4 → 4 index-Bg6NS5Jh.js:1:40733
+  - Resources: 5 → 5 index-Bg6NS5Jh.js:1:40808
+  - Decorations: 11 → 11 index-Bg6NS5Jh.js:1:40889
+🌍 Starting WorldManager resource cleanup... index-Bg6NS5Jh.js:1:40199
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "dddd5d05-82b1-4924-9b63-c00e46fc2e26", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "785a41b8-663e-4d55-910e-4cd82723b0bf", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "17b0c922-cdcf-4b31-82e5-2900f8883fe6", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41335
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "a648927f-9b0c-4837-aba6-a7648964c77c", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "a25b20a0-52af-4bfa-bbe2-198bc3a1cae8", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "216b52d1-8655-4e9d-a36c-a0ff0b10249f", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41594
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "16a9c1d5-e6fd-4892-84da-223c56600e3c", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "d4ed16d8-4a25-4bca-a5f2-0917e9187d74", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "4e6b5900-6b57-42f7-992e-765e08fda1f5", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "f1f5c891-4c12-4928-bc2b-f88ec884ef49", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+🛡️ Skipping removal of protected temple: unnamed 3 index-Bg6NS5Jh.js:1:14789
+🛡️ Skipping removal of protected sphinx: unnamed 3 index-Bg6NS5Jh.js:1:14789
+🛡️ Skipping removal of protected obelisk: unnamed 4 index-Bg6NS5Jh.js:1:14789
+🔧 Removed 10 corrupted objects index-Bg6NS5Jh.js:1:43339
+🌍 Cleanup completed: index-Bg6NS5Jh.js:1:40473
+  - Pyramids: 3 → 3 index-Bg6NS5Jh.js:1:40510
+  - Temples: 3 → 3 index-Bg6NS5Jh.js:1:40585
+  - Sphinxes: 3 → 3 index-Bg6NS5Jh.js:1:40658
+  - Obelisks: 4 → 4 index-Bg6NS5Jh.js:1:40733
+  - Resources: 5 → 5 index-Bg6NS5Jh.js:1:40808
+  - Decorations: 11 → 11 index-Bg6NS5Jh.js:1:40889
+🔧 Cleanup completed - Objects: 89 → 89 index-Bg6NS5Jh.js:1:88395
+🔧 Geometries: 257 → 257 index-Bg6NS5Jh.js:1:88494
+🔧 Materials: undefined → undefined index-Bg6NS5Jh.js:1:88586
+✅ Scene integrity check: 1146 valid objects index-Bg6NS5Jh.js:1:89413
+🕐 Received world_time_update event: 
+Object { time: 0.36048, timestamp: 1756690151833 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.36048, timestamp: 1756690151833 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 8.7h index-Bg6NS5Jh.js:1:101491
+📷 Camera position: 
+Array(3) [ "0.00", "5.00", "10.00" ]
+index-Bg6NS5Jh.js:1:91848
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-Bg6NS5Jh.js:1:91935
+📷 Camera offsets: 0.00 5.00 10.00 index-Bg6NS5Jh.js:1:92003
+🕐 Received world_time_update event: 
+Object { time: 0.42054, timestamp: 1756690152834 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.42054, timestamp: 1756690152834 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 10.1h index-Bg6NS5Jh.js:1:101491
+🕐 Received world_time_update event: 
+Object { time: 0.4806, timestamp: 1756690153835 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.4806, timestamp: 1756690153835 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 11.5h index-Bg6NS5Jh.js:1:101491
+📷 Camera position: 
+Array(3) [ "0.00", "5.00", "10.00" ]
+index-Bg6NS5Jh.js:1:91848
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-Bg6NS5Jh.js:1:91935
+📷 Camera offsets: 0.00 5.00 10.00 index-Bg6NS5Jh.js:1:92003
+🕐 Received world_time_update event: 
+Object { time: 0.5406, timestamp: 1756690154835 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.5406, timestamp: 1756690154835 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 13.0h index-Bg6NS5Jh.js:1:101491
+🕐 Received world_time_update event: 
+Object { time: 0.6007199999999999, timestamp: 1756690155837 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.6007199999999999, timestamp: 1756690155837 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 14.4h index-Bg6NS5Jh.js:1:101491
+🕐 Received world_time_update event: 
+Object { time: 0.6607799999999999, timestamp: 1756690156838 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.6607799999999999, timestamp: 1756690156838 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 15.9h index-Bg6NS5Jh.js:1:101491
+📷 Shadow Camera - Pos: (-106.3, 15.3, 10.0) | Looking at: (106.3, 0.0, 10.0) index-Bg6NS5Jh.js:1:33665
+🕐 Received world_time_update event: 
+Object { time: 0.7208399999999999, timestamp: 1756690157839 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.7208399999999999, timestamp: 1756690157839 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 17.3h index-Bg6NS5Jh.js:1:101491
+👤 Character created: 
+Object { name: "Reptic", createdAt: "2025-09-01T01:29:23.162Z" }
+egypt-mmo-production.up.railway.app:896:21
+⚠️ Game already started, skipping... egypt-mmo-production.up.railway.app:933:25
+🔄 Restoring viewport to full dimensions... index-Bg6NS5Jh.js:1:97105
+✅ Viewport restored to 1536x460 index-Bg6NS5Jh.js:1:97401
+🔄 Restoring viewport to full dimensions... index-Bg6NS5Jh.js:1:97105
+✅ Viewport restored to 1536x460 index-Bg6NS5Jh.js:1:97401
+🕐 Received world_time_update event: 
+Object { time: 0.78084, timestamp: 1756690158839 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.78084, timestamp: 1756690158839 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 18.7h index-Bg6NS5Jh.js:1:101491
+📷 Camera position: 
+Array(3) [ "0.00", "5.00", "10.00" ]
+index-Bg6NS5Jh.js:1:91848
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-Bg6NS5Jh.js:1:91935
+📷 Camera offsets: 0.00 5.00 10.00 index-Bg6NS5Jh.js:1:92003
+🕐 Received world_time_update event: 
+Object { time: 0.8409, timestamp: 1756690159840 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.8409, timestamp: 1756690159840 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 20.2h index-Bg6NS5Jh.js:1:101491
+🕐 Received world_time_update event: 
+Object { time: 0.9009, timestamp: 1756690160840 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.9009, timestamp: 1756690160840 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 21.6h index-Bg6NS5Jh.js:1:101491
+🕐 Received world_time_update event: 
+Object { time: 0.9609000000000001, timestamp: 1756690161840 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.9609000000000001, timestamp: 1756690161840 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 23.1h index-Bg6NS5Jh.js:1:101491
+🌞 PROPER Shadow System - Sun at (194.0, 75.7) | Time: 23.1h index-Bg6NS5Jh.js:1:35487
+🔍 Light pos: (194.0, 75.7, 10.0) | Target: (-194.0, 0, 10.0) index-Bg6NS5Jh.js:1:35627
+📷 Shadow Camera - Pos: (194.0, 75.7, 10.0) | Looking at: (-194.0, 0.0, 10.0) index-Bg6NS5Jh.js:1:33665
+🌞 Day/Night Cycle Update - Time: 23.1h | Frame: 2400 index-Bg6NS5Jh.js:1:34160
+🔧 Renderer info reset (manual GC recommended) index-Bg6NS5Jh.js:1:87985
+🔧 Starting comprehensive resource cleanup... index-Bg6NS5Jh.js:1:88111
+🌍 Starting WorldManager resource cleanup... index-Bg6NS5Jh.js:1:40199
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "dddd5d05-82b1-4924-9b63-c00e46fc2e26", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "785a41b8-663e-4d55-910e-4cd82723b0bf", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "17b0c922-cdcf-4b31-82e5-2900f8883fe6", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41335
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "a648927f-9b0c-4837-aba6-a7648964c77c", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "a25b20a0-52af-4bfa-bbe2-198bc3a1cae8", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "216b52d1-8655-4e9d-a36c-a0ff0b10249f", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41594
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "16a9c1d5-e6fd-4892-84da-223c56600e3c", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "d4ed16d8-4a25-4bca-a5f2-0917e9187d74", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "4e6b5900-6b57-42f7-992e-765e08fda1f5", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "f1f5c891-4c12-4928-bc2b-f88ec884ef49", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+🛡️ Skipping removal of protected temple: unnamed 3 index-Bg6NS5Jh.js:1:14789
+🛡️ Skipping removal of protected sphinx: unnamed 3 index-Bg6NS5Jh.js:1:14789
+🛡️ Skipping removal of protected obelisk: unnamed 4 index-Bg6NS5Jh.js:1:14789
+🔧 Removed 10 corrupted objects index-Bg6NS5Jh.js:1:43339
+🌍 Cleanup completed: index-Bg6NS5Jh.js:1:40473
+  - Pyramids: 3 → 3 index-Bg6NS5Jh.js:1:40510
+  - Temples: 3 → 3 index-Bg6NS5Jh.js:1:40585
+  - Sphinxes: 3 → 3 index-Bg6NS5Jh.js:1:40658
+  - Obelisks: 4 → 4 index-Bg6NS5Jh.js:1:40733
+  - Resources: 5 → 5 index-Bg6NS5Jh.js:1:40808
+  - Decorations: 11 → 11 index-Bg6NS5Jh.js:1:40889
+🌍 Starting WorldManager resource cleanup... index-Bg6NS5Jh.js:1:40199
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "dddd5d05-82b1-4924-9b63-c00e46fc2e26", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "785a41b8-663e-4d55-910e-4cd82723b0bf", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "17b0c922-cdcf-4b31-82e5-2900f8883fe6", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41335
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "a648927f-9b0c-4837-aba6-a7648964c77c", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "a25b20a0-52af-4bfa-bbe2-198bc3a1cae8", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "216b52d1-8655-4e9d-a36c-a0ff0b10249f", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41594
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "16a9c1d5-e6fd-4892-84da-223c56600e3c", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "d4ed16d8-4a25-4bca-a5f2-0917e9187d74", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "4e6b5900-6b57-42f7-992e-765e08fda1f5", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "f1f5c891-4c12-4928-bc2b-f88ec884ef49", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+🛡️ Skipping removal of protected temple: unnamed 3 index-Bg6NS5Jh.js:1:14789
+🛡️ Skipping removal of protected sphinx: unnamed 3 index-Bg6NS5Jh.js:1:14789
+🛡️ Skipping removal of protected obelisk: unnamed 4 index-Bg6NS5Jh.js:1:14789
+🔧 Removed 10 corrupted objects index-Bg6NS5Jh.js:1:43339
+🌍 Cleanup completed: index-Bg6NS5Jh.js:1:40473
+  - Pyramids: 3 → 3 index-Bg6NS5Jh.js:1:40510
+  - Temples: 3 → 3 index-Bg6NS5Jh.js:1:40585
+  - Sphinxes: 3 → 3 index-Bg6NS5Jh.js:1:40658
+  - Obelisks: 4 → 4 index-Bg6NS5Jh.js:1:40733
+  - Resources: 5 → 5 index-Bg6NS5Jh.js:1:40808
+  - Decorations: 11 → 11 index-Bg6NS5Jh.js:1:40889
+🔧 Cleanup completed - Objects: 89 → 89 index-Bg6NS5Jh.js:1:88395
+🔧 Geometries: 257 → 257 index-Bg6NS5Jh.js:1:88494
+🔧 Materials: undefined → undefined index-Bg6NS5Jh.js:1:88586
+✅ Scene integrity check: 1146 valid objects index-Bg6NS5Jh.js:1:89413
+🕐 Received world_time_update event: 
+Object { time: 0, timestamp: 1756690162841 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0, timestamp: 1756690162841 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 0.0h index-Bg6NS5Jh.js:1:101491
+📷 Camera position: 
+Array(3) [ "0.00", "5.00", "10.00" ]
+index-Bg6NS5Jh.js:1:91848
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-Bg6NS5Jh.js:1:91935
+📷 Camera offsets: 0.00 5.00 10.00 index-Bg6NS5Jh.js:1:92003
+🕐 Received world_time_update event: 
+Object { time: 0.060059999999999995, timestamp: 1756690163842 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.060059999999999995, timestamp: 1756690163842 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 1.4h index-Bg6NS5Jh.js:1:101491
+📷 Camera position: 
+Array(3) [ "0.00", "5.00", "10.00" ]
+index-Bg6NS5Jh.js:1:91848
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-Bg6NS5Jh.js:1:91935
+📷 Camera offsets: 0.00 5.00 10.00 index-Bg6NS5Jh.js:1:92003
+🕐 Received world_time_update event: 
+Object { time: 0.12011999999999999, timestamp: 1756690164843 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.12011999999999999, timestamp: 1756690164843 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 2.9h index-Bg6NS5Jh.js:1:101491
+👤 Character created: 
+Object { name: "Reptic", createdAt: "2025-09-01T01:29:30.236Z" }
+egypt-mmo-production.up.railway.app:896:21
+⚠️ Game already started, skipping... egypt-mmo-production.up.railway.app:933:25
+🔄 Restoring viewport to full dimensions... index-Bg6NS5Jh.js:1:97105
+✅ Viewport restored to 1536x460 index-Bg6NS5Jh.js:1:97401
+🔄 Restoring viewport to full dimensions... index-Bg6NS5Jh.js:1:97105
+✅ Viewport restored to 1536x460 index-Bg6NS5Jh.js:1:97401
+🕐 Received world_time_update event: 
+Object { time: 0.18047999999999997, timestamp: 1756690165849 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.18047999999999997, timestamp: 1756690165849 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 4.3h index-Bg6NS5Jh.js:1:101491
+📷 Camera position: 
+Array(3) [ "0.00", "5.00", "10.00" ]
+index-Bg6NS5Jh.js:1:91848
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-Bg6NS5Jh.js:1:91935
+📷 Camera offsets: 0.00 5.00 10.00 index-Bg6NS5Jh.js:1:92003
+🕐 Received world_time_update event: 
+Object { time: 0.24047999999999997, timestamp: 1756690166849 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.24047999999999997, timestamp: 1756690166849 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 5.8h index-Bg6NS5Jh.js:1:101491
+📷 Camera position: 
+Array(3) [ "0.00", "5.00", "10.00" ]
+index-Bg6NS5Jh.js:1:91848
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-Bg6NS5Jh.js:1:91935
+📷 Camera offsets: 0.00 5.00 10.00 index-Bg6NS5Jh.js:1:92003
+🕐 Received world_time_update event: 
+Object { time: 0.30054, timestamp: 1756690167850 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.30054, timestamp: 1756690167850 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 7.2h index-Bg6NS5Jh.js:1:101491
+📷 Shadow Camera - Pos: (-62.4, 195.0, 10.0) | Looking at: (62.4, 0.0, 10.0) index-Bg6NS5Jh.js:1:33665
+🕐 Received world_time_update event: 
+Object { time: 0.3606, timestamp: 1756690168851 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.3606, timestamp: 1756690168851 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 8.7h index-Bg6NS5Jh.js:1:101491
+🕐 Received world_time_update event: 
+Object { time: 0.42066, timestamp: 1756690169852 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.42066, timestamp: 1756690169852 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 10.1h index-Bg6NS5Jh.js:1:101491
+🕐 Received world_time_update event: 
+Object { time: 0.48078, timestamp: 1756690170854 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.48078, timestamp: 1756690170854 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 11.5h index-Bg6NS5Jh.js:1:101491
+🕐 Received world_time_update event: 
+Object { time: 0.54078, timestamp: 1756690171854 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.54078, timestamp: 1756690171854 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 13.0h index-Bg6NS5Jh.js:1:101491
+📷 Camera position: 
+Array(3) [ "0.00", "5.00", "10.00" ]
+index-Bg6NS5Jh.js:1:91848
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-Bg6NS5Jh.js:1:91935
+📷 Camera offsets: 0.00 5.00 10.00 index-Bg6NS5Jh.js:1:92003
+🕐 Received world_time_update event: 
+Object { time: 0.60084, timestamp: 1756690172855 }
+index-Bg6NS5Jh.js:1:163577
+🕐 Time update received: 
+Object { time: 0.60084, timestamp: 1756690172855 }
+index-Bg6NS5Jh.js:1:99338
+🕐 Synced world time to: 14.4h index-Bg6NS5Jh.js:1:101491
+🌞 PROPER Shadow System - Sun at (-161.2, 40.8) | Time: 14.4h index-Bg6NS5Jh.js:1:35487
+🔍 Light pos: (-161.2, 40.8, 10.0) | Target: (161.2, 0, 10.0) index-Bg6NS5Jh.js:1:35627
+📷 Shadow Camera - Pos: (-161.2, 40.8, 10.0) | Looking at: (161.2, 0.0, 10.0) index-Bg6NS5Jh.js:1:33665
+🌞 Day/Night Cycle Update - Time: 14.4h | Frame: 3000 index-Bg6NS5Jh.js:1:34160
+🔧 Renderer info reset (manual GC recommended) index-Bg6NS5Jh.js:1:87985
+🔧 Starting comprehensive resource cleanup... index-Bg6NS5Jh.js:1:88111
+🌍 Starting WorldManager resource cleanup... index-Bg6NS5Jh.js:1:40199
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "dddd5d05-82b1-4924-9b63-c00e46fc2e26", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "785a41b8-663e-4d55-910e-4cd82723b0bf", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "17b0c922-cdcf-4b31-82e5-2900f8883fe6", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41335
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "a648927f-9b0c-4837-aba6-a7648964c77c", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "a25b20a0-52af-4bfa-bbe2-198bc3a1cae8", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "216b52d1-8655-4e9d-a36c-a0ff0b10249f", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41594
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "16a9c1d5-e6fd-4892-84da-223c56600e3c", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "d4ed16d8-4a25-4bca-a5f2-0917e9187d74", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "4e6b5900-6b57-42f7-992e-765e08fda1f5", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "f1f5c891-4c12-4928-bc2b-f88ec884ef49", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-Bg6NS5Jh.js:1:41853
+🛡️ Skipping removal of protected temple: unnamed 2 index-Bg6NS5Jh.js:1:14789
