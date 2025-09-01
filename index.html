@@ -826,55 +826,41 @@
             }, 2000);
         }
 
-        // Guest Login
+        // Guest Login - Simplified!
         function guestLogin() {
-            alert('Guest login function called!'); // Test if function is being called
             console.log('👤 Guest login initiated');
-            console.log('🔍 Checking if startGame function exists:', typeof startGame);
-            console.log('🔍 Current gameStarted flag:', gameStarted);
             
             try {
                 // Generate unique guest ID
                 const guestId = 'guest_' + Math.random().toString(36).substr(2, 9);
                 console.log('🔍 Generated guest ID:', guestId);
                 
-                // Mock user data for guest
+                // Create guest data
                 const userData = {
                     id: guestId,
-                    email: null,
                     name: 'Guest Player',
-                    picture: null,
                     isGuest: true
                 };
                 
-                // Create guest character data
                 const characterData = {
                     name: `Guest_${guestId.slice(-4)}`,
                     createdAt: new Date().toISOString(),
                     isGuest: true
                 };
                 
-                console.log('🔍 About to store data in localStorage...');
-                
-                // Store both user and character data
+                // Store data
                 localStorage.setItem('egyptMMO_user', JSON.stringify(userData));
                 localStorage.setItem('egyptMMO_character', JSON.stringify(characterData));
-                
-                console.log('👤 Guest user created:', userData);
-                console.log('👤 Guest character created:', characterData);
-                
-                // Clear any existing session ID to ensure fresh multiplayer session
                 localStorage.removeItem('egypt_mmo_session_id');
-                console.log('🔍 Cleared session ID');
                 
-                // Start the game directly for guest
-                console.log('🚀 Starting game for guest...');
-                console.log('🔍 Calling startGame()...');
-                startGame();
-                console.log('✅ startGame() called successfully');
+                console.log('👤 Guest account created:', characterData.name);
+                
+                // Simple approach: just reload the page to start fresh
+                console.log('🔄 Reloading page for fresh guest start...');
+                window.location.reload();
                 
             } catch (error) {
-                console.error('❌ Error in guest login:', error);
+                console.error('❌ Guest login failed:', error);
                 alert('Guest login failed: ' + error.message);
             }
         }
@@ -973,41 +959,9 @@
         // Global flag to prevent multiple game starts
         let gameStarted = false;
 
-        // Start Game
+        // Start Game - Simplified!
         function startGame() {
-            console.log('🚀 startGame() called - gameStarted flag:', gameStarted);
-            
-            // Prevent multiple game starts (but allow guest login to override)
-            if (gameStarted) {
-                console.log('⚠️ Game already started, checking if this is a guest login...');
-                
-                // Check if this is a guest login (which should always work)
-                const userData = localStorage.getItem('egyptMMO_user');
-                const characterData = localStorage.getItem('egyptMMO_character');
-                
-                if (userData && characterData) {
-                    const user = JSON.parse(userData);
-                    if (user.isGuest) {
-                        console.log('✅ Guest login detected, allowing game restart');
-                        gameStarted = false; // Reset flag for guest
-                    } else {
-                        console.log('⚠️ Game already started, skipping...');
-                        return;
-                    }
-                } else {
-                    console.log('⚠️ Game already started, skipping...');
-                    return;
-                }
-            }
-            
             console.log('🚀 Starting Egypt MMO...');
-            gameStarted = true;
-            console.log('✅ Set gameStarted flag to:', gameStarted);
-            
-            // Disable character creator mode in InputManager if available
-            if (window.egyptMMO?.gameEngine?.inputManager) {
-                window.egyptMMO.gameEngine.inputManager.disableCharacterCreatorMode();
-            }
             
             // Hide character creator
             document.getElementById('character-creator').style.display = 'none';
@@ -1023,44 +977,26 @@
             initializeGame();
         }
 
-        // Initialize Game (will be called when your game loads)
+        // Initialize Game - Simplified!
         function initializeGame() {
-            console.log('🎮 initializeGame() called');
-            console.log('🔍 Checking Egypt MMO status...');
-            console.log('🔍 window.egyptMMO exists:', !!window.egyptMMO);
-            console.log('🔍 window.egyptMMO.isInitialized:', window.egyptMMO?.isInitialized);
-            
-            // Prevent multiple initializations
-            if (window.egyptMMO?.isInitialized) {
-                console.log('✅ Egypt MMO already initialized');
-                return;
-            }
-            
             console.log('🎮 Game initialization started');
             
-            // Check if Egypt MMO is available
-            if (window.egyptMMO && !window.egyptMMO.isInitialized) {
+            // Simple check: if Egypt MMO exists, start it
+            if (window.egyptMMO) {
                 console.log('✅ Egypt MMO found, starting game...');
                 window.egyptMMO.startGame().catch(error => {
                     console.error('❌ Failed to start game:', error);
-                    gameStarted = false; // Reset flag on error
                 });
-            } else if (window.egyptMMO?.isInitialized) {
-                console.log('✅ Egypt MMO already initialized');
             } else {
                 console.log('⏳ Egypt MMO not ready yet, waiting...');
                 // Wait for Egypt MMO to be available
                 const checkInterval = setInterval(() => {
-                    if (window.egyptMMO && !window.egyptMMO.isInitialized) {
+                    if (window.egyptMMO) {
                         clearInterval(checkInterval);
                         console.log('✅ Egypt MMO ready, starting game...');
                         window.egyptMMO.startGame().catch(error => {
                             console.error('❌ Failed to start game:', error);
-                            gameStarted = false; // Reset flag on error
                         });
-                    } else if (window.egyptMMO?.isInitialized) {
-                        clearInterval(checkInterval);
-                        console.log('✅ Egypt MMO already initialized');
                     }
                 }, 100);
             }

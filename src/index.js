@@ -50,43 +50,18 @@ class EgyptMMO {
 
     async startGame() {
         try {
-            // Prevent double initialization
-            if (this.isInitialized || this.isInitializing) {
-                console.warn('⚠️ Egypt MMO already initialized or initializing, skipping...');
-                return;
-            }
-            
-            // Set initialization flag early to prevent double calls
-            this.isInitializing = true;
-            
-            // Handle Redux DevTools errors gracefully
-            window.addEventListener('error', (event) => {
-                if (event.error && event.error.message && event.error.message.includes('detectStore')) {
-                    // Ignore Redux DevTools errors
-                    event.preventDefault();
-                    console.log('ℹ️ Redux DevTools error ignored (safe to ignore)');
-                    return;
-                }
-            });
-            
             console.log('🚀 Starting Egypt MMO...');
-            console.log('🔍 Init called at:', new Date().toISOString());
-            console.log('🔍 Stack trace:', new Error().stack);
             
             // Initialize loading manager first
             this.loadingManager = new LoadingManager();
             await this.loadingManager.init();
             
             // Initialize core systems
-            console.log('🔍 Creating AudioManager...');
+            console.log('🔍 Creating core systems...');
             this.audioManager = new AudioManager();
-            console.log('🔍 Creating NetworkManager...');
             this.networkManager = new NetworkManager();
-            console.log('🔍 Creating GameEngine...');
             this.gameEngine = new GameEngine();
-            console.log('🔍 Creating UIManager...');
             this.uiManager = new UIManager();
-            console.log('🔍 Creating OptionsManager...');
             this.optionsManager = new OptionsManager(this.gameEngine);
             
             // Initialize systems in parallel for better performance
@@ -154,29 +129,24 @@ class EgyptMMO {
         // Start game loop
         this.gameEngine.start();
         
-        // Connect to server (only if not already connected)
-        if (!this.networkManager.isConnected) {
-            try {
-                console.log('🌐 Connecting to network...');
-                await this.networkManager.connect();
-                console.log('✅ Network connection established');
-                
-                // Wait a moment for the connection to stabilize
-                await new Promise(resolve => setTimeout(resolve, 1000));
-                
-                // Now join the world
-                if (this.gameEngine && !this.gameEngine.worldJoined) {
-                    console.log('🌍 Joining world after network connection...');
-                    await this.gameEngine.joinWorld();
-                }
-            } catch (error) {
-                console.warn('⚠️ Network connection failed, running in single-player mode:', error.message);
+        // Connect to network
+        try {
+            console.log('🌐 Connecting to network...');
+            await this.networkManager.connect();
+            console.log('✅ Network connection established');
+            
+            // Wait a moment for connection to stabilize
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            
+            // Join the world
+            if (this.gameEngine && !this.gameEngine.worldJoined) {
+                console.log('🌍 Joining world after network connection...');
+                await this.gameEngine.joinWorld();
             }
-        } else {
-            console.log('✅ Already connected to network');
+        } catch (error) {
+            console.warn('⚠️ Network connection failed, running in single-player mode:', error.message);
         }
         
-        this.isInitialized = true;
         console.log('✅ Egypt MMO started successfully!');
         
         // Add window event listeners
@@ -286,27 +256,13 @@ class EgyptMMO {
 
 // Initialize the game when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-    // Check if already initialized (Vite hot reload protection)
-    if (window.egyptMMO) {
-        console.log('🔄 Vite hot reload detected, skipping re-initialization');
-        return;
-    }
-    
-    // Add global initialization guard
-    if (window.gameInitializing) {
-        console.log('🔄 Game initialization already in progress, skipping...');
-        return;
-    }
-    
-    window.gameInitializing = true;
+    console.log('🎮 Initializing Egypt MMO...');
     
     const game = new EgyptMMO();
     window.egyptMMO = game; // Make accessible globally for debugging
     
     // Start the game
-    game.init().finally(() => {
-        window.gameInitializing = false;
-    });
+    game.init();
 });
 
 // Export for module usage
