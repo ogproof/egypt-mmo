@@ -44,6 +44,8 @@ export class GameEngine {
         this.isInitialized = false;
         this.animationFrameId = null;
         this.duplicateCleanupInterval = null; // For duplicate player cleanup
+        this.multiplayerCallbacksSetup = false; // Prevent duplicate callback setup
+        this.worldJoined = false; // Prevent duplicate world joins
         
         // Performance monitoring
         this.fps = 0;
@@ -1534,6 +1536,12 @@ export class GameEngine {
 
     // Multiplayer player handling
     setupMultiplayerCallbacks() {
+        // Prevent duplicate callback setup
+        if (this.multiplayerCallbacksSetup) {
+            console.log('⚠️ Multiplayer callbacks already set up, skipping...');
+            return;
+        }
+        
         console.log('🔧 Setting up multiplayer callbacks...');
         
         if (!this.networkManager) {
@@ -1574,6 +1582,7 @@ export class GameEngine {
         };
         
         console.log('✅ Multiplayer callbacks set up successfully');
+        this.multiplayerCallbacksSetup = true; // Mark callbacks as set up
         
         // Join the world after setting up callbacks
         this.joinWorld();
@@ -1621,6 +1630,7 @@ export class GameEngine {
         
         console.log('🌍 Joining world with player data:', playerData);
         this.networkManager.joinWorld(playerData);
+        this.worldJoined = true; // Mark as joined
     }
 
     // Logout and cleanup

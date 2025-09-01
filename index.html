@@ -918,9 +918,19 @@
             return gameContainer;
         }
 
+        // Global flag to prevent multiple game starts
+        let gameStarted = false;
+
         // Start Game
         function startGame() {
+            // Prevent multiple game starts
+            if (gameStarted) {
+                console.log('⚠️ Game already started, skipping...');
+                return;
+            }
+            
             console.log('🚀 Starting Egypt MMO...');
+            gameStarted = true;
             
             // Disable character creator mode in InputManager if available
             if (window.egyptMMO?.gameEngine?.inputManager) {
@@ -941,21 +951,37 @@
 
         // Initialize Game (will be called when your game loads)
         function initializeGame() {
-            // This function will be called by your game engine
+            // Prevent multiple initializations
+            if (gameStarted && window.egyptMMO?.isInitialized) {
+                console.log('⚠️ Game already initialized, skipping...');
+                return;
+            }
+            
             console.log('🎮 Game initialization started');
             
             // Check if Egypt MMO is available
-            if (window.egyptMMO) {
+            if (window.egyptMMO && !window.egyptMMO.isInitialized) {
                 console.log('✅ Egypt MMO found, starting game...');
-                window.egyptMMO.startGame();
+                window.egyptMMO.startGame().catch(error => {
+                    console.error('❌ Failed to start game:', error);
+                    gameStarted = false; // Reset flag on error
+                });
+            } else if (window.egyptMMO?.isInitialized) {
+                console.log('✅ Egypt MMO already initialized');
             } else {
                 console.log('⏳ Egypt MMO not ready yet, waiting...');
                 // Wait for Egypt MMO to be available
                 const checkInterval = setInterval(() => {
-                    if (window.egyptMMO) {
+                    if (window.egyptMMO && !window.egyptMMO.isInitialized) {
                         clearInterval(checkInterval);
                         console.log('✅ Egypt MMO ready, starting game...');
-                        window.egyptMMO.startGame();
+                        window.egyptMMO.startGame().catch(error => {
+                            console.error('❌ Failed to start game:', error);
+                            gameStarted = false; // Reset flag on error
+                        });
+                    } else if (window.egyptMMO?.isInitialized) {
+                        clearInterval(checkInterval);
+                        console.log('✅ Egypt MMO already initialized');
                     }
                 }, 100);
             }

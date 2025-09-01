@@ -1,0 +1,1937 @@
+TypeError: a.default.detectStore(...) is undefined h1-check.js:1:1301
+An AudioContext was prevented from starting automatically. It must be created or resumed after a user gesture on the page. index-B-kIJk-V.js:9:25841
+An AudioContext was prevented from starting automatically. It must be created or resumed after a user gesture on the page. index-B-kIJk-V.js:19:11866
+    - ℹ️ Additional light source index-B-kIJk-V.js:1:40077
+Total lights found: 5 index-B-kIJk-V.js:1:40128
+👤 Initializing Player... index-B-kIJk-V.js:1:2102
+👤 Simple capsule character created index-B-kIJk-V.js:1:4363
+✅ Player initialized index-B-kIJk-V.js:1:2291
+📷 Camera reference set for player index-B-kIJk-V.js:1:12825
+📷 Camera properly initialized: 
+Object { x: 6.3677943970552535, y: 5, z: 11.279147965182965 }
+index-B-kIJk-V.js:1:74257
+🔧 Lighting setup skipped - handled by WorldManager index-B-kIJk-V.js:1:76245
+🔧 Added safe update method to crafting system index-B-kIJk-V.js:1:96125
+🔧 Added safe update method to inventory system index-B-kIJk-V.js:1:96301
+✅ Game Engine initialized index-B-kIJk-V.js:1:74481
+🔧 Setting up multiplayer callbacks... index-B-kIJk-V.js:1:98462
+✅ Network manager found, setting up callbacks... index-B-kIJk-V.js:1:98617
+✅ Multiplayer callbacks set up successfully index-B-kIJk-V.js:1:99242
+⏳ Waiting for network connection... index-B-kIJk-V.js:1:99471
+⚙️ Options Manager connected to Game Engine index-B-kIJk-V.js:1:109140
+📦 Loading Manager connected to Game Engine index-B-kIJk-V.js:1:108416
+👤 Player name set to: Ralph index-B-kIJk-V.js:1:2385
+👤 Player name set to: Ralph index-B-kIJk-V.js:1:108528
+✅ Egypt MMO started successfully! index-B-kIJk-V.js:19:24792
+🎮 Starting Egypt MMO... index-B-kIJk-V.js:19:25349
+🎮 Starting game loop... index-B-kIJk-V.js:1:78182
+🔧 Renderer info reset (manual GC recommended) index-B-kIJk-V.js:1:87931
+🔧 Starting comprehensive resource cleanup... index-B-kIJk-V.js:1:88057
+🌍 Starting WorldManager resource cleanup... index-B-kIJk-V.js:1:40199
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "4ccecb68-6d45-4653-b7a1-39910f163b04", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "764f3701-2de7-4ff6-b056-28aec303e75e", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "d73db5d0-fe0f-45c9-82a7-741c4a874256", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "39ca833d-8bb6-403e-b885-e2e08ab74c5d", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "fd17064d-b1a1-4d57-a3d9-ff08067f1ad8", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "01deb6f7-86d2-4385-aaa4-9d94e1672456", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "b47b204a-781a-40b1-9cca-1b2daf4a7bb6", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "da3da2e9-3af0-4baa-b47f-c6df9f52c71a", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "a5b9c6d5-9a66-46f0-8904-7e63d3f99c3d", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "ffed2d75-297a-403d-a7bd-aec401d086e2", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted decoration detected, removing: 
+Object { isObject3D: true, uuid: "5bf7f0df-d535-426a-8d4d-399bcfdd7b1d", name: "", type: "Group", parent: null, children: (25) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:42401
+⚠️ Corrupted decoration detected, removing: 
+Object { isObject3D: true, uuid: "c0a07293-5595-42db-b432-41dc2ce9be4a", name: "", type: "Group", parent: null, children: (25) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:42401
+⚠️ Corrupted decoration detected, removing: 
+Object { isObject3D: true, uuid: "8b7e13e0-3fa7-48c0-93df-611a2afc157a", name: "", type: "Group", parent: null, children: (25) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:42401
+⚠️ Corrupted decoration detected, removing: 
+Object { isObject3D: true, uuid: "20d20523-8596-4f6a-8870-2158779bfaa9", name: "", type: "Group", parent: null, children: (25) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:42401
+⚠️ Corrupted decoration detected, removing: 
+Object { isObject3D: true, uuid: "26f9ff22-a7f8-4aad-91d5-da4b642e54e4", name: "", type: "Group", parent: null, children: (53) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:42401
+🛡️ Skipping removal of protected temple: unnamed 3 index-B-kIJk-V.js:1:14789
+🛡️ Skipping removal of protected sphinx: unnamed 3 index-B-kIJk-V.js:1:14789
+🛡️ Skipping removal of protected obelisk: unnamed 4 index-B-kIJk-V.js:1:14789
+✅ Safely removed decoration: unnamed 5 index-B-kIJk-V.js:1:15109
+🔧 Removed 15 corrupted objects index-B-kIJk-V.js:1:43339
+🌍 Cleanup completed: index-B-kIJk-V.js:1:40473
+  - Pyramids: 3 → 3 index-B-kIJk-V.js:1:40510
+  - Temples: 3 → 3 index-B-kIJk-V.js:1:40585
+  - Sphinxes: 3 → 3 index-B-kIJk-V.js:1:40658
+  - Obelisks: 4 → 4 index-B-kIJk-V.js:1:40733
+  - Resources: 5 → 5 index-B-kIJk-V.js:1:40808
+  - Decorations: 16 → 11 index-B-kIJk-V.js:1:40889
+🌍 Starting WorldManager resource cleanup... index-B-kIJk-V.js:1:40199
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "4ccecb68-6d45-4653-b7a1-39910f163b04", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "764f3701-2de7-4ff6-b056-28aec303e75e", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "d73db5d0-fe0f-45c9-82a7-741c4a874256", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "39ca833d-8bb6-403e-b885-e2e08ab74c5d", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "fd17064d-b1a1-4d57-a3d9-ff08067f1ad8", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "01deb6f7-86d2-4385-aaa4-9d94e1672456", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "b47b204a-781a-40b1-9cca-1b2daf4a7bb6", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "da3da2e9-3af0-4baa-b47f-c6df9f52c71a", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "a5b9c6d5-9a66-46f0-8904-7e63d3f99c3d", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "ffed2d75-297a-403d-a7bd-aec401d086e2", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+🛡️ Skipping removal of protected temple: unnamed 3 index-B-kIJk-V.js:1:14789
+🛡️ Skipping removal of protected sphinx: unnamed 3 index-B-kIJk-V.js:1:14789
+🛡️ Skipping removal of protected obelisk: unnamed 4 index-B-kIJk-V.js:1:14789
+🔧 Removed 10 corrupted objects index-B-kIJk-V.js:1:43339
+🌍 Cleanup completed: index-B-kIJk-V.js:1:40473
+  - Pyramids: 3 → 3 index-B-kIJk-V.js:1:40510
+  - Temples: 3 → 3 index-B-kIJk-V.js:1:40585
+  - Sphinxes: 3 → 3 index-B-kIJk-V.js:1:40658
+  - Obelisks: 4 → 4 index-B-kIJk-V.js:1:40733
+  - Resources: 5 → 5 index-B-kIJk-V.js:1:40808
+  - Decorations: 11 → 11 index-B-kIJk-V.js:1:40889
+🔧 Cleanup completed - Objects: 94 → 89 index-B-kIJk-V.js:1:88341
+🔧 Geometries: 247 → 247 index-B-kIJk-V.js:1:88440
+🔧 Materials: undefined → undefined index-B-kIJk-V.js:1:88532
+✅ Scene integrity check: 1146 valid objects index-B-kIJk-V.js:1:89359
+✅ Game loop started index-B-kIJk-V.js:1:78292
+🎯 Game loading indicator hidden index-B-kIJk-V.js:1:147643
+🌐 Attempting to connect to: https://egypt-mmo-production.up.railway.app index-B-kIJk-V.js:1:160406
+🔧 Setting up Socket.IO event handlers... index-B-kIJk-V.js:1:161604
+✅ Socket.IO event handlers set up successfully index-B-kIJk-V.js:1:163643
+✅ Loading Manager initialized index-B-kIJk-V.js:19:18001
+🔍 Creating AudioManager... index-B-kIJk-V.js:19:23859
+🎵 Initializing Audio Manager... index-B-kIJk-V.js:19:9856
+🎵 Placeholder sound created for: button_click index-B-kIJk-V.js:19:16278
+🎵 Placeholder sound created for: panel_open index-B-kIJk-V.js:19:16278
+🎵 Placeholder sound created for: panel_close index-B-kIJk-V.js:19:16278
+🎵 Placeholder sound created for: notification index-B-kIJk-V.js:19:16278
+🎵 Placeholder sound created for: hammer_strike index-B-kIJk-V.js:19:16278
+🎵 Placeholder sound created for: metal_clang index-B-kIJk-V.js:19:16278
+🎵 Placeholder sound created for: wood_cut index-B-kIJk-V.js:19:16278
+🎵 Placeholder sound created for: potion_bubble index-B-kIJk-V.js:19:16278
+🎵 Placeholder sound created for: wind_ambient index-B-kIJk-V.js:19:16278
+🎵 Placeholder sound created for: sand_footstep index-B-kIJk-V.js:19:16278
+🎵 Placeholder sound created for: water_splash index-B-kIJk-V.js:19:16278
+🎵 Placeholder sound created for: fire_crackle index-B-kIJk-V.js:19:16278
+🎵 Placeholder sound created for: sword_swing index-B-kIJk-V.js:19:16278
+🎵 Placeholder sound created for: armor_clank index-B-kIJk-V.js:19:16278
+🎵 Placeholder sound created for: magic_cast index-B-kIJk-V.js:19:16278
+An AudioContext was prevented from starting automatically. It must be created or resumed after a user gesture on the page. index-B-kIJk-V.js:19:11866
+✅ Audio Manager initialized index-B-kIJk-V.js:19:10009
+🔍 Creating NetworkManager... index-B-kIJk-V.js:19:23927
+🔍 Creating GameEngine... index-B-kIJk-V.js:19:23999
+🔍 Creating UIManager... index-B-kIJk-V.js:19:24063
+🔍 Creating OptionsManager... index-B-kIJk-V.js:19:24125
+⚠️ AudioManager already initialized, skipping... index-B-kIJk-V.js:19:9784
+🌐 Initializing Network Manager... index-B-kIJk-V.js:1:159293
+🔑 Loaded existing session ID: player_1756689232587_95yupwiub index-B-kIJk-V.js:1:159419
+✅ Network Manager initialized index-B-kIJk-V.js:1:159620
+🎮 Initializing Game Engine... index-B-kIJk-V.js:1:73030
+🗺️ Grid Manager initialized: 500x500 cells (250000 total) - 2x2 units each index-B-kIJk-V.js:1:48461
+🎮 Input Manager initialized index-B-kIJk-V.js:1:52706
+🎒 Initializing Inventory System... index-B-kIJk-V.js:1:62348
+📚 Loading item database... index-B-kIJk-V.js:1:62399
+📚 Starting to load item database... index-B-kIJk-V.js:1:62705
+📚 Adding item to database: bronze_ingot index-B-kIJk-V.js:1:66204
+📚 Item bronze_ingot added to database. Current size: 1 index-B-kIJk-V.js:1:66295
+📚 Added bronze_ingot to database index-B-kIJk-V.js:1:62934
+📚 Adding item to database: iron_ingot index-B-kIJk-V.js:1:66204
+📚 Item iron_ingot added to database. Current size: 2 index-B-kIJk-V.js:1:66295
+📚 Added iron_ingot to database index-B-kIJk-V.js:1:63155
+📚 Adding item to database: steel_ingot index-B-kIJk-V.js:1:66204
+📚 Item steel_ingot added to database. Current size: 3 index-B-kIJk-V.js:1:66295
+📚 Added steel_ingot to database index-B-kIJk-V.js:1:63379
+📚 Adding item to database: wood index-B-kIJk-V.js:1:66204
+📚 Item wood added to database. Current size: 4 index-B-kIJk-V.js:1:66295
+📚 Added wood to database index-B-kIJk-V.js:1:63576
+📚 Adding item to database: leather index-B-kIJk-V.js:1:66204
+📚 Item leather added to database. Current size: 5 index-B-kIJk-V.js:1:66295
+📚 Added leather to database index-B-kIJk-V.js:1:63776
+📚 Adding item to database: thread index-B-kIJk-V.js:1:66204
+📚 Item thread added to database. Current size: 6 index-B-kIJk-V.js:1:66295
+📚 Added thread to database index-B-kIJk-V.js:1:63974
+📚 Adding item to database: herbs index-B-kIJk-V.js:1:66204
+📚 Item herbs added to database. Current size: 7 index-B-kIJk-V.js:1:66295
+📚 Added herbs to database index-B-kIJk-V.js:1:64172
+📚 Adding item to database: water index-B-kIJk-V.js:1:66204
+📚 Item water added to database. Current size: 8 index-B-kIJk-V.js:1:66295
+📚 Added water to database index-B-kIJk-V.js:1:64364
+📚 Adding item to database: crystal index-B-kIJk-V.js:1:66204
+📚 Item crystal added to database. Current size: 9 index-B-kIJk-V.js:1:66295
+📚 Added crystal to database index-B-kIJk-V.js:1:64567
+📚 Adding item to database: bronze_sword index-B-kIJk-V.js:1:66204
+📚 Item bronze_sword added to database. Current size: 10 index-B-kIJk-V.js:1:66295
+📚 Adding item to database: iron_sword index-B-kIJk-V.js:1:66204
+📚 Item iron_sword added to database. Current size: 11 index-B-kIJk-V.js:1:66295
+📚 Adding item to database: leather_armor index-B-kIJk-V.js:1:66204
+📚 Item leather_armor added to database. Current size: 12 index-B-kIJk-V.js:1:66295
+📚 Adding item to database: hammer index-B-kIJk-V.js:1:66204
+📚 Item hammer added to database. Current size: 13 index-B-kIJk-V.js:1:66295
+📚 Adding item to database: needle index-B-kIJk-V.js:1:66204
+📚 Item needle added to database. Current size: 14 index-B-kIJk-V.js:1:66295
+📚 Adding item to database: mortar index-B-kIJk-V.js:1:66204
+📚 Item mortar added to database. Current size: 15 index-B-kIJk-V.js:1:66295
+📚 Adding item to database: chisel index-B-kIJk-V.js:1:66204
+📚 Item chisel added to database. Current size: 16 index-B-kIJk-V.js:1:66295
+📚 Adding item to database: torch index-B-kIJk-V.js:1:66204
+📚 Item torch added to database. Current size: 17 index-B-kIJk-V.js:1:66295
+📚 Item database loaded with 17 items index-B-kIJk-V.js:1:62466
+📦 Adding starting items... index-B-kIJk-V.js:1:62551
+🎒 Adding starting items to inventory... index-B-kIJk-V.js:1:66416
+📦 Adding bronze_ingot x5... index-B-kIJk-V.js:1:66472
+🎒 Adding item: bronze_ingot x5 index-B-kIJk-V.js:1:67242
+Inventory updated: 
+Object { slots: 1, gold: undefined, level: undefined, experience: undefined }
+index-B-kIJk-V.js:1:70578
+✅ Successfully added bronze_ingot x5 index-B-kIJk-V.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, null, null, null, null, null, null, null, null, null, … ]
+index-B-kIJk-V.js:1:67559
+📦 Adding wood x10... index-B-kIJk-V.js:1:66547
+🎒 Adding item: wood x10 index-B-kIJk-V.js:1:67242
+Inventory updated: 
+Object { slots: 2, gold: undefined, level: undefined, experience: undefined }
+index-B-kIJk-V.js:1:70578
+✅ Successfully added wood x10 index-B-kIJk-V.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, null, null, null, null, null, null, null, null, … ]
+index-B-kIJk-V.js:1:67559
+📦 Adding leather x3... index-B-kIJk-V.js:1:66608
+🎒 Adding item: leather x3 index-B-kIJk-V.js:1:67242
+Inventory updated: 
+Object { slots: 3, gold: undefined, level: undefined, experience: undefined }
+index-B-kIJk-V.js:1:70578
+✅ Successfully added leather x3 index-B-kIJk-V.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, null, null, null, null, null, null, null, … ]
+index-B-kIJk-V.js:1:67559
+📦 Adding thread x5... index-B-kIJk-V.js:1:66673
+🎒 Adding item: thread x5 index-B-kIJk-V.js:1:67242
+Inventory updated: 
+Object { slots: 4, gold: undefined, level: undefined, experience: undefined }
+index-B-kIJk-V.js:1:70578
+✅ Successfully added thread x5 index-B-kIJk-V.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, null, null, null, null, null, null, … ]
+index-B-kIJk-V.js:1:67559
+📦 Adding herbs x8... index-B-kIJk-V.js:1:66736
+🎒 Adding item: herbs x8 index-B-kIJk-V.js:1:67242
+Inventory updated: 
+Object { slots: 5, gold: undefined, level: undefined, experience: undefined }
+index-B-kIJk-V.js:1:70578
+✅ Successfully added herbs x8 index-B-kIJk-V.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, null, null, null, null, null, … ]
+index-B-kIJk-V.js:1:67559
+📦 Adding water x20... index-B-kIJk-V.js:1:66797
+🎒 Adding item: water x20 index-B-kIJk-V.js:1:67242
+Inventory updated: 
+Object { slots: 6, gold: undefined, level: undefined, experience: undefined }
+index-B-kIJk-V.js:1:70578
+✅ Successfully added water x20 index-B-kIJk-V.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, null, null, null, null, … ]
+index-B-kIJk-V.js:1:67559
+📦 Adding hammer... index-B-kIJk-V.js:1:66860
+🎒 Adding item: hammer x1 index-B-kIJk-V.js:1:67242
+Inventory updated: 
+Object { slots: 7, gold: undefined, level: undefined, experience: undefined }
+index-B-kIJk-V.js:1:70578
+✅ Successfully added hammer x1 index-B-kIJk-V.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, null, null, null, … ]
+index-B-kIJk-V.js:1:67559
+📦 Adding needle... index-B-kIJk-V.js:1:66918
+🎒 Adding item: needle x1 index-B-kIJk-V.js:1:67242
+Inventory updated: 
+Object { slots: 8, gold: undefined, level: undefined, experience: undefined }
+index-B-kIJk-V.js:1:70578
+✅ Successfully added needle x1 index-B-kIJk-V.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, null, null, … ]
+index-B-kIJk-V.js:1:67559
+📦 Adding mortar... index-B-kIJk-V.js:1:66976
+🎒 Adding item: mortar x1 index-B-kIJk-V.js:1:67242
+Inventory updated: 
+Object { slots: 9, gold: undefined, level: undefined, experience: undefined }
+index-B-kIJk-V.js:1:70578
+✅ Successfully added mortar x1 index-B-kIJk-V.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, null, … ]
+index-B-kIJk-V.js:1:67559
+📦 Adding chisel... index-B-kIJk-V.js:1:67034
+🎒 Adding item: chisel x1 index-B-kIJk-V.js:1:67242
+Inventory updated: 
+Object { slots: 10, gold: undefined, level: undefined, experience: undefined }
+index-B-kIJk-V.js:1:70578
+✅ Successfully added chisel x1 index-B-kIJk-V.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-B-kIJk-V.js:1:67559
+📦 Adding torch... index-B-kIJk-V.js:1:67092
+🎒 Adding item: torch x1 index-B-kIJk-V.js:1:67242
+Inventory updated: 
+Object { slots: 11, gold: undefined, level: undefined, experience: undefined }
+index-B-kIJk-V.js:1:70578
+✅ Successfully added torch x1 index-B-kIJk-V.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-B-kIJk-V.js:1:67559
+🎒 Starting items added. Current inventory: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-B-kIJk-V.js:1:67148
+✅ Inventory System initialized index-B-kIJk-V.js:1:62640
+🎨 Initializing UI Manager... index-B-kIJk-V.js:1:111891
+🎒 Inventory initialized with sample items index-B-kIJk-V.js:1:116565
+✅ UI Manager initialized (UI hidden until game ready) index-B-kIJk-V.js:1:112625
+⚙️ Initializing Options Manager... index-B-kIJk-V.js:1:148551
+✅ Options Manager initialized index-B-kIJk-V.js:1:148872
+🗺️ Initializing Grid Manager... index-B-kIJk-V.js:1:48644
+🗺️ Grid visualization created (hidden by default - press G to show) index-B-kIJk-V.js:1:49551
+✅ Grid Manager initialized index-B-kIJk-V.js:1:48769
+🌍 Initializing World Manager... index-B-kIJk-V.js:1:13485
+🏠 Creating world decorations... index-B-kIJk-V.js:1:19990
+THREE.Material: 'roughness' is not a property of THREE.MeshLambertMaterial. 4 three-C8PiImrb.js:5:82611
+🏠 Creating detailed medieval house... index-B-kIJk-V.js:1:20195
+✅ Medieval house created at position: 
+Object { x: 15, y: 0, z: 15 }
+index-B-kIJk-V.js:1:20459
+✅ World decorations created index-B-kIJk-V.js:1:20130
+🔥 Torch created and placed in the world index-B-kIJk-V.js:1:32760
+🛡️ Protecting important world objects... index-B-kIJk-V.js:1:13786
+✅ Important objects protected index-B-kIJk-V.js:1:14596
+✅ World Manager initialized index-B-kIJk-V.js:1:13713
+🌍 Camera set in WorldManager: YES index-B-kIJk-V.js:1:37220
+🔍 Checking all lights after camera set: index-B-kIJk-V.js:1:37314
+🔍 Debugging all lights in scene: index-B-kIJk-V.js:1:39358
+  Light 1: PointLight at (0.0, 0.8, -5.2) index-B-kIJk-V.js:1:39455
+    - Intensity: 1 index-B-kIJk-V.js:1:39627
+    - Casts shadows: false index-B-kIJk-V.js:1:39680
+    - Name: unnamed index-B-kIJk-V.js:1:39738
+    - ℹ️ Additional light source index-B-kIJk-V.js:1:40077
+  Light 2: PointLight at (5.0, 2.3, 0.0) index-B-kIJk-V.js:1:39455
+    - Intensity: 0.6 index-B-kIJk-V.js:1:39627
+    - Casts shadows: false index-B-kIJk-V.js:1:39680
+    - Name: unnamed index-B-kIJk-V.js:1:39738
+    - ℹ️ Additional light source index-B-kIJk-V.js:1:40077
+  Light 3: AmbientLight at (0.0, 0.0, 0.0) index-B-kIJk-V.js:1:39455
+    - Intensity: 0.8 index-B-kIJk-V.js:1:39627
+    - Casts shadows: false index-B-kIJk-V.js:1:39680
+    - Name: unnamed index-B-kIJk-V.js:1:39738
+    - ✅ This is the day/night cycle ambient light index-B-kIJk-V.js:1:39925
+  Light 4: DirectionalLight at (50.0, 100.0, 50.0) index-B-kIJk-V.js:1:39455
+    - Intensity: 2 index-B-kIJk-V.js:1:39627
+    - Casts shadows: true index-B-kIJk-V.js:1:39680
+    - Name: unnamed index-B-kIJk-V.js:1:39738
+    - ✅ This is the day/night cycle light index-B-kIJk-V.js:1:39832
+  Light 5: PointLight at (0.0, 2.5, 0.0) index-B-kIJk-V.js:1:39455
+    - Intensity: 1.5 index-B-kIJk-V.js:1:39627
+    - Casts shadows: true index-B-kIJk-V.js:1:39680
+    - Name: unnamed index-B-kIJk-V.js:1:39738
+    - ℹ️ Additional light source index-B-kIJk-V.js:1:40077
+Total lights found: 5 index-B-kIJk-V.js:1:40128
+👤 Initializing Player... index-B-kIJk-V.js:1:2102
+👤 Simple capsule character created index-B-kIJk-V.js:1:4363
+✅ Player initialized index-B-kIJk-V.js:1:2291
+📷 Camera reference set for player index-B-kIJk-V.js:1:12825
+📷 Camera properly initialized: 
+Object { x: 6.323675729177273, y: 5, z: 11.270285508149366 }
+index-B-kIJk-V.js:1:74257
+🔧 Lighting setup skipped - handled by WorldManager index-B-kIJk-V.js:1:76245
+🔧 Added safe update method to crafting system index-B-kIJk-V.js:1:96125
+🔧 Added safe update method to inventory system index-B-kIJk-V.js:1:96301
+✅ Game Engine initialized index-B-kIJk-V.js:1:74481
+🔧 Setting up multiplayer callbacks... index-B-kIJk-V.js:1:98462
+✅ Network manager found, setting up callbacks... index-B-kIJk-V.js:1:98617
+✅ Multiplayer callbacks set up successfully index-B-kIJk-V.js:1:99242
+⏳ Waiting for network connection... index-B-kIJk-V.js:1:99471
+⚙️ Options Manager connected to Game Engine index-B-kIJk-V.js:1:109140
+📦 Loading Manager connected to Game Engine index-B-kIJk-V.js:1:108416
+👤 Player name set to: Ralph index-B-kIJk-V.js:1:2385
+👤 Player name set to: Ralph index-B-kIJk-V.js:1:108528
+✅ Egypt MMO started successfully! index-B-kIJk-V.js:19:24792
+🎮 Starting Egypt MMO... index-B-kIJk-V.js:19:25349
+🎮 Starting game loop... index-B-kIJk-V.js:1:78182
+🔧 Renderer info reset (manual GC recommended) index-B-kIJk-V.js:1:87931
+🔧 Starting comprehensive resource cleanup... index-B-kIJk-V.js:1:88057
+🌍 Starting WorldManager resource cleanup... index-B-kIJk-V.js:1:40199
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "ce22c92c-3c32-4605-b47a-175fd3e24e79", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "f8115c2f-7c2d-4553-9c5a-0426a5f5a40f", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "31f86912-357c-4756-9b83-51e822de712c", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "2e0db8bd-ab57-47ef-97fa-7cd895365681", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "07c41fdf-aa01-43d2-9377-e7e6391ed72c", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "0f1ed0b8-e97a-4b22-ad7f-2460b689d28c", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "575dc6b5-908d-436a-b60e-35409087778c", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "de8ab743-c3d7-4814-8ced-cb5ffbf6962c", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "6326cadf-d248-4aee-bb71-0bfe60733ba8", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "20bf9ed3-b44e-40e5-9117-2fc33a50da01", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted decoration detected, removing: 
+Object { isObject3D: true, uuid: "8485bc1e-67b5-44a1-baf2-83446b068f69", name: "", type: "Group", parent: null, children: (25) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:42401
+⚠️ Corrupted decoration detected, removing: 
+Object { isObject3D: true, uuid: "818bbda8-6a59-41cd-aeaf-25e2c1a9dfd8", name: "", type: "Group", parent: null, children: (25) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:42401
+⚠️ Corrupted decoration detected, removing: 
+Object { isObject3D: true, uuid: "87edee3f-b1ce-4593-a1ef-3897d58f63dc", name: "", type: "Group", parent: null, children: (25) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:42401
+⚠️ Corrupted decoration detected, removing: 
+Object { isObject3D: true, uuid: "212f8d43-1148-4d84-87c7-d1ce074e4942", name: "", type: "Group", parent: null, children: (25) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:42401
+⚠️ Corrupted decoration detected, removing: 
+Object { isObject3D: true, uuid: "9e3bce8f-6d76-4199-901b-ddf84bed9418", name: "", type: "Group", parent: null, children: (53) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:42401
+🛡️ Skipping removal of protected temple: unnamed 3 index-B-kIJk-V.js:1:14789
+🛡️ Skipping removal of protected sphinx: unnamed 3 index-B-kIJk-V.js:1:14789
+🛡️ Skipping removal of protected obelisk: unnamed 4 index-B-kIJk-V.js:1:14789
+✅ Safely removed decoration: unnamed 5 index-B-kIJk-V.js:1:15109
+🔧 Removed 15 corrupted objects index-B-kIJk-V.js:1:43339
+🌍 Cleanup completed: index-B-kIJk-V.js:1:40473
+  - Pyramids: 3 → 3 index-B-kIJk-V.js:1:40510
+  - Temples: 3 → 3 index-B-kIJk-V.js:1:40585
+  - Sphinxes: 3 → 3 index-B-kIJk-V.js:1:40658
+  - Obelisks: 4 → 4 index-B-kIJk-V.js:1:40733
+  - Resources: 5 → 5 index-B-kIJk-V.js:1:40808
+  - Decorations: 16 → 11 index-B-kIJk-V.js:1:40889
+🌍 Starting WorldManager resource cleanup... index-B-kIJk-V.js:1:40199
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "ce22c92c-3c32-4605-b47a-175fd3e24e79", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "f8115c2f-7c2d-4553-9c5a-0426a5f5a40f", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "31f86912-357c-4756-9b83-51e822de712c", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "2e0db8bd-ab57-47ef-97fa-7cd895365681", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "07c41fdf-aa01-43d2-9377-e7e6391ed72c", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "0f1ed0b8-e97a-4b22-ad7f-2460b689d28c", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "575dc6b5-908d-436a-b60e-35409087778c", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "de8ab743-c3d7-4814-8ced-cb5ffbf6962c", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "6326cadf-d248-4aee-bb71-0bfe60733ba8", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "20bf9ed3-b44e-40e5-9117-2fc33a50da01", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+🛡️ Skipping removal of protected temple: unnamed 3 index-B-kIJk-V.js:1:14789
+🛡️ Skipping removal of protected sphinx: unnamed 3 index-B-kIJk-V.js:1:14789
+🛡️ Skipping removal of protected obelisk: unnamed 4 index-B-kIJk-V.js:1:14789
+🔧 Removed 10 corrupted objects index-B-kIJk-V.js:1:43339
+🌍 Cleanup completed: index-B-kIJk-V.js:1:40473
+  - Pyramids: 3 → 3 index-B-kIJk-V.js:1:40510
+  - Temples: 3 → 3 index-B-kIJk-V.js:1:40585
+  - Sphinxes: 3 → 3 index-B-kIJk-V.js:1:40658
+  - Obelisks: 4 → 4 index-B-kIJk-V.js:1:40733
+  - Resources: 5 → 5 index-B-kIJk-V.js:1:40808
+  - Decorations: 11 → 11 index-B-kIJk-V.js:1:40889
+🔧 Cleanup completed - Objects: 94 → 89 index-B-kIJk-V.js:1:88341
+🔧 Geometries: 242 → 242 index-B-kIJk-V.js:1:88440
+🔧 Materials: undefined → undefined index-B-kIJk-V.js:1:88532
+✅ Scene integrity check: 1146 valid objects index-B-kIJk-V.js:1:89359
+✅ Game loop started index-B-kIJk-V.js:1:78292
+🎯 Game loading indicator hidden index-B-kIJk-V.js:1:147643
+🌐 Attempting to connect to: https://egypt-mmo-production.up.railway.app index-B-kIJk-V.js:1:160406
+🔧 Setting up Socket.IO event handlers... index-B-kIJk-V.js:1:161604
+✅ Socket.IO event handlers set up successfully index-B-kIJk-V.js:1:163643
+WebGL warning: texImage: Alpha-premult and y-flip are deprecated for non-DOM-Element uploads. 9
+✅ Minimal loading screen removed index-B-kIJk-V.js:19:21680
+✅ Loading screen hidden automatically index-B-kIJk-V.js:19:21147
+⏳ Connection attempt 1/20... index-B-kIJk-V.js:1:99629
+🎵 Music track loaded: Ancient Egypt Theme index-B-kIJk-V.js:19:13648
+🎵 Music track loaded: Desert Wind index-B-kIJk-V.js:19:13648
+🎵 Music track loaded: Pyramid Mystery index-B-kIJk-V.js:19:13648
+🎵 Music track loaded: Crafting Peace index-B-kIJk-V.js:19:13648
+🎵 Music track loaded: Battle Theme index-B-kIJk-V.js:19:13648
+⏳ Connection attempt 1/20... index-B-kIJk-V.js:1:99629
+✅ Loading screen hidden automatically index-B-kIJk-V.js:19:21147
+🎵 Music track loaded: Ancient Egypt Theme index-B-kIJk-V.js:19:13648
+🎵 Music track loaded: Desert Wind index-B-kIJk-V.js:19:13648
+🎵 Music track loaded: Pyramid Mystery index-B-kIJk-V.js:19:13648
+🎵 Music track loaded: Crafting Peace index-B-kIJk-V.js:19:13648
+🎵 Music track loaded: Battle Theme index-B-kIJk-V.js:19:13648
+⏳ Connection attempt 2/20... 2 index-B-kIJk-V.js:1:99629
+🌐 Connected to Railway server - Player ID: 1crEK1iUHzZ2r7B5AAAN index-B-kIJk-V.js:1:160876
+✅ Egypt MMO started successfully! index-B-kIJk-V.js:19:25520
+⏳ Connection attempt 3/20... index-B-kIJk-V.js:1:99629
+✅ Network connected, proceeding to join world... index-B-kIJk-V.js:1:99805
+🌍 Joining world with player data: 
+Object { name: "Ralph", position: {…}, rotation: {…}, level: 1, skills: {}, inventory: [], equipment: {} }
+index-B-kIJk-V.js:1:100147
+🌍 Joining world with data: 
+Object { name: "Ralph", position: {…}, rotation: {…}, level: 1, skills: {}, inventory: [], equipment: {}, sessionId: "player_1756689232587_95yupwiub" }
+index-B-kIJk-V.js:1:164039
+⏳ Connection attempt 3/20... index-B-kIJk-V.js:1:99629
+🌐 Connected to Railway server - Player ID: VZ_DmW-OjOtj-_XAAAAP index-B-kIJk-V.js:1:160876
+✅ Egypt MMO started successfully! index-B-kIJk-V.js:19:25520
+🌍 Received world_state event: 
+Object { players: (1) […], resources: [], buildings: [], worldTime: {…} }
+index-B-kIJk-V.js:1:162796
+🌍 World state update received: 
+Object { players: (1) […], resources: [], buildings: [], worldTime: {…} }
+index-B-kIJk-V.js:1:99056
+🌍 Processing world state with 1 players index-B-kIJk-V.js:1:100586
+🕐 Initial time sync: 20.2h index-B-kIJk-V.js:1:100813
+🔄 Skipping local player: Ralph (ID: player_1756689232587_95yupwiub) index-B-kIJk-V.js:1:100962
+✅ Player joined successfully: 
+Object { success: true, player: {…}, sessionId: "player_1756689232587_95yupwiub", message: "Welcome to Egypt MMO, Ralph!" }
+index-B-kIJk-V.js:1:163322
+🎯 Player ID set to: player_1756689232587_95yupwiub index-B-kIJk-V.js:1:163444
+🔑 Session ID set to: player_1756689232587_95yupwiub index-B-kIJk-V.js:1:163503
+⏳ Connection attempt 4/20... index-B-kIJk-V.js:1:99629
+✅ Network connected, proceeding to join world... index-B-kIJk-V.js:1:99805
+🌍 Joining world with player data: 
+Object { name: "Ralph", position: {…}, rotation: {…}, level: 1, skills: {}, inventory: [], equipment: {} }
+index-B-kIJk-V.js:1:100147
+🌍 Joining world with data: 
+Object { name: "Ralph", position: {…}, rotation: {…}, level: 1, skills: {}, inventory: [], equipment: {}, sessionId: "player_1756689232587_95yupwiub" }
+index-B-kIJk-V.js:1:164039
+🌍 Received world_state event: 
+Object { players: (1) […], resources: [], buildings: [], worldTime: {…} }
+index-B-kIJk-V.js:1:162796
+🌍 World state update received: 
+Object { players: (1) […], resources: [], buildings: [], worldTime: {…} }
+index-B-kIJk-V.js:1:99056
+🌍 Processing world state with 1 players index-B-kIJk-V.js:1:100586
+🕐 Initial time sync: 20.2h index-B-kIJk-V.js:1:100813
+🔄 Skipping local player: Ralph (ID: player_1756689232587_95yupwiub) index-B-kIJk-V.js:1:100962
+✅ Player joined successfully: 
+Object { success: true, player: {…}, sessionId: "player_1756689232587_95yupwiub", message: "Welcome to Egypt MMO, Ralph!" }
+index-B-kIJk-V.js:1:163322
+🎯 Player ID set to: player_1756689232587_95yupwiub index-B-kIJk-V.js:1:163444
+🔑 Session ID set to: player_1756689232587_95yupwiub index-B-kIJk-V.js:1:163503
+🔐 Google login initiated egypt-mmo-production.up.railway.app:805:21
+🕐 Received world_time_update event: 
+Object { time: 0.9005400000000001, timestamp: 1756689422751 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.9005400000000001, timestamp: 1756689422751 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 21.6h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.9005400000000001, timestamp: 1756689422751 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.9005400000000001, timestamp: 1756689422751 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 21.6h index-B-kIJk-V.js:1:101273
+📷 Camera position: 
+Array(3) [ "0.00", "5.00", "10.00" ]
+index-B-kIJk-V.js:1:91794
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-B-kIJk-V.js:1:91881
+📷 Camera offsets: 0.00 5.00 10.00 index-B-kIJk-V.js:1:91949
+🕐 Received world_time_update event: 
+Object { time: 0.9606000000000001, timestamp: 1756689423752 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.9606000000000001, timestamp: 1756689423752 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 23.1h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.9606000000000001, timestamp: 1756689423752 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.9606000000000001, timestamp: 1756689423752 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 23.1h index-B-kIJk-V.js:1:101273
+📷 Camera position: 
+Array(3) [ "0.00", "5.00", "10.00" ]
+index-B-kIJk-V.js:1:91794
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-B-kIJk-V.js:1:91881
+📷 Camera offsets: 0.00 5.00 10.00 index-B-kIJk-V.js:1:91949
+📷 Camera position: 
+Array(3) [ "0.00", "5.00", "10.00" ]
+index-B-kIJk-V.js:1:91794
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-B-kIJk-V.js:1:91881
+📷 Camera offsets: 0.00 5.00 10.00 index-B-kIJk-V.js:1:91949
+📷 Camera position: 
+Array(3) [ "0.00", "5.00", "10.00" ]
+index-B-kIJk-V.js:1:91794
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-B-kIJk-V.js:1:91881
+📷 Camera offsets: 0.00 5.00 10.00 index-B-kIJk-V.js:1:91949
+🕐 Received world_time_update event: 
+Object { time: 0, timestamp: 1756689424753 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0, timestamp: 1756689424753 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 0.0h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0, timestamp: 1756689424753 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0, timestamp: 1756689424753 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 0.0h index-B-kIJk-V.js:1:101273
+🎮 Character creator mode enabled - all keys work normally index-B-kIJk-V.js:1:56055
+⌨️ Key pressed: ArrowLeft 2 index-B-kIJk-V.js:1:110067
+📷 Camera rotating left - New offsets: 0.20 10.00 2 index-B-kIJk-V.js:1:92356
+📷 Camera rotating left - New offsets: 0.40 9.99 2 index-B-kIJk-V.js:1:92356
+📷 Camera rotating left - New offsets: 0.60 9.98 2 index-B-kIJk-V.js:1:92356
+📷 Camera rotating left - New offsets: 0.80 9.97 2 index-B-kIJk-V.js:1:92356
+📷 Camera rotating left - New offsets: 1.00 9.95 2 index-B-kIJk-V.js:1:92356
+📷 Camera rotating left - New offsets: 1.20 9.93 2 index-B-kIJk-V.js:1:92356
+📷 Camera rotating left - New offsets: 1.40 9.90 2 index-B-kIJk-V.js:1:92356
+⌨️ Key released: ArrowLeft 2 index-B-kIJk-V.js:1:111460
+📷 Camera position: 
+Array(3) [ "1.40", "5.00", "9.90" ]
+index-B-kIJk-V.js:1:91794
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-B-kIJk-V.js:1:91881
+📷 Camera offsets: 1.40 5.00 9.90 index-B-kIJk-V.js:1:91949
+🕐 Received world_time_update event: 
+Object { time: 0.060059999999999995, timestamp: 1756689425754 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.060059999999999995, timestamp: 1756689425754 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 1.4h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.060059999999999995, timestamp: 1756689425754 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.060059999999999995, timestamp: 1756689425754 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 1.4h index-B-kIJk-V.js:1:101273
+📷 Camera position: 
+Array(3) [ "1.40", "5.00", "9.90" ]
+index-B-kIJk-V.js:1:91794
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-B-kIJk-V.js:1:91881
+📷 Camera offsets: 1.40 5.00 9.90 index-B-kIJk-V.js:1:91949
+🕐 Received world_time_update event: 
+Object { time: 0.12018000000000001, timestamp: 1756689426756 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.12018000000000001, timestamp: 1756689426756 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 2.9h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.12018000000000001, timestamp: 1756689426756 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.12018000000000001, timestamp: 1756689426756 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 2.9h index-B-kIJk-V.js:1:101273
+⌨️ Key pressed: ShiftLeft 2 index-B-kIJk-V.js:1:110067
+⌨️ Key pressed: KeyR index-B-kIJk-V.js:1:110067
+📷 Camera reset to default orbital position index-B-kIJk-V.js:1:111386
+🔄 R key pressed - resetting camera... index-B-kIJk-V.js:1:113824
+🔄 Resetting camera... index-B-kIJk-V.js:1:140298
+📷 Camera reset to default orbital position index-B-kIJk-V.js:1:111386
+⌨️ Key pressed: KeyR index-B-kIJk-V.js:1:110067
+📷 Camera reset to default orbital position index-B-kIJk-V.js:1:111386
+🔄 R key pressed - resetting camera... index-B-kIJk-V.js:1:113824
+🔄 Resetting camera... index-B-kIJk-V.js:1:140298
+📷 Camera reset to default orbital position index-B-kIJk-V.js:1:111386
+⌨️ Key released: KeyR 2 index-B-kIJk-V.js:1:111460
+⌨️ Key released: ShiftLeft 2 index-B-kIJk-V.js:1:111460
+⌨️ Key pressed: KeyE index-B-kIJk-V.js:1:110067
+📋 E key pressed - exporting model specifications... index-B-kIJk-V.js:1:114256
+📋 Exporting model specifications... index-B-kIJk-V.js:1:141913
+📋 Model specifications exported: 
+Object { player: {…}, mesh: {…}, scene: {…}, timestamp: "2025-09-01T01:17:12.427Z" }
+index-B-kIJk-V.js:1:3491
+✅ Model specs exported successfully: 
+Object { player: {…}, mesh: {…}, scene: {…}, timestamp: "2025-09-01T01:17:12.427Z" }
+index-B-kIJk-V.js:1:142323
+⌨️ Key pressed: KeyE index-B-kIJk-V.js:1:110067
+📋 E key pressed - exporting model specifications... index-B-kIJk-V.js:1:114256
+📋 Exporting model specifications... index-B-kIJk-V.js:1:141913
+📋 Model specifications exported: 
+Object { player: {…}, mesh: {…}, scene: {…}, timestamp: "2025-09-01T01:17:12.440Z" }
+index-B-kIJk-V.js:1:3491
+✅ Model specs exported successfully: 
+Object { player: {…}, mesh: {…}, scene: {…}, timestamp: "2025-09-01T01:17:12.440Z" }
+index-B-kIJk-V.js:1:142323
+📷 Shadow Camera - Pos: (145.6, 168.5, 10.0) | Looking at: (-145.6, 0.0, 10.0) 2 index-B-kIJk-V.js:1:33665
+⌨️ Key released: KeyE 2 index-B-kIJk-V.js:1:111460
+⌨️ Key pressed: KeyP 2 index-B-kIJk-V.js:1:110067
+⌨️ Key released: KeyP 2 index-B-kIJk-V.js:1:111460
+⌨️ Key pressed: KeyT index-B-kIJk-V.js:1:110067
+🔥 T key pressed - testing torch equipping... index-B-kIJk-V.js:1:113607
+🧪 Testing torch equipping system... index-B-kIJk-V.js:1:135710
+✅ All systems found, testing torch equipping... index-B-kIJk-V.js:1:136010
+🔥 Equipping torch from slot 3 index-B-kIJk-V.js:1:118098
+Failed to equip torch index-B-kIJk-V.js:1:118496
+⌨️ Key pressed: KeyT index-B-kIJk-V.js:1:110067
+🔥 T key pressed - testing torch equipping... index-B-kIJk-V.js:1:113607
+🧪 Testing torch equipping system... index-B-kIJk-V.js:1:135710
+✅ All systems found, testing torch equipping... index-B-kIJk-V.js:1:136010
+🔥 Equipping torch from slot 3 index-B-kIJk-V.js:1:118098
+Failed to equip torch index-B-kIJk-V.js:1:118496
+⌨️ Key released: KeyT 2 index-B-kIJk-V.js:1:111460
+🕐 Received world_time_update event: 
+Object { time: 0.18024, timestamp: 1756689427757 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.18024, timestamp: 1756689427757 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 4.3h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.18024, timestamp: 1756689427757 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.18024, timestamp: 1756689427757 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 4.3h index-B-kIJk-V.js:1:101273
+⌨️ Key pressed: KeyI index-B-kIJk-V.js:1:110067
+🎒 Showing inventory... index-B-kIJk-V.js:1:132205
+🔄 Updating inventory display from system... index-B-kIJk-V.js:1:129998
+🎒 Inventory from system: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-B-kIJk-V.js:1:130083
+🎒 Inventory panel shown index-B-kIJk-V.js:1:132393
+🎒 I key pressed - testing inventory... index-B-kIJk-V.js:1:113721
+🎒 Testing inventory system... index-B-kIJk-V.js:1:136279
+✅ All systems found, testing inventory... index-B-kIJk-V.js:1:136573
+📊 Inventory System Status: index-B-kIJk-V.js:1:136630
+  - Initialized: true index-B-kIJk-V.js:1:136673
+  - Item Database Size: 17 index-B-kIJk-V.js:1:136721
+  - Max Slots: 64 index-B-kIJk-V.js:1:136780
+  - Current Slots: 11 index-B-kIJk-V.js:1:136821
+📚 Item Database Contents: index-B-kIJk-V.js:1:136890
+  - bronze_ingot: Bronze Ingot (material) index-B-kIJk-V.js:1:136964
+  - iron_ingot: Iron Ingot (material) index-B-kIJk-V.js:1:136964
+  - steel_ingot: Steel Ingot (material) index-B-kIJk-V.js:1:136964
+  - wood: Wood (material) index-B-kIJk-V.js:1:136964
+  - leather: Leather (material) index-B-kIJk-V.js:1:136964
+  - thread: Thread (material) index-B-kIJk-V.js:1:136964
+  - herbs: Herbs (material) index-B-kIJk-V.js:1:136964
+  - water: Water (material) index-B-kIJk-V.js:1:136964
+  - crystal: Crystal (material) index-B-kIJk-V.js:1:136964
+  - bronze_sword: Bronze Sword (weapon) index-B-kIJk-V.js:1:136964
+  - iron_sword: Iron Sword (weapon) index-B-kIJk-V.js:1:136964
+  - leather_armor: Leather Armor (armor) index-B-kIJk-V.js:1:136964
+  - hammer: Hammer (tool) index-B-kIJk-V.js:1:136964
+  - needle: Needle (tool) index-B-kIJk-V.js:1:136964
+  - mortar: Mortar (tool) index-B-kIJk-V.js:1:136964
+  - chisel: Chisel (tool) index-B-kIJk-V.js:1:136964
+  - torch: Torch (light) index-B-kIJk-V.js:1:136964
+📦 Current Inventory: index-B-kIJk-V.js:1:137038
+  - Slot 0: bronze_ingot x5 index-B-kIJk-V.js:1:137111
+  - Slot 1: wood x10 index-B-kIJk-V.js:1:137111
+  - Slot 2: leather x3 index-B-kIJk-V.js:1:137111
+  - Slot 3: thread x5 index-B-kIJk-V.js:1:137111
+  - Slot 4: herbs x8 index-B-kIJk-V.js:1:137111
+  - Slot 5: water x20 index-B-kIJk-V.js:1:137111
+  - Slot 6: hammer x1 index-B-kIJk-V.js:1:137111
+  - Slot 7: needle x1 index-B-kIJk-V.js:1:137111
+  - Slot 8: mortar x1 index-B-kIJk-V.js:1:137111
+  - Slot 9: chisel x1 index-B-kIJk-V.js:1:137111
+  - Slot 10: torch x1 index-B-kIJk-V.js:1:137111
+⚔️ Current Equipment: index-B-kIJk-V.js:1:137190
+  - head: empty index-B-kIJk-V.js:1:137288
+  - chest: empty index-B-kIJk-V.js:1:137288
+  - legs: empty index-B-kIJk-V.js:1:137288
+  - feet: empty index-B-kIJk-V.js:1:137288
+  - weapon: empty index-B-kIJk-V.js:1:137288
+  - offhand: empty index-B-kIJk-V.js:1:137288
+  - accessory: empty index-B-kIJk-V.js:1:137288
+📦 bronze_ingot already exists, increasing quantity index-B-kIJk-V.js:1:137760
+🎒 Adding item: bronze_ingot x5 index-B-kIJk-V.js:1:67242
+Inventory updated: 
+Object { slots: 11, gold: undefined, level: undefined, experience: undefined }
+index-B-kIJk-V.js:1:70578
+✅ Successfully added bronze_ingot x5 index-B-kIJk-V.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-B-kIJk-V.js:1:67559
+📦 wood already exists, increasing quantity index-B-kIJk-V.js:1:137760
+🎒 Adding item: wood x10 index-B-kIJk-V.js:1:67242
+Inventory updated: 
+Object { slots: 11, gold: undefined, level: undefined, experience: undefined }
+index-B-kIJk-V.js:1:70578
+✅ Successfully added wood x10 index-B-kIJk-V.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-B-kIJk-V.js:1:67559
+📦 leather already exists, increasing quantity index-B-kIJk-V.js:1:137760
+🎒 Adding item: leather x3 index-B-kIJk-V.js:1:67242
+Inventory updated: 
+Object { slots: 11, gold: undefined, level: undefined, experience: undefined }
+index-B-kIJk-V.js:1:70578
+✅ Successfully added leather x3 index-B-kIJk-V.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-B-kIJk-V.js:1:67559
+📦 torch already exists, increasing quantity index-B-kIJk-V.js:1:137760
+🎒 Adding item: torch x1 index-B-kIJk-V.js:1:67242
+Inventory updated: 
+Object { slots: 12, gold: undefined, level: undefined, experience: undefined }
+index-B-kIJk-V.js:1:70578
+✅ Successfully added torch x1 index-B-kIJk-V.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-B-kIJk-V.js:1:67559
+🔄 Updating inventory display from system... index-B-kIJk-V.js:1:129998
+🎒 Inventory from system: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-B-kIJk-V.js:1:130083
+🎒 Inventory system tested successfully. index-B-kIJk-V.js:1:137992
+⌨️ Key pressed: KeyI index-B-kIJk-V.js:1:110067
+🎒 Showing inventory... index-B-kIJk-V.js:1:132205
+🔄 Updating inventory display from system... index-B-kIJk-V.js:1:129998
+🎒 Inventory from system: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-B-kIJk-V.js:1:130083
+🎒 Inventory panel shown index-B-kIJk-V.js:1:132393
+🎒 I key pressed - testing inventory... index-B-kIJk-V.js:1:113721
+🎒 Testing inventory system... index-B-kIJk-V.js:1:136279
+✅ All systems found, testing inventory... index-B-kIJk-V.js:1:136573
+📊 Inventory System Status: index-B-kIJk-V.js:1:136630
+  - Initialized: true index-B-kIJk-V.js:1:136673
+  - Item Database Size: 17 index-B-kIJk-V.js:1:136721
+  - Max Slots: 64 index-B-kIJk-V.js:1:136780
+  - Current Slots: 11 index-B-kIJk-V.js:1:136821
+📚 Item Database Contents: index-B-kIJk-V.js:1:136890
+  - bronze_ingot: Bronze Ingot (material) index-B-kIJk-V.js:1:136964
+  - iron_ingot: Iron Ingot (material) index-B-kIJk-V.js:1:136964
+  - steel_ingot: Steel Ingot (material) index-B-kIJk-V.js:1:136964
+  - wood: Wood (material) index-B-kIJk-V.js:1:136964
+  - leather: Leather (material) index-B-kIJk-V.js:1:136964
+  - thread: Thread (material) index-B-kIJk-V.js:1:136964
+  - herbs: Herbs (material) index-B-kIJk-V.js:1:136964
+  - water: Water (material) index-B-kIJk-V.js:1:136964
+  - crystal: Crystal (material) index-B-kIJk-V.js:1:136964
+  - bronze_sword: Bronze Sword (weapon) index-B-kIJk-V.js:1:136964
+  - iron_sword: Iron Sword (weapon) index-B-kIJk-V.js:1:136964
+  - leather_armor: Leather Armor (armor) index-B-kIJk-V.js:1:136964
+  - hammer: Hammer (tool) index-B-kIJk-V.js:1:136964
+  - needle: Needle (tool) index-B-kIJk-V.js:1:136964
+  - mortar: Mortar (tool) index-B-kIJk-V.js:1:136964
+  - chisel: Chisel (tool) index-B-kIJk-V.js:1:136964
+  - torch: Torch (light) index-B-kIJk-V.js:1:136964
+📦 Current Inventory: index-B-kIJk-V.js:1:137038
+  - Slot 0: bronze_ingot x5 index-B-kIJk-V.js:1:137111
+  - Slot 1: wood x10 index-B-kIJk-V.js:1:137111
+  - Slot 2: leather x3 index-B-kIJk-V.js:1:137111
+  - Slot 3: thread x5 index-B-kIJk-V.js:1:137111
+  - Slot 4: herbs x8 index-B-kIJk-V.js:1:137111
+  - Slot 5: water x20 index-B-kIJk-V.js:1:137111
+  - Slot 6: hammer x1 index-B-kIJk-V.js:1:137111
+  - Slot 7: needle x1 index-B-kIJk-V.js:1:137111
+  - Slot 8: mortar x1 index-B-kIJk-V.js:1:137111
+  - Slot 9: chisel x1 index-B-kIJk-V.js:1:137111
+  - Slot 10: torch x1 index-B-kIJk-V.js:1:137111
+⚔️ Current Equipment: index-B-kIJk-V.js:1:137190
+  - head: empty index-B-kIJk-V.js:1:137288
+  - chest: empty index-B-kIJk-V.js:1:137288
+  - legs: empty index-B-kIJk-V.js:1:137288
+  - feet: empty index-B-kIJk-V.js:1:137288
+  - weapon: empty index-B-kIJk-V.js:1:137288
+  - offhand: empty index-B-kIJk-V.js:1:137288
+  - accessory: empty index-B-kIJk-V.js:1:137288
+📦 bronze_ingot already exists, increasing quantity index-B-kIJk-V.js:1:137760
+🎒 Adding item: bronze_ingot x5 index-B-kIJk-V.js:1:67242
+Inventory updated: 
+Object { slots: 11, gold: undefined, level: undefined, experience: undefined }
+index-B-kIJk-V.js:1:70578
+✅ Successfully added bronze_ingot x5 index-B-kIJk-V.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-B-kIJk-V.js:1:67559
+📦 wood already exists, increasing quantity index-B-kIJk-V.js:1:137760
+🎒 Adding item: wood x10 index-B-kIJk-V.js:1:67242
+Inventory updated: 
+Object { slots: 11, gold: undefined, level: undefined, experience: undefined }
+index-B-kIJk-V.js:1:70578
+✅ Successfully added wood x10 index-B-kIJk-V.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-B-kIJk-V.js:1:67559
+📦 leather already exists, increasing quantity index-B-kIJk-V.js:1:137760
+🎒 Adding item: leather x3 index-B-kIJk-V.js:1:67242
+Inventory updated: 
+Object { slots: 11, gold: undefined, level: undefined, experience: undefined }
+index-B-kIJk-V.js:1:70578
+✅ Successfully added leather x3 index-B-kIJk-V.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-B-kIJk-V.js:1:67559
+📦 torch already exists, increasing quantity index-B-kIJk-V.js:1:137760
+🎒 Adding item: torch x1 index-B-kIJk-V.js:1:67242
+Inventory updated: 
+Object { slots: 12, gold: undefined, level: undefined, experience: undefined }
+index-B-kIJk-V.js:1:70578
+✅ Successfully added torch x1 index-B-kIJk-V.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-B-kIJk-V.js:1:67559
+🔄 Updating inventory display from system... index-B-kIJk-V.js:1:129998
+🎒 Inventory from system: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-B-kIJk-V.js:1:130083
+🎒 Inventory system tested successfully. index-B-kIJk-V.js:1:137992
+⌨️ Key released: KeyI 2 index-B-kIJk-V.js:1:111460
+⌨️ Key pressed: KeyC index-B-kIJk-V.js:1:110067
+🎯 C key pressed - testing click detection... index-B-kIJk-V.js:1:114021
+🎯 Testing click detection system... index-B-kIJk-V.js:1:139662
+✅ Grid manager found, testing grid system... index-B-kIJk-V.js:1:139879
+✅ Grid cell lookup working: 
+Object { x: 250, z: 250, worldX: 1, worldZ: 1, center: {…}, state: "walkable", occupied: false, height: 0, objects: [] }
+index-B-kIJk-V.js:1:139985
+Cell 250, 250 is walkable index-B-kIJk-V.js:1:140030
+✅ Walkable check: true index-B-kIJk-V.js:1:140170
+✅ Nearest walkable position: 
+Object { x: 1, y: 0, z: 1 }
+index-B-kIJk-V.js:1:140238
+⌨️ Key pressed: KeyC index-B-kIJk-V.js:1:110067
+🎯 C key pressed - testing click detection... index-B-kIJk-V.js:1:114021
+🎯 Testing click detection system... index-B-kIJk-V.js:1:139662
+✅ Grid manager found, testing grid system... index-B-kIJk-V.js:1:139879
+✅ Grid cell lookup working: 
+Object { x: 250, z: 250, worldX: 1, worldZ: 1, center: {…}, state: "walkable", occupied: false, height: 0, objects: [] }
+index-B-kIJk-V.js:1:139985
+Cell 250, 250 is walkable index-B-kIJk-V.js:1:140030
+✅ Walkable check: true index-B-kIJk-V.js:1:140170
+✅ Nearest walkable position: 
+Object { x: 1, y: 0, z: 1 }
+index-B-kIJk-V.js:1:140238
+⌨️ Key released: KeyC 2 index-B-kIJk-V.js:1:111460
+🕐 Received world_time_update event: 
+Object { time: 0.2403, timestamp: 1756689428758 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.2403, timestamp: 1756689428758 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 5.8h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.2403, timestamp: 1756689428758 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.2403, timestamp: 1756689428758 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 5.8h index-B-kIJk-V.js:1:101273
+👤 Character created: 
+Object { name: "Reptic", createdAt: "2025-09-01T01:17:14.440Z" }
+egypt-mmo-production.up.railway.app:896:21
+🚀 Starting Egypt MMO... egypt-mmo-production.up.railway.app:928:21
+🎮 Character creator mode disabled - game keys blocked again index-B-kIJk-V.js:1:56188
+✅ Game container shown egypt-mmo-production.up.railway.app:941:21
+🎮 Game initialization started egypt-mmo-production.up.railway.app:950:21
+✅ Egypt MMO found, starting game... egypt-mmo-production.up.railway.app:954:25
+⚠️ Egypt MMO already initialized, skipping... index-B-kIJk-V.js:19:23360
+🕐 Received world_time_update event: 
+Object { time: 0.30042, timestamp: 1756689429760 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.30042, timestamp: 1756689429760 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 7.2h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.30042, timestamp: 1756689429760 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.30042, timestamp: 1756689429760 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 7.2h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.36048, timestamp: 1756689430761 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.36048, timestamp: 1756689430761 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 8.7h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.36048, timestamp: 1756689430761 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.36048, timestamp: 1756689430761 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 8.7h index-B-kIJk-V.js:1:101273
+🎯 Mouse click detected: 
+Object { x: 0.38671875, y: -0.18391449036546526 }
+index-B-kIJk-V.js:1:76372
+🎯 Processing mouse click: 
+Object { x: 0.38671875, y: -0.18391449036546526 }
+index-B-kIJk-V.js:1:76566
+🎯 Ground intersection found: 
+Object { x: 6.379706250435648, y: 0, z: 1.28154079102862 }
+index-B-kIJk-V.js:1:77639
+🎯 World position from mouse: 
+Object { x: 6.379706250435648, y: 0, z: 1.28154079102862 }
+index-B-kIJk-V.js:1:76660
+✅ Position is walkable, moving player index-B-kIJk-V.js:1:76783
+👤 Player.moveToPosition called with: 
+Object { x: 6.379706250435648, y: 0, z: 1.28154079102862 }
+index-B-kIJk-V.js:1:8939
+👤 Moving to clicked position: 6.4, 1.3 index-B-kIJk-V.js:1:9233
+🗺️ Direct path to target index-B-kIJk-V.js:1:9865
+🎯 Mouse click detected: 
+Object { x: 0.38671875, y: -0.18391449036546526 }
+index-B-kIJk-V.js:1:76372
+🎯 Processing mouse click: 
+Object { x: 0.38671875, y: -0.18391449036546526 }
+index-B-kIJk-V.js:1:76566
+🎯 Ground intersection found: 
+Object { x: 6.379706250435648, y: 0, z: 1.28154079102862 }
+index-B-kIJk-V.js:1:77639
+🎯 World position from mouse: 
+Object { x: 6.379706250435648, y: 0, z: 1.28154079102862 }
+index-B-kIJk-V.js:1:76660
+✅ Position is walkable, moving player index-B-kIJk-V.js:1:76783
+👤 Player.moveToPosition called with: 
+Object { x: 6.379706250435648, y: 0, z: 1.28154079102862 }
+index-B-kIJk-V.js:1:8939
+👤 Moving to clicked position: 6.4, 1.3 index-B-kIJk-V.js:1:9233
+🗺️ Direct path to target index-B-kIJk-V.js:1:9865
+📡 Sent position update for player player_1756689232587_95yupwiub: 
+Object { x: 6.3677943970552535, y: 0, z: 1.2791479651829654 }
+index-B-kIJk-V.js:1:164348
+🌐 Sent position update: (0.3, 0.0, 0.1) index-B-kIJk-V.js:1:7288
+📡 Sent position update for player player_1756689232587_95yupwiub: 
+Object { x: 6.323675729177273, y: 0, z: 1.2702855081493651 }
+index-B-kIJk-V.js:1:164348
+🌐 Sent position update: (1.8, 0.0, 0.4) index-B-kIJk-V.js:1:7288
+🔄 Ignoring own movement update for player player_1756689232587_95yupwiub 2 index-B-kIJk-V.js:1:162511
+📡 Sent position update for player player_1756689232587_95yupwiub: 
+Object { x: 6.3677943970552535, y: 0, z: 1.2791479651829654 }
+index-B-kIJk-V.js:1:164348
+🌐 Sent position update: (3.4, 0.0, 0.7) index-B-kIJk-V.js:1:7288
+📡 Sent position update for player player_1756689232587_95yupwiub: 
+Object { x: 6.323675729177273, y: 0, z: 1.2702855081493651 }
+index-B-kIJk-V.js:1:164348
+🌐 Sent position update: (3.5, 0.0, 0.7) index-B-kIJk-V.js:1:7288
+🔄 Ignoring own movement update for player player_1756689232587_95yupwiub 2 index-B-kIJk-V.js:1:162511
+📡 Sent position update for player player_1756689232587_95yupwiub: 
+Object { x: 6.3677943970552535, y: 0, z: 1.2791479651829654 }
+index-B-kIJk-V.js:1:164348
+🌐 Sent position update: (5.0, 0.0, 1.0) index-B-kIJk-V.js:1:7288
+📡 Sent position update for player player_1756689232587_95yupwiub: 
+Object { x: 6.323675729177273, y: 0, z: 1.2702855081493651 }
+index-B-kIJk-V.js:1:164348
+🌐 Sent position update: (5.5, 0.0, 1.1) index-B-kIJk-V.js:1:7288
+🔄 Ignoring own movement update for player player_1756689232587_95yupwiub 2 index-B-kIJk-V.js:1:162511
+📡 Sent position update for player player_1756689232587_95yupwiub: 
+Object { x: 6.3677943970552535, y: 0, z: 1.2791479651829654 }
+index-B-kIJk-V.js:1:164348
+🌐 Sent position update: (6.8, 0.0, 1.4) index-B-kIJk-V.js:1:7288
+📡 Sent position update for player player_1756689232587_95yupwiub: 
+Object { x: 6.323675729177273, y: 0, z: 1.2702855081493651 }
+index-B-kIJk-V.js:1:164348
+🌐 Sent position update: (6.3, 0.0, 1.3) index-B-kIJk-V.js:1:7288
+📡 Sent position update for player player_1756689232587_95yupwiub: 
+Object { x: 6.323675729177273, y: 0, z: 1.2702855081493651 }
+index-B-kIJk-V.js:1:164348
+✅ Reached destination index-B-kIJk-V.js:1:6801
+🔄 Ignoring own movement update for player player_1756689232587_95yupwiub index-B-kIJk-V.js:1:162511
+📡 Sent position update for player player_1756689232587_95yupwiub: 
+Object { x: 6.3677943970552535, y: 0, z: 1.2791479651829654 }
+index-B-kIJk-V.js:1:164348
+✅ Reached destination index-B-kIJk-V.js:1:6801
+🔄 Ignoring own movement update for player player_1756689232587_95yupwiub 3 index-B-kIJk-V.js:1:162511
+🕐 Received world_time_update event: 
+Object { time: 0.42048, timestamp: 1756689431761 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.42048, timestamp: 1756689431761 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 10.1h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.42048, timestamp: 1756689431761 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.42048, timestamp: 1756689431761 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 10.1h index-B-kIJk-V.js:1:101273
+📷 Camera position: 
+Array(3) [ "6.32", "5.00", "11.27" ]
+index-B-kIJk-V.js:1:91794
+👤 Player position: 
+Array(3) [ "6.32", "0.00", "1.27" ]
+index-B-kIJk-V.js:1:91881
+📷 Camera offsets: 0.00 5.00 10.00 index-B-kIJk-V.js:1:91949
+🕐 Received world_time_update event: 
+Object { time: 0.48078, timestamp: 1756689432766 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.48078, timestamp: 1756689432766 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 11.5h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.48078, timestamp: 1756689432766 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.48078, timestamp: 1756689432766 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 11.5h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.5408999999999999, timestamp: 1756689433768 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.5408999999999999, timestamp: 1756689433768 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 13.0h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.5408999999999999, timestamp: 1756689433768 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.5408999999999999, timestamp: 1756689433768 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 13.0h index-B-kIJk-V.js:1:101273
+📷 Camera position: 
+Array(3) [ "6.37", "5.00", "11.28" ]
+index-B-kIJk-V.js:1:91794
+👤 Player position: 
+Array(3) [ "6.37", "0.00", "1.28" ]
+index-B-kIJk-V.js:1:91881
+📷 Camera offsets: 0.00 5.00 10.00 index-B-kIJk-V.js:1:91949
+🌞 PROPER Shadow System - Sun at (-193.4, 74.6) | Time: 13.0h index-B-kIJk-V.js:1:35487
+🔍 Light pos: (-187.1, 74.6, 11.3) | Target: (199.8, 0, 11.3) index-B-kIJk-V.js:1:35627
+📷 Shadow Camera - Pos: (-187.1, 74.6, 11.3) | Looking at: (199.8, 0.0, 11.3) index-B-kIJk-V.js:1:33665
+🌞 Day/Night Cycle Update - Time: 13.0h | Frame: 600 index-B-kIJk-V.js:1:34160
+🔧 Renderer info reset (manual GC recommended) index-B-kIJk-V.js:1:87931
+🔧 Starting comprehensive resource cleanup... index-B-kIJk-V.js:1:88057
+🌍 Starting WorldManager resource cleanup... index-B-kIJk-V.js:1:40199
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "4ccecb68-6d45-4653-b7a1-39910f163b04", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "764f3701-2de7-4ff6-b056-28aec303e75e", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "d73db5d0-fe0f-45c9-82a7-741c4a874256", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "39ca833d-8bb6-403e-b885-e2e08ab74c5d", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "fd17064d-b1a1-4d57-a3d9-ff08067f1ad8", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "01deb6f7-86d2-4385-aaa4-9d94e1672456", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "b47b204a-781a-40b1-9cca-1b2daf4a7bb6", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "da3da2e9-3af0-4baa-b47f-c6df9f52c71a", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "a5b9c6d5-9a66-46f0-8904-7e63d3f99c3d", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "ffed2d75-297a-403d-a7bd-aec401d086e2", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+🛡️ Skipping removal of protected temple: unnamed 3 index-B-kIJk-V.js:1:14789
+🛡️ Skipping removal of protected sphinx: unnamed 3 index-B-kIJk-V.js:1:14789
+🛡️ Skipping removal of protected obelisk: unnamed 4 index-B-kIJk-V.js:1:14789
+🔧 Removed 10 corrupted objects index-B-kIJk-V.js:1:43339
+🌍 Cleanup completed: index-B-kIJk-V.js:1:40473
+  - Pyramids: 3 → 3 index-B-kIJk-V.js:1:40510
+  - Temples: 3 → 3 index-B-kIJk-V.js:1:40585
+  - Sphinxes: 3 → 3 index-B-kIJk-V.js:1:40658
+  - Obelisks: 4 → 4 index-B-kIJk-V.js:1:40733
+  - Resources: 5 → 5 index-B-kIJk-V.js:1:40808
+  - Decorations: 11 → 11 index-B-kIJk-V.js:1:40889
+🌍 Starting WorldManager resource cleanup... index-B-kIJk-V.js:1:40199
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "4ccecb68-6d45-4653-b7a1-39910f163b04", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "764f3701-2de7-4ff6-b056-28aec303e75e", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "d73db5d0-fe0f-45c9-82a7-741c4a874256", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "39ca833d-8bb6-403e-b885-e2e08ab74c5d", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "fd17064d-b1a1-4d57-a3d9-ff08067f1ad8", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "01deb6f7-86d2-4385-aaa4-9d94e1672456", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "b47b204a-781a-40b1-9cca-1b2daf4a7bb6", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "da3da2e9-3af0-4baa-b47f-c6df9f52c71a", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "a5b9c6d5-9a66-46f0-8904-7e63d3f99c3d", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "ffed2d75-297a-403d-a7bd-aec401d086e2", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+🛡️ Skipping removal of protected temple: unnamed 3 index-B-kIJk-V.js:1:14789
+🛡️ Skipping removal of protected sphinx: unnamed 3 index-B-kIJk-V.js:1:14789
+🛡️ Skipping removal of protected obelisk: unnamed 4 index-B-kIJk-V.js:1:14789
+🔧 Removed 10 corrupted objects index-B-kIJk-V.js:1:43339
+🌍 Cleanup completed: index-B-kIJk-V.js:1:40473
+  - Pyramids: 3 → 3 index-B-kIJk-V.js:1:40510
+  - Temples: 3 → 3 index-B-kIJk-V.js:1:40585
+  - Sphinxes: 3 → 3 index-B-kIJk-V.js:1:40658
+  - Obelisks: 4 → 4 index-B-kIJk-V.js:1:40733
+  - Resources: 5 → 5 index-B-kIJk-V.js:1:40808
+  - Decorations: 11 → 11 index-B-kIJk-V.js:1:40889
+🔧 Cleanup completed - Objects: 89 → 89 index-B-kIJk-V.js:1:88341
+🔧 Geometries: 262 → 262 index-B-kIJk-V.js:1:88440
+🔧 Materials: undefined → undefined index-B-kIJk-V.js:1:88532
+✅ Scene integrity check: 1146 valid objects index-B-kIJk-V.js:1:89359
+🌞 PROPER Shadow System - Sun at (-193.4, 74.6) | Time: 13.0h index-B-kIJk-V.js:1:35487
+🔍 Light pos: (-187.1, 74.6, 11.3) | Target: (199.8, 0, 11.3) index-B-kIJk-V.js:1:35627
+📷 Shadow Camera - Pos: (-187.1, 74.6, 11.3) | Looking at: (199.8, 0.0, 11.3) index-B-kIJk-V.js:1:33665
+🌞 Day/Night Cycle Update - Time: 13.0h | Frame: 600 index-B-kIJk-V.js:1:34160
+🔧 Renderer info reset (manual GC recommended) index-B-kIJk-V.js:1:87931
+🔧 Starting comprehensive resource cleanup... index-B-kIJk-V.js:1:88057
+🌍 Starting WorldManager resource cleanup... index-B-kIJk-V.js:1:40199
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "ce22c92c-3c32-4605-b47a-175fd3e24e79", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "f8115c2f-7c2d-4553-9c5a-0426a5f5a40f", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "31f86912-357c-4756-9b83-51e822de712c", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "2e0db8bd-ab57-47ef-97fa-7cd895365681", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "07c41fdf-aa01-43d2-9377-e7e6391ed72c", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "0f1ed0b8-e97a-4b22-ad7f-2460b689d28c", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "575dc6b5-908d-436a-b60e-35409087778c", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "de8ab743-c3d7-4814-8ced-cb5ffbf6962c", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "6326cadf-d248-4aee-bb71-0bfe60733ba8", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "20bf9ed3-b44e-40e5-9117-2fc33a50da01", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+🛡️ Skipping removal of protected temple: unnamed 3 index-B-kIJk-V.js:1:14789
+🛡️ Skipping removal of protected sphinx: unnamed 3 index-B-kIJk-V.js:1:14789
+🛡️ Skipping removal of protected obelisk: unnamed 4 index-B-kIJk-V.js:1:14789
+🔧 Removed 10 corrupted objects index-B-kIJk-V.js:1:43339
+🌍 Cleanup completed: index-B-kIJk-V.js:1:40473
+  - Pyramids: 3 → 3 index-B-kIJk-V.js:1:40510
+  - Temples: 3 → 3 index-B-kIJk-V.js:1:40585
+  - Sphinxes: 3 → 3 index-B-kIJk-V.js:1:40658
+  - Obelisks: 4 → 4 index-B-kIJk-V.js:1:40733
+  - Resources: 5 → 5 index-B-kIJk-V.js:1:40808
+  - Decorations: 11 → 11 index-B-kIJk-V.js:1:40889
+🌍 Starting WorldManager resource cleanup... index-B-kIJk-V.js:1:40199
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "ce22c92c-3c32-4605-b47a-175fd3e24e79", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "f8115c2f-7c2d-4553-9c5a-0426a5f5a40f", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "31f86912-357c-4756-9b83-51e822de712c", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "2e0db8bd-ab57-47ef-97fa-7cd895365681", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "07c41fdf-aa01-43d2-9377-e7e6391ed72c", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "0f1ed0b8-e97a-4b22-ad7f-2460b689d28c", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "575dc6b5-908d-436a-b60e-35409087778c", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "de8ab743-c3d7-4814-8ced-cb5ffbf6962c", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "6326cadf-d248-4aee-bb71-0bfe60733ba8", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "20bf9ed3-b44e-40e5-9117-2fc33a50da01", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+🛡️ Skipping removal of protected temple: unnamed 3 index-B-kIJk-V.js:1:14789
+🛡️ Skipping removal of protected sphinx: unnamed 3 index-B-kIJk-V.js:1:14789
+🛡️ Skipping removal of protected obelisk: unnamed 4 index-B-kIJk-V.js:1:14789
+🔧 Removed 10 corrupted objects index-B-kIJk-V.js:1:43339
+🌍 Cleanup completed: index-B-kIJk-V.js:1:40473
+  - Pyramids: 3 → 3 index-B-kIJk-V.js:1:40510
+  - Temples: 3 → 3 index-B-kIJk-V.js:1:40585
+  - Sphinxes: 3 → 3 index-B-kIJk-V.js:1:40658
+  - Obelisks: 4 → 4 index-B-kIJk-V.js:1:40733
+  - Resources: 5 → 5 index-B-kIJk-V.js:1:40808
+  - Decorations: 11 → 11 index-B-kIJk-V.js:1:40889
+🔧 Cleanup completed - Objects: 89 → 89 index-B-kIJk-V.js:1:88341
+🔧 Geometries: 257 → 257 index-B-kIJk-V.js:1:88440
+🔧 Materials: undefined → undefined index-B-kIJk-V.js:1:88532
+✅ Scene integrity check: 1146 valid objects index-B-kIJk-V.js:1:89359
+📷 Camera position: 
+Array(3) [ "6.37", "5.00", "11.28" ]
+index-B-kIJk-V.js:1:91794
+👤 Player position: 
+Array(3) [ "6.37", "0.00", "1.28" ]
+index-B-kIJk-V.js:1:91881
+📷 Camera offsets: 0.00 5.00 10.00 index-B-kIJk-V.js:1:91949
+🕐 Received world_time_update event: 
+Object { time: 0.6009599999999999, timestamp: 1756689434769 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.6009599999999999, timestamp: 1756689434769 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 14.4h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.6009599999999999, timestamp: 1756689434769 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.6009599999999999, timestamp: 1756689434769 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 14.4h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.6610199999999999, timestamp: 1756689435770 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.6610199999999999, timestamp: 1756689435770 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 15.9h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.6610199999999999, timestamp: 1756689435770 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.6610199999999999, timestamp: 1756689435770 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 15.9h index-B-kIJk-V.js:1:101273
+🔄 Handling resize event... index-B-kIJk-V.js:1:96487
+📐 Viewport dimensions: 1536x460 index-B-kIJk-V.js:1:96577
+🎨 UI Manager handling resize: 1536x460 index-B-kIJk-V.js:1:138719
+✅ UI resize handled index-B-kIJk-V.js:1:138838
+✅ Resize handled successfully index-B-kIJk-V.js:1:96850
+🕐 Received world_time_update event: 
+Object { time: 0.7210799999999999, timestamp: 1756689436771 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.7210799999999999, timestamp: 1756689436771 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 17.3h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.7210799999999999, timestamp: 1756689436771 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.7210799999999999, timestamp: 1756689436771 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 17.3h index-B-kIJk-V.js:1:101273
+🔄 Handling resize event... index-B-kIJk-V.js:1:96487
+📐 Viewport dimensions: 1536x460 index-B-kIJk-V.js:1:96577
+🎨 UI Manager handling resize: 1536x460 index-B-kIJk-V.js:1:138719
+✅ UI resize handled index-B-kIJk-V.js:1:138838
+✅ Resize handled successfully index-B-kIJk-V.js:1:96850
+🔄 Handling resize event... index-B-kIJk-V.js:1:96487
+📐 Viewport dimensions: 1536x460 index-B-kIJk-V.js:1:96577
+🎨 UI Manager handling resize: 1536x460 index-B-kIJk-V.js:1:138719
+✅ UI resize handled index-B-kIJk-V.js:1:138838
+✅ Resize handled successfully index-B-kIJk-V.js:1:96850
+🔄 Handling resize event... index-B-kIJk-V.js:1:96487
+📐 Viewport dimensions: 1536x460 index-B-kIJk-V.js:1:96577
+🎨 UI Manager handling resize: 1536x460 index-B-kIJk-V.js:1:138719
+✅ UI resize handled index-B-kIJk-V.js:1:138838
+✅ Resize handled successfully index-B-kIJk-V.js:1:96850
+WebGL warning: drawElementsInstanced: Drawing to a destination rect smaller than the viewport rect. (This warning will only be given once)
+🕐 Received world_time_update event: 
+Object { time: 0.7810199999999999, timestamp: 1756689437770 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.7810199999999999, timestamp: 1756689437770 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 18.7h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.7810199999999999, timestamp: 1756689437770 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.7810199999999999, timestamp: 1756689437770 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 18.7h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.84114, timestamp: 1756689438772 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.84114, timestamp: 1756689438772 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 20.2h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.84114, timestamp: 1756689438772 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.84114, timestamp: 1756689438772 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 20.2h index-B-kIJk-V.js:1:101273
+📷 Camera position: 
+Array(3) [ "6.32", "5.00", "11.27" ]
+index-B-kIJk-V.js:1:91794
+👤 Player position: 
+Array(3) [ "6.32", "0.00", "1.27" ]
+index-B-kIJk-V.js:1:91881
+📷 Camera offsets: 0.00 5.00 10.00 index-B-kIJk-V.js:1:91949
+🕐 Received world_time_update event: 
+Object { time: 0.9012, timestamp: 1756689439773 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.9012, timestamp: 1756689439773 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 21.6h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.9012, timestamp: 1756689439773 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.9012, timestamp: 1756689439773 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 21.6h index-B-kIJk-V.js:1:101273
+📷 Shadow Camera - Pos: (169.1, 41.8, 11.3) | Looking at: (-156.3, 0.0, 11.3) index-B-kIJk-V.js:1:33665
+📷 Shadow Camera - Pos: (169.0, 41.8, 11.3) | Looking at: (-156.4, 0.0, 11.3) index-B-kIJk-V.js:1:33665
+📷 Camera position: 
+Array(3) [ "6.37", "5.00", "11.28" ]
+index-B-kIJk-V.js:1:91794
+👤 Player position: 
+Array(3) [ "6.37", "0.00", "1.28" ]
+index-B-kIJk-V.js:1:91881
+📷 Camera offsets: 0.00 5.00 10.00 index-B-kIJk-V.js:1:91949
+🕐 Received world_time_update event: 
+Object { time: 0.9612, timestamp: 1756689440773 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.9612, timestamp: 1756689440773 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 23.1h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.9612, timestamp: 1756689440773 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.9612, timestamp: 1756689440773 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 23.1h index-B-kIJk-V.js:1:101273
+📷 Camera position: 
+Array(3) [ "6.37", "5.00", "11.28" ]
+index-B-kIJk-V.js:1:91794
+👤 Player position: 
+Array(3) [ "6.37", "0.00", "1.28" ]
+index-B-kIJk-V.js:1:91881
+📷 Camera offsets: 0.00 5.00 10.00 index-B-kIJk-V.js:1:91949
+📷 Camera position: 
+Array(3) [ "6.37", "5.00", "11.28" ]
+index-B-kIJk-V.js:1:91794
+👤 Player position: 
+Array(3) [ "6.37", "0.00", "1.28" ]
+index-B-kIJk-V.js:1:91881
+📷 Camera offsets: 0.00 5.00 10.00 index-B-kIJk-V.js:1:91949
+🕐 Received world_time_update event: 
+Object { time: 0, timestamp: 1756689441774 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0, timestamp: 1756689441774 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 0.0h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0, timestamp: 1756689441774 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0, timestamp: 1756689441774 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 0.0h index-B-kIJk-V.js:1:101273
+📷 Camera position: 
+Array(3) [ "6.32", "5.00", "11.27" ]
+index-B-kIJk-V.js:1:91794
+👤 Player position: 
+Array(3) [ "6.32", "0.00", "1.27" ]
+index-B-kIJk-V.js:1:91881
+📷 Camera offsets: 0.00 5.00 10.00 index-B-kIJk-V.js:1:91949
+📷 Camera position: 
+Array(3) [ "6.32", "5.00", "11.27" ]
+index-B-kIJk-V.js:1:91794
+👤 Player position: 
+Array(3) [ "6.32", "0.00", "1.27" ]
+index-B-kIJk-V.js:1:91881
+📷 Camera offsets: 0.00 5.00 10.00 index-B-kIJk-V.js:1:91949
+🕐 Received world_time_update event: 
+Object { time: 0.06, timestamp: 1756689442774 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.06, timestamp: 1756689442774 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 1.4h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.06, timestamp: 1756689442774 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.06, timestamp: 1756689442774 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 1.4h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.12006, timestamp: 1756689443775 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.12006, timestamp: 1756689443775 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 2.9h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.12006, timestamp: 1756689443775 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.12006, timestamp: 1756689443775 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 2.9h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.18012, timestamp: 1756689444776 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.18012, timestamp: 1756689444776 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 4.3h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.18012, timestamp: 1756689444776 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.18012, timestamp: 1756689444776 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 4.3h index-B-kIJk-V.js:1:101273
+🌞 PROPER Shadow System - Sun at (85.0, 190.5) | Time: 4.3h index-B-kIJk-V.js:1:35487
+🔍 Light pos: (91.4, 190.5, 11.3) | Target: (-78.7, 0, 11.3) index-B-kIJk-V.js:1:35627
+📷 Shadow Camera - Pos: (91.4, 190.5, 11.3) | Looking at: (-78.7, 0.0, 11.3) index-B-kIJk-V.js:1:33665
+🌞 Day/Night Cycle Update - Time: 4.3h | Frame: 1200 index-B-kIJk-V.js:1:34160
+🔧 Renderer info reset (manual GC recommended) index-B-kIJk-V.js:1:87931
+🔧 Starting comprehensive resource cleanup... index-B-kIJk-V.js:1:88057
+🌍 Starting WorldManager resource cleanup... index-B-kIJk-V.js:1:40199
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "4ccecb68-6d45-4653-b7a1-39910f163b04", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "764f3701-2de7-4ff6-b056-28aec303e75e", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "d73db5d0-fe0f-45c9-82a7-741c4a874256", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "39ca833d-8bb6-403e-b885-e2e08ab74c5d", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "fd17064d-b1a1-4d57-a3d9-ff08067f1ad8", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "01deb6f7-86d2-4385-aaa4-9d94e1672456", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "b47b204a-781a-40b1-9cca-1b2daf4a7bb6", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "da3da2e9-3af0-4baa-b47f-c6df9f52c71a", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "a5b9c6d5-9a66-46f0-8904-7e63d3f99c3d", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "ffed2d75-297a-403d-a7bd-aec401d086e2", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+🛡️ Skipping removal of protected temple: unnamed 3 index-B-kIJk-V.js:1:14789
+🛡️ Skipping removal of protected sphinx: unnamed 3 index-B-kIJk-V.js:1:14789
+🛡️ Skipping removal of protected obelisk: unnamed 4 index-B-kIJk-V.js:1:14789
+🔧 Removed 10 corrupted objects index-B-kIJk-V.js:1:43339
+🌍 Cleanup completed: index-B-kIJk-V.js:1:40473
+  - Pyramids: 3 → 3 index-B-kIJk-V.js:1:40510
+  - Temples: 3 → 3 index-B-kIJk-V.js:1:40585
+  - Sphinxes: 3 → 3 index-B-kIJk-V.js:1:40658
+  - Obelisks: 4 → 4 index-B-kIJk-V.js:1:40733
+  - Resources: 5 → 5 index-B-kIJk-V.js:1:40808
+  - Decorations: 11 → 11 index-B-kIJk-V.js:1:40889
+🌍 Starting WorldManager resource cleanup... index-B-kIJk-V.js:1:40199
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "4ccecb68-6d45-4653-b7a1-39910f163b04", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "764f3701-2de7-4ff6-b056-28aec303e75e", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "d73db5d0-fe0f-45c9-82a7-741c4a874256", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "39ca833d-8bb6-403e-b885-e2e08ab74c5d", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "fd17064d-b1a1-4d57-a3d9-ff08067f1ad8", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "01deb6f7-86d2-4385-aaa4-9d94e1672456", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "b47b204a-781a-40b1-9cca-1b2daf4a7bb6", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "da3da2e9-3af0-4baa-b47f-c6df9f52c71a", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "a5b9c6d5-9a66-46f0-8904-7e63d3f99c3d", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "ffed2d75-297a-403d-a7bd-aec401d086e2", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+🛡️ Skipping removal of protected temple: unnamed 3 index-B-kIJk-V.js:1:14789
+🛡️ Skipping removal of protected sphinx: unnamed 3 index-B-kIJk-V.js:1:14789
+🛡️ Skipping removal of protected obelisk: unnamed 4 index-B-kIJk-V.js:1:14789
+🔧 Removed 10 corrupted objects index-B-kIJk-V.js:1:43339
+🌍 Cleanup completed: index-B-kIJk-V.js:1:40473
+  - Pyramids: 3 → 3 index-B-kIJk-V.js:1:40510
+  - Temples: 3 → 3 index-B-kIJk-V.js:1:40585
+  - Sphinxes: 3 → 3 index-B-kIJk-V.js:1:40658
+  - Obelisks: 4 → 4 index-B-kIJk-V.js:1:40733
+  - Resources: 5 → 5 index-B-kIJk-V.js:1:40808
+  - Decorations: 11 → 11 index-B-kIJk-V.js:1:40889
+🔧 Cleanup completed - Objects: 89 → 89 index-B-kIJk-V.js:1:88341
+🔧 Geometries: 262 → 262 index-B-kIJk-V.js:1:88440
+🔧 Materials: undefined → undefined index-B-kIJk-V.js:1:88532
+✅ Scene integrity check: 1146 valid objects index-B-kIJk-V.js:1:89359
+🌞 PROPER Shadow System - Sun at (85.0, 190.5) | Time: 4.3h index-B-kIJk-V.js:1:35487
+🔍 Light pos: (91.3, 190.5, 11.3) | Target: (-78.7, 0, 11.3) index-B-kIJk-V.js:1:35627
+📷 Shadow Camera - Pos: (91.3, 190.5, 11.3) | Looking at: (-78.7, 0.0, 11.3) index-B-kIJk-V.js:1:33665
+🌞 Day/Night Cycle Update - Time: 4.3h | Frame: 1200 index-B-kIJk-V.js:1:34160
+🔧 Renderer info reset (manual GC recommended) index-B-kIJk-V.js:1:87931
+🔧 Starting comprehensive resource cleanup... index-B-kIJk-V.js:1:88057
+🌍 Starting WorldManager resource cleanup... index-B-kIJk-V.js:1:40199
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "ce22c92c-3c32-4605-b47a-175fd3e24e79", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "f8115c2f-7c2d-4553-9c5a-0426a5f5a40f", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "31f86912-357c-4756-9b83-51e822de712c", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "2e0db8bd-ab57-47ef-97fa-7cd895365681", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "07c41fdf-aa01-43d2-9377-e7e6391ed72c", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "0f1ed0b8-e97a-4b22-ad7f-2460b689d28c", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "575dc6b5-908d-436a-b60e-35409087778c", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "de8ab743-c3d7-4814-8ced-cb5ffbf6962c", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "6326cadf-d248-4aee-bb71-0bfe60733ba8", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "20bf9ed3-b44e-40e5-9117-2fc33a50da01", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+🛡️ Skipping removal of protected temple: unnamed 3 index-B-kIJk-V.js:1:14789
+🛡️ Skipping removal of protected sphinx: unnamed 3 index-B-kIJk-V.js:1:14789
+🛡️ Skipping removal of protected obelisk: unnamed 4 index-B-kIJk-V.js:1:14789
+🔧 Removed 10 corrupted objects index-B-kIJk-V.js:1:43339
+🌍 Cleanup completed: index-B-kIJk-V.js:1:40473
+  - Pyramids: 3 → 3 index-B-kIJk-V.js:1:40510
+  - Temples: 3 → 3 index-B-kIJk-V.js:1:40585
+  - Sphinxes: 3 → 3 index-B-kIJk-V.js:1:40658
+  - Obelisks: 4 → 4 index-B-kIJk-V.js:1:40733
+  - Resources: 5 → 5 index-B-kIJk-V.js:1:40808
+  - Decorations: 11 → 11 index-B-kIJk-V.js:1:40889
+🌍 Starting WorldManager resource cleanup... index-B-kIJk-V.js:1:40199
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "ce22c92c-3c32-4605-b47a-175fd3e24e79", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "f8115c2f-7c2d-4553-9c5a-0426a5f5a40f", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "31f86912-357c-4756-9b83-51e822de712c", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41335
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "2e0db8bd-ab57-47ef-97fa-7cd895365681", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "07c41fdf-aa01-43d2-9377-e7e6391ed72c", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "0f1ed0b8-e97a-4b22-ad7f-2460b689d28c", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41594
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "575dc6b5-908d-436a-b60e-35409087778c", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "de8ab743-c3d7-4814-8ced-cb5ffbf6962c", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "6326cadf-d248-4aee-bb71-0bfe60733ba8", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "20bf9ed3-b44e-40e5-9117-2fc33a50da01", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-B-kIJk-V.js:1:41853
+🛡️ Skipping removal of protected temple: unnamed 3 index-B-kIJk-V.js:1:14789
+🛡️ Skipping removal of protected sphinx: unnamed 3 index-B-kIJk-V.js:1:14789
+🛡️ Skipping removal of protected obelisk: unnamed 4 index-B-kIJk-V.js:1:14789
+🔧 Removed 10 corrupted objects index-B-kIJk-V.js:1:43339
+🌍 Cleanup completed: index-B-kIJk-V.js:1:40473
+  - Pyramids: 3 → 3 index-B-kIJk-V.js:1:40510
+  - Temples: 3 → 3 index-B-kIJk-V.js:1:40585
+  - Sphinxes: 3 → 3 index-B-kIJk-V.js:1:40658
+  - Obelisks: 4 → 4 index-B-kIJk-V.js:1:40733
+  - Resources: 5 → 5 index-B-kIJk-V.js:1:40808
+  - Decorations: 11 → 11 index-B-kIJk-V.js:1:40889
+🔧 Cleanup completed - Objects: 89 → 89 index-B-kIJk-V.js:1:88341
+🔧 Geometries: 260 → 260 index-B-kIJk-V.js:1:88440
+🔧 Materials: undefined → undefined index-B-kIJk-V.js:1:88532
+✅ Scene integrity check: 1146 valid objects index-B-kIJk-V.js:1:89359
+🕐 Received world_time_update event: 
+Object { time: 0.24018, timestamp: 1756689445777 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.24018, timestamp: 1756689445777 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 5.8h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.24018, timestamp: 1756689445777 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.24018, timestamp: 1756689445777 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 5.8h index-B-kIJk-V.js:1:101273
+📷 Camera position: 
+Array(3) [ "6.37", "5.00", "11.28" ]
+index-B-kIJk-V.js:1:91794
+👤 Player position: 
+Array(3) [ "6.37", "0.00", "1.28" ]
+index-B-kIJk-V.js:1:91881
+📷 Camera offsets: 0.00 5.00 10.00 index-B-kIJk-V.js:1:91949
+📷 Camera position: 
+Array(3) [ "6.32", "5.00", "11.27" ]
+index-B-kIJk-V.js:1:91794
+👤 Player position: 
+Array(3) [ "6.32", "0.00", "1.27" ]
+index-B-kIJk-V.js:1:91881
+📷 Camera offsets: 0.00 5.00 10.00 index-B-kIJk-V.js:1:91949
+📷 Camera position: 
+Array(3) [ "6.32", "5.00", "11.27" ]
+index-B-kIJk-V.js:1:91794
+👤 Player position: 
+Array(3) [ "6.32", "0.00", "1.27" ]
+index-B-kIJk-V.js:1:91881
+📷 Camera offsets: 0.00 5.00 10.00 index-B-kIJk-V.js:1:91949
+🕐 Received world_time_update event: 
+Object { time: 0.30018, timestamp: 1756689446777 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.30018, timestamp: 1756689446777 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 7.2h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.30018, timestamp: 1756689446777 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.30018, timestamp: 1756689446777 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 7.2h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.36024, timestamp: 1756689447778 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.36024, timestamp: 1756689447778 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 8.6h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.36024, timestamp: 1756689447778 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.36024, timestamp: 1756689447778 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 8.6h index-B-kIJk-V.js:1:101273
+📷 Camera position: 
+Array(3) [ "6.37", "5.00", "11.28" ]
+index-B-kIJk-V.js:1:91794
+👤 Player position: 
+Array(3) [ "6.37", "0.00", "1.28" ]
+index-B-kIJk-V.js:1:91881
+📷 Camera offsets: 0.00 5.00 10.00 index-B-kIJk-V.js:1:91949
+🕐 Received world_time_update event: 
+Object { time: 0.42036, timestamp: 1756689448780 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.42036, timestamp: 1756689448780 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 10.1h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.42036, timestamp: 1756689448780 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.42036, timestamp: 1756689448780 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 10.1h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.4803, timestamp: 1756689449779 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.4803, timestamp: 1756689449779 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 11.5h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.4803, timestamp: 1756689449779 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.4803, timestamp: 1756689449779 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 11.5h index-B-kIJk-V.js:1:101273
+📷 Shadow Camera - Pos: (-192.1, 112.3, 11.3) | Looking at: (204.8, 0.0, 11.3) 2 index-B-kIJk-V.js:1:33665
+🕐 Received world_time_update event: 
+Object { time: 0.54036, timestamp: 1756689450780 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.54036, timestamp: 1756689450780 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 13.0h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.54036, timestamp: 1756689450780 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.54036, timestamp: 1756689450780 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 13.0h index-B-kIJk-V.js:1:101273
+📷 Camera position: 
+Array(3) [ "6.37", "5.00", "11.28" ]
+index-B-kIJk-V.js:1:91794
+👤 Player position: 
+Array(3) [ "6.37", "0.00", "1.28" ]
+index-B-kIJk-V.js:1:91881
+📷 Camera offsets: 0.00 5.00 10.00 index-B-kIJk-V.js:1:91949
+🕐 Received world_time_update event: 
+Object { time: 0.60042, timestamp: 1756689451781 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.60042, timestamp: 1756689451781 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 14.4h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.60042, timestamp: 1756689451781 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.60042, timestamp: 1756689451781 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 14.4h index-B-kIJk-V.js:1:101273
+📷 Camera position: 
+Array(3) [ "6.37", "5.00", "11.28" ]
+index-B-kIJk-V.js:1:91794
+👤 Player position: 
+Array(3) [ "6.37", "0.00", "1.28" ]
+index-B-kIJk-V.js:1:91881
+📷 Camera offsets: 0.00 5.00 10.00 index-B-kIJk-V.js:1:91949
+📷 Camera position: 
+Array(3) [ "6.37", "5.00", "11.28" ]
+index-B-kIJk-V.js:1:91794
+👤 Player position: 
+Array(3) [ "6.37", "0.00", "1.28" ]
+index-B-kIJk-V.js:1:91881
+📷 Camera offsets: 0.00 5.00 10.00 index-B-kIJk-V.js:1:91949
+🕐 Received world_time_update event: 
+Object { time: 0.6605399999999999, timestamp: 1756689452783 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.6605399999999999, timestamp: 1756689452783 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 15.9h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.6605399999999999, timestamp: 1756689452783 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.6605399999999999, timestamp: 1756689452783 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 15.9h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.7206599999999999, timestamp: 1756689453785 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.7206599999999999, timestamp: 1756689453785 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 17.3h index-B-kIJk-V.js:1:101273
+🕐 Received world_time_update event: 
+Object { time: 0.7206599999999999, timestamp: 1756689453785 }
+index-B-kIJk-V.js:1:162973
+🕐 Time update received: 
+Object { time: 0.7206599999999999, timestamp: 1756689453785 }
+index-B-kIJk-V.js:1:99174
+🕐 Synced world time to: 17.3h index-B-kIJk-V.js:1:101273
+📷 Camera position: 
+Array(3) [ "6.32", "5.00", "11.27" ]
+index-B-kIJk-V.js:1:91794

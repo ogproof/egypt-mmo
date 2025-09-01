@@ -25,6 +25,8 @@ export class NetworkManager {
         this.reconnectDelay = 1000;
 
         this.isInitialized = false;
+        this.eventsSetup = false; // Prevent duplicate event setup
+        this.connecting = false; // Track if a connection attempt is in progress
     }
 
     async init() {
@@ -101,6 +103,19 @@ export class NetworkManager {
 
     // Real network methods (for future implementation)
     async connect() {
+        // Prevent multiple simultaneous connection attempts
+        if (this.connecting) {
+            console.log('⚠️ Connection already in progress, skipping...');
+            return;
+        }
+        
+        if (this.isConnected) {
+            console.log('✅ Already connected to server');
+            return;
+        }
+        
+        this.connecting = true;
+        
         try {
             console.log(`🌐 Attempting to connect to: ${this.serverUrl}`);
             
@@ -119,12 +134,14 @@ export class NetworkManager {
             return new Promise((resolve, reject) => {
                 // Add timeout to prevent hanging
                 const timeout = setTimeout(() => {
+                    this.connecting = false;
                     reject(new Error('Connection timeout - running in single-player mode'));
                 }, 10000);
 
                 this.socket.on('connect', () => {
                     clearTimeout(timeout);
                     this.isConnected = true;
+                    this.connecting = false;
                     this.playerId = this.socket.id;
                     console.log(`🌐 Connected to Railway server - Player ID: ${this.playerId}`);
                     
@@ -137,11 +154,13 @@ export class NetworkManager {
 
                 this.socket.on('connect_error', (error) => {
                     clearTimeout(timeout);
+                    this.connecting = false;
                     console.log('🌐 Connection failed, running in single-player mode:', error.message);
                     reject(new Error('No server available - running in single-player mode'));
                 });
             });
         } catch (error) {
+            this.connecting = false;
             console.error('Failed to connect to server:', error);
             throw error;
         }
@@ -170,6 +189,12 @@ export class NetworkManager {
 
     setupSocketEvents() {
         if (!this.socket) return;
+        
+        // Prevent duplicate event handler setup
+        if (this.eventsSetup) {
+            console.log('⚠️ Socket events already set up, skipping...');
+            return;
+        }
 
         console.log('🔧 Setting up Socket.IO event handlers...');
 
@@ -276,6 +301,7 @@ export class NetworkManager {
         });
 
         console.log('✅ Socket.IO event handlers set up successfully');
+        this.eventsSetup = true; // Mark events as set up
     }
 
     disconnect() {
@@ -413,8 +439,12 @@ export class NetworkManager {
         this.onWorldUpdate = callback;
     }
 
+    onTimeUpdate(callback) {
+        this.onTimeUpdate = callback;
+    }
+
     // Utility methods
-    isConnected() {
+    getConnectionStatus() {
         return this.isConnected;
     }
 

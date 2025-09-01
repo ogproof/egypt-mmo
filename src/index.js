@@ -51,8 +51,8 @@ class EgyptMMO {
     async startGame() {
         try {
             // Prevent double initialization
-            if (this.isInitialized) {
-                console.warn('⚠️ Egypt MMO already initialized, skipping...');
+            if (this.isInitialized || this.isInitializing) {
+                console.warn('⚠️ Egypt MMO already initialized or initializing, skipping...');
                 return;
             }
             
@@ -154,8 +154,16 @@ class EgyptMMO {
         // Start game loop
         this.gameEngine.start();
         
-        // Connect to server
-        await this.networkManager.connect();
+        // Connect to server (only if not already connected)
+        if (!this.networkManager.isConnected) {
+            try {
+                await this.networkManager.connect();
+            } catch (error) {
+                console.warn('⚠️ Network connection failed, running in single-player mode:', error.message);
+            }
+        } else {
+            console.log('✅ Already connected to network');
+        }
         
         this.isInitialized = true;
         console.log('✅ Egypt MMO started successfully!');
