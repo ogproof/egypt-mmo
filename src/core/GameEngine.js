@@ -1580,10 +1580,32 @@ export class GameEngine {
     }
     
     // Join the world with player data
-    joinWorld() {
-        if (!this.networkManager || !this.networkManager.isConnected) {
-            console.log('⚠️ Cannot join world: network not connected');
+    async joinWorld() {
+        if (!this.networkManager) {
+            console.log('⚠️ Cannot join world: no network manager');
             return;
+        }
+        
+        // Wait for network connection
+        if (!this.networkManager.isConnected) {
+            console.log('⏳ Waiting for network connection...');
+            
+            // Wait up to 10 seconds for connection
+            let attempts = 0;
+            const maxAttempts = 20; // 20 * 500ms = 10 seconds
+            
+            while (!this.networkManager.isConnected && attempts < maxAttempts) {
+                await new Promise(resolve => setTimeout(resolve, 500));
+                attempts++;
+                console.log(`⏳ Connection attempt ${attempts}/${maxAttempts}...`);
+            }
+            
+            if (!this.networkManager.isConnected) {
+                console.error('❌ Failed to connect to network after 10 seconds');
+                return;
+            }
+            
+            console.log('✅ Network connected, proceeding to join world...');
         }
         
         // Prepare player data for joining
