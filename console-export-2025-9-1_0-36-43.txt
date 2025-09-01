@@ -1,0 +1,885 @@
+🎮 Egypt MMO Title Screen Loaded egypt-mmo-production.up.railway.app:1086:21
+🔐 Existing session found, starting game... egypt-mmo-production.up.railway.app:1049:25
+🚀 startGame() called - gameStarted flag: false egypt-mmo-production.up.railway.app:968:21
+🚀 Starting Egypt MMO... egypt-mmo-production.up.railway.app:976:21
+✅ Set gameStarted flag to: true egypt-mmo-production.up.railway.app:978:21
+✅ Hidden character creator egypt-mmo-production.up.railway.app:987:21
+✅ Game container shown egypt-mmo-production.up.railway.app:992:21
+🎮 Calling initializeGame()... egypt-mmo-production.up.railway.app:995:21
+🎮 initializeGame() called egypt-mmo-production.up.railway.app:1001:21
+🔍 Checking Egypt MMO status... egypt-mmo-production.up.railway.app:1002:21
+🔍 window.egyptMMO exists: false egypt-mmo-production.up.railway.app:1003:21
+🔍 window.egyptMMO.isInitialized: undefined egypt-mmo-production.up.railway.app:1004:21
+🎮 Game initialization started egypt-mmo-production.up.railway.app:1012:21
+⏳ Egypt MMO not ready yet, waiting... egypt-mmo-production.up.railway.app:1024:25
+👤 User session found: Google Player index-4NYbXy6g.js:19:23176
+👤 Character found: Bob index-4NYbXy6g.js:19:23233
+🚀 Starting Egypt MMO... index-4NYbXy6g.js:19:23688
+🔍 Init called at: 2025-09-01T04:36:01.787Z index-4NYbXy6g.js:19:23728
+🔍 Stack trace: startGame@https://egypt-mmo-production.up.railway.app/assets/index-4NYbXy6g.js:19:23809
+init@https://egypt-mmo-production.up.railway.app/assets/index-4NYbXy6g.js:19:23295
+@https://egypt-mmo-production.up.railway.app/assets/index-4NYbXy6g.js:19:28294
+index-4NYbXy6g.js:19:23787
+📦 Initializing Loading Manager... index-4NYbXy6g.js:19:17546
+⚠️ Loading screen elements not found, using minimal loading... index-4NYbXy6g.js:19:17837
+✅ Created minimal loading screen index-4NYbXy6g.js:19:20603
+TypeError: a.default.detectStore(...) is undefined h1-check.js:1:1301
+✅ Egypt MMO ready, starting game... egypt-mmo-production.up.railway.app:1029:33
+⚠️ Egypt MMO already initialized or initializing, skipping... index-4NYbXy6g.js:19:23381
+✅ Loading Manager initialized index-4NYbXy6g.js:19:18001
+🔍 Creating AudioManager... index-4NYbXy6g.js:19:23896
+🎵 Initializing Audio Manager... index-4NYbXy6g.js:19:9856
+An AudioContext was prevented from starting automatically. It must be created or resumed after a user gesture on the page. index-4NYbXy6g.js:9:25841
+🎵 Placeholder sound created for: button_click index-4NYbXy6g.js:19:16278
+🎵 Placeholder sound created for: panel_open index-4NYbXy6g.js:19:16278
+🎵 Placeholder sound created for: panel_close index-4NYbXy6g.js:19:16278
+🎵 Placeholder sound created for: notification index-4NYbXy6g.js:19:16278
+🎵 Placeholder sound created for: hammer_strike index-4NYbXy6g.js:19:16278
+🎵 Placeholder sound created for: metal_clang index-4NYbXy6g.js:19:16278
+🎵 Placeholder sound created for: wood_cut index-4NYbXy6g.js:19:16278
+🎵 Placeholder sound created for: potion_bubble index-4NYbXy6g.js:19:16278
+🎵 Placeholder sound created for: wind_ambient index-4NYbXy6g.js:19:16278
+🎵 Placeholder sound created for: sand_footstep index-4NYbXy6g.js:19:16278
+🎵 Placeholder sound created for: water_splash index-4NYbXy6g.js:19:16278
+🎵 Placeholder sound created for: fire_crackle index-4NYbXy6g.js:19:16278
+🎵 Placeholder sound created for: sword_swing index-4NYbXy6g.js:19:16278
+🎵 Placeholder sound created for: armor_clank index-4NYbXy6g.js:19:16278
+🎵 Placeholder sound created for: magic_cast index-4NYbXy6g.js:19:16278
+An AudioContext was prevented from starting automatically. It must be created or resumed after a user gesture on the page. index-4NYbXy6g.js:19:11866
+✅ Audio Manager initialized index-4NYbXy6g.js:19:10009
+🔍 Creating NetworkManager... index-4NYbXy6g.js:19:23964
+🔍 Creating GameEngine... index-4NYbXy6g.js:19:24036
+🔍 Creating UIManager... index-4NYbXy6g.js:19:24100
+🔍 Creating OptionsManager... index-4NYbXy6g.js:19:24162
+⚠️ AudioManager already initialized, skipping... index-4NYbXy6g.js:19:9784
+🌐 Initializing Network Manager... index-4NYbXy6g.js:1:160071
+🔑 Loaded existing session ID: player_1756689232587_95yupwiub index-4NYbXy6g.js:1:160197
+✅ Network Manager initialized index-4NYbXy6g.js:1:160398
+🎮 Initializing Game Engine... index-4NYbXy6g.js:1:73084
+🗺️ Grid Manager initialized: 500x500 cells (250000 total) - 2x2 units each index-4NYbXy6g.js:1:48461
+🎮 Input Manager initialized index-4NYbXy6g.js:1:52706
+🎒 Initializing Inventory System... index-4NYbXy6g.js:1:62348
+📚 Loading item database... index-4NYbXy6g.js:1:62399
+📚 Starting to load item database... index-4NYbXy6g.js:1:62705
+📚 Adding item to database: bronze_ingot index-4NYbXy6g.js:1:66204
+📚 Item bronze_ingot added to database. Current size: 1 index-4NYbXy6g.js:1:66295
+📚 Added bronze_ingot to database index-4NYbXy6g.js:1:62934
+📚 Adding item to database: iron_ingot index-4NYbXy6g.js:1:66204
+📚 Item iron_ingot added to database. Current size: 2 index-4NYbXy6g.js:1:66295
+📚 Added iron_ingot to database index-4NYbXy6g.js:1:63155
+📚 Adding item to database: steel_ingot index-4NYbXy6g.js:1:66204
+📚 Item steel_ingot added to database. Current size: 3 index-4NYbXy6g.js:1:66295
+📚 Added steel_ingot to database index-4NYbXy6g.js:1:63379
+📚 Adding item to database: wood index-4NYbXy6g.js:1:66204
+📚 Item wood added to database. Current size: 4 index-4NYbXy6g.js:1:66295
+📚 Added wood to database index-4NYbXy6g.js:1:63576
+📚 Adding item to database: leather index-4NYbXy6g.js:1:66204
+📚 Item leather added to database. Current size: 5 index-4NYbXy6g.js:1:66295
+📚 Added leather to database index-4NYbXy6g.js:1:63776
+📚 Adding item to database: thread index-4NYbXy6g.js:1:66204
+📚 Item thread added to database. Current size: 6 index-4NYbXy6g.js:1:66295
+📚 Added thread to database index-4NYbXy6g.js:1:63974
+📚 Adding item to database: herbs index-4NYbXy6g.js:1:66204
+📚 Item herbs added to database. Current size: 7 index-4NYbXy6g.js:1:66295
+📚 Added herbs to database index-4NYbXy6g.js:1:64172
+📚 Adding item to database: water index-4NYbXy6g.js:1:66204
+📚 Item water added to database. Current size: 8 index-4NYbXy6g.js:1:66295
+📚 Added water to database index-4NYbXy6g.js:1:64364
+📚 Adding item to database: crystal index-4NYbXy6g.js:1:66204
+📚 Item crystal added to database. Current size: 9 index-4NYbXy6g.js:1:66295
+📚 Added crystal to database index-4NYbXy6g.js:1:64567
+📚 Adding item to database: bronze_sword index-4NYbXy6g.js:1:66204
+📚 Item bronze_sword added to database. Current size: 10 index-4NYbXy6g.js:1:66295
+📚 Adding item to database: iron_sword index-4NYbXy6g.js:1:66204
+📚 Item iron_sword added to database. Current size: 11 index-4NYbXy6g.js:1:66295
+📚 Adding item to database: leather_armor index-4NYbXy6g.js:1:66204
+📚 Item leather_armor added to database. Current size: 12 index-4NYbXy6g.js:1:66295
+📚 Adding item to database: hammer index-4NYbXy6g.js:1:66204
+📚 Item hammer added to database. Current size: 13 index-4NYbXy6g.js:1:66295
+📚 Adding item to database: needle index-4NYbXy6g.js:1:66204
+📚 Item needle added to database. Current size: 14 index-4NYbXy6g.js:1:66295
+📚 Adding item to database: mortar index-4NYbXy6g.js:1:66204
+📚 Item mortar added to database. Current size: 15 index-4NYbXy6g.js:1:66295
+📚 Adding item to database: chisel index-4NYbXy6g.js:1:66204
+📚 Item chisel added to database. Current size: 16 index-4NYbXy6g.js:1:66295
+📚 Adding item to database: torch index-4NYbXy6g.js:1:66204
+📚 Item torch added to database. Current size: 17 index-4NYbXy6g.js:1:66295
+📚 Item database loaded with 17 items index-4NYbXy6g.js:1:62466
+📦 Adding starting items... index-4NYbXy6g.js:1:62551
+🎒 Adding starting items to inventory... index-4NYbXy6g.js:1:66416
+📦 Adding bronze_ingot x5... index-4NYbXy6g.js:1:66472
+🎒 Adding item: bronze_ingot x5 index-4NYbXy6g.js:1:67242
+Inventory updated: 
+Object { slots: 1, gold: undefined, level: undefined, experience: undefined }
+index-4NYbXy6g.js:1:70578
+✅ Successfully added bronze_ingot x5 index-4NYbXy6g.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, null, null, null, null, null, null, null, null, null, … ]
+index-4NYbXy6g.js:1:67559
+📦 Adding wood x10... index-4NYbXy6g.js:1:66547
+🎒 Adding item: wood x10 index-4NYbXy6g.js:1:67242
+Inventory updated: 
+Object { slots: 2, gold: undefined, level: undefined, experience: undefined }
+index-4NYbXy6g.js:1:70578
+✅ Successfully added wood x10 index-4NYbXy6g.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, null, null, null, null, null, null, null, null, … ]
+index-4NYbXy6g.js:1:67559
+📦 Adding leather x3... index-4NYbXy6g.js:1:66608
+🎒 Adding item: leather x3 index-4NYbXy6g.js:1:67242
+Inventory updated: 
+Object { slots: 3, gold: undefined, level: undefined, experience: undefined }
+index-4NYbXy6g.js:1:70578
+✅ Successfully added leather x3 index-4NYbXy6g.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, null, null, null, null, null, null, null, … ]
+index-4NYbXy6g.js:1:67559
+📦 Adding thread x5... index-4NYbXy6g.js:1:66673
+🎒 Adding item: thread x5 index-4NYbXy6g.js:1:67242
+Inventory updated: 
+Object { slots: 4, gold: undefined, level: undefined, experience: undefined }
+index-4NYbXy6g.js:1:70578
+✅ Successfully added thread x5 index-4NYbXy6g.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, null, null, null, null, null, null, … ]
+index-4NYbXy6g.js:1:67559
+📦 Adding herbs x8... index-4NYbXy6g.js:1:66736
+🎒 Adding item: herbs x8 index-4NYbXy6g.js:1:67242
+Inventory updated: 
+Object { slots: 5, gold: undefined, level: undefined, experience: undefined }
+index-4NYbXy6g.js:1:70578
+✅ Successfully added herbs x8 index-4NYbXy6g.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, null, null, null, null, null, … ]
+index-4NYbXy6g.js:1:67559
+📦 Adding water x20... index-4NYbXy6g.js:1:66797
+🎒 Adding item: water x20 index-4NYbXy6g.js:1:67242
+Inventory updated: 
+Object { slots: 6, gold: undefined, level: undefined, experience: undefined }
+index-4NYbXy6g.js:1:70578
+✅ Successfully added water x20 index-4NYbXy6g.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, null, null, null, null, … ]
+index-4NYbXy6g.js:1:67559
+📦 Adding hammer... index-4NYbXy6g.js:1:66860
+🎒 Adding item: hammer x1 index-4NYbXy6g.js:1:67242
+Inventory updated: 
+Object { slots: 7, gold: undefined, level: undefined, experience: undefined }
+index-4NYbXy6g.js:1:70578
+✅ Successfully added hammer x1 index-4NYbXy6g.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, null, null, null, … ]
+index-4NYbXy6g.js:1:67559
+📦 Adding needle... index-4NYbXy6g.js:1:66918
+🎒 Adding item: needle x1 index-4NYbXy6g.js:1:67242
+Inventory updated: 
+Object { slots: 8, gold: undefined, level: undefined, experience: undefined }
+index-4NYbXy6g.js:1:70578
+✅ Successfully added needle x1 index-4NYbXy6g.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, null, null, … ]
+index-4NYbXy6g.js:1:67559
+📦 Adding mortar... index-4NYbXy6g.js:1:66976
+🎒 Adding item: mortar x1 index-4NYbXy6g.js:1:67242
+Inventory updated: 
+Object { slots: 9, gold: undefined, level: undefined, experience: undefined }
+index-4NYbXy6g.js:1:70578
+✅ Successfully added mortar x1 index-4NYbXy6g.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, null, … ]
+index-4NYbXy6g.js:1:67559
+📦 Adding chisel... index-4NYbXy6g.js:1:67034
+🎒 Adding item: chisel x1 index-4NYbXy6g.js:1:67242
+Inventory updated: 
+Object { slots: 10, gold: undefined, level: undefined, experience: undefined }
+index-4NYbXy6g.js:1:70578
+✅ Successfully added chisel x1 index-4NYbXy6g.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-4NYbXy6g.js:1:67559
+📦 Adding torch... index-4NYbXy6g.js:1:67092
+🎒 Adding item: torch x1 index-4NYbXy6g.js:1:67242
+Inventory updated: 
+Object { slots: 11, gold: undefined, level: undefined, experience: undefined }
+index-4NYbXy6g.js:1:70578
+✅ Successfully added torch x1 index-4NYbXy6g.js:1:67497
+🎒 Current inventory state: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-4NYbXy6g.js:1:67559
+🎒 Starting items added. Current inventory: 
+Array(64) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+index-4NYbXy6g.js:1:67148
+✅ Inventory System initialized index-4NYbXy6g.js:1:62640
+🎨 Initializing UI Manager... index-4NYbXy6g.js:1:112604
+🎒 Inventory initialized with sample items index-4NYbXy6g.js:1:117278
+✅ UI Manager initialized (UI hidden until game ready) index-4NYbXy6g.js:1:113338
+⚙️ Initializing Options Manager... index-4NYbXy6g.js:1:149264
+⚠️ Options menu element not found in DOM, using minimal mode index-4NYbXy6g.js:1:149390
+🔧 Creating minimal options menu... index-4NYbXy6g.js:1:149657
+✅ Minimal options menu created index-4NYbXy6g.js:1:150546
+✅ Options Manager initialized index-4NYbXy6g.js:1:149585
+🗺️ Initializing Grid Manager... index-4NYbXy6g.js:1:48644
+🗺️ Grid visualization created (hidden by default - press G to show) index-4NYbXy6g.js:1:49551
+✅ Grid Manager initialized index-4NYbXy6g.js:1:48769
+🌍 Initializing World Manager... index-4NYbXy6g.js:1:13485
+🏠 Creating world decorations... index-4NYbXy6g.js:1:19990
+THREE.Material: 'roughness' is not a property of THREE.MeshLambertMaterial. 4 three-C8PiImrb.js:5:82611
+🏠 Creating detailed medieval house... index-4NYbXy6g.js:1:20195
+✅ Medieval house created at position: 
+Object { x: 15, y: 0, z: 15 }
+index-4NYbXy6g.js:1:20459
+✅ World decorations created index-4NYbXy6g.js:1:20130
+🔥 Torch created and placed in the world index-4NYbXy6g.js:1:32760
+🛡️ Protecting important world objects... index-4NYbXy6g.js:1:13786
+✅ Important objects protected index-4NYbXy6g.js:1:14596
+✅ World Manager initialized index-4NYbXy6g.js:1:13713
+🌍 Camera set in WorldManager: YES index-4NYbXy6g.js:1:37220
+🔍 Checking all lights after camera set: index-4NYbXy6g.js:1:37314
+🔍 Debugging all lights in scene: index-4NYbXy6g.js:1:39358
+  Light 1: PointLight at (0.0, 0.8, -5.2) index-4NYbXy6g.js:1:39455
+    - Intensity: 1 index-4NYbXy6g.js:1:39627
+    - Casts shadows: false index-4NYbXy6g.js:1:39680
+    - Name: unnamed index-4NYbXy6g.js:1:39738
+    - ℹ️ Additional light source index-4NYbXy6g.js:1:40077
+  Light 2: PointLight at (5.0, 2.3, 0.0) index-4NYbXy6g.js:1:39455
+    - Intensity: 0.6 index-4NYbXy6g.js:1:39627
+    - Casts shadows: false index-4NYbXy6g.js:1:39680
+    - Name: unnamed index-4NYbXy6g.js:1:39738
+    - ℹ️ Additional light source index-4NYbXy6g.js:1:40077
+  Light 3: AmbientLight at (0.0, 0.0, 0.0) index-4NYbXy6g.js:1:39455
+    - Intensity: 0.8 index-4NYbXy6g.js:1:39627
+    - Casts shadows: false index-4NYbXy6g.js:1:39680
+    - Name: unnamed index-4NYbXy6g.js:1:39738
+    - ✅ This is the day/night cycle ambient light index-4NYbXy6g.js:1:39925
+  Light 4: DirectionalLight at (50.0, 100.0, 50.0) index-4NYbXy6g.js:1:39455
+    - Intensity: 2 index-4NYbXy6g.js:1:39627
+    - Casts shadows: true index-4NYbXy6g.js:1:39680
+    - Name: unnamed index-4NYbXy6g.js:1:39738
+    - ✅ This is the day/night cycle light index-4NYbXy6g.js:1:39832
+  Light 5: PointLight at (0.0, 2.5, 0.0) index-4NYbXy6g.js:1:39455
+    - Intensity: 1.5 index-4NYbXy6g.js:1:39627
+    - Casts shadows: true index-4NYbXy6g.js:1:39680
+    - Name: unnamed index-4NYbXy6g.js:1:39738
+    - ℹ️ Additional light source index-4NYbXy6g.js:1:40077
+Total lights found: 5 index-4NYbXy6g.js:1:40128
+👤 Initializing Player... index-4NYbXy6g.js:1:2102
+👤 Simple capsule character created index-4NYbXy6g.js:1:4363
+✅ Player initialized index-4NYbXy6g.js:1:2291
+📷 Camera reference set for player index-4NYbXy6g.js:1:12825
+📷 Camera properly initialized: 
+Object { x: 0, y: 5, z: 10 }
+index-4NYbXy6g.js:1:74311
+🔧 Lighting setup skipped - handled by WorldManager index-4NYbXy6g.js:1:76299
+🔧 Added safe update method to crafting system index-4NYbXy6g.js:1:96179
+🔧 Added safe update method to inventory system index-4NYbXy6g.js:1:96355
+✅ Game Engine initialized index-4NYbXy6g.js:1:74535
+🔧 Setting up multiplayer callbacks... index-4NYbXy6g.js:1:98626
+✅ Network manager found, setting up callbacks... index-4NYbXy6g.js:1:98781
+✅ Multiplayer callbacks set up successfully index-4NYbXy6g.js:1:99406
+⚙️ Options Manager connected to Game Engine index-4NYbXy6g.js:1:109606
+📦 Loading Manager connected to Game Engine index-4NYbXy6g.js:1:108882
+👤 Character name set to: Bob index-4NYbXy6g.js:1:112056
+✅ Egypt MMO started successfully! index-4NYbXy6g.js:19:24829
+🎮 Starting Egypt MMO... index-4NYbXy6g.js:19:25389
+✅ Minimal loading screen removed index-4NYbXy6g.js:19:21680
+🎮 Starting game loop... index-4NYbXy6g.js:1:78236
+🔧 Renderer info reset (manual GC recommended) index-4NYbXy6g.js:1:87985
+🔧 Starting comprehensive resource cleanup... index-4NYbXy6g.js:1:88111
+🌍 Starting WorldManager resource cleanup... index-4NYbXy6g.js:1:40199
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "868abb0a-e263-432d-9f41-085515424c78", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "f13f8667-ef71-43da-8e94-986943d5a289", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "4f8efa7b-f24c-4e77-87ec-69e475d2cac7", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41335
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "424b4ff4-79f6-4f02-bef7-2a728903262c", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "2d3af87d-4b6f-418e-b945-3b3976cb7353", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "b539417a-b584-43bc-878d-325f70387cfc", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41594
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "ad975e4a-d62e-4c79-9009-dd47d56fbb44", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "6fb0a07f-d4d9-45d2-bb61-669a984841ec", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "180e4887-4155-46da-bc33-995f1e4150a6", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "11dae367-bd81-40ff-81de-1a8d56b465ac", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41853
+⚠️ Corrupted decoration detected, removing: 
+Object { isObject3D: true, uuid: "a57777d6-6767-4ae8-a727-bffefd19a865", name: "", type: "Group", parent: null, children: (25) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:42401
+⚠️ Corrupted decoration detected, removing: 
+Object { isObject3D: true, uuid: "f0214b70-947c-4f3b-aa85-61e5a418f1e6", name: "", type: "Group", parent: null, children: (25) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:42401
+⚠️ Corrupted decoration detected, removing: 
+Object { isObject3D: true, uuid: "cdfc08e3-2bc7-456d-b9a2-0d231c0fb486", name: "", type: "Group", parent: null, children: (25) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:42401
+⚠️ Corrupted decoration detected, removing: 
+Object { isObject3D: true, uuid: "b3d6aac3-94a3-4019-8cba-77b4b6fbafc6", name: "", type: "Group", parent: null, children: (25) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:42401
+⚠️ Corrupted decoration detected, removing: 
+Object { isObject3D: true, uuid: "bc0d1c9a-cddc-437d-9986-b53c280f8d27", name: "", type: "Group", parent: null, children: (53) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:42401
+🛡️ Skipping removal of protected temple: unnamed 3 index-4NYbXy6g.js:1:14789
+🛡️ Skipping removal of protected sphinx: unnamed 3 index-4NYbXy6g.js:1:14789
+🛡️ Skipping removal of protected obelisk: unnamed 4 index-4NYbXy6g.js:1:14789
+✅ Safely removed decoration: unnamed 5 index-4NYbXy6g.js:1:15109
+🔧 Removed 15 corrupted objects index-4NYbXy6g.js:1:43339
+🌍 Cleanup completed: index-4NYbXy6g.js:1:40473
+  - Pyramids: 3 → 3 index-4NYbXy6g.js:1:40510
+  - Temples: 3 → 3 index-4NYbXy6g.js:1:40585
+  - Sphinxes: 3 → 3 index-4NYbXy6g.js:1:40658
+  - Obelisks: 4 → 4 index-4NYbXy6g.js:1:40733
+  - Resources: 5 → 5 index-4NYbXy6g.js:1:40808
+  - Decorations: 16 → 11 index-4NYbXy6g.js:1:40889
+🌍 Starting WorldManager resource cleanup... index-4NYbXy6g.js:1:40199
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "868abb0a-e263-432d-9f41-085515424c78", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "f13f8667-ef71-43da-8e94-986943d5a289", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "4f8efa7b-f24c-4e77-87ec-69e475d2cac7", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41335
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "424b4ff4-79f6-4f02-bef7-2a728903262c", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "2d3af87d-4b6f-418e-b945-3b3976cb7353", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "b539417a-b584-43bc-878d-325f70387cfc", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41594
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "ad975e4a-d62e-4c79-9009-dd47d56fbb44", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "6fb0a07f-d4d9-45d2-bb61-669a984841ec", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "180e4887-4155-46da-bc33-995f1e4150a6", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "11dae367-bd81-40ff-81de-1a8d56b465ac", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41853
+🛡️ Skipping removal of protected temple: unnamed 3 index-4NYbXy6g.js:1:14789
+🛡️ Skipping removal of protected sphinx: unnamed 3 index-4NYbXy6g.js:1:14789
+🛡️ Skipping removal of protected obelisk: unnamed 4 index-4NYbXy6g.js:1:14789
+🔧 Removed 10 corrupted objects index-4NYbXy6g.js:1:43339
+🌍 Cleanup completed: index-4NYbXy6g.js:1:40473
+  - Pyramids: 3 → 3 index-4NYbXy6g.js:1:40510
+  - Temples: 3 → 3 index-4NYbXy6g.js:1:40585
+  - Sphinxes: 3 → 3 index-4NYbXy6g.js:1:40658
+  - Obelisks: 4 → 4 index-4NYbXy6g.js:1:40733
+  - Resources: 5 → 5 index-4NYbXy6g.js:1:40808
+  - Decorations: 11 → 11 index-4NYbXy6g.js:1:40889
+🔧 Cleanup completed - Objects: 94 → 89 index-4NYbXy6g.js:1:88395
+🔧 Geometries: 244 → 244 index-4NYbXy6g.js:1:88494
+🔧 Materials: undefined → undefined index-4NYbXy6g.js:1:88586
+✅ Scene integrity check: 1146 valid objects index-4NYbXy6g.js:1:89413
+✅ Game loop started index-4NYbXy6g.js:1:78346
+🎯 Game loading indicator hidden index-4NYbXy6g.js:1:148356
+🌐 Connecting to network... index-4NYbXy6g.js:19:25589
+🌐 Attempting to connect to: https://egypt-mmo-production.up.railway.app index-4NYbXy6g.js:1:161365
+🔧 Setting up Socket.IO event handlers... index-4NYbXy6g.js:1:162729
+✅ Socket.IO event handlers set up successfully index-4NYbXy6g.js:1:164768
+✅ Minimal loading screen removed index-4NYbXy6g.js:19:21680
+✅ Loading screen hidden automatically index-4NYbXy6g.js:19:21147
+🎵 Music track loaded: Ancient Egypt Theme index-4NYbXy6g.js:19:13648
+🎵 Music track loaded: Desert Wind index-4NYbXy6g.js:19:13648
+🎵 Music track loaded: Pyramid Mystery index-4NYbXy6g.js:19:13648
+🎵 Music track loaded: Crafting Peace index-4NYbXy6g.js:19:13648
+🎵 Music track loaded: Battle Theme index-4NYbXy6g.js:19:13648
+👤 Guest login initiated egypt-mmo-production.up.railway.app:836:21
+👤 Guest user created: 
+Object { id: "guest_m693lt0zk", email: null, name: "Guest Player", picture: null, isGuest: true }
+egypt-mmo-production.up.railway.app:861:21
+👤 Guest character created: 
+Object { name: "Guest_t0zk", createdAt: "2025-09-01T04:36:17.873Z", isGuest: true }
+egypt-mmo-production.up.railway.app:862:21
+🚀 Starting game for guest... egypt-mmo-production.up.railway.app:868:21
+🚀 startGame() called - gameStarted flag: true egypt-mmo-production.up.railway.app:968:21
+⚠️ Game already started, skipping... egypt-mmo-production.up.railway.app:972:25
+🌐 Connected to Railway server - Player ID: YaEH-0vWjusGiNKFAAAB index-4NYbXy6g.js:1:161873
+✅ Network connection established index-4NYbXy6g.js:19:25668
+🌍 Joining world after network connection... index-4NYbXy6g.js:19:25804
+✅ Network already connected, proceeding to join world... index-4NYbXy6g.js:1:99730
+🌍 Joining world with player data: 
+Object { name: "Bob", position: {…}, rotation: {…}, level: 1, skills: {}, inventory: [], equipment: {} }
+index-4NYbXy6g.js:1:100546
+🌍 Joining world with data: 
+Object { name: "Bob", position: {…}, rotation: {…}, level: 1, skills: {}, inventory: [], equipment: {}, sessionId: "player_1756689232587_95yupwiub" }
+index-4NYbXy6g.js:1:165184
+✅ Egypt MMO started successfully! index-4NYbXy6g.js:19:26017
+👤 Guest login initiated egypt-mmo-production.up.railway.app:836:21
+👤 Guest user created: 
+Object { id: "guest_83hhh3scl", email: null, name: "Guest Player", picture: null, isGuest: true }
+egypt-mmo-production.up.railway.app:861:21
+👤 Guest character created: 
+Object { name: "Guest_3scl", createdAt: "2025-09-01T04:36:19.173Z", isGuest: true }
+egypt-mmo-production.up.railway.app:862:21
+🚀 Starting game for guest... egypt-mmo-production.up.railway.app:868:21
+🚀 startGame() called - gameStarted flag: true egypt-mmo-production.up.railway.app:968:21
+⚠️ Game already started, skipping... egypt-mmo-production.up.railway.app:972:25
+📷 Camera position: 
+Array(3) [ "0.00", "5.00", "10.00" ]
+index-4NYbXy6g.js:1:91848
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-4NYbXy6g.js:1:91935
+📷 Camera offsets: 0.00 5.00 10.00 index-4NYbXy6g.js:1:92003
+🌍 Received world_state event: 
+Object { players: (1) […], resources: [], buildings: [], worldTime: {…} }
+index-4NYbXy6g.js:1:163921
+🌍 World state update received: 
+Object { players: (1) […], resources: [], buildings: [], worldTime: {…} }
+index-4NYbXy6g.js:1:99220
+🌍 Processing world state with 1 players index-4NYbXy6g.js:1:101052
+🕐 Initial time sync: 17.3h index-4NYbXy6g.js:1:101279
+🔄 Skipping local player: Bob (ID: player_1756689232587_95yupwiub) index-4NYbXy6g.js:1:101428
+✅ Player joined successfully: 
+Object { success: true, player: {…}, sessionId: "player_1756689232587_95yupwiub", message: "Welcome to Egypt MMO, Bob!" }
+index-4NYbXy6g.js:1:164447
+🎯 Player ID set to: player_1756689232587_95yupwiub index-4NYbXy6g.js:1:164569
+🔑 Session ID set to: player_1756689232587_95yupwiub index-4NYbXy6g.js:1:164628
+🕐 Received world_time_update event: 
+Object { time: 0.7806, timestamp: 1756701375334 }
+index-4NYbXy6g.js:1:164098
+🕐 Time update received: 
+Object { time: 0.7806, timestamp: 1756701375334 }
+index-4NYbXy6g.js:1:99338
+🕐 Synced world time to: 18.7h index-4NYbXy6g.js:1:101739
+🕐 Received world_time_update event: 
+Object { time: 0.8407199999999999, timestamp: 1756701376336 }
+index-4NYbXy6g.js:1:164098
+🕐 Time update received: 
+Object { time: 0.8407199999999999, timestamp: 1756701376336 }
+index-4NYbXy6g.js:1:99338
+🕐 Synced world time to: 20.2h index-4NYbXy6g.js:1:101739
+👤 Guest login initiated egypt-mmo-production.up.railway.app:836:21
+👤 Guest user created: 
+Object { id: "guest_9wmgdcyr7", email: null, name: "Guest Player", picture: null, isGuest: true }
+egypt-mmo-production.up.railway.app:861:21
+👤 Guest character created: 
+Object { name: "Guest_cyr7", createdAt: "2025-09-01T04:36:22.312Z", isGuest: true }
+egypt-mmo-production.up.railway.app:862:21
+🚀 Starting game for guest... egypt-mmo-production.up.railway.app:868:21
+🚀 startGame() called - gameStarted flag: true egypt-mmo-production.up.railway.app:968:21
+⚠️ Game already started, skipping... egypt-mmo-production.up.railway.app:972:25
+🕐 Received world_time_update event: 
+Object { time: 0.9009599999999999, timestamp: 1756701377340 }
+index-4NYbXy6g.js:1:164098
+🕐 Time update received: 
+Object { time: 0.9009599999999999, timestamp: 1756701377340 }
+index-4NYbXy6g.js:1:99338
+🕐 Synced world time to: 21.6h index-4NYbXy6g.js:1:101739
+📷 Shadow Camera - Pos: (162.5, 41.7, 10.0) | Looking at: (-162.5, 0.0, 10.0) index-4NYbXy6g.js:1:33665
+🕐 Received world_time_update event: 
+Object { time: 0.9610799999999999, timestamp: 1756701378342 }
+index-4NYbXy6g.js:1:164098
+🕐 Time update received: 
+Object { time: 0.9610799999999999, timestamp: 1756701378342 }
+index-4NYbXy6g.js:1:99338
+🕐 Synced world time to: 23.1h index-4NYbXy6g.js:1:101739
+🕐 Received world_time_update event: 
+Object { time: 0, timestamp: 1756701379343 }
+index-4NYbXy6g.js:1:164098
+🕐 Time update received: 
+Object { time: 0, timestamp: 1756701379343 }
+index-4NYbXy6g.js:1:99338
+🕐 Synced world time to: 0.0h index-4NYbXy6g.js:1:101739
+🕐 Received world_time_update event: 
+Object { time: 0.060059999999999995, timestamp: 1756701380344 }
+index-4NYbXy6g.js:1:164098
+🕐 Time update received: 
+Object { time: 0.060059999999999995, timestamp: 1756701380344 }
+index-4NYbXy6g.js:1:99338
+🕐 Synced world time to: 1.4h index-4NYbXy6g.js:1:101739
+👤 Guest login initiated egypt-mmo-production.up.railway.app:836:21
+👤 Guest user created: 
+Object { id: "guest_i5gflz9u5", email: null, name: "Guest Player", picture: null, isGuest: true }
+egypt-mmo-production.up.railway.app:861:21
+👤 Guest character created: 
+Object { name: "Guest_z9u5", createdAt: "2025-09-01T04:36:25.759Z", isGuest: true }
+egypt-mmo-production.up.railway.app:862:21
+🚀 Starting game for guest... egypt-mmo-production.up.railway.app:868:21
+🚀 startGame() called - gameStarted flag: true egypt-mmo-production.up.railway.app:968:21
+⚠️ Game already started, skipping... egypt-mmo-production.up.railway.app:972:25
+🕐 Received world_time_update event: 
+Object { time: 0.12011999999999999, timestamp: 1756701381345 }
+index-4NYbXy6g.js:1:164098
+🕐 Time update received: 
+Object { time: 0.12011999999999999, timestamp: 1756701381345 }
+index-4NYbXy6g.js:1:99338
+🕐 Synced world time to: 2.9h index-4NYbXy6g.js:1:101739
+👤 Guest login initiated egypt-mmo-production.up.railway.app:836:21
+👤 Guest user created: 
+Object { id: "guest_v6f5ywlja", email: null, name: "Guest Player", picture: null, isGuest: true }
+egypt-mmo-production.up.railway.app:861:21
+👤 Guest character created: 
+Object { name: "Guest_wlja", createdAt: "2025-09-01T04:36:27.155Z", isGuest: true }
+egypt-mmo-production.up.railway.app:862:21
+🚀 Starting game for guest... egypt-mmo-production.up.railway.app:868:21
+🚀 startGame() called - gameStarted flag: true egypt-mmo-production.up.railway.app:968:21
+⚠️ Game already started, skipping... egypt-mmo-production.up.railway.app:972:25
+🕐 Received world_time_update event: 
+Object { time: 0.18017999999999998, timestamp: 1756701382346 }
+index-4NYbXy6g.js:1:164098
+🕐 Time update received: 
+Object { time: 0.18017999999999998, timestamp: 1756701382346 }
+index-4NYbXy6g.js:1:99338
+🕐 Synced world time to: 4.3h index-4NYbXy6g.js:1:101739
+📷 Camera position: 
+Array(3) [ "0.00", "5.00", "10.00" ]
+index-4NYbXy6g.js:1:91848
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-4NYbXy6g.js:1:91935
+📷 Camera offsets: 0.00 5.00 10.00 index-4NYbXy6g.js:1:92003
+🕐 Received world_time_update event: 
+Object { time: 0.24023999999999998, timestamp: 1756701383347 }
+index-4NYbXy6g.js:1:164098
+🕐 Time update received: 
+Object { time: 0.24023999999999998, timestamp: 1756701383347 }
+index-4NYbXy6g.js:1:99338
+🕐 Synced world time to: 5.8h index-4NYbXy6g.js:1:101739
+🌞 PROPER Shadow System - Sun at (12.3, 199.8) | Time: 5.8h index-4NYbXy6g.js:1:35487
+🔍 Light pos: (12.3, 199.8, 10.0) | Target: (-12.3, 0, 10.0) index-4NYbXy6g.js:1:35627
+📷 Shadow Camera - Pos: (12.3, 199.8, 10.0) | Looking at: (-12.3, 0.0, 10.0) index-4NYbXy6g.js:1:33665
+🌞 Day/Night Cycle Update - Time: 5.8h | Frame: 600 index-4NYbXy6g.js:1:34160
+🔧 Renderer info reset (manual GC recommended) index-4NYbXy6g.js:1:87985
+🔧 Starting comprehensive resource cleanup... index-4NYbXy6g.js:1:88111
+🌍 Starting WorldManager resource cleanup... index-4NYbXy6g.js:1:40199
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "868abb0a-e263-432d-9f41-085515424c78", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "f13f8667-ef71-43da-8e94-986943d5a289", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "4f8efa7b-f24c-4e77-87ec-69e475d2cac7", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41335
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "424b4ff4-79f6-4f02-bef7-2a728903262c", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "2d3af87d-4b6f-418e-b945-3b3976cb7353", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "b539417a-b584-43bc-878d-325f70387cfc", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41594
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "ad975e4a-d62e-4c79-9009-dd47d56fbb44", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "6fb0a07f-d4d9-45d2-bb61-669a984841ec", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "180e4887-4155-46da-bc33-995f1e4150a6", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "11dae367-bd81-40ff-81de-1a8d56b465ac", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41853
+🛡️ Skipping removal of protected temple: unnamed 3 index-4NYbXy6g.js:1:14789
+🛡️ Skipping removal of protected sphinx: unnamed 3 index-4NYbXy6g.js:1:14789
+🛡️ Skipping removal of protected obelisk: unnamed 4 index-4NYbXy6g.js:1:14789
+🔧 Removed 10 corrupted objects index-4NYbXy6g.js:1:43339
+🌍 Cleanup completed: index-4NYbXy6g.js:1:40473
+  - Pyramids: 3 → 3 index-4NYbXy6g.js:1:40510
+  - Temples: 3 → 3 index-4NYbXy6g.js:1:40585
+  - Sphinxes: 3 → 3 index-4NYbXy6g.js:1:40658
+  - Obelisks: 4 → 4 index-4NYbXy6g.js:1:40733
+  - Resources: 5 → 5 index-4NYbXy6g.js:1:40808
+  - Decorations: 11 → 11 index-4NYbXy6g.js:1:40889
+🌍 Starting WorldManager resource cleanup... index-4NYbXy6g.js:1:40199
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "868abb0a-e263-432d-9f41-085515424c78", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "f13f8667-ef71-43da-8e94-986943d5a289", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "4f8efa7b-f24c-4e77-87ec-69e475d2cac7", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41335
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "424b4ff4-79f6-4f02-bef7-2a728903262c", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "2d3af87d-4b6f-418e-b945-3b3976cb7353", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "b539417a-b584-43bc-878d-325f70387cfc", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41594
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "ad975e4a-d62e-4c79-9009-dd47d56fbb44", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "6fb0a07f-d4d9-45d2-bb61-669a984841ec", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "180e4887-4155-46da-bc33-995f1e4150a6", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "11dae367-bd81-40ff-81de-1a8d56b465ac", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41853
+🛡️ Skipping removal of protected temple: unnamed 3 index-4NYbXy6g.js:1:14789
+🛡️ Skipping removal of protected sphinx: unnamed 3 index-4NYbXy6g.js:1:14789
+🛡️ Skipping removal of protected obelisk: unnamed 4 index-4NYbXy6g.js:1:14789
+🔧 Removed 10 corrupted objects index-4NYbXy6g.js:1:43339
+🌍 Cleanup completed: index-4NYbXy6g.js:1:40473
+  - Pyramids: 3 → 3 index-4NYbXy6g.js:1:40510
+  - Temples: 3 → 3 index-4NYbXy6g.js:1:40585
+  - Sphinxes: 3 → 3 index-4NYbXy6g.js:1:40658
+  - Obelisks: 4 → 4 index-4NYbXy6g.js:1:40733
+  - Resources: 5 → 5 index-4NYbXy6g.js:1:40808
+  - Decorations: 11 → 11 index-4NYbXy6g.js:1:40889
+🔧 Cleanup completed - Objects: 89 → 89 index-4NYbXy6g.js:1:88395
+🔧 Geometries: 257 → 257 index-4NYbXy6g.js:1:88494
+🔧 Materials: undefined → undefined index-4NYbXy6g.js:1:88586
+✅ Scene integrity check: 1146 valid objects index-4NYbXy6g.js:1:89413
+🕐 Received world_time_update event: 
+Object { time: 0.30023999999999995, timestamp: 1756701384347 }
+index-4NYbXy6g.js:1:164098
+🕐 Time update received: 
+Object { time: 0.30023999999999995, timestamp: 1756701384347 }
+index-4NYbXy6g.js:1:99338
+🕐 Synced world time to: 7.2h index-4NYbXy6g.js:1:101739
+📷 Camera position: 
+Array(3) [ "0.00", "5.00", "10.00" ]
+index-4NYbXy6g.js:1:91848
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-4NYbXy6g.js:1:91935
+📷 Camera offsets: 0.00 5.00 10.00 index-4NYbXy6g.js:1:92003
+🕐 Received world_time_update event: 
+Object { time: 0.36035999999999996, timestamp: 1756701385349 }
+index-4NYbXy6g.js:1:164098
+🕐 Time update received: 
+Object { time: 0.36035999999999996, timestamp: 1756701385349 }
+index-4NYbXy6g.js:1:99338
+🕐 Synced world time to: 8.6h index-4NYbXy6g.js:1:101739
+🔄 Handling resize event... index-4NYbXy6g.js:1:96541
+📐 Viewport dimensions: 1536x460 index-4NYbXy6g.js:1:96631
+🎨 UI Manager handling resize: 1536x460 index-4NYbXy6g.js:1:139432
+✅ UI resize handled index-4NYbXy6g.js:1:139551
+✅ Resize handled successfully index-4NYbXy6g.js:1:96904
+🔄 Handling resize event... index-4NYbXy6g.js:1:96541
+📐 Viewport dimensions: 1536x460 index-4NYbXy6g.js:1:96631
+🎨 UI Manager handling resize: 1536x460 index-4NYbXy6g.js:1:139432
+✅ UI resize handled index-4NYbXy6g.js:1:139551
+✅ Resize handled successfully index-4NYbXy6g.js:1:96904
+🕐 Received world_time_update event: 
+Object { time: 0.42041999999999996, timestamp: 1756701386350 }
+index-4NYbXy6g.js:1:164098
+🕐 Time update received: 
+Object { time: 0.42041999999999996, timestamp: 1756701386350 }
+index-4NYbXy6g.js:1:99338
+🕐 Synced world time to: 10.1h index-4NYbXy6g.js:1:101739
+🕐 Received world_time_update event: 
+Object { time: 0.48047999999999996, timestamp: 1756701387351 }
+index-4NYbXy6g.js:1:164098
+🕐 Time update received: 
+Object { time: 0.48047999999999996, timestamp: 1756701387351 }
+index-4NYbXy6g.js:1:99338
+🕐 Synced world time to: 11.5h index-4NYbXy6g.js:1:101739
+🕐 Received world_time_update event: 
+Object { time: 0.5406, timestamp: 1756701388353 }
+index-4NYbXy6g.js:1:164098
+🕐 Time update received: 
+Object { time: 0.5406, timestamp: 1756701388353 }
+index-4NYbXy6g.js:1:99338
+🕐 Synced world time to: 13.0h index-4NYbXy6g.js:1:101739
+🕐 Received world_time_update event: 
+Object { time: 0.60066, timestamp: 1756701389354 }
+index-4NYbXy6g.js:1:164098
+🕐 Time update received: 
+Object { time: 0.60066, timestamp: 1756701389354 }
+index-4NYbXy6g.js:1:99338
+🕐 Synced world time to: 14.4h index-4NYbXy6g.js:1:101739
+📷 Shadow Camera - Pos: (-161.3, 40.9, 10.0) | Looking at: (161.3, 0.0, 10.0) index-4NYbXy6g.js:1:33665
+🕐 Received world_time_update event: 
+Object { time: 0.66072, timestamp: 1756701390355 }
+index-4NYbXy6g.js:1:164098
+🕐 Time update received: 
+Object { time: 0.66072, timestamp: 1756701390355 }
+index-4NYbXy6g.js:1:99338
+🕐 Synced world time to: 15.9h index-4NYbXy6g.js:1:101739
+🕐 Received world_time_update event: 
+Object { time: 0.72078, timestamp: 1756701391356 }
+index-4NYbXy6g.js:1:164098
+🕐 Time update received: 
+Object { time: 0.72078, timestamp: 1756701391356 }
+index-4NYbXy6g.js:1:99338
+🕐 Synced world time to: 17.3h index-4NYbXy6g.js:1:101739
+👤 Guest login initiated egypt-mmo-production.up.railway.app:836:21
+👤 Guest user created: 
+Object { id: "guest_8iexa7ahj", email: null, name: "Guest Player", picture: null, isGuest: true }
+egypt-mmo-production.up.railway.app:861:21
+👤 Guest character created: 
+Object { name: "Guest_7ahj", createdAt: "2025-09-01T04:36:37.251Z", isGuest: true }
+egypt-mmo-production.up.railway.app:862:21
+🚀 Starting game for guest... egypt-mmo-production.up.railway.app:868:21
+🚀 startGame() called - gameStarted flag: true egypt-mmo-production.up.railway.app:968:21
+⚠️ Game already started, skipping... egypt-mmo-production.up.railway.app:972:25
+🔄 Restoring viewport to full dimensions... index-4NYbXy6g.js:1:97105
+✅ Viewport restored to 1536x460 index-4NYbXy6g.js:1:97401
+🔄 Restoring viewport to full dimensions... index-4NYbXy6g.js:1:97105
+✅ Viewport restored to 1536x460 index-4NYbXy6g.js:1:97401
+🕐 Received world_time_update event: 
+Object { time: 0.78084, timestamp: 1756701392357 }
+index-4NYbXy6g.js:1:164098
+🕐 Time update received: 
+Object { time: 0.78084, timestamp: 1756701392357 }
+index-4NYbXy6g.js:1:99338
+🕐 Synced world time to: 18.7h index-4NYbXy6g.js:1:101739
+🕐 Received world_time_update event: 
+Object { time: 0.8409, timestamp: 1756701393358 }
+index-4NYbXy6g.js:1:164098
+🕐 Time update received: 
+Object { time: 0.8409, timestamp: 1756701393358 }
+index-4NYbXy6g.js:1:99338
+🕐 Synced world time to: 20.2h index-4NYbXy6g.js:1:101739
+🕐 Received world_time_update event: 
+Object { time: 0.9010199999999999, timestamp: 1756701394360 }
+index-4NYbXy6g.js:1:164098
+🕐 Time update received: 
+Object { time: 0.9010199999999999, timestamp: 1756701394360 }
+index-4NYbXy6g.js:1:99338
+🕐 Synced world time to: 21.6h index-4NYbXy6g.js:1:101739
+🌞 PROPER Shadow System - Sun at (162.6, 41.7) | Time: 21.6h index-4NYbXy6g.js:1:35487
+🔍 Light pos: (162.6, 41.7, 10.0) | Target: (-162.6, 0, 10.0) index-4NYbXy6g.js:1:35627
+📷 Shadow Camera - Pos: (162.6, 41.7, 10.0) | Looking at: (-162.6, 0.0, 10.0) index-4NYbXy6g.js:1:33665
+🌞 Day/Night Cycle Update - Time: 21.6h | Frame: 1200 index-4NYbXy6g.js:1:34160
+🔧 Renderer info reset (manual GC recommended) index-4NYbXy6g.js:1:87985
+🔧 Starting comprehensive resource cleanup... index-4NYbXy6g.js:1:88111
+🌍 Starting WorldManager resource cleanup... index-4NYbXy6g.js:1:40199
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "868abb0a-e263-432d-9f41-085515424c78", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "f13f8667-ef71-43da-8e94-986943d5a289", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "4f8efa7b-f24c-4e77-87ec-69e475d2cac7", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41335
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "424b4ff4-79f6-4f02-bef7-2a728903262c", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "2d3af87d-4b6f-418e-b945-3b3976cb7353", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "b539417a-b584-43bc-878d-325f70387cfc", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41594
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "ad975e4a-d62e-4c79-9009-dd47d56fbb44", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "6fb0a07f-d4d9-45d2-bb61-669a984841ec", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "180e4887-4155-46da-bc33-995f1e4150a6", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "11dae367-bd81-40ff-81de-1a8d56b465ac", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41853
+🛡️ Skipping removal of protected temple: unnamed 3 index-4NYbXy6g.js:1:14789
+🛡️ Skipping removal of protected sphinx: unnamed 3 index-4NYbXy6g.js:1:14789
+🛡️ Skipping removal of protected obelisk: unnamed 4 index-4NYbXy6g.js:1:14789
+🔧 Removed 10 corrupted objects index-4NYbXy6g.js:1:43339
+🌍 Cleanup completed: index-4NYbXy6g.js:1:40473
+  - Pyramids: 3 → 3 index-4NYbXy6g.js:1:40510
+  - Temples: 3 → 3 index-4NYbXy6g.js:1:40585
+  - Sphinxes: 3 → 3 index-4NYbXy6g.js:1:40658
+  - Obelisks: 4 → 4 index-4NYbXy6g.js:1:40733
+  - Resources: 5 → 5 index-4NYbXy6g.js:1:40808
+  - Decorations: 11 → 11 index-4NYbXy6g.js:1:40889
+🌍 Starting WorldManager resource cleanup... index-4NYbXy6g.js:1:40199
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "868abb0a-e263-432d-9f41-085515424c78", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "f13f8667-ef71-43da-8e94-986943d5a289", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41335
+⚠️ Corrupted temple detected, removing: 
+Object { isObject3D: true, uuid: "4f8efa7b-f24c-4e77-87ec-69e475d2cac7", name: "", type: "Group", parent: {…}, children: (7) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41335
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "424b4ff4-79f6-4f02-bef7-2a728903262c", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "2d3af87d-4b6f-418e-b945-3b3976cb7353", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41594
+⚠️ Corrupted sphinx detected, removing: 
+Object { isObject3D: true, uuid: "b539417a-b584-43bc-878d-325f70387cfc", name: "", type: "Group", parent: {…}, children: (4) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41594
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "ad975e4a-d62e-4c79-9009-dd47d56fbb44", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "6fb0a07f-d4d9-45d2-bb61-669a984841ec", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "180e4887-4155-46da-bc33-995f1e4150a6", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41853
+⚠️ Corrupted obelisk detected, removing: 
+Object { isObject3D: true, uuid: "11dae367-bd81-40ff-81de-1a8d56b465ac", name: "", type: "Group", parent: {…}, children: (3) […], up: {…}, position: {…}, rotation: {…}, quaternion: {…}, … }
+index-4NYbXy6g.js:1:41853
+🛡️ Skipping removal of protected temple: unnamed 3 index-4NYbXy6g.js:1:14789
+🛡️ Skipping removal of protected sphinx: unnamed 3 index-4NYbXy6g.js:1:14789
+🛡️ Skipping removal of protected obelisk: unnamed 4 index-4NYbXy6g.js:1:14789
+🔧 Removed 10 corrupted objects index-4NYbXy6g.js:1:43339
+🌍 Cleanup completed: index-4NYbXy6g.js:1:40473
+  - Pyramids: 3 → 3 index-4NYbXy6g.js:1:40510
+  - Temples: 3 → 3 index-4NYbXy6g.js:1:40585
+  - Sphinxes: 3 → 3 index-4NYbXy6g.js:1:40658
+  - Obelisks: 4 → 4 index-4NYbXy6g.js:1:40733
+  - Resources: 5 → 5 index-4NYbXy6g.js:1:40808
+  - Decorations: 11 → 11 index-4NYbXy6g.js:1:40889
+🔧 Cleanup completed - Objects: 89 → 89 index-4NYbXy6g.js:1:88395
+🔧 Geometries: 258 → 258 index-4NYbXy6g.js:1:88494
+🔧 Materials: undefined → undefined index-4NYbXy6g.js:1:88586
+✅ Scene integrity check: 1146 valid objects index-4NYbXy6g.js:1:89413
+📷 Camera position: 
+Array(3) [ "0.00", "5.00", "10.00" ]
+index-4NYbXy6g.js:1:91848
+👤 Player position: 
+Array(3) [ "0.00", "0.00", "0.00" ]
+index-4NYbXy6g.js:1:91935
+📷 Camera offsets: 0.00 5.00 10.00 index-4NYbXy6g.js:1:92003
+🕐 Received world_time_update event: 
+Object { time: 0.9610799999999999, timestamp: 1756701395361 }
+index-4NYbXy6g.js:1:164098
+🕐 Time update received: 
+Object { time: 0.9610799999999999, timestamp: 1756701395361 }
+index-4NYbXy6g.js:1:99338
+🕐 Synced world time to: 23.1h index-4NYbXy6g.js:1:101739
+🕐 Received world_time_update event: 
+Object { time: 0, timestamp: 1756701396362 }
+index-4NYbXy6g.js:1:164098
+🕐 Time update received: 
+Object { time: 0, timestamp: 1756701396362 }
+index-4NYbXy6g.js:1:99338
+🕐 Synced world time to: 0.0h index-4NYbXy6g.js:1:101739
+🕐 Received world_time_update event: 
+Object { time: 0.060059999999999995, timestamp: 1756701397363 }
+index-4NYbXy6g.js:1:164098
+🕐 Time update received: 
+Object { time: 0.060059999999999995, timestamp: 1756701397363 }
+index-4NYbXy6g.js:1:99338
+🕐 Synced world time to: 1.4h index-4NYbXy6g.js:1:101739
+🕐 Received world_time_update event: 
+Object { time: 0.12011999999999999, timestamp: 1756701398364 }
+index-4NYbXy6g.js:1:164098

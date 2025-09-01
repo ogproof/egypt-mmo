@@ -579,7 +579,7 @@
             
             <div class="login-section">
                 <button class="google-btn" onclick="googleLogin()">
-                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0xNy42IDkuMmMwLS4zIDAtLjYgMC0uOSAwLTQuNi0zLjctOC4zLTguMy04LjNTMSAzLjcgMSA4LjNjMCA0LjYgMy43IDguMyA4LjMgOC4zIDIuMiAwIDQuMy0uOSA1LjgtMi40bC0yLjYtMi42Yy0uNy40Ny0xLjYgLjc0LTIuNi43NC0yLjIgMC00LTEuOC00LTQgMC0yLjIgMS44LTQgNC00IC44IDAgMS41LjMgMi4xLjc4bDEuNi0xLjNjLS45LS44LTIuMS0xLjMtMy40LTEuMy0yLjggMC01LjEgMi4zLTUuMSA1LjFzMi4zIDUuMSA1LjEgNS4xYzIuNyAwIDQuOS0xLjkgNS4zLTQuNWgtNS4zVjkuMnoiIGZpbGw9IiNGRkYiLz48L2c+PC9zdmc+" alt="Google">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0xNy42IDkuMmMwLS4zIDAtLjYgMC0uOWwwLTQuNi0zLjctOC4zLTguMy04LjNTMSAzLjcgMSA4LjNjMCA0LjYgMy43IDguMyA4LjMgOC4zIDIuMiAwIDQuMy0uOSA1LjgtMi40bC0yLjYtMi42Yy0uNy40Ny0xLjYgLjc0LTIuNi43NC0yLjIgMC00LTEuOC00LTQgMC0yLjIgMS44LTQgNC00IC44IDAgMS41LjMgMi4xLjc4bDEuNi0xLjNjLS45LS44LTIuMS0xLjMtMy40LTEuMy0yLjggMC01LjEgMi4zLTUuMSA1LjFzMi4zIDUuMSA1LjEgNS4xYzIuNyAwIDQuOS0xLjkgNS4zLTQuNWgtNS4zVjkuMnoiIGZpbGw9IiNGRkYiLz48L2c+PC9zdmc+" alt="Google">
                     Sign in with Google
                 </button>
                 
@@ -828,40 +828,55 @@
 
         // Guest Login
         function guestLogin() {
+            alert('Guest login function called!'); // Test if function is being called
             console.log('👤 Guest login initiated');
+            console.log('🔍 Checking if startGame function exists:', typeof startGame);
+            console.log('🔍 Current gameStarted flag:', gameStarted);
             
-            // Generate unique guest ID
-            const guestId = 'guest_' + Math.random().toString(36).substr(2, 9);
-            
-            // Mock user data for guest
-            const userData = {
-                id: guestId,
-                email: null,
-                name: 'Guest Player',
-                picture: null,
-                isGuest: true
-            };
-            
-            // Create guest character data
-            const characterData = {
-                name: `Guest_${guestId.slice(-4)}`,
-                createdAt: new Date().toISOString(),
-                isGuest: true
-            };
-            
-            // Store both user and character data
-            localStorage.setItem('egyptMMO_user', JSON.stringify(userData));
-            localStorage.setItem('egyptMMO_character', JSON.stringify(characterData));
-            
-            console.log('👤 Guest user created:', userData);
-            console.log('👤 Guest character created:', characterData);
-            
-            // Clear any existing session ID to ensure fresh multiplayer session
-            localStorage.removeItem('egypt_mmo_session_id');
-            
-            // Start the game directly for guest
-            console.log('🚀 Starting game for guest...');
-            startGame();
+            try {
+                // Generate unique guest ID
+                const guestId = 'guest_' + Math.random().toString(36).substr(2, 9);
+                console.log('🔍 Generated guest ID:', guestId);
+                
+                // Mock user data for guest
+                const userData = {
+                    id: guestId,
+                    email: null,
+                    name: 'Guest Player',
+                    picture: null,
+                    isGuest: true
+                };
+                
+                // Create guest character data
+                const characterData = {
+                    name: `Guest_${guestId.slice(-4)}`,
+                    createdAt: new Date().toISOString(),
+                    isGuest: true
+                };
+                
+                console.log('🔍 About to store data in localStorage...');
+                
+                // Store both user and character data
+                localStorage.setItem('egyptMMO_user', JSON.stringify(userData));
+                localStorage.setItem('egyptMMO_character', JSON.stringify(characterData));
+                
+                console.log('👤 Guest user created:', userData);
+                console.log('👤 Guest character created:', characterData);
+                
+                // Clear any existing session ID to ensure fresh multiplayer session
+                localStorage.removeItem('egypt_mmo_session_id');
+                console.log('🔍 Cleared session ID');
+                
+                // Start the game directly for guest
+                console.log('🚀 Starting game for guest...');
+                console.log('🔍 Calling startGame()...');
+                startGame();
+                console.log('✅ startGame() called successfully');
+                
+            } catch (error) {
+                console.error('❌ Error in guest login:', error);
+                alert('Guest login failed: ' + error.message);
+            }
         }
 
         // Show Character Creator
@@ -962,10 +977,27 @@
         function startGame() {
             console.log('🚀 startGame() called - gameStarted flag:', gameStarted);
             
-            // Prevent multiple game starts
+            // Prevent multiple game starts (but allow guest login to override)
             if (gameStarted) {
-                console.log('⚠️ Game already started, skipping...');
-                return;
+                console.log('⚠️ Game already started, checking if this is a guest login...');
+                
+                // Check if this is a guest login (which should always work)
+                const userData = localStorage.getItem('egyptMMO_user');
+                const characterData = localStorage.getItem('egyptMMO_character');
+                
+                if (userData && characterData) {
+                    const user = JSON.parse(userData);
+                    if (user.isGuest) {
+                        console.log('✅ Guest login detected, allowing game restart');
+                        gameStarted = false; // Reset flag for guest
+                    } else {
+                        console.log('⚠️ Game already started, skipping...');
+                        return;
+                    }
+                } else {
+                    console.log('⚠️ Game already started, skipping...');
+                    return;
+                }
             }
             
             console.log('🚀 Starting Egypt MMO...');
@@ -1075,6 +1107,7 @@
 
         // Make logout function globally available
         window.logout = logout;
+        window.guestLogin = guestLogin;
 
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', () => {
